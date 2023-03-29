@@ -1,0 +1,146 @@
+{
+    "$defs": {
+        "Food": {
+            "additionalProperties": false,
+            "description": "Represents a Food",
+            "properties": {
+                "age_in_years": {
+                    "description": "Number of years since birth",
+                    "type": "integer"
+                },
+                "birth_date": {
+                    "description": "Date on which a person is born",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "primary_email": {
+                    "description": "The main email address of a person",
+                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                    "type": "string"
+                },
+                "vital_status": {
+                    "$ref": "#/$defs/PersonStatus",
+                    "description": "living or dead status"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Food",
+            "type": "object"
+        },
+        "FoodCollection": {
+            "additionalProperties": false,
+            "description": "A holder for Food objects",
+            "properties": {
+                "entries": {
+                    "additionalProperties": {
+                        "$ref": "#/$defs/Food__identifier_optional"
+                    },
+                    "type": "object"
+                }
+            },
+            "title": "FoodCollection",
+            "type": "object"
+        },
+        "Food__identifier_optional": {
+            "additionalProperties": false,
+            "description": "Represents a Food",
+            "properties": {
+                "age_in_years": {
+                    "description": "Number of years since birth",
+                    "type": "integer"
+                },
+                "birth_date": {
+                    "description": "Date on which a person is born",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                },
+                "primary_email": {
+                    "description": "The main email address of a person",
+                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
+                    "type": "string"
+                },
+                "vital_status": {
+                    "$ref": "#/$defs/PersonStatus",
+                    "description": "living or dead status"
+                }
+            },
+            "required": [],
+            "title": "Food",
+            "type": "object"
+        },
+        "NamedThing": {
+            "additionalProperties": false,
+            "description": "A generic grouping for any identifiable entity",
+            "properties": {
+                "description": {
+                    "description": "A human-readable description for a thing",
+                    "type": "string"
+                },
+                "id": {
+                    "description": "A unique identifier for a thing",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "A human-readable name for a thing",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "NamedThing",
+            "type": "object"
+        },
+        "PersonStatus": {
+            "description": "",
+            "enum": [
+                "ALIVE",
+                "DEAD",
+                "UNKNOWN"
+            ],
+            "title": "PersonStatus",
+            "type": "string"
+        }
+    },
+    "$id": "https://w3id.org/kaiiam/mifc",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "properties": {
+        "entries": {
+            "additionalProperties": {
+                "$ref": "#/$defs/Food__identifier_optional"
+            },
+            "type": "object"
+        }
+    },
+    "title": "mifc",
+    "type": "object",
+    "version": null
+}

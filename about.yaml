@@ -1,0 +1,7 @@
+---
+name: mifc
+author: Kai Blumberg <kblumberg@email.arizona.edu>
+description: A minimum information standard checklist formalizing the description of food composition data and related metadata.
+source_schema_path: src/mifc/schema/mifc.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums

@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "b801ab6c7e44c46db15905bf440aa573a8f1b3b2",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "mifc",
+      "__project_slug": "mifc",
+      "github_org": "kaiiam",
+      "__source_path": "src/mifc/schema/mifc.yaml",
+      "project_description": "A minimum information standard checklist formalizing the description of food composition data and related metadata.",
+      "full_name": "Kai Blumberg",
+      "email": "kblumberg@email.arizona.edu",
+      "__author": "Kai Blumberg <kblumberg@email.arizona.edu>",
+      "license": "MIT",
+      "main_schema_class": "Food",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
