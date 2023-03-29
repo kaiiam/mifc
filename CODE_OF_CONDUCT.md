@@ -4,10 +4,7 @@
 
 In the interest of fostering an open and welcoming environment, we as
 contributors and maintainers pledge to make participation in our project and
-our community a harassment-free experience for everyone, regardless of age,
-body size, disability, ethnicity, gender identity and expression, level of
-experience, nationality, personal appearance, race, religion, or sexual
-identity and orientation.
+our community a harassment-free experience for everyone.
 
 ## Our Standards
 
@@ -67,7 +64,7 @@ members of the project's leadership.
 
 ## Attribution
 
-This code of conduct has been derived from the excellent code of conduct of the
+This code of conduct has been modified from the code of conduct of the
 [ATOM project](https://github.com/atom/atom/blob/master/CODE_OF_CONDUCT.md)
 which in turn is adapted from the [Contributor Covenant][homepage], version
 1.4, available at [https://contributor-covenant.org/version/1/4][version]
