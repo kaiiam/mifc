@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kaiiam.github.io/mifc/Food/" rel="canonical"/>
+<link href="https://kaiiam.github.io/mifc/Component/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Food - mifc</title>
+<title>Class: Component - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-food">
+<a class="md-skip" href="#class-component">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Food
+              Class: Component
             
           </span>
 </div>
@@ -163,11 +163,6 @@
 <nav aria-label="Identifier and Mapping Information" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#valid-id-prefixes">
-    Valid ID Prefixes
-  </a>
-</li>
-<li class="md-nav__item">
 <a class="md-nav__link" href="#schema-source">
     Schema Source
   </a>
@@ -206,32 +201,56 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Food.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Component.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-food">Class: Food</h1>
-<p><em>Metadata about foods</em></p>
-<p>URI: <a href="http://schema.org/Food">schema:Food</a></p>
+<h1 id="class-component">Class: Component</h1>
+<p><em>Metadata about measured components of nutritional interest</em></p>
+<p>URI: <a href="http://schema.org/Component">schema:Component</a></p>
 <div class="mermaid"> classDiagram
-    class Food
-      NamedThing &lt;|-- Food
+    class Component
+      NamedThing &lt;|-- Component
 
-      Food : food_preparation_state
+      Component : analytical_analysis_measurement_method
 
-          Food ..&gt; FoodPreparationState : food_preparation_state
+          Component ..&gt; AnalyticalMeasurementMethod : analytical_analysis_measurement_method
 
-      Food : id
+      Component : analytical_analysis_measurement_protocol_doi
 
-      Food : primary_food_type
+      Component : id
 
-      Food : primary_food_type_label
+      Component : laboratory_sample_aggregation_maximum_measured_compound_value
+
+      Component : laboratory_sample_aggregation_measured_compound_standard_deviation
+
+      Component : laboratory_sample_aggregation_median_measured_compound_value
+
+      Component : laboratory_sample_aggregation_minimum_measured_compound_value
+
+      Component : measured_compound
+
+      Component : measured_compound_comment
+
+      Component : measured_compound_data_points_number
+
+      Component : measured_compound_denominator_unit
+
+      Component : measured_compound_denominator_value
+
+      Component : measured_compound_derivation_type
+
+      Component : measured_compound_record_date
+
+      Component : measured_compound_unit
+
+      Component : measured_compound_value
 
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedThing/">NamedThing</a><ul>
-<li><strong>Food</strong></li>
+<li><strong>Component</strong></li>
 </ul>
 </li>
 </ul>
@@ -247,20 +266,92 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../primary_food_type/">primary_food_type</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>name of the food e</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../primary_food_type_label/">primary_food_type_label</a></td>
+<td><a href="../measured_compound/">measured_compound</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../food_preparation_state/">food_preparation_state</a></td>
-<td>0..1 <br/> <a href="../FoodPreparationState/">FoodPreparationState</a></td>
+<td><a href="../measured_compound_value/">measured_compound_value</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_unit/">measured_compound_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_denominator_value/">measured_compound_denominator_value</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_denominator_unit/">measured_compound_denominator_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_data_points_number/">measured_compound_data_points_number</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_record_date/">measured_compound_record_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_comment/">measured_compound_comment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_derivation_type/">measured_compound_derivation_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aggregation_minimum_measured_compound_value/">laboratory_sample_aggregation_minimum_measured_compound_value</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aggregation_maximum_measured_compound_value/">laboratory_sample_aggregation_maximum_measured_compound_value</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aggregation_median_measured_compound_value/">laboratory_sample_aggregation_median_measured_compound_value</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aggregation_measured_compound_standard_deviation/">laboratory_sample_aggregation_measured_compound_standard_deviation</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../analytical_analysis_measurement_protocol_doi/">analytical_analysis_measurement_protocol_doi</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../analytical_analysis_measurement_method/">analytical_analysis_measurement_method</a></td>
+<td>0..1 <br/> <a href="../AnalyticalMeasurementMethod/">AnalyticalMeasurementMethod</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -285,18 +376,13 @@
 <tbody>
 <tr>
 <td><a href="../Container/">Container</a></td>
-<td><a href="../foods/">foods</a></td>
+<td><a href="../components/">components</a></td>
 <td>range</td>
-<td><a href="./">Food</a></td>
+<td><a href="./">Component</a></td>
 </tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="valid-id-prefixes">Valid ID Prefixes</h3>
-<p>Instances of this class <em>should</em> have identifiers with one of the following prefixes:</p>
-<ul>
-<li>mifc</li>
-</ul>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: https://w3id.org/kaiiam/mifc</li>
@@ -312,11 +398,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Food</td>
+<td>schema:Component</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:Food</td>
+<td>mifc:Component</td>
 </tr>
 </tbody>
 </table>
@@ -324,72 +410,185 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Food
-id_prefixes:
-- mifc
-description: Metadata about foods
+<pre><code class="language-yaml">name: Component
+description: Metadata about measured components of nutritional interest
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 is_a: NamedThing
 slots:
-- primary_food_type
-- primary_food_type_label
-- food_preparation_state
-class_uri: schema:Food
+- measured_compound
+- measured_compound_value
+- measured_compound_unit
+- measured_compound_denominator_value
+- measured_compound_denominator_unit
+- measured_compound_data_points_number
+- measured_compound_record_date
+- measured_compound_comment
+- measured_compound_derivation_type
+- laboratory_sample_aggregation_minimum_measured_compound_value
+- laboratory_sample_aggregation_maximum_measured_compound_value
+- laboratory_sample_aggregation_median_measured_compound_value
+- laboratory_sample_aggregation_measured_compound_standard_deviation
+- analytical_analysis_measurement_protocol_doi
+- analytical_analysis_measurement_method
+class_uri: schema:Component
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Food
-id_prefixes:
-- mifc
-description: Metadata about foods
+<pre><code class="language-yaml">name: Component
+description: Metadata about measured components of nutritional interest
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 is_a: NamedThing
 attributes:
-  primary_food_type:
-    name: primary_food_type
-    description: name of the food e.g., using a food vocabulary like USDA's FDC or
-      FoodOn
+  measured_compound:
+    name: measured_compound
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    slot_uri: schema:name
-    alias: primary_food_type
-    owner: Food
+    alias: measured_compound
+    owner: Component
     domain_of:
-    - Food
+    - Component
     range: string
-  primary_food_type_label:
-    name: primary_food_type_label
+  measured_compound_value:
+    name: measured_compound_value
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: primary_food_type_label
-    owner: Food
+    alias: measured_compound_value
+    owner: Component
     domain_of:
-    - Food
+    - Component
+    range: float
+  measured_compound_unit:
+    name: measured_compound_unit
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_unit
+    owner: Component
+    domain_of:
+    - Component
     range: string
-  food_preparation_state:
-    name: food_preparation_state
+  measured_compound_denominator_value:
+    name: measured_compound_denominator_value
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: food_preparation_state
-    owner: Food
+    alias: measured_compound_denominator_value
+    owner: Component
     domain_of:
-    - Food
-    range: FoodPreparationState
+    - Component
+    range: float
+  measured_compound_denominator_unit:
+    name: measured_compound_denominator_unit
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_denominator_unit
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  measured_compound_data_points_number:
+    name: measured_compound_data_points_number
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_data_points_number
+    owner: Component
+    domain_of:
+    - Component
+    range: integer
+  measured_compound_record_date:
+    name: measured_compound_record_date
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_record_date
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  measured_compound_comment:
+    name: measured_compound_comment
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_comment
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  measured_compound_derivation_type:
+    name: measured_compound_derivation_type
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_derivation_type
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  laboratory_sample_aggregation_minimum_measured_compound_value:
+    name: laboratory_sample_aggregation_minimum_measured_compound_value
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aggregation_minimum_measured_compound_value
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  laboratory_sample_aggregation_maximum_measured_compound_value:
+    name: laboratory_sample_aggregation_maximum_measured_compound_value
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aggregation_maximum_measured_compound_value
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  laboratory_sample_aggregation_median_measured_compound_value:
+    name: laboratory_sample_aggregation_median_measured_compound_value
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aggregation_median_measured_compound_value
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  laboratory_sample_aggregation_measured_compound_standard_deviation:
+    name: laboratory_sample_aggregation_measured_compound_standard_deviation
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aggregation_measured_compound_standard_deviation
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  analytical_analysis_measurement_protocol_doi:
+    name: analytical_analysis_measurement_protocol_doi
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: analytical_analysis_measurement_protocol_doi
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  analytical_analysis_measurement_method:
+    name: analytical_analysis_measurement_method
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: analytical_analysis_measurement_method
+    owner: Component
+    domain_of:
+    - Component
+    range: AnalyticalMeasurementMethod
   id:
     name: id
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     identifier: true
     alias: id
-    owner: Food
+    owner: Component
     domain_of:
     - NamedThing
     range: string
-class_uri: schema:Food
+class_uri: schema:Component
 
 </code></pre>
 </details>

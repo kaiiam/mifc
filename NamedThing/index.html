@@ -200,17 +200,16 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-namedthing">Class: NamedThing</h1>
-<p><em>A generic grouping for any identifiable entity</em></p>
-<p>URI: <a href="http://schema.org/Thing">schema:Thing</a></p>
+<ul>
+<li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
+</ul>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/NamedThing">mifc:NamedThing</a></p>
 <div class="mermaid"> classDiagram
     class NamedThing
       NamedThing &lt;|-- Food
-
-      NamedThing : description
+      NamedThing &lt;|-- Component
 
       NamedThing : id
-
-      NamedThing : name
 
 
 </div>
@@ -218,6 +217,7 @@
 <ul>
 <li><strong>NamedThing</strong><ul>
 <li><a href="../Food/">Food</a></li>
+<li><a href="../Component/">Component</a></li>
 </ul>
 </li>
 </ul>
@@ -234,20 +234,8 @@
 <tbody>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A unique identifier for a thing</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable name for a thing</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A human-readable description for a thing</td>
+<td>1..1 <br/> <a href="../String/">String</a></td>
+<td></td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -268,11 +256,15 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Thing</td>
+<td>mifc:NamedThing</td>
 </tr>
 <tr>
 <td>native</td>
 <td>mifc:NamedThing</td>
+</tr>
+<tr>
+<td>close</td>
+<td>schema:Thing</td>
 </tr>
 </tbody>
 </table>
@@ -281,59 +273,35 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: NamedThing
-description: A generic grouping for any identifiable entity
 from_schema: https://w3id.org/kaiiam/mifc
+close_mappings:
+- schema:Thing
 rank: 1000
+abstract: true
 slots:
 - id
-- name
-- description
-class_uri: schema:Thing
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: NamedThing
-description: A generic grouping for any identifiable entity
 from_schema: https://w3id.org/kaiiam/mifc
+close_mappings:
+- schema:Thing
 rank: 1000
+abstract: true
 attributes:
   id:
     name: id
-    description: A unique identifier for a thing
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    slot_uri: schema:identifier
     identifier: true
     alias: id
     owner: NamedThing
     domain_of:
     - NamedThing
-    range: uriorcurie
-  name:
-    name: name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    slot_uri: schema:name
-    alias: name
-    owner: NamedThing
-    domain_of:
-    - NamedThing
     range: string
-  description:
-    name: description
-    description: A human-readable description for a thing
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    slot_uri: schema:description
-    alias: description
-    owner: NamedThing
-    domain_of:
-    - NamedThing
-    range: string
-class_uri: schema:Thing
 
 </code></pre>
 </details>
