@@ -1,130 +1,143 @@
 {
     "$defs": {
-        "Food": {
-            "additionalProperties": false,
-            "description": "Represents a Food",
-            "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
-                },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
-                    "type": "string"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
-                    "type": "string"
-                },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "Food",
-            "type": "object"
-        },
-        "FoodCollection": {
-            "additionalProperties": false,
-            "description": "A holder for Food objects",
-            "properties": {
-                "entries": {
-                    "additionalProperties": {
-                        "$ref": "#/$defs/Food__identifier_optional"
-                    },
-                    "type": "object"
-                }
-            },
-            "title": "FoodCollection",
-            "type": "object"
-        },
-        "Food__identifier_optional": {
-            "additionalProperties": false,
-            "description": "Represents a Food",
-            "properties": {
-                "age_in_years": {
-                    "description": "Number of years since birth",
-                    "type": "integer"
-                },
-                "birth_date": {
-                    "description": "Date on which a person is born",
-                    "format": "date",
-                    "type": "string"
-                },
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                },
-                "primary_email": {
-                    "description": "The main email address of a person",
-                    "pattern": "^\\S+@[\\S+\\.]+\\S+",
-                    "type": "string"
-                },
-                "vital_status": {
-                    "$ref": "#/$defs/PersonStatus",
-                    "description": "living or dead status"
-                }
-            },
-            "required": [],
-            "title": "Food",
-            "type": "object"
-        },
-        "NamedThing": {
-            "additionalProperties": false,
-            "description": "A generic grouping for any identifiable entity",
-            "properties": {
-                "description": {
-                    "description": "A human-readable description for a thing",
-                    "type": "string"
-                },
-                "id": {
-                    "description": "A unique identifier for a thing",
-                    "type": "string"
-                },
-                "name": {
-                    "description": "A human-readable name for a thing",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "id"
-            ],
-            "title": "NamedThing",
-            "type": "object"
-        },
-        "PersonStatus": {
+        "AnalyticalMeasurementMethod": {
             "description": "",
             "enum": [
-                "ALIVE",
-                "DEAD",
-                "UNKNOWN"
+                "HPLC",
+                "GLC",
+                "GC",
+                "Nephelometry",
+                "Gravimetric",
+                "Fluorometric",
+                "Kjeldahl"
             ],
-            "title": "PersonStatus",
+            "title": "AnalyticalMeasurementMethod",
+            "type": "string"
+        },
+        "Component": {
+            "additionalProperties": false,
+            "description": "Metadata about measured components of nutritional interest",
+            "properties": {
+                "analytical_analysis_measurement_method": {
+                    "$ref": "#/$defs/AnalyticalMeasurementMethod"
+                },
+                "analytical_analysis_measurement_protocol_doi": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "laboratory_sample_aggregation_maximum_measured_compound_value": {
+                    "type": "number"
+                },
+                "laboratory_sample_aggregation_measured_compound_standard_deviation": {
+                    "type": "number"
+                },
+                "laboratory_sample_aggregation_median_measured_compound_value": {
+                    "type": "number"
+                },
+                "laboratory_sample_aggregation_minimum_measured_compound_value": {
+                    "type": "number"
+                },
+                "measured_compound": {
+                    "type": "string"
+                },
+                "measured_compound_comment": {
+                    "type": "string"
+                },
+                "measured_compound_data_points_number": {
+                    "type": "integer"
+                },
+                "measured_compound_denominator_unit": {
+                    "type": "string"
+                },
+                "measured_compound_denominator_value": {
+                    "type": "number"
+                },
+                "measured_compound_derivation_type": {
+                    "type": "string"
+                },
+                "measured_compound_record_date": {
+                    "type": "string"
+                },
+                "measured_compound_unit": {
+                    "type": "string"
+                },
+                "measured_compound_value": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Component",
+            "type": "object"
+        },
+        "Container": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "components": {
+                    "items": {
+                        "$ref": "#/$defs/Component"
+                    },
+                    "type": "array"
+                },
+                "foods": {
+                    "items": {
+                        "$ref": "#/$defs/Food"
+                    },
+                    "type": "array"
+                }
+            },
+            "title": "Container",
+            "type": "object"
+        },
+        "Food": {
+            "additionalProperties": false,
+            "description": "Metadata about foods",
+            "properties": {
+                "food_preparation_state": {
+                    "$ref": "#/$defs/FoodPreparationState"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "primary_food_type": {
+                    "description": "name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn",
+                    "type": "string"
+                },
+                "primary_food_type_label": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Food",
+            "type": "object"
+        },
+        "FoodPreparationState": {
+            "description": "",
+            "enum": [
+                "raw",
+                "fresh",
+                "chilled",
+                "foodsafe chilled",
+                "fresh chilled",
+                "frozen",
+                "fresh frozen",
+                "unripe",
+                "slightly ripe",
+                "ripe",
+                "overripe",
+                "dried",
+                "naturally dried",
+                "artificially dried",
+                "heat treated",
+                "irradiated"
+            ],
+            "title": "FoodPreparationState",
             "type": "string"
         }
     },
@@ -133,11 +146,17 @@
     "additionalProperties": true,
     "metamodel_version": "1.7.0",
     "properties": {
-        "entries": {
-            "additionalProperties": {
-                "$ref": "#/$defs/Food__identifier_optional"
+        "components": {
+            "items": {
+                "$ref": "#/$defs/Component"
             },
-            "type": "object"
+            "type": "array"
+        },
+        "foods": {
+            "items": {
+                "$ref": "#/$defs/Food"
+            },
+            "type": "array"
         }
     },
     "title": "mifc",
