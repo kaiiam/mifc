@@ -1,6 +1,6 @@
 # Example data object
 ---
-id: example:Food001
-name: foo bar
-primary_email: foo.bar@example.com
-age_in_years: 33
+id: FDC:167512
+primary_food_type: FOOD_11109
+primary_food_type_label: Cabbage, raw
+food_preparation_state: raw
