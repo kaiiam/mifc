@@ -22,14 +22,16 @@ SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
 SHEET_MODULE_PATH = $(SOURCE_SCHEMA_DIR)/$(SHEET_MODULE).yaml
 
 # environment variables
+include config.env
+
 GEN_PARGS =
-ifdef LINKML_COOKIECUTTER_GEN_PROJECT_ARGS
-GEN_PARGS = ${LINKML_COOKIECUTTER_GEN_PROJECT_ARGS}
+ifdef LINKML_GENERATORS_PROJECT_ARGS
+GEN_PARGS = ${LINKML_GENERATORS_PROJECT_ARGS}
 endif
 
 GEN_DARGS =
-ifdef LINKML_COOKIECUTTER_GEN_DOC_ARGS
-GEN_DARGS = ${LINKML_COOKIECUTTER_GEN_DOC_ARGS}
+ifdef LINKML_GENERATORS_MARKDOWN_ARGS
+GEN_DARGS = ${LINKML_GENERATORS_MARKDOWN_ARGS}
 endif
 
 
@@ -44,7 +46,7 @@ help: status
 	@echo "make site -- makes site locally"
 	@echo "make install -- install dependencies"
 	@echo "make test -- runs tests"
-	@echo "make lint -- perfom linting"
+	@echo "make lint -- perform linting"
 	@echo "make testdoc -- builds docs and runs local test server"
 	@echo "make deploy -- deploys site"
 	@echo "make update -- updates linkml version"
@@ -60,12 +62,12 @@ setup: install gen-project gen-examples gendoc git-init-add
 
 # install any dependencies required for building
 install:
-	git init     # issues/33
+	git init
 	poetry install
 .PHONY: install
 
 # ---
-# Project Syncronization
+# Project Synchronization
 # ---
 #
 # check we are up to date
@@ -183,5 +185,6 @@ clean:
 	rm -rf $(DEST)
 	rm -rf tmp
 	rm -fr docs/*
+	rm -fr $(PYMODEL)/*
 
 include project.Makefile
