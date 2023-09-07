@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-09-07T17:35:17
+# Generation date: 2023-09-07T18:23:11
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc

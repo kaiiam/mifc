@@ -30,33 +30,33 @@ schema1:Component a sh:NodeShape ;
     sh:description "Metadata about measured components of nutritional interest" ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:maxCount 1 ;
-            sh:order 10 ;
-            sh:path mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
+            sh:order 4 ;
+            sh:path mifc:measured_compound_denominator_unit ],
         [ sh:maxCount 1 ;
-            sh:order 7 ;
-            sh:path mifc:measured_compound_comment ],
+            sh:order 3 ;
+            sh:path mifc:measured_compound_denominator_value ],
         [ sh:maxCount 1 ;
             sh:order 11 ;
             sh:path mifc:laboratory_sample_aggregation_median_measured_compound_value ],
         [ sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path mifc:measured_compound_denominator_unit ],
+            sh:order 7 ;
+            sh:path mifc:measured_compound_comment ],
+        [ sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path mifc:analytical_analysis_measurement_protocol_doi ],
         [ sh:in ( "HPLC" "GLC" "GC" "Nephelometry" "Gravimetric" "Fluorometric" "Kjeldahl" ) ;
             sh:maxCount 1 ;
             sh:order 14 ;
             sh:path mifc:analytical_analysis_measurement_method ],
         [ sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path mifc:measured_compound_denominator_value ],
+            sh:order 1 ;
+            sh:path mifc:measured_compound_value ],
         [ sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path mifc:measured_compound ],
+            sh:order 10 ;
+            sh:path mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
         [ sh:maxCount 1 ;
-            sh:order 2 ;
-            sh:path mifc:measured_compound_unit ],
-        [ sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path mifc:measured_compound_derivation_type ],
+            sh:order 9 ;
+            sh:path mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
         [ sh:maxCount 1 ;
             sh:order 12 ;
             sh:path mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
@@ -64,39 +64,39 @@ schema1:Component a sh:NodeShape ;
             sh:order 6 ;
             sh:path mifc:measured_compound_record_date ],
         [ sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path mifc:measured_compound_value ],
+            sh:order 8 ;
+            sh:path mifc:measured_compound_derivation_type ],
         [ sh:maxCount 1 ;
             sh:order 15 ;
             sh:path mifc:id ],
         [ sh:maxCount 1 ;
-            sh:order 13 ;
-            sh:path mifc:analytical_analysis_measurement_protocol_doi ],
-        [ sh:maxCount 1 ;
             sh:order 5 ;
-            sh:path mifc:measured_compound_data_points_number ] ;
+            sh:path mifc:measured_compound_data_points_number ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path mifc:measured_compound ],
+        [ sh:maxCount 1 ;
+            sh:order 2 ;
+            sh:path mifc:measured_compound_unit ] ;
     sh:targetClass schema1:Component .
 
 schema1:Food a sh:NodeShape ;
     sh:closed true ;
     sh:description "Metadata about foods" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn" ;
+    sh:property [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path mifc:primary_food_type_label ],
+        [ sh:description "name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn" ;
             sh:maxCount 1 ;
             sh:order 0 ;
             sh:path schema1:name ],
         [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path mifc:primary_food_type_label ],
+            sh:order 3 ;
+            sh:path mifc:id ],
         [ sh:in ( "raw" "fresh" "chilled" "foodsafe chilled" "fresh chilled" "frozen" "fresh frozen" "unripe" "slightly ripe" "ripe" "overripe" "dried" "naturally dried" "artificially dried" "heat treated" "irradiated" ) ;
             sh:maxCount 1 ;
             sh:order 2 ;
-            sh:path mifc:food_preparation_state ],
-        [ sh:maxCount 1 ;
-            sh:order 3 ;
-            sh:path mifc:id ] ;
+            sh:path mifc:food_preparation_state ] ;
     sh:targetClass schema1:Food .
 
