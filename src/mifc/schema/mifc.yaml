@@ -15,6 +15,7 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   example: https://example.org/
+  FDC: https://fdc.nal.usda.gov/
 default_prefix: mifc
 default_range: string
 
@@ -22,75 +23,134 @@ imports:
   - linkml:types
 
 classes:
-
+  ## --
+  ## Parent class for Foods and Compounds
+  ## --
   NamedThing:
-    description: >-
-      A generic grouping for any identifiable entity
+    abstract: true     ## should not be instantiated directly
     slots:
-      - id
-      - name
-      - description
-    class_uri: schema:Thing
+     - id
+    close_mappings:
+     - schema:Thing
 
   Food:
-    is_a: NamedThing
     description: >-
-      Represents a Food
-    slots:
-      - primary_email
-      - birth_date
-      - age_in_years
-      - vital_status
-    slot_usage:
-      primary_email:
-        pattern: "^\\S+@[\\S+\\.]+\\S+"
+      Metadata about foods
+    is_a: NamedThing  ## inheritance
+    class_uri: schema:Food
+    slots:            ## Slots specific to food
+     - primary_food_type
+     - primary_food_type_label
+     - food_preparation_state
+    id_prefixes:
+      - mifc
 
-  FoodCollection:
-    tree_root: true
+  Component:
     description: >-
-      A holder for Food objects
+      Metadata about measured components of nutritional interest
+    is_a: NamedThing
+    class_uri: schema:Component
+    slots:
+      - measured_compound
+      - measured_compound_value
+      - measured_compound_unit
+      - measured_compound_denominator_value
+      - measured_compound_denominator_unit
+      - measured_compound_data_points_number
+      - measured_compound_record_date
+      - measured_compound_comment
+      - measured_compound_derivation_type
+      - laboratory_sample_aggregation_minimum_measured_compound_value
+      - laboratory_sample_aggregation_maximum_measured_compound_value
+      - laboratory_sample_aggregation_median_measured_compound_value
+      - laboratory_sample_aggregation_measured_compound_standard_deviation
+      - analytical_analysis_measurement_protocol_doi
+      - analytical_analysis_measurement_method
+
+  Container:
+    tree_root: true
     attributes:
-      entries:
-        range: Food
+      foods:
         multivalued: true
-        inlined: true
+        inlined_as_list: true
+        range: Food
+      components:
+        multivalued: true
+        inlined_as_list: true
+        range: Component
 
 slots:
+  # Common slots
   id:
     identifier: true
-    slot_uri: schema:identifier
-    range: uriorcurie
-    description: A unique identifier for a thing
-  name:
+
+  # Food slots
+  primary_food_type:
+    description:
+      name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn
     slot_uri: schema:name
-    description: A human-readable name for a thing
-  description:
-    slot_uri: schema:description
-    description: A human-readable description for a thing
-  primary_email:
-    slot_uri: schema:email
-    description: The main email address of a person
-  birth_date:
-    slot_uri: schema:birthDate
-    range: date
-    description: Date on which a person is born
-  age_in_years:
+  primary_food_type_label:
+  food_preparation_state:
+    range: FoodPreparationState
+
+
+  # Component slots
+  measured_compound:
+  measured_compound_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
+    range: float
+  measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
+  measured_compound_denominator_value: # E.g., 100 (for portion of per 100g)
+    range: float
+  measured_compound_denominator_unit: # Constrain by UCUM unit types (default g)
+  measured_compound_data_points_number: # TODO add default 1 perhaps with ifabsent
     range: integer
-    description: Number of years since birth
-  vital_status:
-    range: PersonStatus
-    description: living or dead status
+  measured_compound_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
+  measured_compound_comment: #Comment relating to measured component
+  measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
+  laboratory_sample_aggregation_minimum_measured_compound_value: #Could try to shorten name for these 3
+    range: float
+  laboratory_sample_aggregation_maximum_measured_compound_value:
+    range: float
+  laboratory_sample_aggregation_median_measured_compound_value:
+    range: float
+  laboratory_sample_aggregation_measured_compound_standard_deviation:
+    range: float
+  analytical_analysis_measurement_protocol_doi: # Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
+  analytical_analysis_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
+    range: AnalyticalMeasurementMethod
+
+
+
 
 enums:
-  PersonStatus:
+  AnalyticalMeasurementMethod: # lab_method.csv has list for FDC
     permissible_values:
-      ALIVE:
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        description: the vital status is not known
-        todos:
-          - map this to an ontology
+      HPLC:
+        description: High performance liquid chromotography
+        #meaning: OBI:0002116
+      GLC:
+        description: gas-liquid chromatography
+        #meaning: CHMO:0001016 # also MMO:0000471
+      GC:
+      Nephelometry:
+      Gravimetric:
+      Fluorometric:
+      Kjeldahl:
+  FoodPreparationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it.
+    permissible_values:
+      raw:
+      fresh:
+      chilled:
+      foodsafe chilled:
+      fresh chilled:
+      frozen:
+      fresh frozen:
+      unripe:
+      slightly ripe:
+      ripe:
+      overripe:
+      dried:
+      naturally dried:
+      artificially dried:
+      heat treated:
+      irradiated:

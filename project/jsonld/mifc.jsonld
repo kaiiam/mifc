@@ -34,6 +34,10 @@
     {
       "prefix_prefix": "example",
       "prefix_reference": "https://example.org/"
+    },
+    {
+      "prefix_prefix": "FDC",
+      "prefix_reference": "https://fdc.nal.usda.gov/"
     }
   ],
   "default_prefix": "mifc",
@@ -43,6 +47,9 @@
       "name": "string",
       "definition_uri": "https://w3id.org/linkml/String",
       "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -56,6 +63,9 @@
       "name": "integer",
       "definition_uri": "https://w3id.org/linkml/Integer",
       "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -69,6 +79,9 @@
       "name": "boolean",
       "definition_uri": "https://w3id.org/linkml/Boolean",
       "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -83,6 +96,9 @@
       "name": "float",
       "definition_uri": "https://w3id.org/linkml/Float",
       "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -96,6 +112,9 @@
       "name": "double",
       "definition_uri": "https://w3id.org/linkml/Double",
       "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "close_mappings": [
@@ -109,6 +128,9 @@
       "name": "decimal",
       "definition_uri": "https://w3id.org/linkml/Decimal",
       "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "broad_mappings": [
@@ -123,7 +145,8 @@
       "definition_uri": "https://w3id.org/linkml/Time",
       "description": "A time object represents a (local) time of day, independent of any particular day",
       "notes": [
-        "URI is dateTime because OWL reasoners do not work with straight date or time"
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -131,7 +154,7 @@
         "schema:Time"
       ],
       "base": "XSDTime",
-      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
       "repr": "str",
       "@type": "TypeDefinition"
     },
@@ -140,7 +163,8 @@
       "definition_uri": "https://w3id.org/linkml/Date",
       "description": "a date (year, month and day) in an idealized calendar",
       "notes": [
-        "URI is dateTime because OWL reasoners don't work with straight date or time"
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -156,6 +180,9 @@
       "name": "datetime",
       "definition_uri": "https://w3id.org/linkml/Datetime",
       "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "exact_mappings": [
@@ -170,6 +197,9 @@
       "name": "date_or_datetime",
       "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
       "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -181,6 +211,9 @@
       "name": "uriorcurie",
       "definition_uri": "https://w3id.org/linkml/Uriorcurie",
       "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "URIorCURIE",
@@ -193,6 +226,9 @@
       "definition_uri": "https://w3id.org/linkml/Curie",
       "conforms_to": "https://www.w3.org/TR/curie/",
       "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
       "comments": [
         "in RDF serializations this MUST be expanded to a URI",
         "in non-RDF serializations MAY be serialized as the compact representation"
@@ -209,6 +245,9 @@
       "definition_uri": "https://w3id.org/linkml/Uri",
       "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
       "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
       "comments": [
         "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
       ],
@@ -226,6 +265,9 @@
       "name": "ncname",
       "definition_uri": "https://w3id.org/linkml/Ncname",
       "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NCName",
@@ -237,6 +279,9 @@
       "name": "objectidentifier",
       "definition_uri": "https://w3id.org/linkml/Objectidentifier",
       "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
       "comments": [
         "Used for inheritance and type checking"
       ],
@@ -251,36 +296,145 @@
       "name": "nodeidentifier",
       "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
       "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NodeIdentifier",
       "uri": "http://www.w3.org/ns/shex#nonLiteral",
       "repr": "str",
       "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
     }
   ],
   "enums": [
     {
-      "name": "PersonStatus",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/PersonStatus",
+      "name": "AnalyticalMeasurementMethod",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "permissible_values": [
         {
-          "text": "ALIVE",
-          "description": "the person is living",
-          "meaning": "PATO:0001421"
+          "text": "HPLC",
+          "description": "High performance liquid chromotography"
         },
         {
-          "text": "DEAD",
-          "description": "the person is deceased",
-          "meaning": "PATO:0001422"
+          "text": "GLC",
+          "description": "gas-liquid chromatography"
         },
         {
-          "text": "UNKNOWN",
-          "description": "the vital status is not known",
-          "todos": [
-            "map this to an ontology"
-          ]
+          "text": "GC"
+        },
+        {
+          "text": "Nephelometry"
+        },
+        {
+          "text": "Gravimetric"
+        },
+        {
+          "text": "Fluorometric"
+        },
+        {
+          "text": "Kjeldahl"
+        }
+      ]
+    },
+    {
+      "name": "FoodPreparationState",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodPreparationState",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "permissible_values": [
+        {
+          "text": "raw"
+        },
+        {
+          "text": "fresh"
+        },
+        {
+          "text": "chilled"
+        },
+        {
+          "text": "foodsafe chilled"
+        },
+        {
+          "text": "fresh chilled"
+        },
+        {
+          "text": "frozen"
+        },
+        {
+          "text": "fresh frozen"
+        },
+        {
+          "text": "unripe"
+        },
+        {
+          "text": "slightly ripe"
+        },
+        {
+          "text": "ripe"
+        },
+        {
+          "text": "overripe"
+        },
+        {
+          "text": "dried"
+        },
+        {
+          "text": "naturally dried"
+        },
+        {
+          "text": "artificially dried"
+        },
+        {
+          "text": "heat treated"
+        },
+        {
+          "text": "irradiated"
         }
       ]
     }
@@ -289,62 +443,26 @@
     {
       "name": "id",
       "definition_uri": "https://w3id.org/kaiiam/mifc/id",
-      "description": "A unique identifier for a thing",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
-        "http://schema.org/identifier"
-      ],
-      "slot_uri": "http://schema.org/identifier",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/id",
       "identifier": true,
       "owner": "NamedThing",
       "domain_of": [
         "NamedThing"
       ],
-      "range": "uriorcurie",
+      "range": "string",
       "required": true,
       "@type": "SlotDefinition"
     },
     {
-      "name": "name",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/name",
-      "description": "A human-readable name for a thing",
+      "name": "primary_food_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type",
+      "description": "name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "mappings": [
         "http://schema.org/name"
       ],
       "slot_uri": "http://schema.org/name",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "description",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/description",
-      "description": "A human-readable description for a thing",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
-        "http://schema.org/description"
-      ],
-      "slot_uri": "http://schema.org/description",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "primary_email",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_email",
-      "description": "The main email address of a person",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
-        "http://schema.org/email"
-      ],
-      "slot_uri": "http://schema.org/email",
       "owner": "Food",
       "domain_of": [
         "Food"
@@ -353,81 +471,237 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "birth_date",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/birth_date",
-      "description": "Date on which a person is born",
+      "name": "primary_food_type_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
-        "http://schema.org/birthDate"
-      ],
-      "slot_uri": "http://schema.org/birthDate",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
       "owner": "Food",
       "domain_of": [
         "Food"
       ],
-      "range": "date",
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "age_in_years",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/age_in_years",
-      "description": "Number of years since birth",
+      "name": "food_preparation_state",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_preparation_state",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/age_in_years",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_preparation_state",
       "owner": "Food",
       "domain_of": [
         "Food"
+      ],
+      "range": "FoodPreparationState",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_value",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_value",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_unit",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_unit",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_unit",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_denominator_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_value",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_value",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_denominator_unit",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_unit",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_unit",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_data_points_number",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_data_points_number",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_data_points_number",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
       ],
       "range": "integer",
       "@type": "SlotDefinition"
     },
     {
-      "name": "vital_status",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/vital_status",
-      "description": "living or dead status",
+      "name": "measured_compound_record_date",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/vital_status",
-      "owner": "Food",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
+      "owner": "Component",
       "domain_of": [
-        "Food"
+        "Component"
       ],
-      "range": "PersonStatus",
+      "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "foodCollection__entries",
+      "name": "measured_compound_comment",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_comment",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/entries",
-      "multivalued": true,
-      "alias": "entries",
-      "owner": "FoodCollection",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_comment",
+      "owner": "Component",
       "domain_of": [
-        "FoodCollection"
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_derivation_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_aggregation_minimum_measured_compound_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_minimum_measured_compound_value",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_minimum_measured_compound_value",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_aggregation_maximum_measured_compound_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_maximum_measured_compound_value",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_maximum_measured_compound_value",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_aggregation_median_measured_compound_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_median_measured_compound_value",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_median_measured_compound_value",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_aggregation_measured_compound_standard_deviation",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_measured_compound_standard_deviation",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aggregation_measured_compound_standard_deviation",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "analytical_analysis_measurement_protocol_doi",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "analytical_analysis_measurement_method",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "AnalyticalMeasurementMethod",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "container__foods",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/foods",
+      "multivalued": true,
+      "alias": "foods",
+      "owner": "Container",
+      "domain_of": [
+        "Container"
       ],
       "range": "Food",
       "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     },
     {
-      "name": "Food_primary_email",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_email",
-      "description": "The main email address of a person",
+      "name": "container__components",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
-        "http://schema.org/email"
-      ],
-      "is_a": "primary_email",
-      "domain": "Food",
-      "slot_uri": "http://schema.org/email",
-      "alias": "primary_email",
-      "owner": "Food",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/components",
+      "multivalued": true,
+      "alias": "components",
+      "owner": "Container",
       "domain_of": [
-        "Food"
+        "Container"
       ],
-      "is_usage_slot": true,
-      "usage_slot_name": "primary_email",
-      "range": "string",
-      "pattern": "^\\S+@[\\S+\\.]+\\S+",
+      "range": "Component",
+      "inlined": true,
+      "inlined_as_list": true,
       "@type": "SlotDefinition"
     }
   ],
@@ -435,67 +709,106 @@
     {
       "name": "NamedThing",
       "definition_uri": "https://w3id.org/kaiiam/mifc/NamedThing",
-      "description": "A generic grouping for any identifiable entity",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "mappings": [
+      "close_mappings": [
         "schema:Thing"
       ],
+      "abstract": true,
       "slots": [
-        "id",
-        "name",
-        "description"
+        "id"
       ],
       "slot_usage": {},
-      "class_uri": "http://schema.org/Thing",
+      "class_uri": "https://w3id.org/kaiiam/mifc/NamedThing",
       "@type": "ClassDefinition"
     },
     {
       "name": "Food",
+      "id_prefixes": [
+        "mifc"
+      ],
       "definition_uri": "https://w3id.org/kaiiam/mifc/Food",
-      "description": "Represents a Food",
+      "description": "Metadata about foods",
       "from_schema": "https://w3id.org/kaiiam/mifc",
+      "mappings": [
+        "schema:Food"
+      ],
       "is_a": "NamedThing",
       "slots": [
         "id",
-        "name",
-        "description",
-        "Food_primary_email",
-        "birth_date",
-        "age_in_years",
-        "vital_status"
+        "primary_food_type",
+        "primary_food_type_label",
+        "food_preparation_state"
       ],
       "slot_usage": {},
-      "class_uri": "https://w3id.org/kaiiam/mifc/Food",
+      "class_uri": "http://schema.org/Food",
       "@type": "ClassDefinition"
     },
     {
-      "name": "FoodCollection",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodCollection",
-      "description": "A holder for Food objects",
+      "name": "Component",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/Component",
+      "description": "Metadata about measured components of nutritional interest",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "mappings": [
+        "schema:Component"
+      ],
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "measured_compound",
+        "measured_compound_value",
+        "measured_compound_unit",
+        "measured_compound_denominator_value",
+        "measured_compound_denominator_unit",
+        "measured_compound_data_points_number",
+        "measured_compound_record_date",
+        "measured_compound_comment",
+        "measured_compound_derivation_type",
+        "laboratory_sample_aggregation_minimum_measured_compound_value",
+        "laboratory_sample_aggregation_maximum_measured_compound_value",
+        "laboratory_sample_aggregation_median_measured_compound_value",
+        "laboratory_sample_aggregation_measured_compound_standard_deviation",
+        "analytical_analysis_measurement_protocol_doi",
+        "analytical_analysis_measurement_method"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://schema.org/Component",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Container",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/Container",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slots": [
-        "foodCollection__entries"
+        "container__foods",
+        "container__components"
       ],
       "slot_usage": {},
       "attributes": [
         {
-          "name": "entries",
+          "name": "foods",
           "multivalued": true,
           "range": "Food",
-          "inlined": true,
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
+        },
+        {
+          "name": "components",
+          "multivalued": true,
+          "range": "Component",
+          "inlined_as_list": true,
           "@type": "SlotDefinition"
         }
       ],
-      "class_uri": "https://w3id.org/kaiiam/mifc/FoodCollection",
+      "class_uri": "https://w3id.org/kaiiam/mifc/Container",
       "tree_root": true,
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2023-03-29T11:10:43",
-  "source_file_size": 2193,
-  "generation_date": "2023-03-29T11:11:01",
+  "source_file_date": "2023-09-07T17:28:51",
+  "source_file_size": 5377,
+  "generation_date": "2023-09-07T17:35:12",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

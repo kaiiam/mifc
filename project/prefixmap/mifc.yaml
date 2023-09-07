@@ -1,11 +1,15 @@
 {
+   "FDC": "https://fdc.nal.usda.gov/",
    "PATO": "http://purl.obolibrary.org/obo/PATO_",
    "biolink": "https://w3id.org/biolink/",
    "example": "https://example.org/",
    "linkml": "https://w3id.org/linkml/",
    "mifc": "https://w3id.org/kaiiam/mifc/",
    "schema": "http://schema.org/",
-   "NamedThing": {
-      "@id": "schema:Thing"
+   "Component": {
+      "@id": "schema:Component"
+   },
+   "Food": {
+      "@id": "schema:Food"
    }
 }

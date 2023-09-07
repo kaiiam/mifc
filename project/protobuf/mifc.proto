@@ -1,23 +1,33 @@
-// Represents a Food
+// Metadata about measured components of nutritional interest
+message Component
+ {
+  string id = 0
+  string measuredCompound = 0
+  float measuredCompoundValue = 0
+  string measuredCompoundUnit = 0
+  float measuredCompoundDenominatorValue = 0
+  string measuredCompoundDenominatorUnit = 0
+  integer measuredCompoundDataPointsNumber = 0
+  string measuredCompoundRecordDate = 0
+  string measuredCompoundComment = 0
+  string measuredCompoundDerivationType = 0
+  float laboratorySampleAggregationMinimumMeasuredCompoundValue = 0
+  float laboratorySampleAggregationMaximumMeasuredCompoundValue = 0
+  float laboratorySampleAggregationMedianMeasuredCompoundValue = 0
+  float laboratorySampleAggregationMeasuredCompoundStandardDeviation = 0
+  string analyticalAnalysisMeasurementProtocolDoi = 0
+  analyticalMeasurementMethod analyticalAnalysisMeasurementMethod = 0
+ }
+message Container
+ {
+ repeated  food foods = 0
+ repeated  component components = 0
+ }
+// Metadata about foods
 message Food
  {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
-  string primaryEmail = 0
-  date birthDate = 0
-  integer ageInYears = 0
-  personStatus vitalStatus = 0
- }
-// A holder for Food objects
-message FoodCollection
- {
- repeated  food entries = 0
- }
-// A generic grouping for any identifiable entity
-message NamedThing
- {
-  uriorcurie id = 0
-  string name = 0
-  string description = 0
+  string id = 0
+  string primaryFoodType = 0
+  string primaryFoodTypeLabel = 0
+  foodPreparationState foodPreparationState = 0
  }

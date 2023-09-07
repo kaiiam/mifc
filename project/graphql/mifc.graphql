@@ -1,23 +1,39 @@
+type Component
+  {
+    id: String!
+    measuredCompound: String
+    measuredCompoundValue: Float
+    measuredCompoundUnit: String
+    measuredCompoundDenominatorValue: Float
+    measuredCompoundDenominatorUnit: String
+    measuredCompoundDataPointsNumber: Integer
+    measuredCompoundRecordDate: String
+    measuredCompoundComment: String
+    measuredCompoundDerivationType: String
+    laboratorySampleAggregationMinimumMeasuredCompoundValue: Float
+    laboratorySampleAggregationMaximumMeasuredCompoundValue: Float
+    laboratorySampleAggregationMedianMeasuredCompoundValue: Float
+    laboratorySampleAggregationMeasuredCompoundStandardDeviation: Float
+    analyticalAnalysisMeasurementProtocolDoi: String
+    analyticalAnalysisMeasurementMethod: AnalyticalMeasurementMethod
+  }
+
+type Container
+  {
+    foods: [Food]
+    components: [Component]
+  }
+
 type Food
   {
-    id: Uriorcurie!
-    name: String
-    description: String
-    primaryEmail: String
-    birthDate: Date
-    ageInYears: Integer
-    vitalStatus: PersonStatus
+    id: String!
+    primaryFoodType: String
+    primaryFoodTypeLabel: String
+    foodPreparationState: FoodPreparationState
   }
 
-type FoodCollection
+interface NamedThing
   {
-    entries: [Food]
-  }
-
-type NamedThing
-  {
-    id: Uriorcurie!
-    name: String
-    description: String
+    id: String!
   }
 
