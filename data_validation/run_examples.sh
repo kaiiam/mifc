@@ -6,7 +6,25 @@ set -u
 
 ## Foods
 linkml-validate -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-001.tsv
+linkml-validate -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-002.tsv
 
 ## Components
 linkml-validate -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-001.tsv
 linkml-validate -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-002.tsv
+
+# Convert example data
+
+## Foods
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-001.tsv -o results/yaml/Food-001.yaml
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-001.tsv -o results/json/Food-001.json
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-001.tsv -o results/ttl/Food-001.ttl
+
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S foods test_data/Food-002.tsv -o results/json/Food-002.json
+
+
+## Components
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-001.tsv -o results/yaml/Component-001.yaml
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-001.tsv -o results/json/Component-001.json
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-001.tsv -o results/ttl/Component-001.ttl
+
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-002.tsv -o results/json/Component-002.json
