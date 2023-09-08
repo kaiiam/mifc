@@ -14,6 +14,7 @@ prefixes:
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  OBI: http://purl.obolibrary.org/obo/OBI_
   example: https://example.org/
   FDC: https://fdc.nal.usda.gov/
 default_prefix: mifc
@@ -146,7 +147,7 @@ enums:
     permissible_values:
       HPLC:
         description: High performance liquid chromotography
-        #meaning: OBI:0002116
+        meaning: OBI:0002116
       GLC:
         description: gas-liquid chromatography
         #meaning: CHMO:0001016 # also MMO:0000471
