@@ -82,7 +82,7 @@ classes:
 slots:
   # Common slots
   id:
-    identifier: true
+ #   identifier: true # Forces keys to be unique, we'd want this for food IDs but not for components. Perhaps need to split it into two different slots?
 
   # Food slots
   primary_food_type:
