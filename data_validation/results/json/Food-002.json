@@ -1,0 +1,17 @@
+{
+  "foods": [
+    {
+      "id": "FDC:392739",
+      "primary_food_type": "FOOD:4601",
+      "primary_food_type_label": "Butter, light, stick, with salt",
+      "food_preparation_state": "fresh"
+    },
+    {
+      "id": "FDC:392740",
+      "primary_food_type": "FOOD:11601",
+      "primary_food_type_label": "Yam, raw",
+      "food_preparation_state": "raw"
+    }
+  ],
+  "@type": "Container"
+}
