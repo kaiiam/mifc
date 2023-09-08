@@ -14,6 +14,7 @@ prefixes:
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
+  OBI: http://purl.obolibrary.org/obo/OBI_
   example: https://example.org/
   FDC: https://fdc.nal.usda.gov/
 default_prefix: mifc
@@ -41,7 +42,16 @@ classes:
     slots:            ## Slots specific to food
      - primary_food_type
      - primary_food_type_label
+     - primary_food_type_upc_code
      - food_preparation_state
+     - food_acquisition_city
+     - food_acquisition_country
+     - food_acquisition_country_subdivision
+     - food_acquisition_date
+     - food_distributor_city
+     - food_distributor_country
+     - food_distributor_country_subdivision
+     - food_expiration_date
     id_prefixes:
       - mifc
 
@@ -82,38 +92,63 @@ classes:
 slots:
   # Common slots
   id:
-    identifier: true
+ #   identifier: true # Forces keys to be unique, we'd want this for food IDs but not for components. Perhaps need to split it into two different slots?
 
   # Food slots
   primary_food_type:
-    description:
-      name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn
+    description: A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn
     slot_uri: schema:name
   primary_food_type_label:
+    description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
+  primary_food_type_upc_code:
+    description: An integer denoting a Universal Product Code (UPC) barcode.
+    range: integer
   food_preparation_state:
+    description: A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw).
     range: FoodPreparationState
+  food_acquisition_city:
+  food_acquisition_country: # See ISO 3166 for country codes
+  food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
+  food_acquisition_date: #TODO add ISO datetime requirement?
+  food_distributor_city:
+  food_distributor_country:
+  food_distributor_country_subdivision:
+  food_expiration_date: #TODO add ISO datetime requirement?
 
 
   # Component slots
   measured_compound:
+    description: A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled.
   measured_compound_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
+    description: A float representing an individual instance of a measured food compound value from an individual primary_food_type sample.
     range: float
   measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
-  measured_compound_denominator_value: # E.g., 100 (for portion of per 100g)
+    description: A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled.
+  measured_compound_denominator_value:
+    description: A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g).
     range: float
   measured_compound_denominator_unit: # Constrain by UCUM unit types (default g)
+    description: A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g).
   measured_compound_data_points_number: # TODO add default 1 perhaps with ifabsent
+    description: An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.
     range: integer
   measured_compound_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
-  measured_compound_comment: #Comment relating to measured component
+    description: A datetime value representing a known recorded date pertaining to an analyzed sample.
+    comments: May want to have separate analysis date.
+  measured_compound_comment:
+    description: A Comment relating to measured component.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
   laboratory_sample_aggregation_minimum_measured_compound_value: #Could try to shorten name for these 3
+    description: A float representing the minimum measured compound value of an aggregation of samples.
     range: float
   laboratory_sample_aggregation_maximum_measured_compound_value:
+    description: A float representing the maximum measured compound value of an aggregation of samples.
     range: float
   laboratory_sample_aggregation_median_measured_compound_value:
+    description: A float representing the median measured compound value of an aggregation of samples.
     range: float
   laboratory_sample_aggregation_measured_compound_standard_deviation:
+    description: A float representing the standard deviation of a measured compound value of an aggregation of samples.
     range: float
   analytical_analysis_measurement_protocol_doi: # Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
   analytical_analysis_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
@@ -127,7 +162,7 @@ enums:
     permissible_values:
       HPLC:
         description: High performance liquid chromotography
-        #meaning: OBI:0002116
+        meaning: OBI:0002116
       GLC:
         description: gas-liquid chromatography
         #meaning: CHMO:0001016 # also MMO:0000471

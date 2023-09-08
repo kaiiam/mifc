@@ -1,0 +1,89 @@
+{
+  "components": [
+    {
+      "id": "FDC:167512",
+      "measured_compound": "COMPONENT:1003",
+      "measured_compound_value": 5.88,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 1,
+      "measured_compound_derivation_type": "Analytical"
+    },
+    {
+      "id": "FDC:167512",
+      "measured_compound": "COMPONENT:1007",
+      "measured_compound_value": 3.5,
+      "measured_compound_unit": "kcal",
+      "measured_compound_data_points_number": 1,
+      "measured_compound_derivation_type": "Analytical"
+    },
+    {
+      "id": "FDC:167512",
+      "measured_compound": "COMPONENT:1062",
+      "measured_compound_value": 1286.0,
+      "measured_compound_unit": "kJ",
+      "measured_compound_data_points_number": 2,
+      "measured_compound_derivation_type": "Analytical"
+    },
+    {
+      "id": "FDC:167512",
+      "measured_compound": "COMPONENT:1079",
+      "measured_compound_value": 1.2,
+      "measured_compound_unit": "mg",
+      "measured_compound_data_points_number": 0,
+      "measured_compound_derivation_type": "Calculated"
+    },
+    {
+      "id": "FDC:167512",
+      "measured_compound": "COMPONENT:1089",
+      "measured_compound_value": 2.12,
+      "measured_compound_unit": "ug",
+      "measured_compound_data_points_number": 1,
+      "measured_compound_derivation_type": "Estimated"
+    },
+    {
+      "id": "FDC:167513",
+      "measured_compound": "COMPONENT:1003",
+      "measured_compound_value": 4.34,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 2,
+      "measured_compound_derivation_type": "Analytical"
+    },
+    {
+      "id": "FDC:167513",
+      "measured_compound": "COMPONENT:1007",
+      "measured_compound_value": 3.08,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 1,
+      "measured_compound_derivation_type": "Analytical"
+    },
+    {
+      "id": "FDC:167513",
+      "measured_compound": "COMPONENT:1062",
+      "measured_compound_value": 1381.0,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 0,
+      "measured_compound_derivation_type": "Sourced from literature"
+    },
+    {
+      "id": "FDC:167513",
+      "measured_compound": "COMPONENT:1079",
+      "measured_compound_value": 1.4,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 6,
+      "measured_compound_comment": "Samples were obtained from 12 retail stores using a probability-based sampling plan.  Some fish had been treated during processing to retain moisture on thawing.  Untreated fish = 265 mg sodium/100g.",
+      "measured_compound_derivation_type": "Analytical",
+      "laboratory_sample_aggregation_minimum_measured_compound_value": 0.8,
+      "laboratory_sample_aggregation_maximum_measured_compound_value": 2.2,
+      "laboratory_sample_aggregation_median_measured_compound_value": 1.5
+    },
+    {
+      "id": "FDC:167513",
+      "measured_compound": "COMPONENT:1089",
+      "measured_compound_value": 1.93,
+      "measured_compound_unit": "g",
+      "measured_compound_data_points_number": 3,
+      "measured_compound_derivation_type": "Analytical"
+    }
+  ],
+  "@type": "Container"
+}

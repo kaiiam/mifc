@@ -808,7 +808,7 @@
   "source_file": "mifc.yaml",
   "source_file_date": "2023-09-07T17:28:51",
   "source_file_size": 5377,
-  "generation_date": "2023-09-07T17:35:12",
+  "generation_date": "2023-09-07T18:23:06",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",
