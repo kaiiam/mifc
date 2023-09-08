@@ -1,0 +1,27 @@
+foods:
+- id: FDC:392739
+  primary_food_type: FOOD:4601
+  primary_food_type_label: Butter, light, stick, with salt
+  primary_food_type_upc_code: 40822011143
+  food_preparation_state: fresh
+  food_acquisition_city: PITTSBURGH
+  food_acquisition_country: USA
+  food_acquisition_country_subdivision: PA
+  food_acquisition_date: '2015-11-02'
+  food_distributor_city: Cincinnati
+  food_distributor_country: United States of America
+  food_distributor_country_subdivision: Ohio
+  food_expiration_date: '2015-12-07'
+- id: FDC:392740
+  primary_food_type: FOOD:11601
+  primary_food_type_label: Yam, raw
+  primary_food_type_upc_code: 79893110196
+  food_preparation_state: raw
+  food_acquisition_city: TUCSON
+  food_acquisition_country: USA
+  food_acquisition_country_subdivision: AZ
+  food_acquisition_date: '2018-05-22'
+  food_distributor_city: Veracruz
+  food_distributor_country: Mexico
+  food_distributor_country_subdivision: Veracruz
+  food_expiration_date: '2018-04-25'
