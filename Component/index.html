@@ -268,49 +268,49 @@
 <tr>
 <td><a href="../measured_compound/">measured_compound</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A controlled vocabulary term representing an analyzed component from a primar...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_value/">measured_compound_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing an individual instance of a measured food compound value...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_unit/">measured_compound_unit</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A unit code representing the units of measurement in which a measured food co...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_denominator_value/">measured_compound_denominator_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing the denominator value (or portion size) of a measured me...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_denominator_unit/">measured_compound_denominator_unit</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A unit code representing the denominator units of a measured measured_compoun...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_data_points_number/">measured_compound_data_points_number</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td></td>
+<td>An integer representing the number of individual samples that comprise a meas...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_record_date/">measured_compound_record_date</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A datetime value representing a known recorded date pertaining to an analyzed...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../measured_compound_comment/">measured_compound_comment</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A Comment relating to measured component</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -322,25 +322,25 @@
 <tr>
 <td><a href="../laboratory_sample_aggregation_minimum_measured_compound_value/">laboratory_sample_aggregation_minimum_measured_compound_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing the minimum measured compound value of an aggregation of...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../laboratory_sample_aggregation_maximum_measured_compound_value/">laboratory_sample_aggregation_maximum_measured_compound_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing the maximum measured compound value of an aggregation of...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../laboratory_sample_aggregation_median_measured_compound_value/">laboratory_sample_aggregation_median_measured_compound_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing the median measured compound value of an aggregation of ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../laboratory_sample_aggregation_measured_compound_standard_deviation/">laboratory_sample_aggregation_measured_compound_standard_deviation</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td></td>
+<td>A float representing the standard deviation of a measured compound value of a...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -357,7 +357,7 @@
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -445,6 +445,8 @@ is_a: NamedThing
 attributes:
   measured_compound:
     name: measured_compound
+    description: A controlled vocabulary term representing an analyzed component from
+      a primary_food_type food sampled.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound
@@ -454,6 +456,8 @@ attributes:
     range: string
   measured_compound_value:
     name: measured_compound_value
+    description: A float representing an individual instance of a measured food compound
+      value from an individual primary_food_type sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_value
@@ -463,6 +467,8 @@ attributes:
     range: float
   measured_compound_unit:
     name: measured_compound_unit
+    description: A unit code representing the units of measurement in which a measured
+      food compont value from a primary_food_type sample was sampled.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_unit
@@ -472,6 +478,8 @@ attributes:
     range: string
   measured_compound_denominator_value:
     name: measured_compound_denominator_value
+    description: A float representing the denominator value (or portion size) of a
+      measured measured_compound, e.g., 100 (for portion of per 100g).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_denominator_value
@@ -481,6 +489,8 @@ attributes:
     range: float
   measured_compound_denominator_unit:
     name: measured_compound_denominator_unit
+    description: A unit code representing the denominator units of a measured measured_compound,
+      e.g., g (for portion of per 100g).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_denominator_unit
@@ -490,6 +500,9 @@ attributes:
     range: string
   measured_compound_data_points_number:
     name: measured_compound_data_points_number
+    description: An integer representing the number of individual samples that comprise
+      a measured_compound sample. 1 if an individual sample &gt;1 if an aggregation of
+      samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_data_points_number
@@ -499,6 +512,10 @@ attributes:
     range: integer
   measured_compound_record_date:
     name: measured_compound_record_date
+    description: A datetime value representing a known recorded date pertaining to
+      an analyzed sample.
+    comments:
+    - May want to have separate analysis date.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_record_date
@@ -508,6 +525,7 @@ attributes:
     range: string
   measured_compound_comment:
     name: measured_compound_comment
+    description: A Comment relating to measured component.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_comment
@@ -526,6 +544,8 @@ attributes:
     range: string
   laboratory_sample_aggregation_minimum_measured_compound_value:
     name: laboratory_sample_aggregation_minimum_measured_compound_value
+    description: A float representing the minimum measured compound value of an aggregation
+      of samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: laboratory_sample_aggregation_minimum_measured_compound_value
@@ -535,6 +555,8 @@ attributes:
     range: float
   laboratory_sample_aggregation_maximum_measured_compound_value:
     name: laboratory_sample_aggregation_maximum_measured_compound_value
+    description: A float representing the maximum measured compound value of an aggregation
+      of samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: laboratory_sample_aggregation_maximum_measured_compound_value
@@ -544,6 +566,8 @@ attributes:
     range: float
   laboratory_sample_aggregation_median_measured_compound_value:
     name: laboratory_sample_aggregation_median_measured_compound_value
+    description: A float representing the median measured compound value of an aggregation
+      of samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: laboratory_sample_aggregation_median_measured_compound_value
@@ -553,6 +577,8 @@ attributes:
     range: float
   laboratory_sample_aggregation_measured_compound_standard_deviation:
     name: laboratory_sample_aggregation_measured_compound_standard_deviation
+    description: A float representing the standard deviation of a measured compound
+      value of an aggregation of samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: laboratory_sample_aggregation_measured_compound_standard_deviation
@@ -582,7 +608,6 @@ attributes:
     name: id
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    identifier: true
     alias: id
     owner: Component
     domain_of:

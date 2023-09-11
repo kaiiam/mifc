@@ -216,6 +216,22 @@
     class Food
       NamedThing &lt;|-- Food
 
+      Food : food_acquisition_city
+
+      Food : food_acquisition_country
+
+      Food : food_acquisition_country_subdivision
+
+      Food : food_acquisition_date
+
+      Food : food_distributor_city
+
+      Food : food_distributor_country
+
+      Food : food_distributor_country_subdivision
+
+      Food : food_expiration_date
+
       Food : food_preparation_state
 
           Food ..&gt; FoodPreparationState : food_preparation_state
@@ -225,6 +241,8 @@
       Food : primary_food_type
 
       Food : primary_food_type_label
+
+      Food : primary_food_type_upc_code
 
 
 </div>
@@ -249,24 +267,78 @@
 <tr>
 <td><a href="../primary_food_type/">primary_food_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>name of the food e</td>
+<td>A controlled vocabulary term representing the primary food material which was...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../primary_food_type_label/">primary_food_type_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting the label of a controlled vocabulary term representing the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../primary_food_type_upc_code/">primary_food_type_upc_code</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>An integer denoting a Universal Product Code (UPC) barcode</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_preparation_state/">food_preparation_state</a></td>
 <td>0..1 <br/> <a href="../FoodPreparationState/">FoodPreparationState</a></td>
+<td>A controlled vocabulary term representing the preparation state of the primar...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_city/">food_acquisition_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country/">food_acquisition_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country_subdivision/">food_acquisition_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_date/">food_acquisition_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_city/">food_distributor_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country/">food_distributor_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country_subdivision/">food_distributor_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_expiration_date/">food_expiration_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
 <td><a href="../NamedThing/">NamedThing</a></td>
 </tr>
@@ -334,7 +406,16 @@ is_a: NamedThing
 slots:
 - primary_food_type
 - primary_food_type_label
+- primary_food_type_upc_code
 - food_preparation_state
+- food_acquisition_city
+- food_acquisition_country
+- food_acquisition_country_subdivision
+- food_acquisition_date
+- food_distributor_city
+- food_distributor_country
+- food_distributor_country_subdivision
+- food_expiration_date
 class_uri: schema:Food
 
 </code></pre>
@@ -351,8 +432,8 @@ is_a: NamedThing
 attributes:
   primary_food_type:
     name: primary_food_type
-    description: name of the food e.g., using a food vocabulary like USDA's FDC or
-      FoodOn
+    description: A controlled vocabulary term representing the primary food material
+      which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     slot_uri: schema:name
@@ -363,6 +444,8 @@ attributes:
     range: string
   primary_food_type_label:
     name: primary_food_type_label
+    description: A string denoting the label of a controlled vocabulary term representing
+      the primary food material which was sampled.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: primary_food_type_label
@@ -370,8 +453,20 @@ attributes:
     domain_of:
     - Food
     range: string
+  primary_food_type_upc_code:
+    name: primary_food_type_upc_code
+    description: An integer denoting a Universal Product Code (UPC) barcode.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: primary_food_type_upc_code
+    owner: Food
+    domain_of:
+    - Food
+    range: integer
   food_preparation_state:
     name: food_preparation_state
+    description: A controlled vocabulary term representing the preparation state of
+      the primary_food_type (e.g., raw).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_preparation_state
@@ -379,11 +474,82 @@ attributes:
     domain_of:
     - Food
     range: FoodPreparationState
+  food_acquisition_city:
+    name: food_acquisition_city
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_country:
+    name: food_acquisition_country
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_country_subdivision:
+    name: food_acquisition_country_subdivision
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_date:
+    name: food_acquisition_date
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_city:
+    name: food_distributor_city
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_country:
+    name: food_distributor_country
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_country_subdivision:
+    name: food_distributor_country_subdivision
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_expiration_date:
+    name: food_expiration_date
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_expiration_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
   id:
     name: id
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    identifier: true
     alias: id
     owner: Food
     domain_of:

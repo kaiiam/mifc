@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -317,6 +324,7 @@
 
 
 <h1 id="slot-measured_compound_record_date">Slot: measured_compound_record_date</h1>
+<p><em>A datetime value representing a known recorded date pertaining to an analyzed sample.</em></p>
 <p>URI: <a href="https://w3id.org/kaiiam/mifc/measured_compound_record_date">mifc:measured_compound_record_date</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -339,6 +347,10 @@
 <ul>
 <li>Range: <a href="../String/">String</a></li>
 </ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>May want to have separate analysis date.</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -348,6 +360,10 @@
 <details>
 
 <pre><code class="language-yaml">name: measured_compound_record_date
+description: A datetime value representing a known recorded date pertaining to an
+  analyzed sample.
+comments:
+- May want to have separate analysis date.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: measured_compound_record_date
