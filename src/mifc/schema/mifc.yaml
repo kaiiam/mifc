@@ -104,7 +104,7 @@ slots:
   primary_food_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     close_mappings:
-      - PTFI:Specimen Food Product Name
+      - PTFI:Specimen_Food_Product_Name
   primary_food_type_upc_code:
     description: An integer denoting a Universal Product Code (UPC) barcode.
     range: integer
@@ -114,12 +114,12 @@ slots:
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_acquisition_city:
     close_mappings:
-      - PTFI:Collection Location
+      - PTFI:Collection_Location
   food_acquisition_country: # See ISO 3166 for country codes
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
   food_acquisition_date: #TODO add ISO datetime requirement?
     exact_mappings:
-      - PTFI:Collection Date
+      - PTFI:Collection_Date
   food_distributor_city:
   food_distributor_country:
   food_distributor_country_subdivision:
