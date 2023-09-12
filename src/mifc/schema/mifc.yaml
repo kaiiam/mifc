@@ -49,6 +49,9 @@ classes:
      - food_acquisition_country
      - food_acquisition_country_subdivision
      - food_acquisition_date
+     - food_acquisition_location_type
+     - food_acquisition_latitude
+     - food_acquisition_longitude
      - food_distributor_city
      - food_distributor_country
      - food_distributor_country_subdivision
@@ -79,6 +82,7 @@ classes:
       - laboratory_sample_aggregation_measured_compound_standard_deviation
       - analytical_analysis_measurement_protocol_doi
       - analytical_analysis_measurement_method
+      - laboratory_conducting_analytical_analysis
 
   Container:
     tree_root: true
@@ -122,6 +126,21 @@ slots:
   food_acquisition_date: #TODO add ISO datetime requirement?
     exact_mappings:
       - PTFI:Collection_Date
+  food_acquisition_location_type:
+    description: A string describing the type of location from which a food sample was acquired (e.g., a store).
+    range: FoodAcquisitionLocationType
+    exact_mappings:
+      - PTFI:Collection_Type #PTFI has: field, fresh market, small grocery, supermarket, biobank, unknown, other
+  food_acquisition_latitude: #TODO add numeric range constraint
+    description: A float representing the latitude of the place from which the primary_food_type was acquired.
+    range: float
+    exact_mappings:
+      - PTFI:Collection_Latitude
+  food_acquisition_longitude: #TODO add numeric range constraint
+    description: A float representing the longitude of the place from which the primary_food_type was acquired.
+    range: float
+    exact_mappings:
+      - PTFI:Collection_Longitude
   food_distributor_city:
   food_distributor_country:
   food_distributor_country_subdivision:
@@ -172,6 +191,8 @@ slots:
   analytical_analysis_measurement_protocol_doi: # Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
   analytical_analysis_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
     range: AnalyticalMeasurementMethod
+  laboratory_conducting_analytical_analysis:
+    description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
 
 
 
@@ -208,3 +229,12 @@ enums:
       artificially dried:
       heat treated:
       irradiated:
+  FoodAcquisitionLocationType:
+    permissible_values:
+      field:
+      fresh market:
+      small grocery:
+      supermarket:
+      biobank:
+      unknown:
+      other:
