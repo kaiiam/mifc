@@ -17,6 +17,7 @@ prefixes:
   OBI: http://purl.obolibrary.org/obo/OBI_
   example: https://example.org/
   FDC: https://fdc.nal.usda.gov/
+  PTFI: https://foodperiodictable.org/
 default_prefix: mifc
 default_range: string
 
@@ -99,18 +100,27 @@ slots:
   primary_food_type:
     description: A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn
     slot_uri: schema:name
+    exact_mappings:
+      - FDC:NDB_number
   primary_food_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
+    close_mappings:
+      - PTFI:Specimen_Food_Product_Name
   primary_food_type_upc_code:
     description: An integer denoting a Universal Product Code (UPC) barcode.
     range: integer
   food_preparation_state:
     description: A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw).
     range: FoodPreparationState
+    #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_acquisition_city:
+    close_mappings:
+      - PTFI:Collection_Location
   food_acquisition_country: # See ISO 3166 for country codes
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
   food_acquisition_date: #TODO add ISO datetime requirement?
+    exact_mappings:
+      - PTFI:Collection_Date
   food_distributor_city:
   food_distributor_country:
   food_distributor_country_subdivision:
@@ -176,7 +186,7 @@ enums:
       Gravimetric:
       Fluorometric:
       Kjeldahl:
-  FoodPreparationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it.
+  FoodPreparationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
       raw:
       fresh:
