@@ -68,6 +68,7 @@ classes:
     class_uri: schema:Component
     slots:
       - measured_compound
+      - measured_compound_label
       - measured_compound_value
       - measured_compound_unit
       - measured_compound_denominator_value
@@ -173,7 +174,9 @@ slots:
 
   # Component slots
   measured_compound:
-    description: A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled.
+    description: A controlled vocabulary term representing an analyzed component from a primary_food_type food sample.
+  measured_compound_label:
+    description: A string denoting the label of a controlled vocabulary term representing an analyzed component from a primary_food_type food sample.
   measured_compound_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
     description: A float representing an individual instance of a measured food compound value from an individual primary_food_type sample.
     range: float
