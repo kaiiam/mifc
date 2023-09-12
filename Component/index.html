@@ -328,7 +328,7 @@
 <tr>
 <td><a href="../measured_compound_derivation_type/">measured_compound_derivation_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A controlled vocabulary term denoting how the measured_compound was generated...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -364,13 +364,13 @@
 <tr>
 <td><a href="../analytical_analysis_measurement_protocol_doi/">analytical_analysis_measurement_protocol_doi</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting a digital object identifier link to a measurement protocol ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../analytical_analysis_measurement_method/">analytical_analysis_measurement_method</a></td>
 <td>0..1 <br/> <a href="../AnalyticalMeasurementMethod/">AnalyticalMeasurementMethod</a></td>
-<td></td>
+<td>A controlled vocabulary term denoting method used to conduct an analytical an...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -578,6 +578,8 @@ attributes:
     range: string
   measured_compound_derivation_type:
     name: measured_compound_derivation_type
+    description: A controlled vocabulary term denoting how the measured_compound was
+      generated, (e.g., Analytical or Calculated).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_derivation_type
@@ -646,6 +648,8 @@ attributes:
     range: float
   analytical_analysis_measurement_protocol_doi:
     name: analytical_analysis_measurement_protocol_doi
+    description: A string denoting a digital object identifier link to a measurement
+      protocol used to conduct an analytical analysis on a sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: analytical_analysis_measurement_protocol_doi
@@ -655,6 +659,8 @@ attributes:
     range: string
   analytical_analysis_measurement_method:
     name: analytical_analysis_measurement_method
+    description: A controlled vocabulary term denoting method used to conduct an analytical
+      analysis on a sample, (e.g., HPLC).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: analytical_analysis_measurement_method

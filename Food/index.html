@@ -363,25 +363,25 @@
 <tr>
 <td><a href="../food_distributor_city/">food_distributor_city</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting the city of a distributor organization from which a primary...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_distributor_country/">food_distributor_country</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting the country code of a distributor organization from which a...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_distributor_country_subdivision/">food_distributor_country_subdivision</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A string denoting the country subdivsion of a distributor organization from w...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_expiration_date/">food_expiration_date</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td></td>
+<td>A datetime value representing the food expiration data as shown on the labeli...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -665,6 +665,8 @@ attributes:
     range: string
   food_distributor_city:
     name: food_distributor_city
+    description: A string denoting the city of a distributor organization from which
+      a primary_food_type was acquired.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_distributor_city
@@ -674,6 +676,8 @@ attributes:
     range: string
   food_distributor_country:
     name: food_distributor_country
+    description: A string denoting the country code of a distributor organization
+      from which a primary_food_type was acquired.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_distributor_country
@@ -683,6 +687,8 @@ attributes:
     range: string
   food_distributor_country_subdivision:
     name: food_distributor_country_subdivision
+    description: A string denoting the country subdivsion of a distributor organization
+      from which a primary_food_type was acquired, (e.g., state or province).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_distributor_country_subdivision
@@ -692,6 +698,8 @@ attributes:
     range: string
   food_expiration_date:
     name: food_expiration_date
+    description: A datetime value representing the food expiration data as shown on
+      the labeling information of the primary_food_type.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_expiration_date
