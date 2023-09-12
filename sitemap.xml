@@ -136,6 +136,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/food_acquisition_agent_name/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/food_acquisition_city/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -167,6 +172,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/food_acquisition_longitude/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_acquisition_organization/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -232,6 +242,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/laboratory_sample_aliquot_id/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/laboratory_sample_batch_id/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
