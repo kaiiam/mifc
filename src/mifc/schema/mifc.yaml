@@ -58,9 +58,6 @@ classes:
      - food_distributor_country
      - food_distributor_country_subdivision
      - food_expiration_date
-     - laboratory_sample_id
-     - laboratory_sample_aliquot_id
-     - laboratory_sample_batch_id
     id_prefixes:
       - mifc
 
@@ -105,6 +102,13 @@ slots:
   # Common slots
   id:
  #   identifier: true # Forces keys to be unique, we'd want this for food IDs but not for components. Perhaps need to split it into two different slots?
+  laboratory_sample_id:
+    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
+  laboratory_sample_aliquot_id:
+    description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
+  laboratory_sample_batch_id:
+     description: A string denoting an identifier of a batch of laboratory samples analysed together.
+
 
   # Food slots
   primary_food_type:
@@ -166,12 +170,6 @@ slots:
     description: A string denoting the country subdivsion of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
-  laboratory_sample_id:
-    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
-  laboratory_sample_aliquot_id:
-    description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
-  laboratory_sample_batch_id:
-     description: A string denoting an identifier of a batch of laboratory samples analysed together.
 
   # Component slots
   measured_compound:
