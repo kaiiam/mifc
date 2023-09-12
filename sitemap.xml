@@ -291,6 +291,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/measured_compound_label/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/measured_compound_limit_of_quantitation/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
