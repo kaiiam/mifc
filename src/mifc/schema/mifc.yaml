@@ -159,9 +159,13 @@ slots:
     exact_mappings:
       - PTFI:Collector_Organization
   food_distributor_city:
+    description: A string denoting the city of a distributor organization from which a primary_food_type was acquired.
   food_distributor_country:
+    description: A string denoting the country code of a distributor organization from which a primary_food_type was acquired.
   food_distributor_country_subdivision:
+    description: A string denoting the country subdivsion of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
+    description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
   laboratory_sample_id:
     description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
   laboratory_sample_aliquot_id:
@@ -194,6 +198,7 @@ slots:
   measured_compound_comment:
     description: A Comment relating to measured component.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
+    description: A controlled vocabulary term denoting how the measured_compound was generated, (e.g., Analytical or Calculated).
   measured_compound_limit_of_quantitation:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.
@@ -210,8 +215,10 @@ slots:
   laboratory_sample_aggregation_measured_compound_standard_deviation:
     description: A float representing the standard deviation of a measured compound value of an aggregation of samples.
     range: float
-  analytical_analysis_measurement_protocol_doi: # Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
+  analytical_analysis_measurement_protocol_doi: # TODO Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
+    description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
   analytical_analysis_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
+    description: A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC).
     range: AnalyticalMeasurementMethod
   laboratory_conducting_analytical_analysis:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
