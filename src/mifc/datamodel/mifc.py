@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-09-07T18:23:11
+# Generation date: 2023-09-11T17:11:27
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -33,6 +33,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
 FDC = CurieNamespace('FDC', 'https://fdc.nal.usda.gov/')
+OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
 PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
 EXAMPLE = CurieNamespace('example', 'https://example.org/')
@@ -45,16 +46,7 @@ DEFAULT_ = MIFC
 # Types
 
 # Class references
-class NamedThingId(extended_str):
-    pass
 
-
-class FoodId(NamedThingId):
-    pass
-
-
-class ComponentId(NamedThingId):
-    pass
 
 
 @dataclass
@@ -66,13 +58,11 @@ class NamedThing(YAMLRoot):
     class_name: ClassVar[str] = "NamedThing"
     class_model_uri: ClassVar[URIRef] = MIFC.NamedThing
 
-    id: Union[str, NamedThingId] = None
+    id: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, NamedThingId):
-            self.id = NamedThingId(self.id)
+        if self.id is not None and not isinstance(self.id, str):
+            self.id = str(self.id)
 
         super().__post_init__(**kwargs)
 
@@ -89,25 +79,55 @@ class Food(NamedThing):
     class_name: ClassVar[str] = "Food"
     class_model_uri: ClassVar[URIRef] = MIFC.Food
 
-    id: Union[str, FoodId] = None
     primary_food_type: Optional[str] = None
     primary_food_type_label: Optional[str] = None
+    primary_food_type_upc_code: Optional[int] = None
     food_preparation_state: Optional[Union[str, "FoodPreparationState"]] = None
+    food_acquisition_city: Optional[str] = None
+    food_acquisition_country: Optional[str] = None
+    food_acquisition_country_subdivision: Optional[str] = None
+    food_acquisition_date: Optional[str] = None
+    food_distributor_city: Optional[str] = None
+    food_distributor_country: Optional[str] = None
+    food_distributor_country_subdivision: Optional[str] = None
+    food_expiration_date: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, FoodId):
-            self.id = FoodId(self.id)
-
         if self.primary_food_type is not None and not isinstance(self.primary_food_type, str):
             self.primary_food_type = str(self.primary_food_type)
 
         if self.primary_food_type_label is not None and not isinstance(self.primary_food_type_label, str):
             self.primary_food_type_label = str(self.primary_food_type_label)
 
+        if self.primary_food_type_upc_code is not None and not isinstance(self.primary_food_type_upc_code, int):
+            self.primary_food_type_upc_code = int(self.primary_food_type_upc_code)
+
         if self.food_preparation_state is not None and not isinstance(self.food_preparation_state, FoodPreparationState):
             self.food_preparation_state = FoodPreparationState(self.food_preparation_state)
+
+        if self.food_acquisition_city is not None and not isinstance(self.food_acquisition_city, str):
+            self.food_acquisition_city = str(self.food_acquisition_city)
+
+        if self.food_acquisition_country is not None and not isinstance(self.food_acquisition_country, str):
+            self.food_acquisition_country = str(self.food_acquisition_country)
+
+        if self.food_acquisition_country_subdivision is not None and not isinstance(self.food_acquisition_country_subdivision, str):
+            self.food_acquisition_country_subdivision = str(self.food_acquisition_country_subdivision)
+
+        if self.food_acquisition_date is not None and not isinstance(self.food_acquisition_date, str):
+            self.food_acquisition_date = str(self.food_acquisition_date)
+
+        if self.food_distributor_city is not None and not isinstance(self.food_distributor_city, str):
+            self.food_distributor_city = str(self.food_distributor_city)
+
+        if self.food_distributor_country is not None and not isinstance(self.food_distributor_country, str):
+            self.food_distributor_country = str(self.food_distributor_country)
+
+        if self.food_distributor_country_subdivision is not None and not isinstance(self.food_distributor_country_subdivision, str):
+            self.food_distributor_country_subdivision = str(self.food_distributor_country_subdivision)
+
+        if self.food_expiration_date is not None and not isinstance(self.food_expiration_date, str):
+            self.food_expiration_date = str(self.food_expiration_date)
 
         super().__post_init__(**kwargs)
 
@@ -124,7 +144,6 @@ class Component(NamedThing):
     class_name: ClassVar[str] = "Component"
     class_model_uri: ClassVar[URIRef] = MIFC.Component
 
-    id: Union[str, ComponentId] = None
     measured_compound: Optional[str] = None
     measured_compound_value: Optional[float] = None
     measured_compound_unit: Optional[str] = None
@@ -142,11 +161,6 @@ class Component(NamedThing):
     analytical_analysis_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self._is_empty(self.id):
-            self.MissingRequiredField("id")
-        if not isinstance(self.id, ComponentId):
-            self.id = ComponentId(self.id)
-
         if self.measured_compound is not None and not isinstance(self.measured_compound, str):
             self.measured_compound = str(self.measured_compound)
 
@@ -204,13 +218,17 @@ class Container(YAMLRoot):
     class_name: ClassVar[str] = "Container"
     class_model_uri: ClassVar[URIRef] = MIFC.Container
 
-    foods: Optional[Union[Dict[Union[str, FoodId], Union[dict, Food]], List[Union[dict, Food]]]] = empty_dict()
-    components: Optional[Union[Dict[Union[str, ComponentId], Union[dict, Component]], List[Union[dict, Component]]]] = empty_dict()
+    foods: Optional[Union[Union[dict, Food], List[Union[dict, Food]]]] = empty_list()
+    components: Optional[Union[Union[dict, Component], List[Union[dict, Component]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        self._normalize_inlined_as_list(slot_name="foods", slot_type=Food, key_name="id", keyed=True)
+        if not isinstance(self.foods, list):
+            self.foods = [self.foods] if self.foods is not None else []
+        self.foods = [v if isinstance(v, Food) else Food(**as_dict(v)) for v in self.foods]
 
-        self._normalize_inlined_as_list(slot_name="components", slot_type=Component, key_name="id", keyed=True)
+        if not isinstance(self.components, list):
+            self.components = [self.components] if self.components is not None else []
+        self.components = [v if isinstance(v, Component) else Component(**as_dict(v)) for v in self.components]
 
         super().__post_init__(**kwargs)
 
@@ -219,7 +237,8 @@ class Container(YAMLRoot):
 class AnalyticalMeasurementMethod(EnumDefinitionImpl):
 
     HPLC = PermissibleValue(text="HPLC",
-                               description="High performance liquid chromotography")
+                               description="High performance liquid chromotography",
+                               meaning=OBI["0002116"])
     GLC = PermissibleValue(text="GLC",
                              description="gas-liquid chromatography")
     GC = PermissibleValue(text="GC")
@@ -270,7 +289,7 @@ class slots:
     pass
 
 slots.id = Slot(uri=MIFC.id, name="id", curie=MIFC.curie('id'),
-                   model_uri=MIFC.id, domain=None, range=URIRef)
+                   model_uri=MIFC.id, domain=None, range=Optional[str])
 
 slots.primary_food_type = Slot(uri=SCHEMA.name, name="primary_food_type", curie=SCHEMA.curie('name'),
                    model_uri=MIFC.primary_food_type, domain=None, range=Optional[str])
@@ -278,8 +297,35 @@ slots.primary_food_type = Slot(uri=SCHEMA.name, name="primary_food_type", curie=
 slots.primary_food_type_label = Slot(uri=MIFC.primary_food_type_label, name="primary_food_type_label", curie=MIFC.curie('primary_food_type_label'),
                    model_uri=MIFC.primary_food_type_label, domain=None, range=Optional[str])
 
+slots.primary_food_type_upc_code = Slot(uri=MIFC.primary_food_type_upc_code, name="primary_food_type_upc_code", curie=MIFC.curie('primary_food_type_upc_code'),
+                   model_uri=MIFC.primary_food_type_upc_code, domain=None, range=Optional[int])
+
 slots.food_preparation_state = Slot(uri=MIFC.food_preparation_state, name="food_preparation_state", curie=MIFC.curie('food_preparation_state'),
                    model_uri=MIFC.food_preparation_state, domain=None, range=Optional[Union[str, "FoodPreparationState"]])
+
+slots.food_acquisition_city = Slot(uri=MIFC.food_acquisition_city, name="food_acquisition_city", curie=MIFC.curie('food_acquisition_city'),
+                   model_uri=MIFC.food_acquisition_city, domain=None, range=Optional[str])
+
+slots.food_acquisition_country = Slot(uri=MIFC.food_acquisition_country, name="food_acquisition_country", curie=MIFC.curie('food_acquisition_country'),
+                   model_uri=MIFC.food_acquisition_country, domain=None, range=Optional[str])
+
+slots.food_acquisition_country_subdivision = Slot(uri=MIFC.food_acquisition_country_subdivision, name="food_acquisition_country_subdivision", curie=MIFC.curie('food_acquisition_country_subdivision'),
+                   model_uri=MIFC.food_acquisition_country_subdivision, domain=None, range=Optional[str])
+
+slots.food_acquisition_date = Slot(uri=MIFC.food_acquisition_date, name="food_acquisition_date", curie=MIFC.curie('food_acquisition_date'),
+                   model_uri=MIFC.food_acquisition_date, domain=None, range=Optional[str])
+
+slots.food_distributor_city = Slot(uri=MIFC.food_distributor_city, name="food_distributor_city", curie=MIFC.curie('food_distributor_city'),
+                   model_uri=MIFC.food_distributor_city, domain=None, range=Optional[str])
+
+slots.food_distributor_country = Slot(uri=MIFC.food_distributor_country, name="food_distributor_country", curie=MIFC.curie('food_distributor_country'),
+                   model_uri=MIFC.food_distributor_country, domain=None, range=Optional[str])
+
+slots.food_distributor_country_subdivision = Slot(uri=MIFC.food_distributor_country_subdivision, name="food_distributor_country_subdivision", curie=MIFC.curie('food_distributor_country_subdivision'),
+                   model_uri=MIFC.food_distributor_country_subdivision, domain=None, range=Optional[str])
+
+slots.food_expiration_date = Slot(uri=MIFC.food_expiration_date, name="food_expiration_date", curie=MIFC.curie('food_expiration_date'),
+                   model_uri=MIFC.food_expiration_date, domain=None, range=Optional[str])
 
 slots.measured_compound = Slot(uri=MIFC.measured_compound, name="measured_compound", curie=MIFC.curie('measured_compound'),
                    model_uri=MIFC.measured_compound, domain=None, range=Optional[str])
@@ -327,7 +373,7 @@ slots.analytical_analysis_measurement_method = Slot(uri=MIFC.analytical_analysis
                    model_uri=MIFC.analytical_analysis_measurement_method, domain=None, range=Optional[Union[str, "AnalyticalMeasurementMethod"]])
 
 slots.container__foods = Slot(uri=MIFC.foods, name="container__foods", curie=MIFC.curie('foods'),
-                   model_uri=MIFC.container__foods, domain=None, range=Optional[Union[Dict[Union[str, FoodId], Union[dict, Food]], List[Union[dict, Food]]]])
+                   model_uri=MIFC.container__foods, domain=None, range=Optional[Union[Union[dict, Food], List[Union[dict, Food]]]])
 
 slots.container__components = Slot(uri=MIFC.components, name="container__components", curie=MIFC.curie('components'),
-                   model_uri=MIFC.container__components, domain=None, range=Optional[Union[Dict[Union[str, ComponentId], Union[dict, Component]], List[Union[dict, Component]]]])
+                   model_uri=MIFC.container__components, domain=None, range=Optional[Union[Union[dict, Component], List[Union[dict, Component]]]])

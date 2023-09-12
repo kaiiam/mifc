@@ -62,7 +62,7 @@ linkml:Sparqlpath xsd:string
           <analytical_analysis_measurement_protocol_doi> @linkml:String ? ;
           <analytical_analysis_measurement_method> @<AnalyticalMeasurementMethod> ?
        ) ;
-       rdf:type [ schema1:Component ]
+       rdf:type [ schema1:Component ] ?
     )
 }
 
@@ -79,9 +79,18 @@ linkml:Sparqlpath xsd:string
           rdf:type [ <NamedThing> ] ? ;
           schema1:name @linkml:String ? ;
           <primary_food_type_label> @linkml:String ? ;
-          <food_preparation_state> @<FoodPreparationState> ?
+          <primary_food_type_upc_code> @linkml:Integer ? ;
+          <food_preparation_state> @<FoodPreparationState> ? ;
+          <food_acquisition_city> @linkml:String ? ;
+          <food_acquisition_country> @linkml:String ? ;
+          <food_acquisition_country_subdivision> @linkml:String ? ;
+          <food_acquisition_date> @linkml:String ? ;
+          <food_distributor_city> @linkml:String ? ;
+          <food_distributor_country> @linkml:String ? ;
+          <food_distributor_country_subdivision> @linkml:String ? ;
+          <food_expiration_date> @linkml:String ?
        ) ;
-       rdf:type [ schema1:Food ]
+       rdf:type [ schema1:Food ] ?
     )
 }
 
@@ -90,8 +99,8 @@ linkml:Sparqlpath xsd:string
 )
 
 <NamedThing_struct> {
-    (  $<NamedThing_tes> rdf:type . * ;
-       rdf:type [ <NamedThing> ]
+    (  $<NamedThing_tes> <id> @linkml:String ? ;
+       rdf:type [ <NamedThing> ] ?
     )
 }
 

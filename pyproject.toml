@@ -10,6 +10,7 @@ include = ["README.md", "src/mifc/schema", "project"]
 [tool.poetry.dependencies]
 python = "^3.9"
 linkml-runtime = "^1.1.24"
+cruft = "^2.15.0"
 
 [tool.poetry-dynamic-versioning]
 enable = true

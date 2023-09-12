@@ -1,6 +1,6 @@
 type Component
   {
-    id: String!
+    id: String
     measuredCompound: String
     measuredCompoundValue: Float
     measuredCompoundUnit: String
@@ -26,14 +26,23 @@ type Container
 
 type Food
   {
-    id: String!
+    id: String
     primaryFoodType: String
     primaryFoodTypeLabel: String
+    primaryFoodTypeUpcCode: Integer
     foodPreparationState: FoodPreparationState
+    foodAcquisitionCity: String
+    foodAcquisitionCountry: String
+    foodAcquisitionCountrySubdivision: String
+    foodAcquisitionDate: String
+    foodDistributorCity: String
+    foodDistributorCountry: String
+    foodDistributorCountrySubdivision: String
+    foodExpirationDate: String
   }
 
 interface NamedThing
   {
-    id: String!
+    id: String
   }
 

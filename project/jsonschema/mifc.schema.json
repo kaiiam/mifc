@@ -28,48 +28,57 @@
                     "type": "string"
                 },
                 "laboratory_sample_aggregation_maximum_measured_compound_value": {
+                    "description": "A float representing the maximum measured compound value of an aggregation of samples.",
                     "type": "number"
                 },
                 "laboratory_sample_aggregation_measured_compound_standard_deviation": {
+                    "description": "A float representing the standard deviation of a measured compound value of an aggregation of samples.",
                     "type": "number"
                 },
                 "laboratory_sample_aggregation_median_measured_compound_value": {
+                    "description": "A float representing the median measured compound value of an aggregation of samples.",
                     "type": "number"
                 },
                 "laboratory_sample_aggregation_minimum_measured_compound_value": {
+                    "description": "A float representing the minimum measured compound value of an aggregation of samples.",
                     "type": "number"
                 },
                 "measured_compound": {
+                    "description": "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled.",
                     "type": "string"
                 },
                 "measured_compound_comment": {
+                    "description": "A Comment relating to measured component.",
                     "type": "string"
                 },
                 "measured_compound_data_points_number": {
+                    "description": "An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.",
                     "type": "integer"
                 },
                 "measured_compound_denominator_unit": {
+                    "description": "A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g).",
                     "type": "string"
                 },
                 "measured_compound_denominator_value": {
+                    "description": "A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g).",
                     "type": "number"
                 },
                 "measured_compound_derivation_type": {
                     "type": "string"
                 },
                 "measured_compound_record_date": {
+                    "description": "A datetime value representing a known recorded date pertaining to an analyzed sample.",
                     "type": "string"
                 },
                 "measured_compound_unit": {
+                    "description": "A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled.",
                     "type": "string"
                 },
                 "measured_compound_value": {
+                    "description": "A float representing an individual instance of a measured food compound value from an individual primary_food_type sample.",
                     "type": "number"
                 }
             },
-            "required": [
-                "id"
-            ],
             "title": "Component",
             "type": "object"
         },
@@ -97,23 +106,50 @@
             "additionalProperties": false,
             "description": "Metadata about foods",
             "properties": {
+                "food_acquisition_city": {
+                    "type": "string"
+                },
+                "food_acquisition_country": {
+                    "type": "string"
+                },
+                "food_acquisition_country_subdivision": {
+                    "type": "string"
+                },
+                "food_acquisition_date": {
+                    "type": "string"
+                },
+                "food_distributor_city": {
+                    "type": "string"
+                },
+                "food_distributor_country": {
+                    "type": "string"
+                },
+                "food_distributor_country_subdivision": {
+                    "type": "string"
+                },
+                "food_expiration_date": {
+                    "type": "string"
+                },
                 "food_preparation_state": {
-                    "$ref": "#/$defs/FoodPreparationState"
+                    "$ref": "#/$defs/FoodPreparationState",
+                    "description": "A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw)."
                 },
                 "id": {
                     "type": "string"
                 },
                 "primary_food_type": {
-                    "description": "name of the food e.g., using a food vocabulary like USDA's FDC or FoodOn",
+                    "description": "A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn",
                     "type": "string"
                 },
                 "primary_food_type_label": {
+                    "description": "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.",
                     "type": "string"
+                },
+                "primary_food_type_upc_code": {
+                    "description": "An integer denoting a Universal Product Code (UPC) barcode.",
+                    "type": "integer"
                 }
             },
-            "required": [
-                "id"
-            ],
             "title": "Food",
             "type": "object"
         },

@@ -29,5 +29,14 @@ message Food
   string id = 0
   string primaryFoodType = 0
   string primaryFoodTypeLabel = 0
+  integer primaryFoodTypeUpcCode = 0
   foodPreparationState foodPreparationState = 0
+  string foodAcquisitionCity = 0
+  string foodAcquisitionCountry = 0
+  string foodAcquisitionCountrySubdivision = 0
+  string foodAcquisitionDate = 0
+  string foodDistributorCity = 0
+  string foodDistributorCountry = 0
+  string foodDistributorCountrySubdivision = 0
+  string foodExpirationDate = 0
  }
