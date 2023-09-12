@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -435,6 +435,8 @@ attributes:
     description: A controlled vocabulary term representing the primary food material
       which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn
     from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - FDC:NDB_number
     rank: 1000
     slot_uri: schema:name
     alias: primary_food_type
@@ -447,6 +449,8 @@ attributes:
     description: A string denoting the label of a controlled vocabulary term representing
       the primary food material which was sampled.
     from_schema: https://w3id.org/kaiiam/mifc
+    close_mappings:
+    - PTFI:Specimen_Food_Product_Name
     rank: 1000
     alias: primary_food_type_label
     owner: Food
@@ -477,6 +481,8 @@ attributes:
   food_acquisition_city:
     name: food_acquisition_city
     from_schema: https://w3id.org/kaiiam/mifc
+    close_mappings:
+    - PTFI:Collection_Location
     rank: 1000
     alias: food_acquisition_city
     owner: Food
@@ -504,6 +510,8 @@ attributes:
   food_acquisition_date:
     name: food_acquisition_date
     from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collection_Date
     rank: 1000
     alias: food_acquisition_date
     owner: Food

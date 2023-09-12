@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -229,6 +229,8 @@
 
       Component : measured_compound
 
+      Component : measured_compound_analysis_date
+
       Component : measured_compound_comment
 
       Component : measured_compound_data_points_number
@@ -238,6 +240,8 @@
       Component : measured_compound_denominator_value
 
       Component : measured_compound_derivation_type
+
+      Component : measured_compound_limit_of_quantitation
 
       Component : measured_compound_record_date
 
@@ -308,6 +312,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../measured_compound_analysis_date/">measured_compound_analysis_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing the date in which an measured_compound was anal...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../measured_compound_comment/">measured_compound_comment</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A Comment relating to measured component</td>
@@ -317,6 +327,12 @@
 <td><a href="../measured_compound_derivation_type/">measured_compound_derivation_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../measured_compound_limit_of_quantitation/">measured_compound_limit_of_quantitation</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string representing the lowest analyte concentration likely to be reliably ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -423,8 +439,10 @@ slots:
 - measured_compound_denominator_unit
 - measured_compound_data_points_number
 - measured_compound_record_date
+- measured_compound_analysis_date
 - measured_compound_comment
 - measured_compound_derivation_type
+- measured_compound_limit_of_quantitation
 - laboratory_sample_aggregation_minimum_measured_compound_value
 - laboratory_sample_aggregation_maximum_measured_compound_value
 - laboratory_sample_aggregation_median_measured_compound_value
@@ -515,10 +533,26 @@ attributes:
     description: A datetime value representing a known recorded date pertaining to
       an analyzed sample.
     comments:
-    - May want to have separate analysis date.
+    - Allows for ambiguity of date record relative to measured_compound_analysis_date.
+      Use this if a date for a record is know but it isn't specifically the date of
+      analysis.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_record_date
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  measured_compound_analysis_date:
+    name: measured_compound_analysis_date
+    description: A datetime value representing the date in which an measured_compound
+      was analyzed.
+    comments:
+    - Use this field if the exact date of analysis is know if there is date ambiguity
+      use measured_compound_record_date.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_analysis_date
     owner: Component
     domain_of:
     - Component
@@ -538,6 +572,21 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_derivation_type
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  measured_compound_limit_of_quantitation:
+    name: measured_compound_limit_of_quantitation
+    description: A string representing the lowest analyte concentration likely to
+      be reliably distinguished from the Limit of Blank (LoB) and at which detection
+      is feasible. Where LoB is the highest apparent analyte concentration expected
+      to be found when replicates of a blank sample containing no analyte are tested.
+    comments:
+    - definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: measured_compound_limit_of_quantitation
     owner: Component
     domain_of:
     - Component
