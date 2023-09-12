@@ -246,6 +246,10 @@
 
       Food : id
 
+      Food : laboratory_sample_aliquot_id
+
+      Food : laboratory_sample_id
+
       Food : primary_food_type
 
       Food : primary_food_type_label
@@ -363,6 +367,18 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../laboratory_sample_id/">laboratory_sample_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a laboratory sample which was prepared fro...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aliquot_id/">laboratory_sample_aliquot_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a unique aliquot of a laboratory sample wh...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../id/">id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
@@ -445,6 +461,8 @@ slots:
 - food_distributor_country
 - food_distributor_country_subdivision
 - food_expiration_date
+- laboratory_sample_id
+- laboratory_sample_aliquot_id
 class_uri: schema:Food
 
 </code></pre>
@@ -618,6 +636,28 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_expiration_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  laboratory_sample_id:
+    name: laboratory_sample_id
+    description: A string denoting an identifier of a laboratory sample which was
+      prepared from a food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_id
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  laboratory_sample_aliquot_id:
+    name: laboratory_sample_aliquot_id
+    description: A string denoting an identifier of a unique aliquot of a laboratory
+      sample which was prepared from a food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aliquot_id
     owner: Food
     domain_of:
     - Food
