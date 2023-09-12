@@ -124,15 +124,19 @@ slots:
     range: FoodPreparationState
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_acquisition_city:
+    description: A string denoting the city in which a primary_food_type was acquired.
     close_mappings:
       - PTFI:Collection_Location
   food_acquisition_country: # See ISO 3166 for country codes
+    description: A string denoting the country code from which a primary_food_type was acquired.
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
+    description: A string denoting the country subdivsion from which a primary_food_type was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
+    description: A datetime value representing the date a primary_food_type was acquired.
     exact_mappings:
       - PTFI:Collection_Date
   food_acquisition_location_type:
-    description: A string describing the type of location from which a food sample was acquired (e.g., a supermarket).
+    description: A string describing the type of location from which a primary_food_type sample was acquired (e.g., a supermarket).
     range: FoodAcquisitionLocationType #Can maybe set default to unknown
     exact_mappings:
       - PTFI:Collection_Type
