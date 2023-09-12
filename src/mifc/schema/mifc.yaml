@@ -32,6 +32,9 @@ classes:
     abstract: true     ## should not be instantiated directly
     slots:
      - id
+     - laboratory_sample_id
+     - laboratory_sample_aliquot_id
+     - laboratory_sample_batch_id
     close_mappings:
      - schema:Thing
 
