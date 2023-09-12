@@ -53,6 +53,7 @@ classes:
      - food_acquisition_latitude
      - food_acquisition_longitude
      - food_acquisition_agent_name
+     - food_acquisition_organization
      - food_distributor_city
      - food_distributor_country
      - food_distributor_country_subdivision
@@ -149,6 +150,10 @@ slots:
     description: A string denoting the name of the agent (person, device or other type of service) that acquired the primary_food_type.
     exact_mappings:
       - PTFI:Collector_Name
+  food_acquisition_organization:
+    description: A string denoting the name of the organization responsible for acquired the primary_food_type.
+    exact_mappings:
+      - PTFI:Collector_Organization
   food_distributor_city:
   food_distributor_country:
   food_distributor_country_subdivision:
