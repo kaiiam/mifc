@@ -58,6 +58,7 @@ classes:
      - food_expiration_date
      - laboratory_sample_id
      - laboratory_sample_aliquot_id
+     - laboratory_sample_batch_id
     id_prefixes:
       - mifc
 
@@ -151,6 +152,8 @@ slots:
     description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
   laboratory_sample_aliquot_id:
     description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
+  laboratory_sample_batch_id:
+     description: A string denoting an identifier of a batch of laboratory samples analysed together.
 
   # Component slots
   measured_compound:
