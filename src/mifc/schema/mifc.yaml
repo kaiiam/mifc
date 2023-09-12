@@ -69,6 +69,7 @@ classes:
       - measured_compound_denominator_unit
       - measured_compound_data_points_number
       - measured_compound_record_date
+      - measured_compound_analysis_date
       - measured_compound_comment
       - measured_compound_derivation_type
       - measured_compound_limit_of_quantitation
@@ -145,7 +146,10 @@ slots:
     range: integer
   measured_compound_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
     description: A datetime value representing a known recorded date pertaining to an analyzed sample.
-    comments: May want to have separate analysis date.
+    comments: Allows for ambiguity of date record relative to measured_compound_analysis_date. Use this if a date for a record is know but it isn't specifically the date of analysis.
+  measured_compound_analysis_date:
+    description: A datetime value representing the date in which an measured_compound was analyzed.
+    comments: Use this field if the exact date of analysis is know if there is date ambiguity use measured_compound_record_date.
   measured_compound_comment:
     description: A Comment relating to measured component.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
