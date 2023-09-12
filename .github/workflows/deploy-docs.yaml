@@ -28,14 +28,16 @@ jobs:
         run: |
           mkdir -p docs
           touch docs/.nojekyll
-<<<<<<< ours
-          cp src/docs/*md docs
-          poetry run gen-doc -d docs src/mifc/schema/mifc.yaml
+          poetry run gen-doc -d docs src/cmdr/schema/cmdr.yaml
           poetry run mkdocs gh-deploy
-=======
-          make gendoc
-          ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
-          make mkd-gh-deploy
-
-...
->>>>>>> theirs
+#<<<<<<< ours
+#          cp src/docs/*md docs
+#          poetry run gen-doc -d docs src/mifc/schema/mifc.yaml
+#          poetry run mkdocs gh-deploy
+#=======
+#          make gendoc
+#          ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
+#          make mkd-gh-deploy
+#
+#...
+#>>>>>>> theirs
