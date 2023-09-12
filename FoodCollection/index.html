@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kaiiam.github.io/mifc/Container/" rel="canonical"/>
+<link href="https://kaiiam.github.io/mifc/FoodCollection/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Container - mifc</title>
+<title>Class: FoodCollection - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-container">
+<a class="md-skip" href="#class-foodcollection">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Container
+              Class: FoodCollection
             
           </span>
 </div>
@@ -191,20 +191,17 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Container.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/FoodCollection.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-container">Class: Container</h1>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/Container">mifc:Container</a></p>
+<h1 id="class-foodcollection">Class: FoodCollection</h1>
+<p><em>A holder for Food objects</em></p>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/FoodCollection">mifc:FoodCollection</a></p>
 <div class="mermaid"> classDiagram
-    class Container
-      Container : components
+    class FoodCollection
+      FoodCollection : entries
 
-          Container ..&gt; Component : components
-
-      Container : foods
-
-          Container ..&gt; Food : foods
+          FoodCollection ..&gt; Food : entries
 
 
 </div>
@@ -221,14 +218,8 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../foods/">foods</a></td>
+<td><a href="../entries/">entries</a></td>
 <td>0..* <br/> <a href="../Food/">Food</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../components/">components</a></td>
-<td>0..* <br/> <a href="../Component/">Component</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -250,11 +241,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:Container</td>
+<td>mifc:FoodCollection</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:Container</td>
+<td>mifc:FoodCollection</td>
 </tr>
 </tbody>
 </table>
@@ -262,60 +253,40 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Container
+<pre><code class="language-yaml">name: FoodCollection
+description: A holder for Food objects
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 attributes:
-  foods:
-    name: foods
+  entries:
+    name: entries
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     multivalued: true
     range: Food
     inlined: true
-    inlined_as_list: true
-  components:
-    name: components
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    multivalued: true
-    range: Component
-    inlined: true
-    inlined_as_list: true
 tree_root: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Container
+<pre><code class="language-yaml">name: FoodCollection
+description: A holder for Food objects
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 attributes:
-  foods:
-    name: foods
+  entries:
+    name: entries
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     multivalued: true
-    alias: foods
-    owner: Container
+    alias: entries
+    owner: FoodCollection
     domain_of:
-    - Container
+    - FoodCollection
     range: Food
     inlined: true
-    inlined_as_list: true
-  components:
-    name: components
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    multivalued: true
-    alias: components
-    owner: Container
-    domain_of:
-    - Container
-    range: Component
-    inlined: true
-    inlined_as_list: true
 tree_root: true
 
 </code></pre>

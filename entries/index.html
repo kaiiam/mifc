@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_acquisition_agent_name/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/entries/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: food_acquisition_agent_name - mifc</title>
+        <title>Slot: entries - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-food_acquisition_agent_name" class="md-skip">
+        <a href="#slot-entries" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: food_acquisition_agent_name
+              Slot: entries
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about.md" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         About
       </a>
     </li>
@@ -310,15 +310,14 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_acquisition_agent_name.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/entries.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-food_acquisition_agent_name">Slot: food_acquisition_agent_name</h1>
-<p><em>A string denoting the name of the agent (person, device or other type of service) that acquired the primary_food_type.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_acquisition_agent_name">mifc:food_acquisition_agent_name</a></p>
+<h1 id="slot-entries">Slot: entries</h1>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/entries">mifc:entries</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +330,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Food/">Food</a></td>
-<td>Metadata about foods</td>
+<td><a href="../FoodCollection/">FoodCollection</a></td>
+<td>A holder for Food objects</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../Food/">Food</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,17 +348,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: food_acquisition_agent_name
-description: A string denoting the name of the agent (person, device or other type
-  of service) that acquired the primary_food_type.
+<pre><code class="language-yaml">name: entries
 from_schema: https://w3id.org/kaiiam/mifc
-exact_mappings:
-- PTFI:Collector_Name
 rank: 1000
-alias: food_acquisition_agent_name
+multivalued: true
+alias: entries
+owner: FoodCollection
 domain_of:
-- Food
-range: string
+- FoodCollection
+range: Food
+inlined: true
 
 </code></pre>
 

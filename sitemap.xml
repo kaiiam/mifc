@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/FoodCollection/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/FoodPreparationState/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -101,6 +106,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/PersonStatus/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/String/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -121,6 +131,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/about/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/age_in_years/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/analytical_analysis_measurement_method/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -131,12 +151,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/birth_date/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/components/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/food_acquisition_agent_name/</loc>
+         <loc>https://kaiiam.github.io/mifc/description/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/entries/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -172,11 +202,6 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/food_acquisition_longitude/</loc>
-         <lastmod>2023-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/food_acquisition_organization/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -241,21 +266,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aliquot_id/</loc>
-         <lastmod>2023-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_batch_id/</loc>
-         <lastmod>2023-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_id/</loc>
-         <lastmod>2023-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/measured_compound/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -291,11 +301,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_label/</loc>
-         <lastmod>2023-09-12</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/measured_compound_limit_of_quantitation/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -321,6 +326,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/name/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/primary_email/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/primary_food_type/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
@@ -332,6 +347,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/primary_food_type_upc_code/</loc>
+         <lastmod>2023-09-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/vital_status/</loc>
          <lastmod>2023-09-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
