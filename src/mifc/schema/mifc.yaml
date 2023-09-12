@@ -70,6 +70,7 @@ classes:
       - measured_compound_record_date
       - measured_compound_comment
       - measured_compound_derivation_type
+      - measured_compound_limit_of_quantitation
       - laboratory_sample_aggregation_minimum_measured_compound_value
       - laboratory_sample_aggregation_maximum_measured_compound_value
       - laboratory_sample_aggregation_median_measured_compound_value
@@ -138,6 +139,10 @@ slots:
   measured_compound_comment:
     description: A Comment relating to measured component.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
+  measured_compound_limit_of_quantitation:
+    range: string
+    description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.
+    comments: definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/
   laboratory_sample_aggregation_minimum_measured_compound_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of samples.
     range: float
