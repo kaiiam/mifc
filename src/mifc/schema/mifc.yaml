@@ -89,6 +89,7 @@ classes:
       - analytical_analysis_measurement_protocol_doi
       - analytical_analysis_measurement_method
       - laboratory_conducting_analytical_analysis
+      - compound_value_remeasured_for_quality_control
 
   Container:
     tree_root: true
@@ -226,6 +227,10 @@ slots:
     range: AnalyticalMeasurementMethod
   laboratory_conducting_analytical_analysis:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
+  compound_value_remeasured_for_quality_control:
+    description: A boolean value denoting TRUE if a measured_compound_value was measured more than once for internal laboratory quality control purposes.
+    range: boolean
+#    is_a: boolean_slot
 
 
 
