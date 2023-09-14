@@ -42,6 +42,10 @@
     {
       "prefix_prefix": "FDC",
       "prefix_reference": "https://fdc.nal.usda.gov/"
+    },
+    {
+      "prefix_prefix": "PTFI",
+      "prefix_reference": "https://foodperiodictable.org/"
     }
   ],
   "default_prefix": "mifc",
@@ -442,6 +446,34 @@
           "text": "irradiated"
         }
       ]
+    },
+    {
+      "name": "FoodAcquisitionLocationType",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "permissible_values": [
+        {
+          "text": "field"
+        },
+        {
+          "text": "fresh market"
+        },
+        {
+          "text": "small grocery"
+        },
+        {
+          "text": "supermarket"
+        },
+        {
+          "text": "biobank"
+        },
+        {
+          "text": "unknown"
+        },
+        {
+          "text": "other"
+        }
+      ]
     }
   ],
   "slots": [
@@ -465,6 +497,9 @@
       "mappings": [
         "http://schema.org/name"
       ],
+      "exact_mappings": [
+        "https://fdc.nal.usda.gov/NDB_number"
+      ],
       "slot_uri": "http://schema.org/name",
       "owner": "Food",
       "domain_of": [
@@ -478,6 +513,9 @@
       "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
       "description": "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
+      "close_mappings": [
+        "https://foodperiodictable.org/Specimen_Food_Product_Name"
+      ],
       "slot_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
       "owner": "Food",
       "domain_of": [
@@ -516,6 +554,9 @@
       "name": "food_acquisition_city",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_city",
       "from_schema": "https://w3id.org/kaiiam/mifc",
+      "close_mappings": [
+        "https://foodperiodictable.org/Collection_Location"
+      ],
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_city",
       "owner": "Food",
       "domain_of": [
@@ -552,12 +593,63 @@
       "name": "food_acquisition_date",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_date",
       "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collection_Date"
+      ],
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_date",
       "owner": "Food",
       "domain_of": [
         "Food"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_acquisition_location_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_location_type",
+      "description": "A string describing the type of location from which a food sample was acquired (e.g., a store).",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collection_Type"
+      ],
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_location_type",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "FoodAcquisitionLocationType",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_acquisition_latitude",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_latitude",
+      "description": "A float representing the latitude of the place from which the primary_food_type was acquired.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collection_Latitude"
+      ],
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_latitude",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "float",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_acquisition_longitude",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_longitude",
+      "description": "A float representing the longitude of the place from which the primary_food_type was acquired.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collection_Longitude"
+      ],
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_longitude",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "float",
       "@type": "SlotDefinition"
     },
     {
@@ -691,10 +783,26 @@
       "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
       "description": "A datetime value representing a known recorded date pertaining to an analyzed sample.",
       "comments": [
-        "May want to have separate analysis date."
+        "Allows for ambiguity of date record relative to measured_compound_analysis_date. Use this if a date for a record is know but it isn't specifically the date of analysis."
       ],
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_analysis_date",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_analysis_date",
+      "description": "A datetime value representing the date in which an measured_compound was analyzed.",
+      "comments": [
+        "Use this field if the exact date of analysis is know if there is date ambiguity use measured_compound_record_date."
+      ],
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_analysis_date",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -720,6 +828,22 @@
       "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "measured_compound_limit_of_quantitation",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_limit_of_quantitation",
+      "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.",
+      "comments": [
+        "definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/"
+      ],
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_limit_of_quantitation",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -804,6 +928,19 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "laboratory_conducting_analytical_analysis",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_conducting_analytical_analysis",
+      "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_conducting_analytical_analysis",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "container__foods",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/foods",
@@ -872,6 +1009,9 @@
         "food_acquisition_country",
         "food_acquisition_country_subdivision",
         "food_acquisition_date",
+        "food_acquisition_location_type",
+        "food_acquisition_latitude",
+        "food_acquisition_longitude",
         "food_distributor_city",
         "food_distributor_country",
         "food_distributor_country_subdivision",
@@ -899,14 +1039,17 @@
         "measured_compound_denominator_unit",
         "measured_compound_data_points_number",
         "measured_compound_record_date",
+        "measured_compound_analysis_date",
         "measured_compound_comment",
         "measured_compound_derivation_type",
+        "measured_compound_limit_of_quantitation",
         "laboratory_sample_aggregation_minimum_measured_compound_value",
         "laboratory_sample_aggregation_maximum_measured_compound_value",
         "laboratory_sample_aggregation_median_measured_compound_value",
         "laboratory_sample_aggregation_measured_compound_standard_deviation",
         "analytical_analysis_measurement_protocol_doi",
-        "analytical_analysis_measurement_method"
+        "analytical_analysis_measurement_method",
+        "laboratory_conducting_analytical_analysis"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Component",
@@ -944,9 +1087,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2023-09-11T17:10:54",
-  "source_file_size": 8116,
-  "generation_date": "2023-09-11T17:11:21",
+  "source_file_date": "2023-09-12T15:38:44",
+  "source_file_size": 10908,
+  "generation_date": "2023-09-12T15:39:23",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

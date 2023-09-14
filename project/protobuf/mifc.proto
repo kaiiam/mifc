@@ -9,14 +9,17 @@ message Component
   string measuredCompoundDenominatorUnit = 0
   integer measuredCompoundDataPointsNumber = 0
   string measuredCompoundRecordDate = 0
+  string measuredCompoundAnalysisDate = 0
   string measuredCompoundComment = 0
   string measuredCompoundDerivationType = 0
+  string measuredCompoundLimitOfQuantitation = 0
   float laboratorySampleAggregationMinimumMeasuredCompoundValue = 0
   float laboratorySampleAggregationMaximumMeasuredCompoundValue = 0
   float laboratorySampleAggregationMedianMeasuredCompoundValue = 0
   float laboratorySampleAggregationMeasuredCompoundStandardDeviation = 0
   string analyticalAnalysisMeasurementProtocolDoi = 0
   analyticalMeasurementMethod analyticalAnalysisMeasurementMethod = 0
+  string laboratoryConductingAnalyticalAnalysis = 0
  }
 message Container
  {
@@ -35,6 +38,9 @@ message Food
   string foodAcquisitionCountry = 0
   string foodAcquisitionCountrySubdivision = 0
   string foodAcquisitionDate = 0
+  foodAcquisitionLocationType foodAcquisitionLocationType = 0
+  float foodAcquisitionLatitude = 0
+  float foodAcquisitionLongitude = 0
   string foodDistributorCity = 0
   string foodDistributorCountry = 0
   string foodDistributorCountrySubdivision = 0

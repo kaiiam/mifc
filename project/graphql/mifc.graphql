@@ -8,14 +8,17 @@ type Component
     measuredCompoundDenominatorUnit: String
     measuredCompoundDataPointsNumber: Integer
     measuredCompoundRecordDate: String
+    measuredCompoundAnalysisDate: String
     measuredCompoundComment: String
     measuredCompoundDerivationType: String
+    measuredCompoundLimitOfQuantitation: String
     laboratorySampleAggregationMinimumMeasuredCompoundValue: Float
     laboratorySampleAggregationMaximumMeasuredCompoundValue: Float
     laboratorySampleAggregationMedianMeasuredCompoundValue: Float
     laboratorySampleAggregationMeasuredCompoundStandardDeviation: Float
     analyticalAnalysisMeasurementProtocolDoi: String
     analyticalAnalysisMeasurementMethod: AnalyticalMeasurementMethod
+    laboratoryConductingAnalyticalAnalysis: String
   }
 
 type Container
@@ -35,6 +38,9 @@ type Food
     foodAcquisitionCountry: String
     foodAcquisitionCountrySubdivision: String
     foodAcquisitionDate: String
+    foodAcquisitionLocationType: FoodAcquisitionLocationType
+    foodAcquisitionLatitude: Float
+    foodAcquisitionLongitude: Float
     foodDistributorCity: String
     foodDistributorCountry: String
     foodDistributorCountrySubdivision: String

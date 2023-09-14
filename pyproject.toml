@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mifc"
-version = "0.1.0"
+version = "0.0.0.post62.dev0+aa92aef"
 description = "A minimum information standard checklist formalizing the description of food composition data and related metadata."
 authors = ["Kai Blumberg <kblumberg@email.arizona.edu>"]
 license = "MIT"
@@ -13,7 +13,7 @@ linkml-runtime = "^1.1.24"
 cruft = "^2.15.0"
 
 [tool.poetry-dynamic-versioning]
-enable = true
+enable = false
 vcs = "git"
 style = "pep440"
 

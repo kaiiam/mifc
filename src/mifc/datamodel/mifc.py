@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-09-11T17:11:27
+# Generation date: 2023-09-12T15:39:28
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -35,6 +35,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 FDC = CurieNamespace('FDC', 'https://fdc.nal.usda.gov/')
 OBI = CurieNamespace('OBI', 'http://purl.obolibrary.org/obo/OBI_')
 PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
+PTFI = CurieNamespace('PTFI', 'https://foodperiodictable.org/')
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
 EXAMPLE = CurieNamespace('example', 'https://example.org/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
@@ -87,6 +88,9 @@ class Food(NamedThing):
     food_acquisition_country: Optional[str] = None
     food_acquisition_country_subdivision: Optional[str] = None
     food_acquisition_date: Optional[str] = None
+    food_acquisition_location_type: Optional[Union[str, "FoodAcquisitionLocationType"]] = None
+    food_acquisition_latitude: Optional[float] = None
+    food_acquisition_longitude: Optional[float] = None
     food_distributor_city: Optional[str] = None
     food_distributor_country: Optional[str] = None
     food_distributor_country_subdivision: Optional[str] = None
@@ -116,6 +120,15 @@ class Food(NamedThing):
 
         if self.food_acquisition_date is not None and not isinstance(self.food_acquisition_date, str):
             self.food_acquisition_date = str(self.food_acquisition_date)
+
+        if self.food_acquisition_location_type is not None and not isinstance(self.food_acquisition_location_type, FoodAcquisitionLocationType):
+            self.food_acquisition_location_type = FoodAcquisitionLocationType(self.food_acquisition_location_type)
+
+        if self.food_acquisition_latitude is not None and not isinstance(self.food_acquisition_latitude, float):
+            self.food_acquisition_latitude = float(self.food_acquisition_latitude)
+
+        if self.food_acquisition_longitude is not None and not isinstance(self.food_acquisition_longitude, float):
+            self.food_acquisition_longitude = float(self.food_acquisition_longitude)
 
         if self.food_distributor_city is not None and not isinstance(self.food_distributor_city, str):
             self.food_distributor_city = str(self.food_distributor_city)
@@ -151,14 +164,17 @@ class Component(NamedThing):
     measured_compound_denominator_unit: Optional[str] = None
     measured_compound_data_points_number: Optional[int] = None
     measured_compound_record_date: Optional[str] = None
+    measured_compound_analysis_date: Optional[str] = None
     measured_compound_comment: Optional[str] = None
     measured_compound_derivation_type: Optional[str] = None
+    measured_compound_limit_of_quantitation: Optional[str] = None
     laboratory_sample_aggregation_minimum_measured_compound_value: Optional[float] = None
     laboratory_sample_aggregation_maximum_measured_compound_value: Optional[float] = None
     laboratory_sample_aggregation_median_measured_compound_value: Optional[float] = None
     laboratory_sample_aggregation_measured_compound_standard_deviation: Optional[float] = None
     analytical_analysis_measurement_protocol_doi: Optional[str] = None
     analytical_analysis_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
+    laboratory_conducting_analytical_analysis: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self.measured_compound is not None and not isinstance(self.measured_compound, str):
@@ -182,11 +198,17 @@ class Component(NamedThing):
         if self.measured_compound_record_date is not None and not isinstance(self.measured_compound_record_date, str):
             self.measured_compound_record_date = str(self.measured_compound_record_date)
 
+        if self.measured_compound_analysis_date is not None and not isinstance(self.measured_compound_analysis_date, str):
+            self.measured_compound_analysis_date = str(self.measured_compound_analysis_date)
+
         if self.measured_compound_comment is not None and not isinstance(self.measured_compound_comment, str):
             self.measured_compound_comment = str(self.measured_compound_comment)
 
         if self.measured_compound_derivation_type is not None and not isinstance(self.measured_compound_derivation_type, str):
             self.measured_compound_derivation_type = str(self.measured_compound_derivation_type)
+
+        if self.measured_compound_limit_of_quantitation is not None and not isinstance(self.measured_compound_limit_of_quantitation, str):
+            self.measured_compound_limit_of_quantitation = str(self.measured_compound_limit_of_quantitation)
 
         if self.laboratory_sample_aggregation_minimum_measured_compound_value is not None and not isinstance(self.laboratory_sample_aggregation_minimum_measured_compound_value, float):
             self.laboratory_sample_aggregation_minimum_measured_compound_value = float(self.laboratory_sample_aggregation_minimum_measured_compound_value)
@@ -205,6 +227,9 @@ class Component(NamedThing):
 
         if self.analytical_analysis_measurement_method is not None and not isinstance(self.analytical_analysis_measurement_method, AnalyticalMeasurementMethod):
             self.analytical_analysis_measurement_method = AnalyticalMeasurementMethod(self.analytical_analysis_measurement_method)
+
+        if self.laboratory_conducting_analytical_analysis is not None and not isinstance(self.laboratory_conducting_analytical_analysis, str):
+            self.laboratory_conducting_analytical_analysis = str(self.laboratory_conducting_analytical_analysis)
 
         super().__post_init__(**kwargs)
 
@@ -284,6 +309,25 @@ class FoodPreparationState(EnumDefinitionImpl):
         setattr(cls, "heat treated",
                 PermissibleValue(text="heat treated") )
 
+class FoodAcquisitionLocationType(EnumDefinitionImpl):
+
+    field = PermissibleValue(text="field")
+    supermarket = PermissibleValue(text="supermarket")
+    biobank = PermissibleValue(text="biobank")
+    unknown = PermissibleValue(text="unknown")
+    other = PermissibleValue(text="other")
+
+    _defn = EnumDefinition(
+        name="FoodAcquisitionLocationType",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "fresh market",
+                PermissibleValue(text="fresh market") )
+        setattr(cls, "small grocery",
+                PermissibleValue(text="small grocery") )
+
 # Slots
 class slots:
     pass
@@ -314,6 +358,15 @@ slots.food_acquisition_country_subdivision = Slot(uri=MIFC.food_acquisition_coun
 
 slots.food_acquisition_date = Slot(uri=MIFC.food_acquisition_date, name="food_acquisition_date", curie=MIFC.curie('food_acquisition_date'),
                    model_uri=MIFC.food_acquisition_date, domain=None, range=Optional[str])
+
+slots.food_acquisition_location_type = Slot(uri=MIFC.food_acquisition_location_type, name="food_acquisition_location_type", curie=MIFC.curie('food_acquisition_location_type'),
+                   model_uri=MIFC.food_acquisition_location_type, domain=None, range=Optional[Union[str, "FoodAcquisitionLocationType"]])
+
+slots.food_acquisition_latitude = Slot(uri=MIFC.food_acquisition_latitude, name="food_acquisition_latitude", curie=MIFC.curie('food_acquisition_latitude'),
+                   model_uri=MIFC.food_acquisition_latitude, domain=None, range=Optional[float])
+
+slots.food_acquisition_longitude = Slot(uri=MIFC.food_acquisition_longitude, name="food_acquisition_longitude", curie=MIFC.curie('food_acquisition_longitude'),
+                   model_uri=MIFC.food_acquisition_longitude, domain=None, range=Optional[float])
 
 slots.food_distributor_city = Slot(uri=MIFC.food_distributor_city, name="food_distributor_city", curie=MIFC.curie('food_distributor_city'),
                    model_uri=MIFC.food_distributor_city, domain=None, range=Optional[str])
@@ -348,11 +401,17 @@ slots.measured_compound_data_points_number = Slot(uri=MIFC.measured_compound_dat
 slots.measured_compound_record_date = Slot(uri=MIFC.measured_compound_record_date, name="measured_compound_record_date", curie=MIFC.curie('measured_compound_record_date'),
                    model_uri=MIFC.measured_compound_record_date, domain=None, range=Optional[str])
 
+slots.measured_compound_analysis_date = Slot(uri=MIFC.measured_compound_analysis_date, name="measured_compound_analysis_date", curie=MIFC.curie('measured_compound_analysis_date'),
+                   model_uri=MIFC.measured_compound_analysis_date, domain=None, range=Optional[str])
+
 slots.measured_compound_comment = Slot(uri=MIFC.measured_compound_comment, name="measured_compound_comment", curie=MIFC.curie('measured_compound_comment'),
                    model_uri=MIFC.measured_compound_comment, domain=None, range=Optional[str])
 
 slots.measured_compound_derivation_type = Slot(uri=MIFC.measured_compound_derivation_type, name="measured_compound_derivation_type", curie=MIFC.curie('measured_compound_derivation_type'),
                    model_uri=MIFC.measured_compound_derivation_type, domain=None, range=Optional[str])
+
+slots.measured_compound_limit_of_quantitation = Slot(uri=MIFC.measured_compound_limit_of_quantitation, name="measured_compound_limit_of_quantitation", curie=MIFC.curie('measured_compound_limit_of_quantitation'),
+                   model_uri=MIFC.measured_compound_limit_of_quantitation, domain=None, range=Optional[str])
 
 slots.laboratory_sample_aggregation_minimum_measured_compound_value = Slot(uri=MIFC.laboratory_sample_aggregation_minimum_measured_compound_value, name="laboratory_sample_aggregation_minimum_measured_compound_value", curie=MIFC.curie('laboratory_sample_aggregation_minimum_measured_compound_value'),
                    model_uri=MIFC.laboratory_sample_aggregation_minimum_measured_compound_value, domain=None, range=Optional[float])
@@ -371,6 +430,9 @@ slots.analytical_analysis_measurement_protocol_doi = Slot(uri=MIFC.analytical_an
 
 slots.analytical_analysis_measurement_method = Slot(uri=MIFC.analytical_analysis_measurement_method, name="analytical_analysis_measurement_method", curie=MIFC.curie('analytical_analysis_measurement_method'),
                    model_uri=MIFC.analytical_analysis_measurement_method, domain=None, range=Optional[Union[str, "AnalyticalMeasurementMethod"]])
+
+slots.laboratory_conducting_analytical_analysis = Slot(uri=MIFC.laboratory_conducting_analytical_analysis, name="laboratory_conducting_analytical_analysis", curie=MIFC.curie('laboratory_conducting_analytical_analysis'),
+                   model_uri=MIFC.laboratory_conducting_analytical_analysis, domain=None, range=Optional[str])
 
 slots.container__foods = Slot(uri=MIFC.foods, name="container__foods", curie=MIFC.curie('foods'),
                    model_uri=MIFC.container__foods, domain=None, range=Optional[Union[Union[dict, Food], List[Union[dict, Food]]]])

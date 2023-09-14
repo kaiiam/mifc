@@ -53,14 +53,17 @@ linkml:Sparqlpath xsd:string
           <measured_compound_denominator_unit> @linkml:String ? ;
           <measured_compound_data_points_number> @linkml:Integer ? ;
           <measured_compound_record_date> @linkml:String ? ;
+          <measured_compound_analysis_date> @linkml:String ? ;
           <measured_compound_comment> @linkml:String ? ;
           <measured_compound_derivation_type> @linkml:String ? ;
+          <measured_compound_limit_of_quantitation> @linkml:String ? ;
           <laboratory_sample_aggregation_minimum_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_maximum_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_median_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_measured_compound_standard_deviation> @linkml:Float ? ;
           <analytical_analysis_measurement_protocol_doi> @linkml:String ? ;
-          <analytical_analysis_measurement_method> @<AnalyticalMeasurementMethod> ?
+          <analytical_analysis_measurement_method> @<AnalyticalMeasurementMethod> ? ;
+          <laboratory_conducting_analytical_analysis> @linkml:String ?
        ) ;
        rdf:type [ schema1:Component ] ?
     )
@@ -85,6 +88,9 @@ linkml:Sparqlpath xsd:string
           <food_acquisition_country> @linkml:String ? ;
           <food_acquisition_country_subdivision> @linkml:String ? ;
           <food_acquisition_date> @linkml:String ? ;
+          <food_acquisition_location_type> @<FoodAcquisitionLocationType> ? ;
+          <food_acquisition_latitude> @linkml:Float ? ;
+          <food_acquisition_longitude> @linkml:Float ? ;
           <food_distributor_city> @linkml:String ? ;
           <food_distributor_country> @linkml:String ? ;
           <food_distributor_country_subdivision> @linkml:String ? ;

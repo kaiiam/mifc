@@ -30,67 +30,79 @@ schema1:Component a sh:NodeShape ;
     sh:closed true ;
     sh:description "Metadata about measured components of nutritional interest" ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:maxCount 1 ;
-            sh:order 13 ;
-            sh:path mifc:analytical_analysis_measurement_protocol_doi ],
-        [ sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path mifc:measured_compound_derivation_type ],
-        [ sh:description "A float representing an individual instance of a measured food compound value from an individual primary_food_type sample." ;
+    sh:property [ sh:description "A float representing the standard deviation of a measured compound value of an aggregation of samples." ;
             sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path mifc:measured_compound_value ],
-        [ sh:description "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled." ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path mifc:measured_compound ],
-        [ sh:description "A float representing the median measured compound value of an aggregation of samples." ;
-            sh:maxCount 1 ;
-            sh:order 11 ;
-            sh:path mifc:laboratory_sample_aggregation_median_measured_compound_value ],
+            sh:order 14 ;
+            sh:path mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
         [ sh:description "A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g)." ;
             sh:maxCount 1 ;
             sh:order 3 ;
             sh:path mifc:measured_compound_denominator_value ],
-        [ sh:description "An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples." ;
-            sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path mifc:measured_compound_data_points_number ],
-        [ sh:description "A float representing the standard deviation of a measured compound value of an aggregation of samples." ;
-            sh:maxCount 1 ;
-            sh:order 12 ;
-            sh:path mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
-        [ sh:description "A datetime value representing a known recorded date pertaining to an analyzed sample." ;
-            sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path mifc:measured_compound_record_date ],
-        [ sh:description "A float representing the maximum measured compound value of an aggregation of samples." ;
-            sh:maxCount 1 ;
-            sh:order 10 ;
-            sh:path mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
-        [ sh:maxCount 1 ;
-            sh:order 15 ;
-            sh:path mifc:id ],
-        [ sh:description "A float representing the minimum measured compound value of an aggregation of samples." ;
-            sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
-        [ sh:description "A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g)." ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path mifc:measured_compound_denominator_unit ],
         [ sh:description "A Comment relating to measured component." ;
             sh:maxCount 1 ;
-            sh:order 7 ;
+            sh:order 8 ;
             sh:path mifc:measured_compound_comment ],
+        [ sh:description "A float representing the minimum measured compound value of an aggregation of samples." ;
+            sh:maxCount 1 ;
+            sh:order 11 ;
+            sh:path mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
+        [ sh:description "A float representing the median measured compound value of an aggregation of samples." ;
+            sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path mifc:laboratory_sample_aggregation_median_measured_compound_value ],
+        [ sh:description "A float representing the maximum measured compound value of an aggregation of samples." ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
+        [ sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path mifc:measured_compound_derivation_type ],
         [ sh:description "A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled." ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path mifc:measured_compound_unit ],
+        [ sh:description "A datetime value representing the date in which an measured_compound was analyzed." ;
+            sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path mifc:measured_compound_analysis_date ],
+        [ sh:maxCount 1 ;
+            sh:order 18 ;
+            sh:path mifc:id ],
+        [ sh:description "A float representing an individual instance of a measured food compound value from an individual primary_food_type sample." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path mifc:measured_compound_value ],
+        [ sh:description "A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g)." ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path mifc:measured_compound_denominator_unit ],
+        [ sh:description "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested." ;
+            sh:maxCount 1 ;
+            sh:order 10 ;
+            sh:path mifc:measured_compound_limit_of_quantitation ],
+        [ sh:description "An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples." ;
+            sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path mifc:measured_compound_data_points_number ],
+        [ sh:description "A datetime value representing a known recorded date pertaining to an analyzed sample." ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path mifc:measured_compound_record_date ],
+        [ sh:description "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled." ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path mifc:measured_compound ],
+        [ sh:maxCount 1 ;
+            sh:order 15 ;
+            sh:path mifc:analytical_analysis_measurement_protocol_doi ],
         [ sh:in ( OBI:0002116 "GLC" "GC" "Nephelometry" "Gravimetric" "Fluorometric" "Kjeldahl" ) ;
             sh:maxCount 1 ;
-            sh:order 14 ;
-            sh:path mifc:analytical_analysis_measurement_method ] ;
+            sh:order 16 ;
+            sh:path mifc:analytical_analysis_measurement_method ],
+        [ sh:description "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound." ;
+            sh:maxCount 1 ;
+            sh:order 17 ;
+            sh:path mifc:laboratory_conducting_analytical_analysis ] ;
     sh:targetClass schema1:Component .
 
 schema1:Food a sh:NodeShape ;
@@ -98,48 +110,61 @@ schema1:Food a sh:NodeShape ;
     sh:description "Metadata about foods" ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:maxCount 1 ;
-            sh:order 10 ;
-            sh:path mifc:food_distributor_country_subdivision ],
-        [ sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path mifc:food_acquisition_country_subdivision ],
-        [ sh:description "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." ;
-            sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path mifc:primary_food_type_label ],
-        [ sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path mifc:food_distributor_country ],
-        [ sh:maxCount 1 ;
-            sh:order 11 ;
-            sh:path mifc:food_expiration_date ],
-        [ sh:maxCount 1 ;
-            sh:order 12 ;
+            sh:order 15 ;
             sh:path mifc:id ],
-        [ sh:maxCount 1 ;
-            sh:order 5 ;
-            sh:path mifc:food_acquisition_country ],
-        [ sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path mifc:food_distributor_city ],
-        [ sh:description "A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn" ;
-            sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path schema1:name ],
         [ sh:description "An integer denoting a Universal Product Code (UPC) barcode." ;
             sh:maxCount 1 ;
             sh:order 2 ;
             sh:path mifc:primary_food_type_upc_code ],
         [ sh:maxCount 1 ;
-            sh:order 7 ;
-            sh:path mifc:food_acquisition_date ],
+            sh:order 11 ;
+            sh:path mifc:food_distributor_city ],
+        [ sh:maxCount 1 ;
+            sh:order 13 ;
+            sh:path mifc:food_distributor_country_subdivision ],
+        [ sh:description "A string describing the type of location from which a food sample was acquired (e.g., a store)." ;
+            sh:in ( "field" "fresh market" "small grocery" "supermarket" "biobank" "unknown" "other" ) ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path mifc:food_acquisition_location_type ],
+        [ sh:maxCount 1 ;
+            sh:order 5 ;
+            sh:path mifc:food_acquisition_country ],
         [ sh:maxCount 1 ;
             sh:order 4 ;
             sh:path mifc:food_acquisition_city ],
+        [ sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path mifc:food_distributor_country ],
+        [ sh:maxCount 1 ;
+            sh:order 14 ;
+            sh:path mifc:food_expiration_date ],
         [ sh:description "A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw)." ;
             sh:in ( "raw" "fresh" "chilled" "foodsafe chilled" "fresh chilled" "frozen" "fresh frozen" "unripe" "slightly ripe" "ripe" "overripe" "dried" "naturally dried" "artificially dried" "heat treated" "irradiated" ) ;
             sh:maxCount 1 ;
             sh:order 3 ;
-            sh:path mifc:food_preparation_state ] ;
+            sh:path mifc:food_preparation_state ],
+        [ sh:maxCount 1 ;
+            sh:order 7 ;
+            sh:path mifc:food_acquisition_date ],
+        [ sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path mifc:food_acquisition_country_subdivision ],
+        [ sh:description "A float representing the longitude of the place from which the primary_food_type was acquired." ;
+            sh:maxCount 1 ;
+            sh:order 10 ;
+            sh:path mifc:food_acquisition_longitude ],
+        [ sh:description "A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn" ;
+            sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path schema1:name ],
+        [ sh:description "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." ;
+            sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path mifc:primary_food_type_label ],
+        [ sh:description "A float representing the latitude of the place from which the primary_food_type was acquired." ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path mifc:food_acquisition_latitude ] ;
     sh:targetClass schema1:Food .
 

@@ -27,6 +27,10 @@
                 "id": {
                     "type": "string"
                 },
+                "laboratory_conducting_analytical_analysis": {
+                    "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.",
+                    "type": "string"
+                },
                 "laboratory_sample_aggregation_maximum_measured_compound_value": {
                     "description": "A float representing the maximum measured compound value of an aggregation of samples.",
                     "type": "number"
@@ -47,6 +51,10 @@
                     "description": "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled.",
                     "type": "string"
                 },
+                "measured_compound_analysis_date": {
+                    "description": "A datetime value representing the date in which an measured_compound was analyzed.",
+                    "type": "string"
+                },
                 "measured_compound_comment": {
                     "description": "A Comment relating to measured component.",
                     "type": "string"
@@ -64,6 +72,10 @@
                     "type": "number"
                 },
                 "measured_compound_derivation_type": {
+                    "type": "string"
+                },
+                "measured_compound_limit_of_quantitation": {
+                    "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.",
                     "type": "string"
                 },
                 "measured_compound_record_date": {
@@ -118,6 +130,18 @@
                 "food_acquisition_date": {
                     "type": "string"
                 },
+                "food_acquisition_latitude": {
+                    "description": "A float representing the latitude of the place from which the primary_food_type was acquired.",
+                    "type": "number"
+                },
+                "food_acquisition_location_type": {
+                    "$ref": "#/$defs/FoodAcquisitionLocationType",
+                    "description": "A string describing the type of location from which a food sample was acquired (e.g., a store)."
+                },
+                "food_acquisition_longitude": {
+                    "description": "A float representing the longitude of the place from which the primary_food_type was acquired.",
+                    "type": "number"
+                },
                 "food_distributor_city": {
                     "type": "string"
                 },
@@ -152,6 +176,20 @@
             },
             "title": "Food",
             "type": "object"
+        },
+        "FoodAcquisitionLocationType": {
+            "description": "",
+            "enum": [
+                "field",
+                "fresh market",
+                "small grocery",
+                "supermarket",
+                "biobank",
+                "unknown",
+                "other"
+            ],
+            "title": "FoodAcquisitionLocationType",
+            "type": "string"
         },
         "FoodPreparationState": {
             "description": "",

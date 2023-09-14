@@ -20,3 +20,6 @@ linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_d
 
 linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-002.tsv -o results/yaml/Component-002.yaml
 linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-002.tsv -o results/json/Component-002.json
+
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-003.tsv -o results/yaml/Component-003.yaml
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-003.tsv -o results/json/Component-003.json
