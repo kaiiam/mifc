@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/description/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/laboratory_sample_id/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: description - mifc</title>
+        <title>Slot: laboratory_sample_id - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-description" class="md-skip">
+        <a href="#slot-laboratory_sample_id" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: description
+              Slot: laboratory_sample_id
             
           </span>
         </div>
@@ -222,7 +222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../about.md" class="md-nav__link">
         About
       </a>
     </li>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/description.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/laboratory_sample_id.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-description">Slot: description</h1>
-<p><em>A human-readable description for a thing</em></p>
-<p>URI: <a href="http://schema.org/description">schema:description</a></p>
+<h1 id="slot-laboratory_sample_id">Slot: laboratory_sample_id</h1>
+<p><em>A string denoting an identifier of a laboratory sample which was prepared from a food sample.</em></p>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/laboratory_sample_id">mifc:laboratory_sample_id</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,11 +332,15 @@
 <tbody>
 <tr>
 <td><a href="../NamedThing/">NamedThing</a></td>
-<td>A generic grouping for any identifiable entity</td>
+<td></td>
 </tr>
 <tr>
 <td><a href="../Food/">Food</a></td>
-<td>Represents a Food</td>
+<td>Metadata about foods</td>
+</tr>
+<tr>
+<td><a href="../Component/">Component</a></td>
+<td>Metadata about measured components of nutritional interest</td>
 </tr>
 </tbody>
 </table>
@@ -352,12 +356,12 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: description
-description: A human-readable description for a thing
+<pre><code class="language-yaml">name: laboratory_sample_id
+description: A string denoting an identifier of a laboratory sample which was prepared
+  from a food sample.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-slot_uri: schema:description
-alias: description
+alias: laboratory_sample_id
 domain_of:
 - NamedThing
 range: string

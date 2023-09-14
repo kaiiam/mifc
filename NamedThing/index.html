@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about/">
+<a class="md-nav__link" href="../about.md">
         About
       </a>
 </li>
@@ -211,6 +211,12 @@
 
       NamedThing : id
 
+      NamedThing : laboratory_sample_aliquot_id
+
+      NamedThing : laboratory_sample_batch_id
+
+      NamedThing : laboratory_sample_id
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -236,6 +242,24 @@
 <td><a href="../id/">id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_id/">laboratory_sample_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a laboratory sample which was prepared fro...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_aliquot_id/">laboratory_sample_aliquot_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a unique aliquot of a laboratory sample wh...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../laboratory_sample_batch_id/">laboratory_sample_batch_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a batch of laboratory samples analysed tog...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -280,6 +304,9 @@ rank: 1000
 abstract: true
 slots:
 - id
+- laboratory_sample_id
+- laboratory_sample_aliquot_id
+- laboratory_sample_batch_id
 
 </code></pre>
 </details>
@@ -297,6 +324,39 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: id
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: string
+  laboratory_sample_id:
+    name: laboratory_sample_id
+    description: A string denoting an identifier of a laboratory sample which was
+      prepared from a food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_id
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: string
+  laboratory_sample_aliquot_id:
+    name: laboratory_sample_aliquot_id
+    description: A string denoting an identifier of a unique aliquot of a laboratory
+      sample which was prepared from a food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_aliquot_id
+    owner: NamedThing
+    domain_of:
+    - NamedThing
+    range: string
+  laboratory_sample_batch_id:
+    name: laboratory_sample_batch_id
+    description: A string denoting an identifier of a batch of laboratory samples
+      analysed together.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: laboratory_sample_batch_id
     owner: NamedThing
     domain_of:
     - NamedThing
