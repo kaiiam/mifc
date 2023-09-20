@@ -1,11 +1,11 @@
-id	measured_compound	measured_compound_value	measured_compound_unit	measured_compound_data_points_number		measured_compound_derivation_type	laboratory_sample_aggregation_minimum_measured_compound_value	laboratory_sample_aggregation_maximum_measured_compound_value	laboratory_sample_aggregation_median_measured_compound_value	measured_compound_comment
-FDC:167512	COMPONENT:1003	5.88	g	1		Analytical				
-FDC:167512	COMPONENT:1007	3.5	kcal	1		Analytical				
-FDC:167512	COMPONENT:1062	1286	kJ	2		Analytical				
-FDC:167512	COMPONENT:1079	1.2	mg	0		Calculated				
-FDC:167512	COMPONENT:1089	2.12	ug	1		Estimated				
-FDC:167513	COMPONENT:1003	4.34	g	2		Analytical				
-FDC:167513	COMPONENT:1007	3.08	g	1		Analytical				
-FDC:167513	COMPONENT:1062	1381	g	0		Sourced from literature				
-FDC:167513	COMPONENT:1079	1.4	g	6		Analytical	0.8	2.2	1.5	Samples were obtained from 12 retail stores using a probability-based sampling plan.  Some fish had been treated during processing to retain moisture on thawing.  Untreated fish = 265 mg sodium/100g.
-FDC:167513	COMPONENT:1089	1.93	g	3		Analytical				
+id	measured_compound	measured_compound_value	measured_compound_unit	measured_compound_data_points_number	measured_compound_derivation_type	laboratory_sample_aggregation_minimum_measured_compound_value	laboratory_sample_aggregation_maximum_measured_compound_value	laboratory_sample_aggregation_median_measured_compound_value	measured_compound_comment
+FDC:167512	COMPONENT:1003	5.88	g	1	Analytical				
+FDC:167512	COMPONENT:1007	3.5	kcal	1	Analytical				
+FDC:167512	COMPONENT:1062	1286	kJ	2	Analytical				
+FDC:167512	COMPONENT:1079	1.2	mg	0	Calculated				
+FDC:167512	COMPONENT:1089	2.12	ug	1	Estimated				
+FDC:167513	COMPONENT:1003	4.34	g	2	Analytical				
+FDC:167513	COMPONENT:1007	3.08	g	1	Analytical				
+FDC:167513	COMPONENT:1062	1381	g	0	Sourced from literature				
+FDC:167513	COMPONENT:1079	1.4	g	6	Analytical	0.8	2.2	1.5	Samples were obtained from 12 retail stores using a probability-based sampling plan.  Some fish had been treated during processing to retain moisture on thawing.  Untreated fish = 265 mg sodium/100g.
+FDC:167513	COMPONENT:1089	1.93	g	3	Analytical				
