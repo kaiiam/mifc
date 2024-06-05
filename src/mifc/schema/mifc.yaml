@@ -112,6 +112,10 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: Component
+      provenances:
+        multivalued: true
+        inlined_as_list: true
+        range: Provenance
 
 slots:
   # Common slots
