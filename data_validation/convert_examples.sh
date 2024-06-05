@@ -23,3 +23,9 @@ linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_d
 
 linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-003.tsv -o results/yaml/Component-003.yaml
 linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S components test_data/Component-003.tsv -o results/json/Component-003.json
+
+
+##Provenance
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S provenances test_data/Provenance-001.tsv -o results/yaml/Provenance-001.yaml
+linkml-convert -s ../src/mifc/schema/mifc.yaml -C Container -S provenances test_data/Provenance-001.tsv -o results/json/Provenance-001.json
+
