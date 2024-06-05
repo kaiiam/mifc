@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/linkml/linkml-project-cookiecutter",
-  "commit": "ef7ff16925321a2abdbaa5a2ba5db8aa83ebf24f",
+  "commit": "4ee2b14cb30c7585b7ac4bf57b14f25dcc26c88c",
   "checkout": null,
   "context": {
     "cookiecutter": {

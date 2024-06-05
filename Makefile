@@ -6,10 +6,17 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
+# environment variables
+.EXPORT_ALL_VARIABLES:
+ifdef LINKML_ENVIRONMENT_FILENAME
+include ${LINKML_ENVIRONMENT_FILENAME}
+else
+include .env.public
+endif
+
 RUN = poetry run
-# get values from about.yaml file
-SCHEMA_NAME = $(shell ${SHELL} ./utils/get-value.sh name)
-SOURCE_SCHEMA_PATH = $(shell ${SHELL} ./utils/get-value.sh source_schema_path)
+SCHEMA_NAME = $(LINKML_SCHEMA_NAME)
+SOURCE_SCHEMA_PATH = $(LINKML_SCHEMA_SOURCE_PATH)
 SOURCE_SCHEMA_DIR = $(dir $(SOURCE_SCHEMA_PATH))
 SRC = src
 DEST = project
@@ -17,26 +24,38 @@ PYMODEL = $(SRC)/$(SCHEMA_NAME)/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
 SHEET_MODULE = personinfo_enums
-SHEET_ID = $(shell ${SHELL} ./utils/get-value.sh google_sheet_id)
-SHEET_TABS = $(shell ${SHELL} ./utils/get-value.sh google_sheet_tabs)
+SHEET_ID = $(LINKML_SCHEMA_GOOGLE_SHEET_ID)
+SHEET_TABS = $(LINKML_SCHEMA_GOOGLE_SHEET_TABS)
 SHEET_MODULE_PATH = $(SOURCE_SCHEMA_DIR)/$(SHEET_MODULE).yaml
 
-# environment variables
-include config.env
-
-GEN_PARGS =
-ifdef LINKML_GENERATORS_PROJECT_ARGS
-GEN_PARGS = ${LINKML_GENERATORS_PROJECT_ARGS}
+CONFIG_YAML =
+ifdef LINKML_GENERATORS_CONFIG_YAML
+CONFIG_YAML = ${LINKML_GENERATORS_CONFIG_YAML}
 endif
 
-GEN_DARGS =
-ifdef LINKML_GENERATORS_MARKDOWN_ARGS
-GEN_DARGS = ${LINKML_GENERATORS_MARKDOWN_ARGS}
+GEN_DOC_ARGS =
+ifdef LINKML_GENERATORS_DOC_ARGS
+GEN_DOC_ARGS = ${LINKML_GENERATORS_DOC_ARGS}
+endif
+
+GEN_OWL_ARGS =
+ifdef LINKML_GENERATORS_OWL_ARGS
+GEN_OWL_ARGS = ${LINKML_GENERATORS_OWL_ARGS}
+endif
+
+GEN_JAVA_ARGS =
+ifdef LINKML_GENERATORS_JAVA_ARGS
+GEN_JAVA_ARGS = ${LINKML_GENERATORS_JAVA_ARGS}
+endif
+
+GEN_TS_ARGS =
+ifdef LINKML_GENERATORS_TYPESCRIPT_ARGS
+GEN_TS_ARGS = ${LINKML_GENERATORS_TYPESCRIPT_ARGS}
 endif
 
 
 # basename of a YAML file in model/
-.PHONY: all clean
+.PHONY: all clean setup gen-project gen-examples gendoc git-init-add git-init git-add git-commit git-status
 
 # note: "help" MUST be the first target in the file,
 # when the user types "make" they should get help info
@@ -58,11 +77,10 @@ status: check-config
 	@echo "Source: $(SOURCE_SCHEMA_PATH)"
 
 # generate products and add everything to github
-setup: install gen-project gen-examples gendoc git-init-add
+setup: check-config git-init install gen-project gen-examples gendoc git-add git-commit
 
 # install any dependencies required for building
 install:
-	git init
 	poetry install
 .PHONY: install
 
@@ -104,13 +122,28 @@ gen-examples:
 # generates all project files
 
 gen-project: $(PYMODEL)
-	$(RUN) gen-project ${GEN_PARGS} -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
+	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(SOURCE_SCHEMA_PATH) && mv $(DEST)/*.py $(PYMODEL)
 
+
+# non-empty arg triggers owl (workaround https://github.com/linkml/linkml/issues/1453)
+ifneq ($(strip ${GEN_OWL_ARGS}),)
+	mkdir -p ${DEST}/owl || true
+	$(RUN) gen-owl ${GEN_OWL_ARGS} $(SOURCE_SCHEMA_PATH) >${DEST}/owl/${SCHEMA_NAME}.owl.ttl
+endif
+# non-empty arg triggers java
+ifneq ($(strip ${GEN_JAVA_ARGS}),)
+	$(RUN) gen-java ${GEN_JAVA_ARGS} --output-directory ${DEST}/java/ $(SOURCE_SCHEMA_PATH)
+endif
+# non-empty arg triggers typescript
+ifneq ($(strip ${GEN_TS_ARGS}),)
+	mkdir -p ${DEST}/typescript || true
+	$(RUN) gen-typescript ${GEN_TS_ARGS} $(SOURCE_SCHEMA_PATH) >${DEST}/typescript/${SCHEMA_NAME}.ts
+endif
 
 test: test-schema test-python test-examples
 
 test-schema:
-	$(RUN) gen-project ${GEN_PARGS} -d tmp $(SOURCE_SCHEMA_PATH)
+	$(RUN) gen-project ${CONFIG_YAML} -d tmp $(SOURCE_SCHEMA_PATH)
 
 test-python:
 	$(RUN) python -m unittest discover
@@ -119,7 +152,11 @@ lint:
 	$(RUN) linkml-lint $(SOURCE_SCHEMA_PATH)
 
 check-config:
-	@(grep my-datamodel about.yaml > /dev/null && printf "\n**Project not configured**:\n\n  - Remember to edit 'about.yaml'\n\n" || exit 0)
+ifndef LINKML_SCHEMA_NAME
+	$(error **Project not configured**:\n\n - See '.env.public'\n\n)
+else
+	$(info Ok)
+endif
 
 convert-examples-to-%:
 	$(patsubst %, $(RUN) linkml-convert  % -s $(SOURCE_SCHEMA_PATH) -C Person, $(shell ${SHELL} find src/data/examples -name "*.yaml"))
@@ -155,8 +192,8 @@ $(DOCDIR):
 	mkdir -p $@
 
 gendoc: $(DOCDIR)
-	cp $(SRC)/docs/*md $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	cp -rf $(SRC)/docs/* $(DOCDIR) ; \
+	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
 
 testdoc: gendoc serve
 
@@ -164,15 +201,13 @@ MKDOCS = $(RUN) mkdocs
 mkd-%:
 	$(MKDOCS) $*
 
-PROJECT_FOLDERS = sqlschema shex shacl protobuf prefixmap owl jsonschema jsonld graphql excel
 git-init-add: git-init git-add git-commit git-status
 git-init:
 	git init
 git-add: .cruft.json
-	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/mifc/schema/*yaml src/*/datamodel/*py src/data src/docs tests src/*/_version.py
-	git add $(patsubst %, project/%, $(PROJECT_FOLDERS))
+	git add .
 git-commit:
-	git commit -m 'chore: initial commit' -a
+	git commit -m 'chore: make setup was run' -a
 git-status:
 	git status
 

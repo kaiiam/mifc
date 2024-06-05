@@ -1,0 +1,7 @@
+diff a/.github/workflows/deploy-docs.yaml b/.github/workflows/deploy-docs.yaml	(rejected hunks)
+@@ -31,5 +38,3 @@ jobs:
+           make gendoc
+           ([ ! -f docs/about.md ] && cp src/docs/about.md docs/) || true
+           make mkd-gh-deploy
+-
+-...
