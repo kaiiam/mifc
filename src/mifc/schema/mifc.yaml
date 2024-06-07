@@ -154,7 +154,7 @@ slots:
   food_acquisition_country: # See ISO 3166 for country codes
     description: A string denoting the country code from which a primary_food_type was acquired.
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
-    description: A string denoting the country subdivsion from which a primary_food_type was acquired (e.g., state or province).
+    description: A string denoting the country subdivision from which a primary_food_type was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the date a primary_food_type was acquired.
     exact_mappings:
@@ -187,7 +187,7 @@ slots:
   food_distributor_country:
     description: A string denoting the country code of a distributor organization from which a primary_food_type was acquired.
   food_distributor_country_subdivision:
-    description: A string denoting the country subdivsion of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
+    description: A string denoting the country subdivision of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
 
@@ -200,7 +200,7 @@ slots:
     description: A float representing an individual instance of a measured food compound value from an individual primary_food_type sample.
     range: float
   measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
-    description: A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled.
+    description: A unit code representing the units of measurement in which a measured food component value from a primary_food_type sample was sampled.
   measured_compound_denominator_value:
     description: A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g).
     range: float
@@ -213,16 +213,16 @@ slots:
     description: A datetime value representing a known recorded date pertaining to an analyzed sample.
     comments: Allows for ambiguity of date record relative to measured_compound_analysis_date. Use this if a date for a record is know but it isn't specifically the date of analysis.
   measured_compound_analysis_date:
-    description: A datetime value representing the date in which an measured_compound was analyzed.
-    comments: Use this field if the exact date of analysis is know if there is date ambiguity use measured_compound_record_date.
+    description: A datetime value representing the date in which a measured_compound was analyzed.
+    comments: Use this field if the exact date of analysis is known if there is date ambiguity use measured_compound_record_date.
   measured_compound_comment:
-    description: A Comment relating to measured component.
+    description: A comment relating to measured component.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how the measured_compound was generated, (e.g., Analytical or Calculated).
   measured_compound_limit_of_quantitation:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.
-    comments: definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/
+    comments: Definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/
   laboratory_sample_aggregation_minimum_measured_compound_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of samples.
     range: float
