@@ -251,7 +251,7 @@ slots:
   dataset_label:
     description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
   mifc_version_tag:
-    description: A string corresponding to a named MIFC release number (e.g., "1.0.1").
+    description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
   contributor_orcid:
     description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
   organization_name:
