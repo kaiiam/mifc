@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/FoodRipenessState/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/FoodStorageTemperatureState/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
@@ -227,6 +232,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/food_preservation_state/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_ripeness_state/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>

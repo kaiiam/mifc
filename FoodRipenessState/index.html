@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_storage_temperature_state/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/FoodRipenessState/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: food_storage_temperature_state - mifc</title>
+        <title>Enum: FoodRipenessState - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-food_storage_temperature_state" class="md-skip">
+        <a href="#enum-foodripenessstate" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: food_storage_temperature_state
+              Enum: FoodRipenessState
             
           </span>
         </div>
@@ -256,15 +256,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -310,18 +310,47 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_storage_temperature_state.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/FoodRipenessState.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-food_storage_temperature_state">Slot: food_storage_temperature_state</h1>
-<p><em>An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a primary_food_type was stored prior to acquisition (e.g., "Refrigerated").</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_storage_temperature_state">mifc:food_storage_temperature_state</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-foodripenessstate">Enum: FoodRipenessState</h1>
+<p>URI: <a href="FoodRipenessState">FoodRipenessState</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ripe</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>overripe</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>unripe</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>slightly ripe</td>
+<td>None</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
@@ -331,15 +360,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Food/">Food</a></td>
-<td>Metadata about foods</td>
+<td><a href="../food_ripeness_state/">food_ripeness_state</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -348,16 +373,18 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: food_storage_temperature_state
-description: An enumerated set of controlled vocabulary terms representing the qualitative
-  temperature state at which a primary_food_type was stored prior to acquisition (e.g.,
-  &quot;Refrigerated&quot;).
+<pre><code class="language-yaml">name: FoodRipenessState
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_storage_temperature_state
-domain_of:
-- Food
-range: FoodStorageTemperatureState
+permissible_values:
+  ripe:
+    text: ripe
+  overripe:
+    text: overripe
+  unripe:
+    text: unripe
+  slightly ripe:
+    text: slightly ripe
 
 </code></pre>
 
