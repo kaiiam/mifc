@@ -1,0 +1,80 @@
+@prefix mifc: <https://w3id.org/kaiiam/mifc/> .
+@prefix schema1: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a mifc:Container ;
+    mifc:components [ a schema1:Component ;
+            mifc:id "FDC:167513" ;
+            mifc:measured_compound "COMPONENT:1007" ;
+            mifc:measured_compound_data_points_number 1 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "3.08"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167513" ;
+            mifc:measured_compound "COMPONENT:1062" ;
+            mifc:measured_compound_data_points_number 0 ;
+            mifc:measured_compound_derivation_type "Sourced from literature" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "1381.0"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167512" ;
+            mifc:measured_compound "COMPONENT:1003" ;
+            mifc:measured_compound_data_points_number 1 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "5.88"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167512" ;
+            mifc:measured_compound "COMPONENT:1089" ;
+            mifc:measured_compound_data_points_number 1 ;
+            mifc:measured_compound_derivation_type "Estimated" ;
+            mifc:measured_compound_unit "ug/(100.g)" ;
+            mifc:measured_compound_value "2.12"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167513" ;
+            mifc:laboratory_sample_aggregation_maximum_measured_compound_value "2.2"^^xsd:float ;
+            mifc:laboratory_sample_aggregation_median_measured_compound_value "1.5"^^xsd:float ;
+            mifc:laboratory_sample_aggregation_minimum_measured_compound_value "0.8"^^xsd:float ;
+            mifc:measured_compound "COMPONENT:1079" ;
+            mifc:measured_compound_comment "Samples were obtained from 12 retail stores using a probability-based sampling plan.  Some fish had been treated during processing to retain moisture on thawing.  Untreated fish = 265 mg sodium/100g." ;
+            mifc:measured_compound_data_points_number 6 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "1.4"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167512" ;
+            mifc:measured_compound "COMPONENT:1079" ;
+            mifc:measured_compound_data_points_number 0 ;
+            mifc:measured_compound_derivation_type "Calculated" ;
+            mifc:measured_compound_unit "mg/(100.g)" ;
+            mifc:measured_compound_value "1.2"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167512" ;
+            mifc:measured_compound "COMPONENT:1007" ;
+            mifc:measured_compound_data_points_number 1 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "kcal/(100.g)" ;
+            mifc:measured_compound_value "3.5"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167513" ;
+            mifc:measured_compound "COMPONENT:1089" ;
+            mifc:measured_compound_data_points_number 3 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "1.93"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167513" ;
+            mifc:measured_compound "COMPONENT:1003" ;
+            mifc:measured_compound_data_points_number 2 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "g/(100.g)" ;
+            mifc:measured_compound_value "4.34"^^xsd:float ],
+        [ a schema1:Component ;
+            mifc:id "FDC:167512" ;
+            mifc:measured_compound "COMPONENT:1062" ;
+            mifc:measured_compound_data_points_number 2 ;
+            mifc:measured_compound_derivation_type "Analytical" ;
+            mifc:measured_compound_unit "kJ/(100.g)" ;
+            mifc:measured_compound_value "1286.0"^^xsd:float ] .
+

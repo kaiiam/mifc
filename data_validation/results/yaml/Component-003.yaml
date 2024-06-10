@@ -2,25 +2,22 @@ components:
 - laboratory_sample_id: CY124QU
   laboratory_sample_aliquot_id: NFY122JPN
   laboratory_sample_batch_id: o
-  measured_compound: '1075'
+  measured_compound: COMPONENT:1075
   measured_compound_label: galactose
   measured_compound_value: 0.52
-  measured_compound_unit: g
-  measured_compound_denominator_value: 100.0
-  measured_compound_denominator_unit: g
+  measured_compound_unit: g/(100.g)
   measured_compound_data_points_number: 1
   measured_compound_analysis_date: March 8, 2023
   analytical_analysis_measurement_protocol_doi: SUGR-GALAC-CHG
   laboratory_conducting_analytical_analysis: Silliker
+  compound_value_remeasured_for_quality_control: false
 - laboratory_sample_id: CY124QX
   laboratory_sample_aliquot_id: NFY122JRQ
   laboratory_sample_batch_id: o
-  measured_compound: '1014'
+  measured_compound: COMPONENT:1014
   measured_compound_label: maltose
   measured_compound_value: 0.0
-  measured_compound_unit: g
-  measured_compound_denominator_value: 100.0
-  measured_compound_denominator_unit: g
+  measured_compound_unit: g/(100.g)
   measured_compound_data_points_number: 1
   measured_compound_analysis_date: March 9, 2023
   measured_compound_limit_of_quantitation: <0.25
@@ -29,14 +26,13 @@ components:
 - laboratory_sample_id: CY124R2
   laboratory_sample_aliquot_id: NFY122JV9
   laboratory_sample_batch_id: q
-  measured_compound: '1011'
+  measured_compound: COMPONENT:1011
   measured_compound_label: glucose
   measured_compound_value: 0.0
-  measured_compound_unit: g
-  measured_compound_denominator_value: 100.0
-  measured_compound_denominator_unit: g
+  measured_compound_unit: g/(100.g)
   measured_compound_data_points_number: 1
   measured_compound_analysis_date: March 17, 2023
   measured_compound_limit_of_quantitation: <0.25
   analytical_analysis_measurement_protocol_doi: SUGR-DP1-2-CHG
   laboratory_conducting_analytical_analysis: Silliker
+  compound_value_remeasured_for_quality_control: true
