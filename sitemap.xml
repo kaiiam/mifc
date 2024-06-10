@@ -71,7 +71,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/FoodPreparationState/</loc>
+         <loc>https://kaiiam.github.io/mifc/FoodPreservationState/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -221,7 +221,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/food_preparation_state/</loc>
+         <loc>https://kaiiam.github.io/mifc/food_preservation_state/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -337,6 +337,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/organization_name/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/primary_food_category_label/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
