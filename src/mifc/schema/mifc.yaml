@@ -48,7 +48,7 @@ classes:
      - primary_food_type_label
      - primary_food_type_upc_code
      - primary_food_category_label
-     - food_preparation_state
+     - food_preservation_state
      - food_acquisition_city
      - food_acquisition_country
      - food_acquisition_country_subdivision
@@ -142,9 +142,9 @@ slots:
   primary_food_type_upc_code:
     description: An integer denoting a Universal Product Code (UPC) barcode.
     range: integer
-  food_preparation_state:
-    description: A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw).
-    range: FoodPreparationState
+  food_preservation_state:
+    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of the primary_food_type (e.g., "Raw").
+    range: FoodPreservationState
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_acquisition_city:
     description: A string denoting the city in which a primary_food_type was acquired.
@@ -191,6 +191,7 @@ slots:
     description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
   primary_food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
+
 
   # Component slots
   measured_compound:
@@ -270,24 +271,28 @@ enums:
       Gravimetric:
       Fluorometric:
       Kjeldahl:
-  FoodPreparationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
+  FoodPreservationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
-      raw:
-      fresh:
-      chilled:
-      foodsafe chilled:
-      fresh chilled:
-      frozen:
-      fresh frozen:
-      unripe:
-      slightly ripe:
-      ripe:
-      overripe:
-      dried:
-      naturally dried:
+      air-dried:
       artificially dried:
-      heat treated:
+      brined:
+      candied:
+      canned:
+      cured:
+      dried:
+      fermented:
+      freeze-dried:
+      fresh:
       irradiated:
+      jellied:
+      kippered:
+      naturally dried:
+      pasteurized:
+      pickled:
+      raw:
+      shelf stable:
+      sun-dried:
+      ultraviolet light exposed:
   FoodAcquisitionLocationType:
     permissible_values:
       field:
