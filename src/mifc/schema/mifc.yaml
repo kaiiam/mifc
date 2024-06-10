@@ -74,8 +74,6 @@ classes:
       - measured_compound_label
       - measured_compound_value
       - measured_compound_unit
-      - measured_compound_denominator_value
-      - measured_compound_denominator_unit
       - measured_compound_data_points_number
       - measured_compound_record_date
       - measured_compound_analysis_date
