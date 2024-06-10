@@ -47,6 +47,7 @@ classes:
      - primary_food_type
      - primary_food_type_label
      - primary_food_type_upc_code
+     - primary_food_category_label
      - food_preparation_state
      - food_acquisition_city
      - food_acquisition_country
@@ -188,6 +189,8 @@ slots:
     description: A string denoting the country subdivision of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
+  primary_food_category_label:
+    description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
 
   # Component slots
   measured_compound:
