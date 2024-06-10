@@ -201,11 +201,6 @@ slots:
     range: float
   measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
     description: A unit code representing the units of measurement in which a measured food component value from a primary_food_type sample was sampled.
-  measured_compound_denominator_value:
-    description: A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g).
-    range: float
-  measured_compound_denominator_unit: # Constrain by UCUM unit types (default g)
-    description: A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g).
   measured_compound_data_points_number: # TODO add default 1 perhaps with ifabsent
     description: An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.
     range: integer
