@@ -49,6 +49,8 @@ classes:
      - primary_food_type_upc_code
      - primary_food_category_label
      - food_preservation_state
+     - food_storage_temperature_state
+     - food_ripeness_state
      - food_acquisition_city
      - food_acquisition_country
      - food_acquisition_country_subdivision
@@ -149,6 +151,9 @@ slots:
   food_storage_temperature_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a primary_food_type was stored prior to acquisition (e.g., "Refrigerated").
     range: FoodStorageTemperatureState
+  food_ripeness_state:
+    description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a primary_food_type when prepared for analysis.
+    range: FoodRipenessState
   food_acquisition_city:
     description: A string denoting the city in which a primary_food_type was acquired.
     close_mappings:
@@ -303,6 +308,12 @@ enums:
       foodsafe chilled:
       frozen:
       refrigerated:
+  FoodRipenessState:
+    permissible_values:
+      ripe:
+      overripe:
+      unripe:
+      slightly ripe:
   FoodAcquisitionLocationType:
     permissible_values:
       field:
