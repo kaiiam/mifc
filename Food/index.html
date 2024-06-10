@@ -236,6 +236,10 @@
 
       Food : food_acquisition_organization
 
+      Food : food_cooking_method
+
+          Food ..&gt; FoodCookingMethod : food_cooking_method
+
       Food : food_distributor_city
 
       Food : food_distributor_country
@@ -332,6 +336,12 @@
 <td><a href="../food_ripeness_state/">food_ripeness_state</a></td>
 <td>0..1 <br/> <a href="../FoodRipenessState/">FoodRipenessState</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_cooking_method/">food_cooking_method</a></td>
+<td>0..1 <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -505,6 +515,7 @@ slots:
 - food_preservation_state
 - food_storage_temperature_state
 - food_ripeness_state
+- food_cooking_method
 - food_acquisition_city
 - food_acquisition_country
 - food_acquisition_country_subdivision
@@ -614,6 +625,18 @@ attributes:
     domain_of:
     - Food
     range: FoodRipenessState
+  food_cooking_method:
+    name: food_cooking_method
+    description: An enumerated set of controlled vocabulary terms representing the
+      any cooking method(s) applied to a primary_food_type prior to analysis (e.g.,
+      "baked").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_cooking_method
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodCookingMethod
   food_acquisition_city:
     name: food_acquisition_city
     description: A string denoting the city in which a primary_food_type was acquired.
