@@ -51,6 +51,7 @@ classes:
      - food_preservation_state
      - food_storage_temperature_state
      - food_ripeness_state
+     - food_cooking_method
      - food_acquisition_city
      - food_acquisition_country
      - food_acquisition_country_subdivision
@@ -154,6 +155,9 @@ slots:
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a primary_food_type when prepared for analysis.
     range: FoodRipenessState
+  food_cooking_method:
+    description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a primary_food_type prior to analysis (e.g., "baked").
+    range: FoodCookingMethod
   food_acquisition_city:
     description: A string denoting the city in which a primary_food_type was acquired.
     close_mappings:
@@ -323,3 +327,39 @@ enums:
       biobank:
       unknown:
       other:
+  FoodCookingMethod:
+    permissible_values:
+      baked:
+      blanched:
+      boiled:
+      braised:
+      broiled:
+      cooked:
+      dry-heat cooked:
+      dry-roasted:
+      fried:
+      grilled:
+      heated:
+      microwaved:
+      moist-heat cooked:
+      oil-roasted:
+      pan-broiled:
+      pan-browned:
+      pan-fried:
+      parboiled:
+      partially fried:
+      poached:
+      precooked:
+      refried:
+      roasted:
+      sauteed:
+      simmered:
+      slow-roasted:
+      smoked:
+      spit-roasted:
+      steamed:
+      stewed:
+      stir-fried:
+      toasted:
+      uncooked:
+      unheated:
