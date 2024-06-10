@@ -293,6 +293,12 @@ enums:
       shelf stable:
       sun-dried:
       ultraviolet light exposed:
+  FoodStorageTemperatureState:
+    permissible_values:
+      chilled:
+      foodsafe chilled:
+      frozen:
+      refrigerated:
   FoodAcquisitionLocationType:
     permissible_values:
       field:
