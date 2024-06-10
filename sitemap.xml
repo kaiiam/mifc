@@ -76,6 +76,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/FoodStorageTemperatureState/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/Integer/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
@@ -222,6 +227,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/food_preservation_state/</loc>
+         <lastmod>2024-06-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_storage_temperature_state/</loc>
          <lastmod>2024-06-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
