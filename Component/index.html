@@ -245,10 +245,6 @@
 
       Component : measured_compound_data_points_number
 
-      Component : measured_compound_denominator_unit
-
-      Component : measured_compound_denominator_value
-
       Component : measured_compound_derivation_type
 
       Component : measured_compound_label
@@ -303,18 +299,6 @@
 <td><a href="../measured_compound_unit/">measured_compound_unit</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A unit code representing the units of measurement in which a measured food co...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../measured_compound_denominator_value/">measured_compound_denominator_value</a></td>
-<td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td>A float representing the denominator value (or portion size) of a measured me...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../measured_compound_denominator_unit/">measured_compound_denominator_unit</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A unit code representing the denominator units of a measured measured_compoun...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -484,8 +468,6 @@ slots:
 - measured_compound_label
 - measured_compound_value
 - measured_compound_unit
-- measured_compound_denominator_value
-- measured_compound_denominator_unit
 - measured_compound_data_points_number
 - measured_compound_record_date
 - measured_compound_analysis_date
@@ -552,28 +534,6 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_unit
-    owner: Component
-    domain_of:
-    - Component
-    range: string
-  measured_compound_denominator_value:
-    name: measured_compound_denominator_value
-    description: A float representing the denominator value (or portion size) of a
-      measured measured_compound, e.g., 100 (for portion of per 100g).
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    alias: measured_compound_denominator_value
-    owner: Component
-    domain_of:
-    - Component
-    range: float
-  measured_compound_denominator_unit:
-    name: measured_compound_denominator_unit
-    description: A unit code representing the denominator units of a measured measured_compound,
-      e.g., g (for portion of per 100g).
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    alias: measured_compound_denominator_unit
     owner: Component
     domain_of:
     - Component
