@@ -77,7 +77,7 @@ classes:
     slots:            ## Slots specific to components of nutritional interest
       - component_type
       - component_type_label
-      - measured_compound_recorded_value
+      - component_recorded_value
       - measured_compound_unit
       - measured_compound_data_points_number
       - measured_compound_record_date
@@ -214,8 +214,8 @@ slots:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
   component_type_label:
     description: A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.
-  measured_compound_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
-    description: A float representing a recorded value of a compound of nutritional interest measured from a laboratory sample derived from a food sample.
+  component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
+    description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
     range: float
   measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
     description: A unit code representing the units of measurement in which a measured food component value from a food was sampled.
