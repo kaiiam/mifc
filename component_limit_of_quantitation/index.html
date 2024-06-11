@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/measured_compound_data_points_number/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/component_limit_of_quantitation/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: measured_compound_data_points_number - mifc</title>
+        <title>Slot: component_limit_of_quantitation - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-measured_compound_data_points_number" class="md-skip">
+        <a href="#slot-component_limit_of_quantitation" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: measured_compound_data_points_number
+              Slot: component_limit_of_quantitation
             
           </span>
         </div>
@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -310,15 +317,15 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/measured_compound_data_points_number.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/component_limit_of_quantitation.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-measured_compound_data_points_number">Slot: measured_compound_data_points_number</h1>
-<p><em>An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample &gt;1 if an aggregation of samples.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/measured_compound_data_points_number">mifc:measured_compound_data_points_number</a></p>
+<h1 id="slot-component_limit_of_quantitation">Slot: component_limit_of_quantitation</h1>
+<p><em>A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.</em></p>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/component_limit_of_quantitation">mifc:component_limit_of_quantitation</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -332,13 +339,17 @@
 <tbody>
 <tr>
 <td><a href="../Component/">Component</a></td>
-<td>Metadata about measured components of nutritional interest</td>
+<td>Metadata about components of nutritional interest measured from foods</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Integer/">Integer</a></li>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,15 +359,20 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: measured_compound_data_points_number
-description: An integer representing the number of individual samples that comprise
-  a measured_compound sample. 1 if an individual sample &gt;1 if an aggregation of samples.
+<pre><code class="language-yaml">name: component_limit_of_quantitation
+description: A string representing the lowest analyte concentration likely to be reliably
+  distinguished from the Limit of Blank (LoB) and at which detection is feasible during
+  the analysis of a component of nutritional interest.
+comments:
+- LoB, (used in the description) is the highest apparent analyte concentration expected
+  to be found when replicates of a blank sample containing no analyte are tested.
+  Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: measured_compound_data_points_number
+alias: component_limit_of_quantitation
 domain_of:
 - Component
-range: integer
+range: string
 
 </code></pre>
 

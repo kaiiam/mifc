@@ -151,12 +151,62 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/components/</loc>
+         <loc>https://kaiiam.github.io/mifc/component_analysis_date/</loc>
          <lastmod>2024-06-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/compound_value_remeasured_for_quality_control/</loc>
+         <loc>https://kaiiam.github.io/mifc/component_comment/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_data_points_number/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_derivation_type/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_limit_of_quantitation/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_measurement_unit/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_quality_control_remeasurement/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_record_date/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_recorded_value/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_type/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/component_type_label/</loc>
+         <lastmod>2024-06-11</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/components/</loc>
          <lastmod>2024-06-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -327,56 +377,6 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/laboratory_sample_id/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_analysis_date/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_comment/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_data_points_number/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_derivation_type/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_label/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_limit_of_quantitation/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_record_date/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_recorded_value/</loc>
-         <lastmod>2024-06-11</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/measured_compound_unit/</loc>
          <lastmod>2024-06-11</lastmod>
          <changefreq>daily</changefreq>
     </url>

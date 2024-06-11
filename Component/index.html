@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-component">Class: Component</h1>
-<p><em>Metadata about measured components of nutritional interest</em></p>
+<p><em>Metadata about components of nutritional interest measured from foods.</em></p>
 <p>URI: <a href="http://schema.org/Component">schema:Component</a></p>
 <div class="mermaid"> classDiagram
     class Component
@@ -217,7 +217,27 @@
 
       Component : analytical_analysis_measurement_protocol_doi
 
-      Component : compound_value_remeasured_for_quality_control
+      Component : component_analysis_date
+
+      Component : component_comment
+
+      Component : component_data_points_number
+
+      Component : component_derivation_type
+
+      Component : component_limit_of_quantitation
+
+      Component : component_measurement_unit
+
+      Component : component_quality_control_remeasurement
+
+      Component : component_record_date
+
+      Component : component_recorded_value
+
+      Component : component_type
+
+      Component : component_type_label
 
       Component : id
 
@@ -236,26 +256,6 @@
       Component : laboratory_sample_batch_id
 
       Component : laboratory_sample_id
-
-      Component : measured_compound
-
-      Component : measured_compound_analysis_date
-
-      Component : measured_compound_comment
-
-      Component : measured_compound_data_points_number
-
-      Component : measured_compound_derivation_type
-
-      Component : measured_compound_label
-
-      Component : measured_compound_limit_of_quantitation
-
-      Component : measured_compound_record_date
-
-      Component : measured_compound_recorded_value
-
-      Component : measured_compound_unit
 
 
 </div>
@@ -278,61 +278,61 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../measured_compound/">measured_compound</a></td>
+<td><a href="../component_type/">component_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A controlled vocabulary term representing an analyzed component from a food s...</td>
+<td>A controlled vocabulary term representing the type of component of nutritiona...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_label/">measured_compound_label</a></td>
+<td><a href="../component_type_label/">component_type_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting the label of a controlled vocabulary term representing an a...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_recorded_value/">measured_compound_recorded_value</a></td>
+<td><a href="../component_recorded_value/">component_recorded_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td>A float representing a recorded value of a compound of nutritional interest m...</td>
+<td>A float representing a recorded value of a component of nutritional interest ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_unit/">measured_compound_unit</a></td>
+<td><a href="../component_measurement_unit/">component_measurement_unit</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A unit code representing the units of measurement in which a measured food co...</td>
+<td>A unit code representing the unit of measurement in which a component_recorde...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_data_points_number/">measured_compound_data_points_number</a></td>
+<td><a href="../component_data_points_number/">component_data_points_number</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>An integer representing the number of individual samples that comprise a meas...</td>
+<td>An integer representing the number of individual samples that comprise a comp...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_record_date/">measured_compound_record_date</a></td>
+<td><a href="../component_record_date/">component_record_date</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing a known recorded date pertaining to an analyzed...</td>
+<td>A datetime value representing recorded date pertaining to an analyzed sample</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_analysis_date/">measured_compound_analysis_date</a></td>
+<td><a href="../component_analysis_date/">component_analysis_date</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing the date in which a measured_compound was analy...</td>
+<td>A datetime value representing the date in which a component of nutritional in...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_comment/">measured_compound_comment</a></td>
+<td><a href="../component_comment/">component_comment</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A comment relating to measured component</td>
+<td>A comment relating to an analyzed component of nutritional interest</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_derivation_type/">measured_compound_derivation_type</a></td>
+<td><a href="../component_derivation_type/">component_derivation_type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A controlled vocabulary term denoting how the measured_compound was generated...</td>
+<td>A controlled vocabulary term denoting how a component of nutritional interest...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_limit_of_quantitation/">measured_compound_limit_of_quantitation</a></td>
+<td><a href="../component_limit_of_quantitation/">component_limit_of_quantitation</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string representing the lowest analyte concentration likely to be reliably ...</td>
 <td>direct</td>
@@ -380,9 +380,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../compound_value_remeasured_for_quality_control/">compound_value_remeasured_for_quality_control</a></td>
+<td><a href="../component_quality_control_remeasurement/">component_quality_control_remeasurement</a></td>
 <td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
-<td>A boolean value denoting TRUE if a measured_compound_value was measured more ...</td>
+<td>A boolean value denoting TRUE if a component_recorded_value was measured more...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -459,21 +459,21 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Component
-description: Metadata about measured components of nutritional interest
+description: Metadata about components of nutritional interest measured from foods.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 is_a: NamedThing
 slots:
-- measured_compound
-- measured_compound_label
-- measured_compound_recorded_value
-- measured_compound_unit
-- measured_compound_data_points_number
-- measured_compound_record_date
-- measured_compound_analysis_date
-- measured_compound_comment
-- measured_compound_derivation_type
-- measured_compound_limit_of_quantitation
+- component_type
+- component_type_label
+- component_recorded_value
+- component_measurement_unit
+- component_data_points_number
+- component_record_date
+- component_analysis_date
+- component_comment
+- component_derivation_type
+- component_limit_of_quantitation
 - laboratory_sample_aggregation_minimum_measured_compound_value
 - laboratory_sample_aggregation_maximum_measured_compound_value
 - laboratory_sample_aggregation_median_measured_compound_value
@@ -481,7 +481,7 @@ slots:
 - analytical_analysis_measurement_protocol_doi
 - analytical_analysis_measurement_method
 - laboratory_conducting_analytical_analysis
-- compound_value_remeasured_for_quality_control
+- component_quality_control_remeasurement
 class_uri: schema:Component
 
 </code></pre>
@@ -489,128 +489,128 @@ class_uri: schema:Component
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Component
-description: Metadata about measured components of nutritional interest
+description: Metadata about components of nutritional interest measured from foods.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 is_a: NamedThing
 attributes:
-  measured_compound:
-    name: measured_compound
-    description: A controlled vocabulary term representing an analyzed component from
-      a food sample.
+  component_type:
+    name: component_type
+    description: A controlled vocabulary term representing the type of component of
+      nutritional interest analyzed from a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound
+    alias: component_type
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_label:
-    name: measured_compound_label
+  component_type_label:
+    name: component_type_label
     description: A string denoting the label of a controlled vocabulary term representing
-      an analyzed component from a food sample.
+      an analyzed component_type from a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_label
+    alias: component_type_label
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_recorded_value:
-    name: measured_compound_recorded_value
-    description: A float representing a recorded value of a compound of nutritional
+  component_recorded_value:
+    name: component_recorded_value
+    description: A float representing a recorded value of a component of nutritional
       interest measured from a laboratory sample derived from a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_recorded_value
+    alias: component_recorded_value
     owner: Component
     domain_of:
     - Component
     range: float
-  measured_compound_unit:
-    name: measured_compound_unit
-    description: A unit code representing the units of measurement in which a measured
-      food component value from a food was sampled.
+  component_measurement_unit:
+    name: component_measurement_unit
+    description: A unit code representing the unit of measurement in which a component_recorded_value
+      is measured.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_unit
+    alias: component_measurement_unit
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_data_points_number:
-    name: measured_compound_data_points_number
+  component_data_points_number:
+    name: component_data_points_number
     description: An integer representing the number of individual samples that comprise
-      a measured_compound sample. 1 if an individual sample &gt;1 if an aggregation of
-      samples.
+      a component sample. 1 if an individual sample &gt;1 if an aggregation of samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_data_points_number
+    alias: component_data_points_number
     owner: Component
     domain_of:
     - Component
     range: integer
-  measured_compound_record_date:
-    name: measured_compound_record_date
-    description: A datetime value representing a known recorded date pertaining to
-      an analyzed sample.
+  component_record_date:
+    name: component_record_date
+    description: A datetime value representing recorded date pertaining to an analyzed
+      sample.
     comments:
-    - Allows for ambiguity of date record relative to measured_compound_analysis_date.
-      Use this if a date for a record is know but it isn't specifically the date of
-      analysis.
+    - Allows for ambiguity of date record relative to component_analysis_date. Use
+      this if a date for a record is know but it is unclear if it is specifically
+      the date of analysis.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_record_date
+    alias: component_record_date
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_analysis_date:
-    name: measured_compound_analysis_date
-    description: A datetime value representing the date in which a measured_compound
-      was analyzed.
+  component_analysis_date:
+    name: component_analysis_date
+    description: A datetime value representing the date in which a component of nutritional
+      interest was analyzed.
     comments:
     - Use this field if the exact date of analysis is known if there is date ambiguity
-      use measured_compound_record_date.
+      use component_record_date.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_analysis_date
+    alias: component_analysis_date
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_comment:
-    name: measured_compound_comment
-    description: A comment relating to measured component.
+  component_comment:
+    name: component_comment
+    description: A comment relating to an analyzed component of nutritional interest.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_comment
+    alias: component_comment
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_derivation_type:
-    name: measured_compound_derivation_type
-    description: A controlled vocabulary term denoting how the measured_compound was
-      generated, (e.g., Analytical or Calculated).
+  component_derivation_type:
+    name: component_derivation_type
+    description: A controlled vocabulary term denoting how a component of nutritional
+      interest was generated, (e.g., Analytical or Calculated).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_derivation_type
+    alias: component_derivation_type
     owner: Component
     domain_of:
     - Component
     range: string
-  measured_compound_limit_of_quantitation:
-    name: measured_compound_limit_of_quantitation
+  component_limit_of_quantitation:
+    name: component_limit_of_quantitation
     description: A string representing the lowest analyte concentration likely to
       be reliably distinguished from the Limit of Blank (LoB) and at which detection
-      is feasible. Where LoB is the highest apparent analyte concentration expected
-      to be found when replicates of a blank sample containing no analyte are tested.
+      is feasible during the analysis of a component of nutritional interest.
     comments:
-    - Definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/
+    - LoB, (used in the description) is the highest apparent analyte concentration
+      expected to be found when replicates of a blank sample containing no analyte
+      are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_limit_of_quantitation
+    alias: component_limit_of_quantitation
     owner: Component
     domain_of:
     - Component
@@ -692,13 +692,15 @@ attributes:
     domain_of:
     - Component
     range: string
-  compound_value_remeasured_for_quality_control:
-    name: compound_value_remeasured_for_quality_control
-    description: A boolean value denoting TRUE if a measured_compound_value was measured
+  component_quality_control_remeasurement:
+    name: component_quality_control_remeasurement
+    description: A boolean value denoting TRUE if a component_recorded_value was measured
       more than once for internal laboratory quality control purposes.
+    comments:
+    - This could be alternatively be modeled with an integer rather than a boolean.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: compound_value_remeasured_for_quality_control
+    alias: component_quality_control_remeasurement
     owner: Component
     domain_of:
     - Component
