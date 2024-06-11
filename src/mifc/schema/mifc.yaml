@@ -47,7 +47,6 @@ classes:
      - food_primary_type
      - food_primary_type_label
      - food_upc_code
-     - food_category_label
      - food_preservation_state
      - food_storage_temperature_state
      - food_ripeness_state
@@ -65,6 +64,8 @@ classes:
      - food_distributor_country
      - food_distributor_country_subdivision
      - food_expiration_date
+     - food_category_label
+     - food_additional_types
     id_prefixes:
       - mifc
 
@@ -204,6 +205,8 @@ slots:
     description: A datetime value representing the food expiration data as shown on the labeling information of the food sample.
   food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
+  food_additional_types:
+    description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
 
 
   # Component slots
