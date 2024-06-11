@@ -46,7 +46,7 @@ classes:
     slots:            ## Slots specific to food
      - food_primary_type
      - food_primary_type_label
-     - primary_food_type_upc_code
+     - food_upc_code
      - primary_food_category_label
      - food_preservation_state
      - food_storage_temperature_state
@@ -143,8 +143,8 @@ slots:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
-  primary_food_type_upc_code:
-    description: An integer denoting a Universal Product Code (UPC) barcode.
+  food_upc_code:
+    description: An integer denoting a Universal Product Code (UPC) barcode of a food sample.
     range: integer
   food_preservation_state:
     description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
