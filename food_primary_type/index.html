@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/primary_food_category_label/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_primary_type/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: primary_food_category_label - mifc</title>
+        <title>Slot: food_primary_type - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-primary_food_category_label" class="md-skip">
+        <a href="#slot-food_primary_type" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: primary_food_category_label
+              Slot: food_primary_type
             
           </span>
         </div>
@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -310,15 +317,15 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/primary_food_category_label.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_primary_type.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-primary_food_category_label">Slot: primary_food_category_label</h1>
-<p><em>A string or controlled vocabulary denoting the label of the food group or category of the primary food material.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/primary_food_category_label">mifc:primary_food_category_label</a></p>
+<h1 id="slot-food_primary_type">Slot: food_primary_type</h1>
+<p><em>A controlled vocabulary term representing the primary food material which was sampled.</em></p>
+<p>URI: <a href="http://schema.org/name">schema:name</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -340,6 +347,10 @@
 <ul>
 <li>Range: <a href="../String/">String</a></li>
 </ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -348,12 +359,18 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: primary_food_category_label
-description: A string or controlled vocabulary denoting the label of the food group
-  or category of the primary food material.
+<pre><code class="language-yaml">name: food_primary_type
+description: A controlled vocabulary term representing the primary food material which
+  was sampled.
+comments:
+- The food_primary_type could be sourced from one of various food vocabularies such
+  as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
 from_schema: https://w3id.org/kaiiam/mifc
+exact_mappings:
+- FDC:NDB_number
 rank: 1000
-alias: primary_food_category_label
+slot_uri: schema:name
+alias: food_primary_type
 domain_of:
 - Food
 range: string

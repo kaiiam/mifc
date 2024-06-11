@@ -253,9 +253,9 @@
 
       Component : measured_compound_record_date
 
-      Component : measured_compound_unit
+      Component : measured_compound_recorded_value
 
-      Component : measured_compound_value
+      Component : measured_compound_unit
 
 
 </div>
@@ -280,7 +280,7 @@
 <tr>
 <td><a href="../measured_compound/">measured_compound</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A controlled vocabulary term representing an analyzed component from a primar...</td>
+<td>A controlled vocabulary term representing an analyzed component from a food s...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -290,9 +290,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../measured_compound_value/">measured_compound_value</a></td>
+<td><a href="../measured_compound_recorded_value/">measured_compound_recorded_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td>A float representing an individual instance of a measured food compound value...</td>
+<td>A float representing a recorded value of a compound of nutritional interest m...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -466,7 +466,7 @@ is_a: NamedThing
 slots:
 - measured_compound
 - measured_compound_label
-- measured_compound_value
+- measured_compound_recorded_value
 - measured_compound_unit
 - measured_compound_data_points_number
 - measured_compound_record_date
@@ -497,7 +497,7 @@ attributes:
   measured_compound:
     name: measured_compound
     description: A controlled vocabulary term representing an analyzed component from
-      a primary_food_type food sample.
+      a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound
@@ -508,7 +508,7 @@ attributes:
   measured_compound_label:
     name: measured_compound_label
     description: A string denoting the label of a controlled vocabulary term representing
-      an analyzed component from a primary_food_type food sample.
+      an analyzed component from a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_label
@@ -516,13 +516,13 @@ attributes:
     domain_of:
     - Component
     range: string
-  measured_compound_value:
-    name: measured_compound_value
-    description: A float representing an individual instance of a measured food compound
-      value from an individual primary_food_type sample.
+  measured_compound_recorded_value:
+    name: measured_compound_recorded_value
+    description: A float representing a recorded value of a compound of nutritional
+      interest measured from a laboratory sample derived from a food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: measured_compound_value
+    alias: measured_compound_recorded_value
     owner: Component
     domain_of:
     - Component
@@ -530,7 +530,7 @@ attributes:
   measured_compound_unit:
     name: measured_compound_unit
     description: A unit code representing the units of measurement in which a measured
-      food component value from a primary_food_type sample was sampled.
+      food component value from a food was sampled.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: measured_compound_unit
