@@ -79,7 +79,7 @@ classes:
       - component_type_label
       - component_recorded_value
       - component_measurement_unit
-      - measured_compound_data_points_number
+      - component_data_points_number
       - measured_compound_record_date
       - measured_compound_analysis_date
       - measured_compound_comment
@@ -219,8 +219,8 @@ slots:
     range: float
   component_measurement_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
-  measured_compound_data_points_number: # TODO add default 1 perhaps with ifabsent
-    description: An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.
+  component_data_points_number: # TODO add default 1 perhaps with ifabsent
+    description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
     range: integer
   measured_compound_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
     description: A datetime value representing a known recorded date pertaining to an analyzed sample.
