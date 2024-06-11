@@ -4,9 +4,27 @@
 
 **Component**
 
-* Rename `measured_compound` to `measured_compound_type`
+* Rename `measured_compound` to `component_type`
 
-* Rename `measured_compound_value` to `measured_compound_recorded_value`
+* Rename `measured_compound_label` to `component_type_label`
+
+* Rename `measured_compound_recorded_value` to `component_recorded_value`
+
+* Rename `measured_compound_unit` to `component_measurement_unit`
+
+* Rename `measured_compound_data_points_number` to `component_data_points_number`
+
+* Rename `measured_compound_record_date` to `component_record_date`
+
+* Rename `measured_compound_analysis_date` to `component_analysis_date`
+
+* Rename `measured_compound_comment` to `component_comment`
+
+* Rename `measured_compound_derivation_type` to `component_derivation_type`
+
+* Rename `measured_compound_limit_of_quantitation` to `component_limit_of_quantitation`
+
+* Rename `compound_value_remeasured_for_quality_control` to `component_quality_control_remeasurement`
 
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
