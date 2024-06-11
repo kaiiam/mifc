@@ -82,7 +82,7 @@ classes:
       - component_data_points_number
       - component_record_date
       - component_analysis_date
-      - measured_compound_comment
+      - component_comment
       - measured_compound_derivation_type
       - measured_compound_limit_of_quantitation
       - laboratory_sample_aggregation_minimum_measured_compound_value
@@ -228,8 +228,8 @@ slots:
   component_analysis_date:
     description: A datetime value representing the date in which a component of nutritional interest was analyzed.
     comments: Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date.
-  measured_compound_comment:
-    description: A comment relating to measured component.
+  component_comment:
+    description: A comment relating to an analyzed component of nutritional interest.
   measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how the measured_compound was generated, (e.g., Analytical or Calculated).
   measured_compound_limit_of_quantitation:
