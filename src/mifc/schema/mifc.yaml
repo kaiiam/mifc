@@ -44,7 +44,7 @@ classes:
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
     slots:            ## Slots specific to food
-     - primary_food_type
+     - food_primary_type
      - primary_food_type_label
      - primary_food_type_upc_code
      - primary_food_category_label
@@ -133,8 +133,9 @@ slots:
 
 
   # Food slots
-  primary_food_type:
-    description: A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn
+  food_primary_type:
+    description: A controlled vocabulary term representing the primary food material which was sampled.
+    comments: The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
@@ -146,75 +147,75 @@ slots:
     description: An integer denoting a Universal Product Code (UPC) barcode.
     range: integer
   food_preservation_state:
-    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of the primary_food_type (e.g., "Raw").
+    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
     range: FoodPreservationState
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
-    description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a primary_food_type was stored prior to acquisition (e.g., "Refrigerated").
+    description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
     range: FoodStorageTemperatureState
   food_ripeness_state:
-    description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a primary_food_type when prepared for analysis.
+    description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
   food_cooking_method:
-    description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a primary_food_type prior to analysis (e.g., "baked").
+    description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     range: FoodCookingMethod
   food_acquisition_city:
-    description: A string denoting the city in which a primary_food_type was acquired.
+    description: A string denoting the city in which a food sample was acquired.
     close_mappings:
       - PTFI:Collection_Location
   food_acquisition_country: # See ISO 3166 for country codes
-    description: A string denoting the country code from which a primary_food_type was acquired.
+    description: A string denoting the country code from which a food sample was acquired.
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
-    description: A string denoting the country subdivision from which a primary_food_type was acquired (e.g., state or province).
+    description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
-    description: A datetime value representing the date a primary_food_type was acquired.
+    description: A datetime value representing the date a food sample was acquired.
     exact_mappings:
       - PTFI:Collection_Date
   food_acquisition_location_type:
-    description: A string describing the type of location from which a primary_food_type sample was acquired (e.g., a supermarket).
+    description: A string describing the type of location from which a food sample was acquired (e.g., a supermarket).
     range: FoodAcquisitionLocationType #Can maybe set default to unknown
     exact_mappings:
       - PTFI:Collection_Type
   food_acquisition_latitude: #TODO add numeric range constraint
-    description: A float representing the latitude of the place from which the primary_food_type was acquired.
+    description: A float representing the latitude of the place from which the food sample was acquired.
     range: float
     exact_mappings:
       - PTFI:Collection_Latitude
   food_acquisition_longitude: #TODO add numeric range constraint
-    description: A float representing the longitude of the place from which the primary_food_type was acquired.
+    description: A float representing the longitude of the place from which the food sample was acquired.
     range: float
     exact_mappings:
       - PTFI:Collection_Longitude
   food_acquisition_agent_name:
-    description: A string denoting the name of the agent (person, device or other type of service) that acquired the primary_food_type.
+    description: A string denoting the name of the agent (person, device or other type of service) that acquired the food sample.
     exact_mappings:
       - PTFI:Collector_Name
   food_acquisition_organization:
-    description: A string denoting the name of the organization responsible for acquired the primary_food_type.
+    description: A string denoting the name of the organization responsible for acquired the food sample.
     exact_mappings:
       - PTFI:Collector_Organization
   food_distributor_city:
-    description: A string denoting the city of a distributor organization from which a primary_food_type was acquired.
+    description: A string denoting the city of a distributor organization from which a food sample was acquired.
   food_distributor_country:
-    description: A string denoting the country code of a distributor organization from which a primary_food_type was acquired.
+    description: A string denoting the country code of a distributor organization from which a food sample was acquired.
   food_distributor_country_subdivision:
-    description: A string denoting the country subdivision of a distributor organization from which a primary_food_type was acquired, (e.g., state or province).
+    description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
-    description: A datetime value representing the food expiration data as shown on the labeling information of the primary_food_type.
+    description: A datetime value representing the food expiration data as shown on the labeling information of the food sample.
   primary_food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
 
 
   # Component slots
   measured_compound:
-    description: A controlled vocabulary term representing an analyzed component from a primary_food_type food sample.
+    description: A controlled vocabulary term representing an analyzed component from a food sample.
   measured_compound_label:
-    description: A string denoting the label of a controlled vocabulary term representing an analyzed component from a primary_food_type food sample.
+    description: A string denoting the label of a controlled vocabulary term representing an analyzed component from a food sample.
   measured_compound_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
-    description: A float representing a recorded value of a compound of nutritional interest measured from a laboratory sample derived from a primary_food_type.
+    description: A float representing a recorded value of a compound of nutritional interest measured from a laboratory sample derived from a food sample.
     range: float
   measured_compound_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
-    description: A unit code representing the units of measurement in which a measured food component value from a primary_food_type sample was sampled.
+    description: A unit code representing the units of measurement in which a measured food component value from a food was sampled.
   measured_compound_data_points_number: # TODO add default 1 perhaps with ifabsent
     description: An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.
     range: integer
