@@ -40,7 +40,7 @@ classes:
 
   Food:
     description: >-
-      Metadata about foods
+      Metadata about foods analyzed for components of nutritional interest.
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
     slots:            ## Slots specific to food
@@ -71,7 +71,7 @@ classes:
 
   Component:
     description: >-
-      Metadata about measured components of nutritional interest
+      Metadata about components of nutritional interest measured from foods.
     is_a: NamedThing
     class_uri: schema:Component
     slots:
