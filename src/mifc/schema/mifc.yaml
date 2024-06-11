@@ -83,7 +83,7 @@ classes:
       - component_record_date
       - component_analysis_date
       - component_comment
-      - measured_compound_derivation_type
+      - component_derivation_type
       - measured_compound_limit_of_quantitation
       - laboratory_sample_aggregation_minimum_measured_compound_value
       - laboratory_sample_aggregation_maximum_measured_compound_value
@@ -230,8 +230,8 @@ slots:
     comments: Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date.
   component_comment:
     description: A comment relating to an analyzed component of nutritional interest.
-  measured_compound_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
-    description: A controlled vocabulary term denoting how the measured_compound was generated, (e.g., Analytical or Calculated).
+  component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
+    description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
   measured_compound_limit_of_quantitation:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.
