@@ -26,7 +26,7 @@ imports:
 
 classes:
   ## --
-  ## Parent class for Foods and Compounds
+  ## Parent class for Foods and Components
   ## --
   NamedThing:
     abstract: true     ## should not be instantiated directly
@@ -43,7 +43,7 @@ classes:
       Metadata about foods analyzed for components of nutritional interest.
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
-    slots:            ## Slots specific to food
+    slots:            ## Slots specific to foods
      - food_primary_type
      - food_primary_type_label
      - food_upc_code
@@ -74,7 +74,7 @@ classes:
       Metadata about components of nutritional interest measured from foods.
     is_a: NamedThing
     class_uri: schema:Component
-    slots:
+    slots:            ## Slots specific to components of nutritional interest
       - measured_compound_type
       - measured_compound_label
       - measured_compound_recorded_value
