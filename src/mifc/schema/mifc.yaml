@@ -45,7 +45,7 @@ classes:
     class_uri: schema:Food
     slots:            ## Slots specific to food
      - food_primary_type
-     - primary_food_type_label
+     - food_primary_type_label
      - primary_food_type_upc_code
      - primary_food_category_label
      - food_preservation_state
@@ -139,7 +139,7 @@ slots:
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
-  primary_food_type_label:
+  food_primary_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
