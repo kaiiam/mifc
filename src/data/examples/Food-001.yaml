@@ -1,7 +1,0 @@
-# Example data object
----
-foods:
-- id: FDC:167512
-  primary_food_type: FOOD:11109
-  primary_food_type_label: Cabbage, raw
-  food_preparation_state: raw

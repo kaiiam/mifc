@@ -1,3 +1,4 @@
+# metamodel_version: 1.7.0
 BASE <https://w3id.org/kaiiam/mifc/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -46,24 +47,30 @@ linkml:Sparqlpath xsd:string
 <Component> CLOSED {
     (  $<Component_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
-          <measured_compound> @linkml:String ? ;
-          <measured_compound_value> @linkml:Float ? ;
-          <measured_compound_unit> @linkml:String ? ;
-          <measured_compound_denominator_value> @linkml:Float ? ;
-          <measured_compound_denominator_unit> @linkml:String ? ;
-          <measured_compound_data_points_number> @linkml:Integer ? ;
-          <measured_compound_record_date> @linkml:String ? ;
-          <measured_compound_analysis_date> @linkml:String ? ;
-          <measured_compound_comment> @linkml:String ? ;
-          <measured_compound_derivation_type> @linkml:String ? ;
-          <measured_compound_limit_of_quantitation> @linkml:String ? ;
+          <component_type> @linkml:String ? ;
+          <component_type_label> @linkml:String ? ;
+          <component_recorded_value> @linkml:Float ? ;
+          <component_measurement_unit> @linkml:String ? ;
+          <component_data_points_number> @linkml:Integer ? ;
+          <component_record_date> @linkml:String ? ;
+          <component_analysis_date> @linkml:String ? ;
+          <component_comment> @linkml:String ? ;
+          <component_derivation_type> @linkml:String ? ;
+          <component_limit_of_quantitation> @linkml:String ? ;
           <laboratory_sample_aggregation_minimum_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_maximum_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_median_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_measured_compound_standard_deviation> @linkml:Float ? ;
           <analytical_analysis_measurement_protocol_doi> @linkml:String ? ;
-          <analytical_analysis_measurement_method> @<AnalyticalMeasurementMethod> ? ;
-          <laboratory_conducting_analytical_analysis> @linkml:String ?
+          <analytical_analysis_measurement_method> [ <http://purl.obolibrary.org/obo/OBI_0002116>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric>
+             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> ] ? ;
+          <laboratory_conducting_analytical_analysis> @linkml:String ? ;
+          <component_quality_control_remeasurement> @linkml:Boolean ?
        ) ;
        rdf:type [ schema1:Component ] ?
     )
@@ -71,7 +78,8 @@ linkml:Sparqlpath xsd:string
 
 <Container> CLOSED {
     (  $<Container_tes> (  <foods> @<Food> * ;
-          <components> @<Component> *
+          <components> @<Component> * ;
+          <provenances> @<Provenance> *
        ) ;
        rdf:type [ <Container> ] ?
     )
@@ -81,33 +89,105 @@ linkml:Sparqlpath xsd:string
     (  $<Food_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
           schema1:name @linkml:String ? ;
-          <primary_food_type_label> @linkml:String ? ;
-          <primary_food_type_upc_code> @linkml:Integer ? ;
-          <food_preparation_state> @<FoodPreparationState> ? ;
+          <food_primary_type_label> @linkml:String ? ;
+          <food_upc_code> @linkml:Integer ? ;
+          <food_preservation_state> [ <https://w3id.org/kaiiam/mifc/FoodPreservationState#air-dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#artificially%20dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#brined>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#candied>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#canned> <https://w3id.org/kaiiam/mifc/FoodPreservationState#cured>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#fermented>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#freeze-dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#fresh>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#heat%20treated>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#irradiated>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#jellied>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#kippered>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#naturally%20dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#pasteurized>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#pickled> <https://w3id.org/kaiiam/mifc/FoodPreservationState#raw>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#shelf%20stable>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#sun-dried>
+             <https://w3id.org/kaiiam/mifc/FoodPreservationState#ultraviolet%20light%20exposed> ] ? ;
+          <food_storage_temperature_state> [ <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#chilled>
+             <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#foodsafe%20chilled>
+             <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#frozen>
+             <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#refrigerated> ] ? ;
+          <food_ripeness_state> [ <https://w3id.org/kaiiam/mifc/FoodRipenessState#ripe>
+             <https://w3id.org/kaiiam/mifc/FoodRipenessState#overripe> <https://w3id.org/kaiiam/mifc/FoodRipenessState#unripe>
+             <https://w3id.org/kaiiam/mifc/FoodRipenessState#slightly%20ripe> ] ? ;
+          <food_cooking_method> [ <https://w3id.org/kaiiam/mifc/FoodCookingMethod#baked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#blanched> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#boiled>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#braised> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#broiled>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#cooked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-heat%20cooked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#fried>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#grilled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#heated>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#microwaved>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#moist-heat%20cooked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#oil-roasted>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-broiled>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-browned>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-fried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#parboiled>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#partially%20fried>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#poached> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#precooked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#refried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#roasted>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#sauteed> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#simmered>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#slow-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#smoked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#spit-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#steamed>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stewed> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stir-fried>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#toasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#uncooked>
+             <https://w3id.org/kaiiam/mifc/FoodCookingMethod#unheated> ] ? ;
           <food_acquisition_city> @linkml:String ? ;
           <food_acquisition_country> @linkml:String ? ;
           <food_acquisition_country_subdivision> @linkml:String ? ;
           <food_acquisition_date> @linkml:String ? ;
-          <food_acquisition_location_type> @<FoodAcquisitionLocationType> ? ;
+          <food_acquisition_location_type> [ <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#field>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#fresh%20market>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#small%20grocery>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#supermarket>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#biobank>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#unknown>
+             <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#other> ] ? ;
           <food_acquisition_latitude> @linkml:Float ? ;
           <food_acquisition_longitude> @linkml:Float ? ;
+          <food_acquisition_agent_name> @linkml:String ? ;
+          <food_acquisition_organization> @linkml:String ? ;
           <food_distributor_city> @linkml:String ? ;
           <food_distributor_country> @linkml:String ? ;
           <food_distributor_country_subdivision> @linkml:String ? ;
-          <food_expiration_date> @linkml:String ?
+          <food_expiration_date> @linkml:String ? ;
+          <food_category_label> @linkml:String ? ;
+          <food_additional_types> @linkml:String ?
        ) ;
        rdf:type [ schema1:Food ] ?
     )
 }
 
 <NamedThing>  (
-    @<Component> OR @<Food>
+    @<Component> OR @<Food> OR @<Provenance>
 )
 
 <NamedThing_struct> {
-    (  $<NamedThing_tes> <id> @linkml:String ? ;
+    (  $<NamedThing_tes> (  <id> @linkml:String ? ;
+          <laboratory_sample_id> @linkml:String ? ;
+          <laboratory_sample_aliquot_id> @linkml:String ? ;
+          <laboratory_sample_batch_id> @linkml:String ?
+       ) ;
        rdf:type [ <NamedThing> ] ?
     )
 }
 
+<Provenance> CLOSED {
+    (  $<Provenance_tes> (  &<NamedThing_tes> ;
+          rdf:type [ <NamedThing> ] ? ;
+          <dataset_label> @linkml:String ? ;
+          <mifc_version_tag> @linkml:String ? ;
+          <contributor_orcid> @linkml:String ? ;
+          <organization_name> @linkml:String ?
+       ) ;
+       rdf:type [ schema1:Provenance ] ?
+    )
+}
 

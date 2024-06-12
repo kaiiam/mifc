@@ -1,7 +1,7 @@
 @prefix FDC: <https://fdc.nal.usda.gov/> .
-@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
 @prefix OBI: <http://purl.obolibrary.org/obo/OBI_> .
 @prefix PTFI: <https://foodperiodictable.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix linkml: <https://w3id.org/linkml/> .
 @prefix mifc: <https://w3id.org/kaiiam/mifc/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,30 +11,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/kaiiam/mifc> a owl:Ontology ;
-    rdfs:label "mifc" ;
-    IAO:0000700 mifc:Container,
-        mifc:NamedThing ;
-    linkml:classes "{'NamedThing': ClassDefinition(name='NamedThing', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/NamedThing', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=['schema:Thing'], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=True, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['id'], slot_usage={}, attributes={}, class_uri='mifc:NamedThing', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={}), 'Food': ClassDefinition(name='Food', id_prefixes=['mifc'], definition_uri='https://w3id.org/kaiiam/mifc/Food', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Metadata about foods', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=['schema:Food'], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a='NamedThing', abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['id', 'primary_food_type', 'primary_food_type_label', 'primary_food_type_upc_code', 'food_preparation_state', 'food_acquisition_city', 'food_acquisition_country', 'food_acquisition_country_subdivision', 'food_acquisition_date', 'food_acquisition_location_type', 'food_acquisition_latitude', 'food_acquisition_longitude', 'food_distributor_city', 'food_distributor_country', 'food_distributor_country_subdivision', 'food_expiration_date'], slot_usage={}, attributes={}, class_uri='schema:Food', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={}), 'Component': ClassDefinition(name='Component', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/Component', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Metadata about measured components of nutritional interest', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=['schema:Component'], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a='NamedThing', abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['id', 'measured_compound', 'measured_compound_value', 'measured_compound_unit', 'measured_compound_denominator_value', 'measured_compound_denominator_unit', 'measured_compound_data_points_number', 'measured_compound_record_date', 'measured_compound_analysis_date', 'measured_compound_comment', 'measured_compound_derivation_type', 'measured_compound_limit_of_quantitation', 'laboratory_sample_aggregation_minimum_measured_compound_value', 'laboratory_sample_aggregation_maximum_measured_compound_value', 'laboratory_sample_aggregation_median_measured_compound_value', 'laboratory_sample_aggregation_measured_compound_standard_deviation', 'analytical_analysis_measurement_protocol_doi', 'analytical_analysis_measurement_method', 'laboratory_conducting_analytical_analysis'], slot_usage={}, attributes={}, class_uri='schema:Component', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={}), 'Container': ClassDefinition(name='Container', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/Container', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['container__foods', 'container__components'], slot_usage={}, attributes={'foods': SlotDefinition(name='foods', id_prefixes=[], definition_uri=None, local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, singular_name=None, domain=None, slot_uri=None, multivalued=True, inherited=None, readonly=None, ifabsent=None, list_elements_unique=None, list_elements_ordered=None, shared=None, key=None, identifier=None, designates_type=None, alias=None, owner=None, domain_of=[], subproperty_of=None, symmetric=None, reflexive=None, locally_reflexive=None, irreflexive=None, asymmetric=None, transitive=None, inverse=None, is_class_field=None, transitive_form_of=None, reflexive_transitive_form_of=None, role=None, is_usage_slot=None, usage_slot_name=None, relational_role=None, slot_group=None, is_grouping_slot=None, path_rule=None, disjoint_with=[], children_are_mutually_disjoint=None, union_of=[], range='Food', range_expression=None, enum_range=None, required=None, recommended=None, inlined=None, inlined_as_list=True, minimum_value=None, maximum_value=None, pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, value_presence=None, equals_string=None, equals_string_in=[], equals_number=None, equals_expression=None, minimum_cardinality=None, maximum_cardinality=None, has_member=None, all_members=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'components': SlotDefinition(name='components', id_prefixes=[], definition_uri=None, local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, singular_name=None, domain=None, slot_uri=None, multivalued=True, inherited=None, readonly=None, ifabsent=None, list_elements_unique=None, list_elements_ordered=None, shared=None, key=None, identifier=None, designates_type=None, alias=None, owner=None, domain_of=[], subproperty_of=None, symmetric=None, reflexive=None, locally_reflexive=None, irreflexive=None, asymmetric=None, transitive=None, inverse=None, is_class_field=None, transitive_form_of=None, reflexive_transitive_form_of=None, role=None, is_usage_slot=None, usage_slot_name=None, relational_role=None, slot_group=None, is_grouping_slot=None, path_rule=None, disjoint_with=[], children_are_mutually_disjoint=None, union_of=[], range='Component', range_expression=None, enum_range=None, required=None, recommended=None, inlined=None, inlined_as_list=True, minimum_value=None, maximum_value=None, pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, value_presence=None, equals_string=None, equals_string_in=[], equals_number=None, equals_expression=None, minimum_cardinality=None, maximum_cardinality=None, has_member=None, all_members=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[])}, class_uri='mifc:Container', subclass_of=None, union_of=[], defining_slots=[], tree_root=True, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={})}" ;
-    linkml:enums "{'AnalyticalMeasurementMethod': EnumDefinition(name='AnalyticalMeasurementMethod', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, enum_uri=None, code_set=None, code_set_tag=None, code_set_version=None, pv_formula=None, permissible_values={'HPLC': PermissibleValue(text='HPLC', description='High performance liquid chromotography', meaning='OBI:0002116', unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'GLC': PermissibleValue(text='GLC', description='gas-liquid chromatography', meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'GC': PermissibleValue(text='GC', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'Nephelometry': PermissibleValue(text='Nephelometry', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'Gravimetric': PermissibleValue(text='Gravimetric', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'Fluorometric': PermissibleValue(text='Fluorometric', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'Kjeldahl': PermissibleValue(text='Kjeldahl', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None)}, include=[], minus=[], inherits=[], reachable_from=None, matches=None, concepts=[]), 'FoodPreparationState': EnumDefinition(name='FoodPreparationState', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/FoodPreparationState', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, enum_uri=None, code_set=None, code_set_tag=None, code_set_version=None, pv_formula=None, permissible_values={'raw': PermissibleValue(text='raw', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'fresh': PermissibleValue(text='fresh', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'chilled': PermissibleValue(text='chilled', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'foodsafe chilled': PermissibleValue(text='foodsafe chilled', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'fresh chilled': PermissibleValue(text='fresh chilled', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'frozen': PermissibleValue(text='frozen', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'fresh frozen': PermissibleValue(text='fresh frozen', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'unripe': PermissibleValue(text='unripe', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'slightly ripe': PermissibleValue(text='slightly ripe', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'ripe': PermissibleValue(text='ripe', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'overripe': PermissibleValue(text='overripe', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'dried': PermissibleValue(text='dried', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'naturally dried': PermissibleValue(text='naturally dried', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'artificially dried': PermissibleValue(text='artificially dried', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'heat treated': PermissibleValue(text='heat treated', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'irradiated': PermissibleValue(text='irradiated', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None)}, include=[], minus=[], inherits=[], reachable_from=None, matches=None, concepts=[]), 'FoodAcquisitionLocationType': EnumDefinition(name='FoodAcquisitionLocationType', id_prefixes=[], definition_uri='https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/kaiiam/mifc', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, enum_uri=None, code_set=None, code_set_tag=None, code_set_version=None, pv_formula=None, permissible_values={'field': PermissibleValue(text='field', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'fresh market': PermissibleValue(text='fresh market', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'small grocery': PermissibleValue(text='small grocery', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'supermarket': PermissibleValue(text='supermarket', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'biobank': PermissibleValue(text='biobank', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'unknown': PermissibleValue(text='unknown', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None), 'other': PermissibleValue(text='other', description=None, meaning=None, unit=None, is_a=None, mixins=[], extensions={}, annotations={}, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None)}, include=[], minus=[], inherits=[], reachable_from=None, matches=None, concepts=[])}" ;
-    linkml:id "https://w3id.org/kaiiam/mifc" ;
-    linkml:imports "linkml:types" ;
-    linkml:types "{'string': TypeDefinition(name='string', id_prefixes=[], definition_uri='https://w3id.org/linkml/String', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A character string', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Text'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='xsd:string', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'integer': TypeDefinition(name='integer', id_prefixes=[], definition_uri='https://w3id.org/linkml/Integer', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='An integer', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Integer'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='int', uri='xsd:integer', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'boolean': TypeDefinition(name='boolean', id_prefixes=[], definition_uri='https://w3id.org/linkml/Boolean', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A binary (true or false) value', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Boolean'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Bool', uri='xsd:boolean', repr='bool', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'float': TypeDefinition(name='float', id_prefixes=[], definition_uri='https://w3id.org/linkml/Float', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number that conforms to the xsd:float specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Float'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='float', uri='xsd:float', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'double': TypeDefinition(name='double', id_prefixes=[], definition_uri='https://w3id.org/linkml/Double', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number that conforms to the xsd:double specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=['schema:Float'], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='float', uri='xsd:double', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'decimal': TypeDefinition(name='decimal', id_prefixes=[], definition_uri='https://w3id.org/linkml/Decimal', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number with arbitrary precision that conforms to the xsd:decimal specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=['schema:Number'], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Decimal', uri='xsd:decimal', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'time': TypeDefinition(name='time', id_prefixes=[], definition_uri='https://w3id.org/linkml/Time', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A time object represents a (local) time of day, independent of any particular day', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['URI is dateTime because OWL reasoners do not work with straight date or time', 'If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Time'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDTime', uri='xsd:time', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'date': TypeDefinition(name='date', id_prefixes=[], definition_uri='https://w3id.org/linkml/Date', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='a date (year, month and day) in an idealized calendar', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[\"URI is dateTime because OWL reasoners don't work with straight date or time\", 'If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Date'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDDate', uri='xsd:date', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'datetime': TypeDefinition(name='datetime', id_prefixes=[], definition_uri='https://w3id.org/linkml/Datetime', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='The combination of a date and time', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:DateTime'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDDateTime', uri='xsd:dateTime', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'date_or_datetime': TypeDefinition(name='date_or_datetime', id_prefixes=[], definition_uri='https://w3id.org/linkml/DateOrDatetime', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Either a date or a datetime', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='linkml:DateOrDatetime', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'uriorcurie': TypeDefinition(name='uriorcurie', id_prefixes=[], definition_uri='https://w3id.org/linkml/Uriorcurie', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='a URI or a CURIE', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='URIorCURIE', uri='xsd:anyURI', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'curie': TypeDefinition(name='curie', id_prefixes=[], definition_uri='https://w3id.org/linkml/Curie', local_names={}, conforms_to='https://www.w3.org/TR/curie/', implements=[], extensions={}, annotations={}, description='a compact URI', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\".'], comments=['in RDF serializations this MUST be expanded to a URI', 'in non-RDF serializations MAY be serialized as the compact representation'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Curie', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'uri': TypeDefinition(name='uri', id_prefixes=[], definition_uri='https://w3id.org/linkml/Uri', local_names={}, conforms_to='https://www.ietf.org/rfc/rfc3987.txt', implements=[], extensions={}, annotations={}, description='a complete URI', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\".'], comments=['in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=['schema:URL'], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='URI', uri='xsd:anyURI', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'ncname': TypeDefinition(name='ncname', id_prefixes=[], definition_uri='https://w3id.org/linkml/Ncname', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Prefix part of CURIE', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='NCName', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'objectidentifier': TypeDefinition(name='objectidentifier', id_prefixes=[], definition_uri='https://w3id.org/linkml/Objectidentifier', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A URI or CURIE that represents an object in the model.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\".'], comments=['Used for inheritance and type checking'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='ElementIdentifier', uri='shex:iri', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'nodeidentifier': TypeDefinition(name='nodeidentifier', id_prefixes=[], definition_uri='https://w3id.org/linkml/Nodeidentifier', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A URI, CURIE or BNODE that represents a node in a model.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='NodeIdentifier', uri='shex:nonLiteral', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'jsonpointer': TypeDefinition(name='jsonpointer', id_prefixes=[], definition_uri='https://w3id.org/linkml/Jsonpointer', local_names={}, conforms_to='https://datatracker.ietf.org/doc/html/rfc6901', implements=[], extensions={}, annotations={}, description='A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'jsonpath': TypeDefinition(name='jsonpath', id_prefixes=[], definition_uri='https://w3id.org/linkml/Jsonpath', local_names={}, conforms_to='https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html', implements=[], extensions={}, annotations={}, description='A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'sparqlpath': TypeDefinition(name='sparqlpath', id_prefixes=[], definition_uri='https://w3id.org/linkml/Sparqlpath', local_names={}, conforms_to='https://www.w3.org/TR/sparql11-query/#propertypaths', implements=[], extensions={}, annotations={}, description='A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\".'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[])}" .
-
-linkml:SubsetDefinition a owl:Class ;
-    rdfs:label "subset_definition" ;
-    linkml:attributes "{}" ;
-    linkml:is_a "element" .
-
-linkml:TypeDefinition a owl:Class ;
-    rdfs:label "type_definition" ;
-    linkml:attributes "{}" ;
-    linkml:is_a "element" ;
-    linkml:mixins "type_expression" .
-
-linkml:topValue a owl:DatatypeProperty ;
-    rdfs:label "value" .
-
 mifc:Container a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Container" ;
@@ -42,509 +18,1220 @@ mifc:Container a owl:Class,
             owl:allValuesFrom mifc:Component ;
             owl:onProperty mifc:components ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:foods ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:provenances ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:Provenance ;
+            owl:onProperty mifc:provenances ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:components ],
+        [ a owl:Restriction ;
             owl:allValuesFrom mifc:Food ;
             owl:onProperty mifc:foods ] ;
-    linkml:attributes "{'foods': SlotDefinition(name='foods', id_prefixes=[], definition_uri=None, local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, singular_name=None, domain=None, slot_uri=None, multivalued=True, inherited=None, readonly=None, ifabsent=None, list_elements_unique=None, list_elements_ordered=None, shared=None, key=None, identifier=None, designates_type=None, alias=None, owner=None, domain_of=[], subproperty_of=None, symmetric=None, reflexive=None, locally_reflexive=None, irreflexive=None, asymmetric=None, transitive=None, inverse=None, is_class_field=None, transitive_form_of=None, reflexive_transitive_form_of=None, role=None, is_usage_slot=None, usage_slot_name=None, relational_role=None, slot_group=None, is_grouping_slot=None, path_rule=None, disjoint_with=[], children_are_mutually_disjoint=None, union_of=[], range='Food', range_expression=None, enum_range=None, required=None, recommended=None, inlined=None, inlined_as_list=True, minimum_value=None, maximum_value=None, pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, value_presence=None, equals_string=None, equals_string_in=[], equals_number=None, equals_expression=None, minimum_cardinality=None, maximum_cardinality=None, has_member=None, all_members=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'components': SlotDefinition(name='components', id_prefixes=[], definition_uri=None, local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema=None, imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, singular_name=None, domain=None, slot_uri=None, multivalued=True, inherited=None, readonly=None, ifabsent=None, list_elements_unique=None, list_elements_ordered=None, shared=None, key=None, identifier=None, designates_type=None, alias=None, owner=None, domain_of=[], subproperty_of=None, symmetric=None, reflexive=None, locally_reflexive=None, irreflexive=None, asymmetric=None, transitive=None, inverse=None, is_class_field=None, transitive_form_of=None, reflexive_transitive_form_of=None, role=None, is_usage_slot=None, usage_slot_name=None, relational_role=None, slot_group=None, is_grouping_slot=None, path_rule=None, disjoint_with=[], children_are_mutually_disjoint=None, union_of=[], range='Component', range_expression=None, enum_range=None, required=None, recommended=None, inlined=None, inlined_as_list=True, minimum_value=None, maximum_value=None, pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, value_presence=None, equals_string=None, equals_string_in=[], equals_number=None, equals_expression=None, minimum_cardinality=None, maximum_cardinality=None, has_member=None, all_members=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[])}" .
-
-mifc:analytical_analysis_measurement_method a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "analytical_analysis_measurement_method" ;
-    rdfs:range mifc:AnalyticalMeasurementMethod .
-
-mifc:analytical_analysis_measurement_protocol_doi a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "analytical_analysis_measurement_protocol_doi" ;
-    rdfs:range linkml:String .
-
-mifc:components a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "components" ;
-    rdfs:range mifc:Component .
-
-mifc:food_acquisition_city a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_city" ;
-    rdfs:range linkml:String ;
-    skos:closeMatch PTFI:Collection_Location .
-
-mifc:food_acquisition_country a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_country" ;
-    rdfs:range linkml:String .
-
-mifc:food_acquisition_country_subdivision a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_country_subdivision" ;
-    rdfs:range linkml:String .
-
-mifc:food_acquisition_date a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_date" ;
-    rdfs:range linkml:String ;
-    skos:exactMatch PTFI:Collection_Date .
-
-mifc:food_acquisition_latitude a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_latitude" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the latitude of the place from which the primary_food_type was acquired." ;
-    skos:exactMatch PTFI:Collection_Latitude .
-
-mifc:food_acquisition_location_type a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_location_type" ;
-    rdfs:range mifc:FoodAcquisitionLocationType ;
-    skos:definition "A string describing the type of location from which a food sample was acquired (e.g., a store)." ;
-    skos:exactMatch PTFI:Collection_Type .
-
-mifc:food_acquisition_longitude a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_acquisition_longitude" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the longitude of the place from which the primary_food_type was acquired." ;
-    skos:exactMatch PTFI:Collection_Longitude .
-
-mifc:food_distributor_city a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_distributor_city" ;
-    rdfs:range linkml:String .
-
-mifc:food_distributor_country a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_distributor_country" ;
-    rdfs:range linkml:String .
-
-mifc:food_distributor_country_subdivision a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_distributor_country_subdivision" ;
-    rdfs:range linkml:String .
-
-mifc:food_expiration_date a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_expiration_date" ;
-    rdfs:range linkml:String .
-
-mifc:food_preparation_state a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "food_preparation_state" ;
-    rdfs:range mifc:FoodPreparationState ;
-    skos:definition "A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw)." .
-
-mifc:foods a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "foods" ;
-    rdfs:range mifc:Food .
-
-mifc:id a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "id" ;
-    rdfs:range linkml:String .
-
-mifc:laboratory_conducting_analytical_analysis a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "laboratory_conducting_analytical_analysis" ;
-    rdfs:range linkml:String ;
-    skos:definition "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound." .
-
-mifc:laboratory_sample_aggregation_maximum_measured_compound_value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "laboratory_sample_aggregation_maximum_measured_compound_value" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the maximum measured compound value of an aggregation of samples." .
-
-mifc:laboratory_sample_aggregation_measured_compound_standard_deviation a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "laboratory_sample_aggregation_measured_compound_standard_deviation" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the standard deviation of a measured compound value of an aggregation of samples." .
-
-mifc:laboratory_sample_aggregation_median_measured_compound_value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "laboratory_sample_aggregation_median_measured_compound_value" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the median measured compound value of an aggregation of samples." .
-
-mifc:laboratory_sample_aggregation_minimum_measured_compound_value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "laboratory_sample_aggregation_minimum_measured_compound_value" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the minimum measured compound value of an aggregation of samples." .
-
-mifc:measured_compound a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound" ;
-    rdfs:range linkml:String ;
-    skos:definition "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled." .
-
-mifc:measured_compound_analysis_date a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_analysis_date" ;
-    rdfs:range linkml:String ;
-    skos:definition "A datetime value representing the date in which an measured_compound was analyzed." .
-
-mifc:measured_compound_comment a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_comment" ;
-    rdfs:range linkml:String ;
-    skos:definition "A Comment relating to measured component." .
-
-mifc:measured_compound_data_points_number a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_data_points_number" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples." .
-
-mifc:measured_compound_denominator_unit a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_denominator_unit" ;
-    rdfs:range linkml:String ;
-    skos:definition "A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g)." .
-
-mifc:measured_compound_denominator_value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_denominator_value" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g)." .
-
-mifc:measured_compound_derivation_type a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_derivation_type" ;
-    rdfs:range linkml:String .
-
-mifc:measured_compound_limit_of_quantitation a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_limit_of_quantitation" ;
-    rdfs:range linkml:String ;
-    skos:definition "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested." .
-
-mifc:measured_compound_record_date a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_record_date" ;
-    rdfs:range linkml:String ;
-    skos:definition "A datetime value representing a known recorded date pertaining to an analyzed sample." .
-
-mifc:measured_compound_unit a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_unit" ;
-    rdfs:range linkml:String ;
-    skos:definition "A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled." .
-
-mifc:measured_compound_value a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "measured_compound_value" ;
-    rdfs:range linkml:Float ;
-    skos:definition "A float representing an individual instance of a measured food compound value from an individual primary_food_type sample." .
-
-mifc:primary_food_type_label a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_food_type_label" ;
-    rdfs:range linkml:String ;
-    skos:closeMatch PTFI:Specimen_Food_Product_Name ;
-    skos:definition "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." .
-
-mifc:primary_food_type_upc_code a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_food_type_upc_code" ;
-    rdfs:range linkml:Integer ;
-    skos:definition "An integer denoting a Universal Product Code (UPC) barcode." .
-
-OBI:0002116 a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "HPLC" .
-
-schema1:name a owl:ObjectProperty,
-        linkml:SlotDefinition ;
-    rdfs:label "primary_food_type" ;
-    rdfs:range linkml:String ;
-    skos:definition "A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn" ;
-    skos:exactMatch schema1:name,
-        FDC:NDB_number .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "Fluorometric" .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "GC" .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "GLC" .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "Gravimetric" .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "Kjeldahl" .
-
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
-    rdfs:label "Nephelometry" .
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
 mifc:Component a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Component" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
-            owl:onProperty mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_comment ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
-            owl:onProperty mifc:measured_compound_denominator_value ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_record_date ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:analytical_analysis_measurement_protocol_doi ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_unit ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_derivation_type ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
-            owl:onProperty mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
-            owl:onProperty mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_analysis_date ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass mifc:AnalyticalMeasurementMethod ;
-            owl:onProperty mifc:analytical_analysis_measurement_method ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:laboratory_sample_aggregation_median_measured_compound_value ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
-            owl:onProperty mifc:measured_compound_value ],
+            owl:allValuesFrom mifc:AnalyticalMeasurementMethod ;
+            owl:onProperty mifc:analytical_analysis_measurement_method ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_record_date ],
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_recorded_value ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty mifc:measured_compound_data_points_number ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_comment ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_denominator_unit ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:measured_compound_limit_of_quantitation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:laboratory_conducting_analytical_analysis ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:component_recorded_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_data_points_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_comment ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_record_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Boolean ;
+            owl:onProperty mifc:component_quality_control_remeasurement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_data_points_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_median_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_derivation_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_conducting_analytical_analysis ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_type_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:analytical_analysis_measurement_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_analysis_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty mifc:component_data_points_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:analytical_analysis_measurement_protocol_doi ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:analytical_analysis_measurement_protocol_doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_measurement_unit ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_record_date ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_measurement_unit ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_comment ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_recorded_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_measured_compound_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:laboratory_conducting_analytical_analysis ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:laboratory_sample_aggregation_minimum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_aggregation_maximum_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_analysis_date ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:analytical_analysis_measurement_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_quality_control_remeasurement ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_analysis_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_measurement_unit ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:analytical_analysis_measurement_protocol_doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:laboratory_sample_aggregation_median_measured_compound_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_quality_control_remeasurement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_derivation_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_derivation_type ],
         mifc:NamedThing ;
-    skos:definition "Metadata about measured components of nutritional interest" ;
+    skos:definition "Metadata about components of nutritional interest measured from foods." ;
     skos:exactMatch schema1:Component ;
-    linkml:attributes "{}" ;
-    linkml:is_a "NamedThing" .
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
 mifc:Food a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Food" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass mifc:FoodPreparationState ;
-            owl:onProperty mifc:food_preparation_state ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_acquisition_country ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty mifc:food_acquisition_country_subdivision ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_distributor_city ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_expiration_date ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_distributor_country_subdivision ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_distributor_country ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Integer ;
-            owl:onProperty mifc:primary_food_type_upc_code ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:food_acquisition_city ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty mifc:food_acquisition_date ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass mifc:FoodAcquisitionLocationType ;
-            owl:onProperty mifc:food_acquisition_location_type ],
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_primary_type_label ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:name ],
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_upc_code ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_upc_code ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodStorageTemperatureState ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodRipenessState ;
+            owl:onProperty mifc:food_ripeness_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:food_acquisition_longitude ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:Float ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Integer ;
+            owl:onProperty mifc:food_upc_code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:food_acquisition_latitude ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty mifc:primary_food_type_label ],
+            owl:allValuesFrom mifc:FoodAcquisitionLocationType ;
+            owl:onProperty mifc:food_acquisition_location_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodCookingMethod ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_distributor_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_organization ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_longitude ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_latitude ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodPreservationState ;
+            owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_organization ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_ripeness_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_organization ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:food_acquisition_longitude ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_primary_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_primary_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_date ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_distributor_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_primary_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_distributor_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_location_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_ripeness_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:food_acquisition_latitude ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_distributor_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_primary_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_location_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_primary_type ],
         mifc:NamedThing ;
-    skos:definition "Metadata about foods" ;
+    skos:definition "Metadata about foods analyzed for components of nutritional interest." ;
     skos:exactMatch schema1:Food ;
-    linkml:attributes "{}" ;
-    linkml:is_a "NamedThing" .
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:Provenance a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Provenance" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:dataset_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:organization_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:contributor_orcid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:dataset_label ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:dataset_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:contributor_orcid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:organization_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:organization_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:contributor_orcid ],
+        mifc:NamedThing ;
+    skos:definition "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC." ;
+    skos:exactMatch schema1:Provenance ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+OBI:0002116 a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "HPLC" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "Fluorometric" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "GC" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "GLC" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "Gravimetric" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "Kjeldahl" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+
+<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> a owl:Class,
+        mifc:AnalyticalMeasurementMethod ;
+    rdfs:label "Nephelometry" ;
+    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#biobank> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "biobank" .
+    rdfs:label "biobank" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#field> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "field" .
+    rdfs:label "field" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#fresh+market> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "fresh market" .
+    rdfs:label "fresh market" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#other> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "other" .
+    rdfs:label "other" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#small+grocery> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "small grocery" .
+    rdfs:label "small grocery" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#supermarket> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "supermarket" .
+    rdfs:label "supermarket" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#unknown> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
-    rdfs:label "unknown" .
+    rdfs:label "unknown" ;
+    rdfs:subClassOf mifc:FoodAcquisitionLocationType .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#artificially+dried> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "artificially dried" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#baked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "baked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#chilled> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "chilled" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#blanched> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "blanched" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#dried> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "dried" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#boiled> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "boiled" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#foodsafe+chilled> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "foodsafe chilled" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#braised> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "braised" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "fresh" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#broiled> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "broiled" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+chilled> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "fresh chilled" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#cooked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "cooked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+frozen> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "fresh frozen" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-heat+cooked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "dry-heat cooked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#frozen> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "frozen" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-roasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "dry-roasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#heat+treated> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "heat treated" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#fried> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "fried" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#irradiated> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "irradiated" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#grilled> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "grilled" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#naturally+dried> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "naturally dried" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#heated> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "heated" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#overripe> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "overripe" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#microwaved> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "microwaved" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#raw> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "raw" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#moist-heat+cooked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "moist-heat cooked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#ripe> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "ripe" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#oil-roasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "oil-roasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#slightly+ripe> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "slightly ripe" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-broiled> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "pan-broiled" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
 
-<https://w3id.org/kaiiam/mifc/FoodPreparationState#unripe> a owl:Class,
-        mifc:FoodPreparationState ;
-    rdfs:label "unripe" .
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-browned> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "pan-browned" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-fried> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "pan-fried" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#parboiled> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "parboiled" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#partially+fried> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "partially fried" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#poached> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "poached" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#precooked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "precooked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#refried> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "refried" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#roasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "roasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#sauteed> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "sauteed" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#simmered> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "simmered" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#slow-roasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "slow-roasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#smoked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "smoked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#spit-roasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "spit-roasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#steamed> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "steamed" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#stewed> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "stewed" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#stir-fried> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "stir-fried" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#toasted> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "toasted" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#uncooked> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "uncooked" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodCookingMethod#unheated> a owl:Class,
+        mifc:FoodCookingMethod ;
+    rdfs:label "unheated" ;
+    rdfs:subClassOf mifc:FoodCookingMethod .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#air-dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "air-dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#artificially+dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "artificially dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#brined> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "brined" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#candied> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "candied" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#canned> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "canned" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#cured> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "cured" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#fermented> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "fermented" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#freeze-dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "freeze-dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#fresh> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "fresh" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#heat+treated> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "heat treated" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#irradiated> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "irradiated" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#jellied> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "jellied" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#kippered> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "kippered" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#naturally+dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "naturally dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#pasteurized> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "pasteurized" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#pickled> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "pickled" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#raw> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "raw" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#shelf+stable> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "shelf stable" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#sun-dried> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "sun-dried" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodPreservationState#ultraviolet+light+exposed> a owl:Class,
+        mifc:FoodPreservationState ;
+    rdfs:label "ultraviolet light exposed" ;
+    rdfs:subClassOf mifc:FoodPreservationState .
+
+<https://w3id.org/kaiiam/mifc/FoodRipenessState#overripe> a owl:Class,
+        mifc:FoodRipenessState ;
+    rdfs:label "overripe" ;
+    rdfs:subClassOf mifc:FoodRipenessState .
+
+<https://w3id.org/kaiiam/mifc/FoodRipenessState#ripe> a owl:Class,
+        mifc:FoodRipenessState ;
+    rdfs:label "ripe" ;
+    rdfs:subClassOf mifc:FoodRipenessState .
+
+<https://w3id.org/kaiiam/mifc/FoodRipenessState#slightly+ripe> a owl:Class,
+        mifc:FoodRipenessState ;
+    rdfs:label "slightly ripe" ;
+    rdfs:subClassOf mifc:FoodRipenessState .
+
+<https://w3id.org/kaiiam/mifc/FoodRipenessState#unripe> a owl:Class,
+        mifc:FoodRipenessState ;
+    rdfs:label "unripe" ;
+    rdfs:subClassOf mifc:FoodRipenessState .
+
+<https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#chilled> a owl:Class,
+        mifc:FoodStorageTemperatureState ;
+    rdfs:label "chilled" ;
+    rdfs:subClassOf mifc:FoodStorageTemperatureState .
+
+<https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#foodsafe+chilled> a owl:Class,
+        mifc:FoodStorageTemperatureState ;
+    rdfs:label "foodsafe chilled" ;
+    rdfs:subClassOf mifc:FoodStorageTemperatureState .
+
+<https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#frozen> a owl:Class,
+        mifc:FoodStorageTemperatureState ;
+    rdfs:label "frozen" ;
+    rdfs:subClassOf mifc:FoodStorageTemperatureState .
+
+<https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#refrigerated> a owl:Class,
+        mifc:FoodStorageTemperatureState ;
+    rdfs:label "refrigerated" ;
+    rdfs:subClassOf mifc:FoodStorageTemperatureState .
+
+mifc:components a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "components" ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:foods a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "foods" ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:provenances a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "provenances" ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
 mifc:NamedThing a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "NamedThing" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
             owl:onProperty mifc:id ] ;
     skos:closeMatch schema1:Thing ;
-    linkml:attributes "{}" .
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
-linkml:ClassDefinition a owl:Class ;
-    rdfs:label "class_definition" ;
-    linkml:attributes "{}" ;
-    linkml:is_a "definition" ;
-    linkml:mixins "class_expression" .
+mifc:analytical_analysis_measurement_method a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "analytical_analysis_measurement_method" ;
+    rdfs:range mifc:AnalyticalMeasurementMethod ;
+    skos:definition "A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC)." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:analytical_analysis_measurement_protocol_doi a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "analytical_analysis_measurement_protocol_doi" ;
+    skos:definition "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_analysis_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_analysis_date" ;
+    skos:definition "A datetime value representing the date in which a component of nutritional interest was analyzed." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> ;
+    skos:note "Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date." .
+
+mifc:component_comment a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_comment" ;
+    skos:definition "A comment relating to an analyzed component of nutritional interest." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_data_points_number a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_data_points_number" ;
+    rdfs:range linkml:Integer ;
+    skos:definition "An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_derivation_type a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_derivation_type" ;
+    skos:definition "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated)." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_limit_of_quantitation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_limit_of_quantitation" ;
+    rdfs:range linkml:String ;
+    skos:definition "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> ;
+    skos:note "LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/." .
+
+mifc:component_measurement_unit a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_measurement_unit" ;
+    skos:definition "A unit code representing the unit of measurement in which a component_recorded_value is measured." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_quality_control_remeasurement a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_quality_control_remeasurement" ;
+    rdfs:range linkml:Boolean ;
+    skos:definition "A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> ;
+    skos:note "This could be alternatively be modeled with an integer rather than a boolean." .
+
+mifc:component_record_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_record_date" ;
+    skos:definition "A datetime value representing recorded date pertaining to an analyzed sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> ;
+    skos:note "Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis." .
+
+mifc:component_recorded_value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_recorded_value" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_type a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_type" ;
+    skos:definition "A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:component_type_label a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "component_type_label" ;
+    skos:definition "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:contributor_orcid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "contributor_orcid" ;
+    skos:definition "A string corresponding to a \"|\" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:dataset_label a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dataset_label" ;
+    skos:definition "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\")." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_agent_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_agent_name" ;
+    skos:definition "A string denoting the name of the agent (person, device or other type of service) that acquired the food sample." ;
+    skos:exactMatch PTFI:Collector_Name ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_city a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_city" ;
+    skos:closeMatch PTFI:Collection_Location ;
+    skos:definition "A string denoting the city in which a food sample was acquired." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_country a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_country" ;
+    skos:definition "A string denoting the country code from which a food sample was acquired." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_country_subdivision a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_country_subdivision" ;
+    skos:definition "A string denoting the country subdivision from which a food sample was acquired (e.g., state or province)." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_date" ;
+    skos:definition "A datetime value representing the date a food sample was acquired." ;
+    skos:exactMatch PTFI:Collection_Date ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_latitude a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_latitude" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the latitude of the place from which the food sample was acquired." ;
+    skos:exactMatch PTFI:Collection_Latitude ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_location_type a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_location_type" ;
+    rdfs:range mifc:FoodAcquisitionLocationType ;
+    skos:definition "A string describing the type of location from which a food sample was acquired (e.g., a supermarket)." ;
+    skos:exactMatch PTFI:Collection_Type ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_longitude a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_longitude" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the longitude of the place from which the food sample was acquired." ;
+    skos:exactMatch PTFI:Collection_Longitude ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_acquisition_organization a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_acquisition_organization" ;
+    skos:definition "A string denoting the name of the organization responsible for acquired the food sample." ;
+    skos:exactMatch PTFI:Collector_Organization ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_additional_types a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_additional_types" ;
+    skos:definition "A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_category_label a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_category_label" ;
+    skos:definition "A string or controlled vocabulary denoting the label of the food group or category of the primary food material." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_cooking_method a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_cooking_method" ;
+    rdfs:range mifc:FoodCookingMethod ;
+    skos:definition "An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., \"baked\")." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_distributor_city a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_distributor_city" ;
+    skos:definition "A string denoting the city of a distributor organization from which a food sample was acquired." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_distributor_country a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_distributor_country" ;
+    skos:definition "A string denoting the country code of a distributor organization from which a food sample was acquired." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_distributor_country_subdivision a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_distributor_country_subdivision" ;
+    skos:definition "A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province)." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_expiration_date a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_expiration_date" ;
+    skos:definition "A datetime value representing the food expiration data as shown on the labeling information of the food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_preservation_state a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_preservation_state" ;
+    rdfs:range mifc:FoodPreservationState ;
+    skos:definition "An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., \"raw\")." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_primary_type a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_primary_type" ;
+    skos:definition "A controlled vocabulary term representing the primary food material which was sampled." ;
+    skos:exactMatch FDC:NDB_number ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> ;
+    skos:note "The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn." .
+
+mifc:food_primary_type_label a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_primary_type_label" ;
+    skos:closeMatch PTFI:Specimen_Food_Product_Name ;
+    skos:definition "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_ripeness_state a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_ripeness_state" ;
+    rdfs:range mifc:FoodRipenessState ;
+    skos:definition "An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_storage_temperature_state a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_storage_temperature_state" ;
+    rdfs:range mifc:FoodStorageTemperatureState ;
+    skos:definition "An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., \"Refrigerated\")." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:food_upc_code a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "food_upc_code" ;
+    rdfs:range linkml:Integer ;
+    skos:definition "An integer denoting a Universal Product Code (UPC) barcode of a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "id" ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_conducting_analytical_analysis a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_conducting_analytical_analysis" ;
+    skos:definition "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_aggregation_maximum_measured_compound_value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_aggregation_maximum_measured_compound_value" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the maximum measured compound value of an aggregation of samples." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_aggregation_measured_compound_standard_deviation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_aggregation_measured_compound_standard_deviation" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the standard deviation of a measured compound value of an aggregation of samples." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_aggregation_median_measured_compound_value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_aggregation_median_measured_compound_value" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the median measured compound value of an aggregation of samples." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_aggregation_minimum_measured_compound_value a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_aggregation_minimum_measured_compound_value" ;
+    rdfs:range linkml:Float ;
+    skos:definition "A float representing the minimum measured compound value of an aggregation of samples." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_aliquot_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_aliquot_id" ;
+    skos:definition "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_batch_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_batch_id" ;
+    skos:definition "A string denoting an identifier of a batch of laboratory samples analysed together." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:laboratory_sample_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "laboratory_sample_id" ;
+    skos:definition "A string denoting an identifier of a laboratory sample which was prepared from a food sample." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:mifc_version_tag a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "mifc_version_tag" ;
+    skos:definition "A string corresponding to a named MIFC release number (e.g., \"v1.0.1\")." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:organization_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "organization_name" ;
+    skos:definition "A string corresponding to a \"|\" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., \"USDA\"." ;
+    skos:inScheme <https://w3id.org/kaiiam/mifc> .
+
+mifc:FoodRipenessState a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodRipenessState#ripe> <https://w3id.org/kaiiam/mifc/FoodRipenessState#overripe> <https://w3id.org/kaiiam/mifc/FoodRipenessState#unripe> <https://w3id.org/kaiiam/mifc/FoodRipenessState#slightly+ripe> ) ;
+    linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodRipenessState#overripe>,
+        <https://w3id.org/kaiiam/mifc/FoodRipenessState#ripe>,
+        <https://w3id.org/kaiiam/mifc/FoodRipenessState#slightly+ripe>,
+        <https://w3id.org/kaiiam/mifc/FoodRipenessState#unripe> .
+
+mifc:FoodStorageTemperatureState a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#chilled> <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#foodsafe+chilled> <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#frozen> <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#refrigerated> ) ;
+    linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#chilled>,
+        <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#foodsafe+chilled>,
+        <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#frozen>,
+        <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#refrigerated> .
 
 mifc:AnalyticalMeasurementMethod a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "AnalyticalMeasurementMethod" ;
     owl:unionOf ( OBI:0002116 <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> ) ;
     linkml:permissible_values OBI:0002116,
         <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric>,
@@ -556,7 +1243,6 @@ mifc:AnalyticalMeasurementMethod a owl:Class,
 
 mifc:FoodAcquisitionLocationType a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "FoodAcquisitionLocationType" ;
     owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#field> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#fresh+market> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#small+grocery> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#supermarket> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#biobank> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#unknown> <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#other> ) ;
     linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#biobank>,
         <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#field>,
@@ -566,31 +1252,73 @@ mifc:FoodAcquisitionLocationType a owl:Class,
         <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#supermarket>,
         <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#unknown> .
 
-mifc:FoodPreparationState a owl:Class,
+mifc:FoodPreservationState a owl:Class,
         linkml:EnumDefinition ;
-    rdfs:label "FoodPreparationState" ;
-    owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodPreparationState#raw> <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh> <https://w3id.org/kaiiam/mifc/FoodPreparationState#chilled> <https://w3id.org/kaiiam/mifc/FoodPreparationState#foodsafe+chilled> <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+chilled> <https://w3id.org/kaiiam/mifc/FoodPreparationState#frozen> <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+frozen> <https://w3id.org/kaiiam/mifc/FoodPreparationState#unripe> <https://w3id.org/kaiiam/mifc/FoodPreparationState#slightly+ripe> <https://w3id.org/kaiiam/mifc/FoodPreparationState#ripe> <https://w3id.org/kaiiam/mifc/FoodPreparationState#overripe> <https://w3id.org/kaiiam/mifc/FoodPreparationState#dried> <https://w3id.org/kaiiam/mifc/FoodPreparationState#naturally+dried> <https://w3id.org/kaiiam/mifc/FoodPreparationState#artificially+dried> <https://w3id.org/kaiiam/mifc/FoodPreparationState#heat+treated> <https://w3id.org/kaiiam/mifc/FoodPreparationState#irradiated> ) ;
-    linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodPreparationState#artificially+dried>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#chilled>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#dried>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#foodsafe+chilled>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+chilled>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#fresh+frozen>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#frozen>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#heat+treated>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#irradiated>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#naturally+dried>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#overripe>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#raw>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#ripe>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#slightly+ripe>,
-        <https://w3id.org/kaiiam/mifc/FoodPreparationState#unripe> .
+    owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodPreservationState#air-dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#artificially+dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#brined> <https://w3id.org/kaiiam/mifc/FoodPreservationState#candied> <https://w3id.org/kaiiam/mifc/FoodPreservationState#canned> <https://w3id.org/kaiiam/mifc/FoodPreservationState#cured> <https://w3id.org/kaiiam/mifc/FoodPreservationState#dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#fermented> <https://w3id.org/kaiiam/mifc/FoodPreservationState#freeze-dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#fresh> <https://w3id.org/kaiiam/mifc/FoodPreservationState#heat+treated> <https://w3id.org/kaiiam/mifc/FoodPreservationState#irradiated> <https://w3id.org/kaiiam/mifc/FoodPreservationState#jellied> <https://w3id.org/kaiiam/mifc/FoodPreservationState#kippered> <https://w3id.org/kaiiam/mifc/FoodPreservationState#naturally+dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#pasteurized> <https://w3id.org/kaiiam/mifc/FoodPreservationState#pickled> <https://w3id.org/kaiiam/mifc/FoodPreservationState#raw> <https://w3id.org/kaiiam/mifc/FoodPreservationState#shelf+stable> <https://w3id.org/kaiiam/mifc/FoodPreservationState#sun-dried> <https://w3id.org/kaiiam/mifc/FoodPreservationState#ultraviolet+light+exposed> ) ;
+    linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodPreservationState#air-dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#artificially+dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#brined>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#candied>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#canned>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#cured>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#fermented>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#freeze-dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#fresh>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#heat+treated>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#irradiated>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#jellied>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#kippered>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#naturally+dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#pasteurized>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#pickled>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#raw>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#shelf+stable>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#sun-dried>,
+        <https://w3id.org/kaiiam/mifc/FoodPreservationState#ultraviolet+light+exposed> .
 
-linkml:SlotDefinition a owl:Class ;
-    rdfs:label "slot_definition" ;
-    linkml:attributes "{}" ;
-    linkml:is_a "definition" ;
-    linkml:mixins "slot_expression" .
+<https://w3id.org/kaiiam/mifc> a owl:Ontology ;
+    rdfs:label "mifc" ;
+    dcterms:license "MIT" ;
+    dcterms:title "mifc" ;
+    rdfs:seeAlso <https://kaiiam.github.io/mifc> ;
+    skos:definition "A minimum information standard checklist formalizing the description of food composition data and related metadata." .
 
+mifc:FoodCookingMethod a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://w3id.org/kaiiam/mifc/FoodCookingMethod#baked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#blanched> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#boiled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#braised> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#broiled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#cooked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-heat+cooked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#fried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#grilled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#heated> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#microwaved> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#moist-heat+cooked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#oil-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-broiled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-browned> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-fried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#parboiled> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#partially+fried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#poached> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#precooked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#refried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#sauteed> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#simmered> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#slow-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#smoked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#spit-roasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#steamed> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stewed> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stir-fried> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#toasted> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#uncooked> <https://w3id.org/kaiiam/mifc/FoodCookingMethod#unheated> ) ;
+    linkml:permissible_values <https://w3id.org/kaiiam/mifc/FoodCookingMethod#baked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#blanched>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#boiled>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#braised>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#broiled>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#cooked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-heat+cooked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#dry-roasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#fried>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#grilled>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#heated>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#microwaved>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#moist-heat+cooked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#oil-roasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-broiled>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-browned>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#pan-fried>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#parboiled>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#partially+fried>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#poached>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#precooked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#refried>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#roasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#sauteed>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#simmered>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#slow-roasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#smoked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#spit-roasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#steamed>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stewed>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#stir-fried>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#toasted>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#uncooked>,
+        <https://w3id.org/kaiiam/mifc/FoodCookingMethod#unheated> .
 
