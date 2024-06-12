@@ -1,17 +1,20 @@
+# metamodel_version: 1.7.0
 type Component
   {
     id: String
-    measuredCompound: String
-    measuredCompoundValue: Float
-    measuredCompoundUnit: String
-    measuredCompoundDenominatorValue: Float
-    measuredCompoundDenominatorUnit: String
-    measuredCompoundDataPointsNumber: Integer
-    measuredCompoundRecordDate: String
-    measuredCompoundAnalysisDate: String
-    measuredCompoundComment: String
-    measuredCompoundDerivationType: String
-    measuredCompoundLimitOfQuantitation: String
+    laboratorySampleId: String
+    laboratorySampleAliquotId: String
+    laboratorySampleBatchId: String
+    componentType: String
+    componentTypeLabel: String
+    componentRecordedValue: Float
+    componentMeasurementUnit: String
+    componentDataPointsNumber: Integer
+    componentRecordDate: String
+    componentAnalysisDate: String
+    componentComment: String
+    componentDerivationType: String
+    componentLimitOfQuantitation: String
     laboratorySampleAggregationMinimumMeasuredCompoundValue: Float
     laboratorySampleAggregationMaximumMeasuredCompoundValue: Float
     laboratorySampleAggregationMedianMeasuredCompoundValue: Float
@@ -19,21 +22,29 @@ type Component
     analyticalAnalysisMeasurementProtocolDoi: String
     analyticalAnalysisMeasurementMethod: AnalyticalMeasurementMethod
     laboratoryConductingAnalyticalAnalysis: String
+    componentQualityControlRemeasurement: Boolean
   }
 
 type Container
   {
     foods: [Food]
     components: [Component]
+    provenances: [Provenance]
   }
 
 type Food
   {
     id: String
-    primaryFoodType: String
-    primaryFoodTypeLabel: String
-    primaryFoodTypeUpcCode: Integer
-    foodPreparationState: FoodPreparationState
+    laboratorySampleId: String
+    laboratorySampleAliquotId: String
+    laboratorySampleBatchId: String
+    foodPrimaryType: String
+    foodPrimaryTypeLabel: String
+    foodUpcCode: Integer
+    foodPreservationState: FoodPreservationState
+    foodStorageTemperatureState: FoodStorageTemperatureState
+    foodRipenessState: FoodRipenessState
+    foodCookingMethod: FoodCookingMethod
     foodAcquisitionCity: String
     foodAcquisitionCountry: String
     foodAcquisitionCountrySubdivision: String
@@ -41,14 +52,33 @@ type Food
     foodAcquisitionLocationType: FoodAcquisitionLocationType
     foodAcquisitionLatitude: Float
     foodAcquisitionLongitude: Float
+    foodAcquisitionAgentName: String
+    foodAcquisitionOrganization: String
     foodDistributorCity: String
     foodDistributorCountry: String
     foodDistributorCountrySubdivision: String
     foodExpirationDate: String
+    foodCategoryLabel: String
+    foodAdditionalTypes: String
   }
 
 interface NamedThing
   {
     id: String
+    laboratorySampleId: String
+    laboratorySampleAliquotId: String
+    laboratorySampleBatchId: String
+  }
+
+type Provenance
+  {
+    id: String
+    laboratorySampleId: String
+    laboratorySampleAliquotId: String
+    laboratorySampleBatchId: String
+    datasetLabel: String
+    mifcVersionTag: String
+    contributorOrcid: String
+    organizationName: String
   }
 

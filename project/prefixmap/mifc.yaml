@@ -13,5 +13,8 @@
    },
    "Food": {
       "@id": "schema:Food"
+   },
+   "Provenance": {
+      "@id": "schema:Provenance"
    }
 }

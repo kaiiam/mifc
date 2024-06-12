@@ -393,16 +393,80 @@
       ]
     },
     {
-      "name": "FoodPreparationState",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodPreparationState",
+      "name": "FoodPreservationState",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodPreservationState",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "permissible_values": [
         {
-          "text": "raw"
+          "text": "air-dried"
+        },
+        {
+          "text": "artificially dried"
+        },
+        {
+          "text": "brined"
+        },
+        {
+          "text": "candied"
+        },
+        {
+          "text": "canned"
+        },
+        {
+          "text": "cured"
+        },
+        {
+          "text": "dried"
+        },
+        {
+          "text": "fermented"
+        },
+        {
+          "text": "freeze-dried"
         },
         {
           "text": "fresh"
         },
+        {
+          "text": "heat treated"
+        },
+        {
+          "text": "irradiated"
+        },
+        {
+          "text": "jellied"
+        },
+        {
+          "text": "kippered"
+        },
+        {
+          "text": "naturally dried"
+        },
+        {
+          "text": "pasteurized"
+        },
+        {
+          "text": "pickled"
+        },
+        {
+          "text": "raw"
+        },
+        {
+          "text": "shelf stable"
+        },
+        {
+          "text": "sun-dried"
+        },
+        {
+          "text": "ultraviolet light exposed"
+        }
+      ]
+    },
+    {
+      "name": "FoodStorageTemperatureState",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "permissible_values": [
         {
           "text": "chilled"
         },
@@ -410,20 +474,18 @@
           "text": "foodsafe chilled"
         },
         {
-          "text": "fresh chilled"
-        },
-        {
           "text": "frozen"
         },
         {
-          "text": "fresh frozen"
-        },
-        {
-          "text": "unripe"
-        },
-        {
-          "text": "slightly ripe"
-        },
+          "text": "refrigerated"
+        }
+      ]
+    },
+    {
+      "name": "FoodRipenessState",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodRipenessState",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "permissible_values": [
         {
           "text": "ripe"
         },
@@ -431,19 +493,10 @@
           "text": "overripe"
         },
         {
-          "text": "dried"
+          "text": "unripe"
         },
         {
-          "text": "naturally dried"
-        },
-        {
-          "text": "artificially dried"
-        },
-        {
-          "text": "heat treated"
-        },
-        {
-          "text": "irradiated"
+          "text": "slightly ripe"
         }
       ]
     },
@@ -474,6 +527,115 @@
           "text": "other"
         }
       ]
+    },
+    {
+      "name": "FoodCookingMethod",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/FoodCookingMethod",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "permissible_values": [
+        {
+          "text": "baked"
+        },
+        {
+          "text": "blanched"
+        },
+        {
+          "text": "boiled"
+        },
+        {
+          "text": "braised"
+        },
+        {
+          "text": "broiled"
+        },
+        {
+          "text": "cooked"
+        },
+        {
+          "text": "dry-heat cooked"
+        },
+        {
+          "text": "dry-roasted"
+        },
+        {
+          "text": "fried"
+        },
+        {
+          "text": "grilled"
+        },
+        {
+          "text": "heated"
+        },
+        {
+          "text": "microwaved"
+        },
+        {
+          "text": "moist-heat cooked"
+        },
+        {
+          "text": "oil-roasted"
+        },
+        {
+          "text": "pan-broiled"
+        },
+        {
+          "text": "pan-browned"
+        },
+        {
+          "text": "pan-fried"
+        },
+        {
+          "text": "parboiled"
+        },
+        {
+          "text": "partially fried"
+        },
+        {
+          "text": "poached"
+        },
+        {
+          "text": "precooked"
+        },
+        {
+          "text": "refried"
+        },
+        {
+          "text": "roasted"
+        },
+        {
+          "text": "sauteed"
+        },
+        {
+          "text": "simmered"
+        },
+        {
+          "text": "slow-roasted"
+        },
+        {
+          "text": "smoked"
+        },
+        {
+          "text": "spit-roasted"
+        },
+        {
+          "text": "steamed"
+        },
+        {
+          "text": "stewed"
+        },
+        {
+          "text": "stir-fried"
+        },
+        {
+          "text": "toasted"
+        },
+        {
+          "text": "uncooked"
+        },
+        {
+          "text": "unheated"
+        }
+      ]
     }
   ],
   "slots": [
@@ -490,9 +652,51 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "primary_food_type",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type",
-      "description": "A controlled vocabulary term representing the primary food material which was sampled. E.g., using a food vocabulary like USDA's FDC or FoodOn",
+      "name": "laboratory_sample_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_id",
+      "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_id",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_aliquot_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aliquot_id",
+      "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aliquot_id",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "laboratory_sample_batch_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_batch_id",
+      "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_batch_id",
+      "owner": "NamedThing",
+      "domain_of": [
+        "NamedThing"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_primary_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_primary_type",
+      "description": "A controlled vocabulary term representing the primary food material which was sampled.",
+      "comments": [
+        "The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn."
+      ],
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "mappings": [
         "http://schema.org/name"
@@ -509,14 +713,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "primary_food_type_label",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
+      "name": "food_primary_type_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_primary_type_label",
       "description": "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "close_mappings": [
         "https://foodperiodictable.org/Specimen_Food_Product_Name"
       ],
-      "slot_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_label",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_primary_type_label",
       "owner": "Food",
       "domain_of": [
         "Food"
@@ -525,11 +729,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "primary_food_type_upc_code",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_upc_code",
-      "description": "An integer denoting a Universal Product Code (UPC) barcode.",
+      "name": "food_upc_code",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_upc_code",
+      "description": "An integer denoting a Universal Product Code (UPC) barcode of a food sample.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/primary_food_type_upc_code",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_upc_code",
       "owner": "Food",
       "domain_of": [
         "Food"
@@ -538,21 +742,61 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "food_preparation_state",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/food_preparation_state",
-      "description": "A controlled vocabulary term representing the preparation state of the primary_food_type (e.g., raw).",
+      "name": "food_preservation_state",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_preservation_state",
+      "description": "An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., \"raw\").",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/food_preparation_state",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_preservation_state",
       "owner": "Food",
       "domain_of": [
         "Food"
       ],
-      "range": "FoodPreparationState",
+      "range": "FoodPreservationState",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_storage_temperature_state",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_storage_temperature_state",
+      "description": "An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., \"Refrigerated\").",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_storage_temperature_state",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "FoodStorageTemperatureState",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_ripeness_state",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_ripeness_state",
+      "description": "An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_ripeness_state",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "FoodRipenessState",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_cooking_method",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_cooking_method",
+      "description": "An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., \"baked\").",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_cooking_method",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "FoodCookingMethod",
       "@type": "SlotDefinition"
     },
     {
       "name": "food_acquisition_city",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_city",
+      "description": "A string denoting the city in which a food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "close_mappings": [
         "https://foodperiodictable.org/Collection_Location"
@@ -568,6 +812,7 @@
     {
       "name": "food_acquisition_country",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_country",
+      "description": "A string denoting the country code from which a food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_country",
       "owner": "Food",
@@ -580,6 +825,7 @@
     {
       "name": "food_acquisition_country_subdivision",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_country_subdivision",
+      "description": "A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_country_subdivision",
       "owner": "Food",
@@ -592,6 +838,7 @@
     {
       "name": "food_acquisition_date",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_date",
+      "description": "A datetime value representing the date a food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "exact_mappings": [
         "https://foodperiodictable.org/Collection_Date"
@@ -607,7 +854,7 @@
     {
       "name": "food_acquisition_location_type",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_location_type",
-      "description": "A string describing the type of location from which a food sample was acquired (e.g., a store).",
+      "description": "A string describing the type of location from which a food sample was acquired (e.g., a supermarket).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "exact_mappings": [
         "https://foodperiodictable.org/Collection_Type"
@@ -623,7 +870,7 @@
     {
       "name": "food_acquisition_latitude",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_latitude",
-      "description": "A float representing the latitude of the place from which the primary_food_type was acquired.",
+      "description": "A float representing the latitude of the place from which the food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "exact_mappings": [
         "https://foodperiodictable.org/Collection_Latitude"
@@ -639,7 +886,7 @@
     {
       "name": "food_acquisition_longitude",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_longitude",
-      "description": "A float representing the longitude of the place from which the primary_food_type was acquired.",
+      "description": "A float representing the longitude of the place from which the food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "exact_mappings": [
         "https://foodperiodictable.org/Collection_Longitude"
@@ -653,8 +900,41 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "food_acquisition_agent_name",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_agent_name",
+      "description": "A string denoting the name of the agent (person, device or other type of service) that acquired the food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collector_Name"
+      ],
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_agent_name",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_acquisition_organization",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_organization",
+      "description": "A string denoting the name of the organization responsible for acquired the food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "exact_mappings": [
+        "https://foodperiodictable.org/Collector_Organization"
+      ],
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_acquisition_organization",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "food_distributor_city",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_distributor_city",
+      "description": "A string denoting the city of a distributor organization from which a food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_distributor_city",
       "owner": "Food",
@@ -667,6 +947,7 @@
     {
       "name": "food_distributor_country",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_distributor_country",
+      "description": "A string denoting the country code of a distributor organization from which a food sample was acquired.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_distributor_country",
       "owner": "Food",
@@ -679,6 +960,7 @@
     {
       "name": "food_distributor_country_subdivision",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_distributor_country_subdivision",
+      "description": "A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_distributor_country_subdivision",
       "owner": "Food",
@@ -691,6 +973,7 @@
     {
       "name": "food_expiration_date",
       "definition_uri": "https://w3id.org/kaiiam/mifc/food_expiration_date",
+      "description": "A datetime value representing the food expiration data as shown on the labeling information of the food sample.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/food_expiration_date",
       "owner": "Food",
@@ -701,11 +984,37 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound",
-      "description": "A controlled vocabulary term representing an analyzed component from a primary_food_type food sampled.",
+      "name": "food_category_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_category_label",
+      "description": "A string or controlled vocabulary denoting the label of the food group or category of the primary food material.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_category_label",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_additional_types",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_additional_types",
+      "description": "A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_additional_types",
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "component_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_type",
+      "description": "A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_type",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -714,11 +1023,24 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_value",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_value",
-      "description": "A float representing an individual instance of a measured food compound value from an individual primary_food_type sample.",
+      "name": "component_type_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_type_label",
+      "description": "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_value",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_type_label",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "component_recorded_value",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_recorded_value",
+      "description": "A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_recorded_value",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -727,11 +1049,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_unit",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_unit",
-      "description": "A unit code representing the units of measurement in which a measured food compont value from a primary_food_type sample was sampled.",
+      "name": "component_measurement_unit",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_measurement_unit",
+      "description": "A unit code representing the unit of measurement in which a component_recorded_value is measured.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_unit",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_measurement_unit",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -740,37 +1062,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_denominator_value",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_value",
-      "description": "A float representing the denominator value (or portion size) of a measured measured_compound, e.g., 100 (for portion of per 100g).",
+      "name": "component_data_points_number",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_data_points_number",
+      "description": "An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_value",
-      "owner": "Component",
-      "domain_of": [
-        "Component"
-      ],
-      "range": "float",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "measured_compound_denominator_unit",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_unit",
-      "description": "A unit code representing the denominator units of a measured measured_compound, e.g., g (for portion of per 100g).",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_denominator_unit",
-      "owner": "Component",
-      "domain_of": [
-        "Component"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "measured_compound_data_points_number",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_data_points_number",
-      "description": "An integer representing the number of individual samples that comprise a measured_compound sample. 1 if an individual sample >1 if an aggregation of samples.",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_data_points_number",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_data_points_number",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -779,14 +1075,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_record_date",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
-      "description": "A datetime value representing a known recorded date pertaining to an analyzed sample.",
+      "name": "component_record_date",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_record_date",
+      "description": "A datetime value representing recorded date pertaining to an analyzed sample.",
       "comments": [
-        "Allows for ambiguity of date record relative to measured_compound_analysis_date. Use this if a date for a record is know but it isn't specifically the date of analysis."
+        "Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis."
       ],
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_record_date",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_record_date",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -795,14 +1091,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_analysis_date",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_analysis_date",
-      "description": "A datetime value representing the date in which an measured_compound was analyzed.",
+      "name": "component_analysis_date",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_analysis_date",
+      "description": "A datetime value representing the date in which a component of nutritional interest was analyzed.",
       "comments": [
-        "Use this field if the exact date of analysis is know if there is date ambiguity use measured_compound_record_date."
+        "Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date."
       ],
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_analysis_date",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_analysis_date",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -811,11 +1107,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_comment",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_comment",
-      "description": "A Comment relating to measured component.",
+      "name": "component_comment",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_comment",
+      "description": "A comment relating to an analyzed component of nutritional interest.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_comment",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_comment",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -824,10 +1120,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_derivation_type",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
+      "name": "component_derivation_type",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_derivation_type",
+      "description": "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_derivation_type",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_derivation_type",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -836,14 +1133,14 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "measured_compound_limit_of_quantitation",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/measured_compound_limit_of_quantitation",
-      "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible. Where LoB is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested.",
+      "name": "component_limit_of_quantitation",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_limit_of_quantitation",
+      "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.",
       "comments": [
-        "definition reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/"
+        "LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/."
       ],
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/measured_compound_limit_of_quantitation",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_limit_of_quantitation",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -906,6 +1203,7 @@
     {
       "name": "analytical_analysis_measurement_protocol_doi",
       "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
+      "description": "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
       "owner": "Component",
@@ -918,6 +1216,7 @@
     {
       "name": "analytical_analysis_measurement_method",
       "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
+      "description": "A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
       "owner": "Component",
@@ -936,6 +1235,74 @@
       "owner": "Component",
       "domain_of": [
         "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "component_quality_control_remeasurement",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_quality_control_remeasurement",
+      "description": "A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.",
+      "comments": [
+        "This could be alternatively be modeled with an integer rather than a boolean."
+      ],
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_quality_control_remeasurement",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "dataset_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/dataset_label",
+      "description": "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\").",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/dataset_label",
+      "owner": "Provenance",
+      "domain_of": [
+        "Provenance"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "mifc_version_tag",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/mifc_version_tag",
+      "description": "A string corresponding to a named MIFC release number (e.g., \"v1.0.1\").",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/mifc_version_tag",
+      "owner": "Provenance",
+      "domain_of": [
+        "Provenance"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "contributor_orcid",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/contributor_orcid",
+      "description": "A string corresponding to a \"|\" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/contributor_orcid",
+      "owner": "Provenance",
+      "domain_of": [
+        "Provenance"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "organization_name",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/organization_name",
+      "description": "A string corresponding to a \"|\" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., \"USDA\".",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/organization_name",
+      "owner": "Provenance",
+      "domain_of": [
+        "Provenance"
       ],
       "range": "string",
       "@type": "SlotDefinition"
@@ -969,6 +1336,21 @@
       "inlined": true,
       "inlined_as_list": true,
       "@type": "SlotDefinition"
+    },
+    {
+      "name": "container__provenances",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/provenances",
+      "multivalued": true,
+      "alias": "provenances",
+      "owner": "Container",
+      "domain_of": [
+        "Container"
+      ],
+      "range": "Provenance",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
     }
   ],
   "classes": [
@@ -981,7 +1363,10 @@
       ],
       "abstract": true,
       "slots": [
-        "id"
+        "id",
+        "laboratory_sample_id",
+        "laboratory_sample_aliquot_id",
+        "laboratory_sample_batch_id"
       ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/kaiiam/mifc/NamedThing",
@@ -993,7 +1378,7 @@
         "mifc"
       ],
       "definition_uri": "https://w3id.org/kaiiam/mifc/Food",
-      "description": "Metadata about foods",
+      "description": "Metadata about foods analyzed for components of nutritional interest.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "mappings": [
         "schema:Food"
@@ -1001,10 +1386,16 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
-        "primary_food_type",
-        "primary_food_type_label",
-        "primary_food_type_upc_code",
-        "food_preparation_state",
+        "laboratory_sample_id",
+        "laboratory_sample_aliquot_id",
+        "laboratory_sample_batch_id",
+        "food_primary_type",
+        "food_primary_type_label",
+        "food_upc_code",
+        "food_preservation_state",
+        "food_storage_temperature_state",
+        "food_ripeness_state",
+        "food_cooking_method",
         "food_acquisition_city",
         "food_acquisition_country",
         "food_acquisition_country_subdivision",
@@ -1012,10 +1403,14 @@
         "food_acquisition_location_type",
         "food_acquisition_latitude",
         "food_acquisition_longitude",
+        "food_acquisition_agent_name",
+        "food_acquisition_organization",
         "food_distributor_city",
         "food_distributor_country",
         "food_distributor_country_subdivision",
-        "food_expiration_date"
+        "food_expiration_date",
+        "food_category_label",
+        "food_additional_types"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Food",
@@ -1024,7 +1419,7 @@
     {
       "name": "Component",
       "definition_uri": "https://w3id.org/kaiiam/mifc/Component",
-      "description": "Metadata about measured components of nutritional interest",
+      "description": "Metadata about components of nutritional interest measured from foods.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "mappings": [
         "schema:Component"
@@ -1032,27 +1427,53 @@
       "is_a": "NamedThing",
       "slots": [
         "id",
-        "measured_compound",
-        "measured_compound_value",
-        "measured_compound_unit",
-        "measured_compound_denominator_value",
-        "measured_compound_denominator_unit",
-        "measured_compound_data_points_number",
-        "measured_compound_record_date",
-        "measured_compound_analysis_date",
-        "measured_compound_comment",
-        "measured_compound_derivation_type",
-        "measured_compound_limit_of_quantitation",
+        "laboratory_sample_id",
+        "laboratory_sample_aliquot_id",
+        "laboratory_sample_batch_id",
+        "component_type",
+        "component_type_label",
+        "component_recorded_value",
+        "component_measurement_unit",
+        "component_data_points_number",
+        "component_record_date",
+        "component_analysis_date",
+        "component_comment",
+        "component_derivation_type",
+        "component_limit_of_quantitation",
         "laboratory_sample_aggregation_minimum_measured_compound_value",
         "laboratory_sample_aggregation_maximum_measured_compound_value",
         "laboratory_sample_aggregation_median_measured_compound_value",
         "laboratory_sample_aggregation_measured_compound_standard_deviation",
         "analytical_analysis_measurement_protocol_doi",
         "analytical_analysis_measurement_method",
-        "laboratory_conducting_analytical_analysis"
+        "laboratory_conducting_analytical_analysis",
+        "component_quality_control_remeasurement"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Component",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Provenance",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/Provenance",
+      "description": "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "mappings": [
+        "schema:Provenance"
+      ],
+      "is_a": "NamedThing",
+      "slots": [
+        "id",
+        "laboratory_sample_id",
+        "laboratory_sample_aliquot_id",
+        "laboratory_sample_batch_id",
+        "dataset_label",
+        "mifc_version_tag",
+        "contributor_orcid",
+        "organization_name"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://schema.org/Provenance",
       "@type": "ClassDefinition"
     },
     {
@@ -1061,7 +1482,8 @@
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slots": [
         "container__foods",
-        "container__components"
+        "container__components",
+        "container__provenances"
       ],
       "slot_usage": {},
       "attributes": [
@@ -1078,6 +1500,13 @@
           "range": "Component",
           "inlined_as_list": true,
           "@type": "SlotDefinition"
+        },
+        {
+          "name": "provenances",
+          "multivalued": true,
+          "range": "Provenance",
+          "inlined_as_list": true,
+          "@type": "SlotDefinition"
         }
       ],
       "class_uri": "https://w3id.org/kaiiam/mifc/Container",
@@ -1087,9 +1516,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2023-09-12T15:38:44",
-  "source_file_size": 10908,
-  "generation_date": "2023-09-12T15:39:23",
+  "source_file_date": "2024-06-12T10:09:25",
+  "source_file_size": 16671,
+  "generation_date": "2024-06-12T11:10:28",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

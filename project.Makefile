@@ -7,4 +7,4 @@ clean-examples:
 
 examples-all: clean-examples examples/output
 
-all-all: clean all test examples-all
+all-all: clean clean-examples all test examples-all

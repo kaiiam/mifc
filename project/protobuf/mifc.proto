@@ -1,18 +1,23 @@
-// Metadata about measured components of nutritional interest
+ syntax="proto3";
+ package
+// metamodel_version: 1.7.0
+// Metadata about components of nutritional interest measured from foods.
 message Component
  {
   string id = 0
-  string measuredCompound = 0
-  float measuredCompoundValue = 0
-  string measuredCompoundUnit = 0
-  float measuredCompoundDenominatorValue = 0
-  string measuredCompoundDenominatorUnit = 0
-  integer measuredCompoundDataPointsNumber = 0
-  string measuredCompoundRecordDate = 0
-  string measuredCompoundAnalysisDate = 0
-  string measuredCompoundComment = 0
-  string measuredCompoundDerivationType = 0
-  string measuredCompoundLimitOfQuantitation = 0
+  string laboratorySampleId = 0
+  string laboratorySampleAliquotId = 0
+  string laboratorySampleBatchId = 0
+  string componentType = 0
+  string componentTypeLabel = 0
+  float componentRecordedValue = 0
+  string componentMeasurementUnit = 0
+  integer componentDataPointsNumber = 0
+  string componentRecordDate = 0
+  string componentAnalysisDate = 0
+  string componentComment = 0
+  string componentDerivationType = 0
+  string componentLimitOfQuantitation = 0
   float laboratorySampleAggregationMinimumMeasuredCompoundValue = 0
   float laboratorySampleAggregationMaximumMeasuredCompoundValue = 0
   float laboratorySampleAggregationMedianMeasuredCompoundValue = 0
@@ -20,20 +25,28 @@ message Component
   string analyticalAnalysisMeasurementProtocolDoi = 0
   analyticalMeasurementMethod analyticalAnalysisMeasurementMethod = 0
   string laboratoryConductingAnalyticalAnalysis = 0
+  boolean componentQualityControlRemeasurement = 0
  }
 message Container
  {
  repeated  food foods = 0
  repeated  component components = 0
+ repeated  provenance provenances = 0
  }
-// Metadata about foods
+// Metadata about foods analyzed for components of nutritional interest.
 message Food
  {
   string id = 0
-  string primaryFoodType = 0
-  string primaryFoodTypeLabel = 0
-  integer primaryFoodTypeUpcCode = 0
-  foodPreparationState foodPreparationState = 0
+  string laboratorySampleId = 0
+  string laboratorySampleAliquotId = 0
+  string laboratorySampleBatchId = 0
+  string foodPrimaryType = 0
+  string foodPrimaryTypeLabel = 0
+  integer foodUpcCode = 0
+  foodPreservationState foodPreservationState = 0
+  foodStorageTemperatureState foodStorageTemperatureState = 0
+  foodRipenessState foodRipenessState = 0
+  foodCookingMethod foodCookingMethod = 0
   string foodAcquisitionCity = 0
   string foodAcquisitionCountry = 0
   string foodAcquisitionCountrySubdivision = 0
@@ -41,8 +54,24 @@ message Food
   foodAcquisitionLocationType foodAcquisitionLocationType = 0
   float foodAcquisitionLatitude = 0
   float foodAcquisitionLongitude = 0
+  string foodAcquisitionAgentName = 0
+  string foodAcquisitionOrganization = 0
   string foodDistributorCity = 0
   string foodDistributorCountry = 0
   string foodDistributorCountrySubdivision = 0
   string foodExpirationDate = 0
+  string foodCategoryLabel = 0
+  string foodAdditionalTypes = 0
+ }
+// Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
+message Provenance
+ {
+  string id = 0
+  string laboratorySampleId = 0
+  string laboratorySampleAliquotId = 0
+  string laboratorySampleBatchId = 0
+  string datasetLabel = 0
+  string mifcVersionTag = 0
+  string contributorOrcid = 0
+  string organizationName = 0
  }
