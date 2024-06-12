@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kaiiam.github.io/mifc/Container/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Container - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -198,17 +198,33 @@
 <p>URI: <a href="https://w3id.org/kaiiam/mifc/Container">mifc:Container</a></p>
 <div class="mermaid"> classDiagram
     class Container
+    click Container href "../Container"
       Container : components
 
-          Container ..&gt; Component : components
+
+
+
+    Container --&gt; "*" Component : components
+    click Component href "../Component"
+
 
       Container : foods
 
-          Container ..&gt; Food : foods
+
+
+
+    Container --&gt; "*" Food : foods
+    click Food href "../Food"
+
 
       Container : provenances
 
-          Container ..&gt; Provenance : provenances
+
+
+
+    Container --&gt; "*" Provenance : provenances
+    click Provenance href "../Provenance"
+
 
 
 </div>
@@ -226,19 +242,19 @@
 <tbody>
 <tr>
 <td><a href="../foods/">foods</a></td>
-<td>0..* <br/> <a href="../Food/">Food</a></td>
+<td>* <br/> <a href="../Food/">Food</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../components/">components</a></td>
-<td>0..* <br/> <a href="../Component/">Component</a></td>
+<td>* <br/> <a href="../Component/">Component</a></td>
 <td></td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../provenances/">provenances</a></td>
-<td>0..* <br/> <a href="../Provenance/">Provenance</a></td>
+<td>* <br/> <a href="../Provenance/">Provenance</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -274,13 +290,14 @@
 <details>
 <pre><code class="language-yaml">name: Container
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 attributes:
   foods:
     name: foods
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     multivalued: true
+    domain_of:
+    - Container
     range: Food
     inlined: true
     inlined_as_list: true
@@ -289,6 +306,8 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     multivalued: true
+    domain_of:
+    - Container
     range: Component
     inlined: true
     inlined_as_list: true
@@ -297,6 +316,8 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     multivalued: true
+    domain_of:
+    - Container
     range: Provenance
     inlined: true
     inlined_as_list: true
@@ -308,7 +329,6 @@ tree_root: true
 <details>
 <pre><code class="language-yaml">name: Container
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 attributes:
   foods:
     name: foods

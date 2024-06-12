@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kaiiam.github.io/mifc/Food/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Food - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -214,7 +214,9 @@
 <p>URI: <a href="http://schema.org/Food">schema:Food</a></p>
 <div class="mermaid"> classDiagram
     class Food
+    click Food href "../Food"
       NamedThing &lt;|-- Food
+        click NamedThing href "../NamedThing"
 
       Food : food_acquisition_agent_name
 
@@ -230,7 +232,12 @@
 
       Food : food_acquisition_location_type
 
-          Food ..&gt; FoodAcquisitionLocationType : food_acquisition_location_type
+
+
+
+    Food --&gt; "0..1" FoodAcquisitionLocationType : food_acquisition_location_type
+    click FoodAcquisitionLocationType href "../FoodAcquisitionLocationType"
+
 
       Food : food_acquisition_longitude
 
@@ -242,7 +249,12 @@
 
       Food : food_cooking_method
 
-          Food ..&gt; FoodCookingMethod : food_cooking_method
+
+
+
+    Food --&gt; "0..1" FoodCookingMethod : food_cooking_method
+    click FoodCookingMethod href "../FoodCookingMethod"
+
 
       Food : food_distributor_city
 
@@ -254,7 +266,12 @@
 
       Food : food_preservation_state
 
-          Food ..&gt; FoodPreservationState : food_preservation_state
+
+
+
+    Food --&gt; "0..1" FoodPreservationState : food_preservation_state
+    click FoodPreservationState href "../FoodPreservationState"
+
 
       Food : food_primary_type
 
@@ -262,11 +279,21 @@
 
       Food : food_ripeness_state
 
-          Food ..&gt; FoodRipenessState : food_ripeness_state
+
+
+
+    Food --&gt; "0..1" FoodRipenessState : food_ripeness_state
+    click FoodRipenessState href "../FoodRipenessState"
+
 
       Food : food_storage_temperature_state
 
-          Food ..&gt; FoodStorageTemperatureState : food_storage_temperature_state
+
+
+
+    Food --&gt; "0..1" FoodStorageTemperatureState : food_storage_temperature_state
+    click FoodStorageTemperatureState href "../FoodStorageTemperatureState"
+
 
       Food : food_upc_code
 
@@ -513,7 +540,6 @@ id_prefixes:
 - mifc
 description: Metadata about foods analyzed for components of nutritional interest.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 slots:
 - food_primary_type
@@ -549,7 +575,6 @@ id_prefixes:
 - mifc
 description: Metadata about foods analyzed for components of nutritional interest.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 attributes:
   food_primary_type:

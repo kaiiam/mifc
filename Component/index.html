@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kaiiam.github.io/mifc/Component/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Component - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -209,11 +209,18 @@
 <p>URI: <a href="http://schema.org/Component">schema:Component</a></p>
 <div class="mermaid"> classDiagram
     class Component
+    click Component href "../Component"
       NamedThing &lt;|-- Component
+        click NamedThing href "../NamedThing"
 
       Component : analytical_analysis_measurement_method
 
-          Component ..&gt; AnalyticalMeasurementMethod : analytical_analysis_measurement_method
+
+
+
+    Component --&gt; "0..1" AnalyticalMeasurementMethod : analytical_analysis_measurement_method
+    click AnalyticalMeasurementMethod href "../AnalyticalMeasurementMethod"
+
 
       Component : analytical_analysis_measurement_protocol_doi
 
@@ -461,7 +468,6 @@
 <pre><code class="language-yaml">name: Component
 description: Metadata about components of nutritional interest measured from foods.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 slots:
 - component_type
@@ -491,7 +497,6 @@ class_uri: schema:Component
 <pre><code class="language-yaml">name: Component
 description: Metadata about components of nutritional interest measured from foods.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 attributes:
   component_type:

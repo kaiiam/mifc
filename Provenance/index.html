@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kaiiam.github.io/mifc/Provenance/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: Provenance - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -209,7 +209,9 @@
 <p>URI: <a href="http://schema.org/Provenance">schema:Provenance</a></p>
 <div class="mermaid"> classDiagram
     class Provenance
+    click Provenance href "../Provenance"
       NamedThing &lt;|-- Provenance
+        click NamedThing href "../NamedThing"
 
       Provenance : contributor_orcid
 
@@ -348,7 +350,6 @@
 description: Supplemental data about the provenance of a Food and Component dataset
   collection standardized using MIFC.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 slots:
 - dataset_label
@@ -365,7 +366,6 @@ class_uri: schema:Provenance
 description: Supplemental data about the provenance of a Food and Component dataset
   collection standardized using MIFC.
 from_schema: https://w3id.org/kaiiam/mifc
-rank: 1000
 is_a: NamedThing
 attributes:
   dataset_label:

@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://kaiiam.github.io/mifc/">
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.5.10">
     
     
       
@@ -381,8 +381,8 @@
 
 <h1 id="mifc">mifc</h1>
 <p>A minimum information standard checklist formalizing the description of food composition data and related metadata.</p>
-<p>URI: https://w3id.org/kaiiam/mifc
-Name: mifc</p>
+<p>URI: https://w3id.org/kaiiam/mifc</p>
+<p>Name: mifc</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -393,24 +393,24 @@ Name: mifc</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Component/">Component</a></td>
-<td>Metadata about components of nutritional interest measured from foods</td>
-</tr>
-<tr>
 <td><a href="Container/">Container</a></td>
-<td></td>
-</tr>
-<tr>
-<td><a href="Food/">Food</a></td>
-<td>Metadata about foods analyzed for components of nutritional interest</td>
+<td>None</td>
 </tr>
 <tr>
 <td><a href="NamedThing/">NamedThing</a></td>
-<td></td>
+<td>None</td>
 </tr>
 <tr>
-<td><a href="Provenance/">Provenance</a></td>
-<td>Supplemental data about the provenance of a Food and Component dataset collec...</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Component/">Component</a></td>
+<td>Metadata about components of nutritional interest measured from foods.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Food/">Food</a></td>
+<td>Metadata about foods analyzed for components of nutritional interest.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Provenance/">Provenance</a></td>
+<td>Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.</td>
 </tr>
 </tbody>
 </table>
@@ -710,6 +710,14 @@ Name: mifc</p>
 <td>An integer</td>
 </tr>
 <tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
 <td><a href="Ncname/">Ncname</a></td>
 <td>Prefix part of CURIE</td>
 </tr>
@@ -720,6 +728,10 @@ Name: mifc</p>
 <tr>
 <td><a href="Objectidentifier/">Objectidentifier</a></td>
 <td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
 </tr>
 <tr>
 <td><a href="String/">String</a></td>

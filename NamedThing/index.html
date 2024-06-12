@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://kaiiam.github.io/mifc/NamedThing/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
 <title>Class: NamedThing - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
@@ -206,9 +206,13 @@
 <p>URI: <a href="https://w3id.org/kaiiam/mifc/NamedThing">mifc:NamedThing</a></p>
 <div class="mermaid"> classDiagram
     class NamedThing
+    click NamedThing href "../NamedThing"
       NamedThing &lt;|-- Food
+        click Food href "../Food"
       NamedThing &lt;|-- Component
+        click Component href "../Component"
       NamedThing &lt;|-- Provenance
+        click Provenance href "../Provenance"
 
       NamedThing : id
 
@@ -302,7 +306,6 @@
 from_schema: https://w3id.org/kaiiam/mifc
 close_mappings:
 - schema:Thing
-rank: 1000
 abstract: true
 slots:
 - id
@@ -318,7 +321,6 @@ slots:
 from_schema: https://w3id.org/kaiiam/mifc
 close_mappings:
 - schema:Thing
-rank: 1000
 abstract: true
 attributes:
   id:
