@@ -103,10 +103,10 @@ classes:
     is_a: NamedThing
     class_uri: schema:Provenance
     slots:            ## Slots specific to Provenance
-      - dataset_label
-      - mifc_version_tag
-      - contributor_orcid
-      - organization_name
+      - provenance_dataset_label
+      - provenance_mifc_version_tag
+      - provenance_contributor_orcid
+      - provenance_organization_name
 
   Container:
     tree_root: true
@@ -260,13 +260,13 @@ slots:
 #    is_a: boolean_slot
 
   # Provenance slots
-  dataset_label:
+  provenance_dataset_label:
     description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
-  mifc_version_tag:
+  provenance_mifc_version_tag:
     description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
-  contributor_orcid:
+  provenance_contributor_orcid:
     description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
-  organization_name:
+  provenance_organization_name:
     description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
 
   # Slots common to both Food and Component classes
