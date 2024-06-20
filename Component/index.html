@@ -244,8 +244,8 @@
 
 
 
-    Component --&gt; "0..1" AnalyticalMeasurementMethod : compound_analytical_measurement_method
-    click AnalyticalMeasurementMethod href "../AnalyticalMeasurementMethod"
+    Component --&gt; "0..1" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
+    click CompoundAnalyticalMeasurementMethod href "../CompoundAnalyticalMeasurementMethod"
 
 
       Component : compound_analytical_measurement_protocol_doi
@@ -382,7 +382,7 @@
 </tr>
 <tr>
 <td><a href="../compound_analytical_measurement_method/">compound_analytical_measurement_method</a></td>
-<td>0..1 <br/> <a href="../AnalyticalMeasurementMethod/">AnalyticalMeasurementMethod</a></td>
+<td>0..1 <br/> <a href="../CompoundAnalyticalMeasurementMethod/">CompoundAnalyticalMeasurementMethod</a></td>
 <td>A controlled vocabulary term denoting the method used to conduct an analytica...</td>
 <td>direct</td>
 </tr>
@@ -703,7 +703,7 @@ attributes:
     owner: Component
     domain_of:
     - Component
-    range: AnalyticalMeasurementMethod
+    range: CompoundAnalyticalMeasurementMethod
   compound_analytical_laboratory_name:
     name: compound_analytical_laboratory_name
     description: A string denoting the name of a laboratory that conducted the analytical
