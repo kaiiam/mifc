@@ -92,7 +92,7 @@ classes:
       - laboratory_sample_aggregation_measured_compound_standard_deviation
       - compound_analytical_measurement_protocol_doi
       - compound_analytical_measurement_method
-      - laboratory_conducting_analytical_analysis
+      - compound_analytical_laboratory_name
       - component_quality_control_remeasurement
 
   Provenance:
@@ -259,8 +259,8 @@ slots:
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
     description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
     range: AnalyticalMeasurementMethod
-  laboratory_conducting_analytical_analysis:
-    description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
+  compound_analytical_laboratory_name:
+    description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
   component_quality_control_remeasurement:
     description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
     comments: This could be alternatively be modeled with an integer rather than a boolean.

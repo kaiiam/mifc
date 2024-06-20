@@ -32,6 +32,8 @@
 
 * Rename `analytical_analysis_measurement_protocol_doi` to `compound_analytical_measurement_protocol_doi`
 
+* Rename `laboratory_conducting_analytical_analysis` to `compound_analytical_laboratory_name`
+
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**
