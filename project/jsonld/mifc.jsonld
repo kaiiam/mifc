@@ -1516,9 +1516,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-12T10:09:25",
+  "source_file_date": "2024-06-11T18:24:55",
   "source_file_size": 16671,
-  "generation_date": "2024-06-12T11:37:05",
+  "generation_date": "2024-06-20T13:50:21",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",
