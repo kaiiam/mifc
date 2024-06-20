@@ -4,7 +4,7 @@
 
 **Component**
 
-* Remove `id` from NamedThing and replace with `component_id`
+* Remove `id` from NamedThing and replace with `component_sample_id`
 
 * Rename `measured_compound` to `component_type`
 
@@ -34,11 +34,17 @@
 
 * Rename `laboratory_conducting_analytical_analysis` to `compound_analytical_laboratory_name`
 
+* Rename `laboratory_sample_aliquot_id` to `food_laboratory_sample_aliquot_id` 
+
+* Rename `laboratory_sample_batch_id` to `food_laboratory_sample_batch_id`
+
+* Rename `laboratory_sample_id` to `food_laboratory_sample_id`
+
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**
 
-* Rename `id` from NamedThing and replace with `food_id`
+* Rename `id` from NamedThing and replace with `food_sample_id`
 
 * Rename `primary_food_type` to `food_primary_type`
 
