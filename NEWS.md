@@ -66,3 +66,12 @@
 
 * Break up slot `food_preparation_state` into slots `food_preservation_state`, `food_storage_temperature_state`, and `food_ripeness_state`.
 
+**Provenance**
+
+* Rename `dataset_label` to `provenance_dataset_label`
+
+* Rename `mifc_version_tag` to `provenance_mifc_version_tag`
+
+* Rename `contributor_orcid` to `provenance_contributor_orcid`
+
+* Rename `organization_name` to `provenance_organization_name`
