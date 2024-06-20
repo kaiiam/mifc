@@ -47,6 +47,7 @@ linkml:Sparqlpath xsd:string
 <Component> CLOSED {
     (  $<Component_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
+          <component_id> @linkml:String ? ;
           <component_type> @linkml:String ? ;
           <component_type_label> @linkml:String ? ;
           <component_recorded_value> @linkml:Float ? ;
@@ -161,7 +162,7 @@ linkml:Sparqlpath xsd:string
           <food_category_label> @linkml:String ? ;
           <food_additional_types> @linkml:String ?
        ) ;
-       rdf:type [ schema1:Food ] ?
+       rdf:type [ schema1:Food ]
     )
 }
 
@@ -170,8 +171,7 @@ linkml:Sparqlpath xsd:string
 )
 
 <NamedThing_struct> {
-    (  $<NamedThing_tes> (  <id> @linkml:String ? ;
-          <laboratory_sample_id> @linkml:String ? ;
+    (  $<NamedThing_tes> (  <laboratory_sample_id> @linkml:String ? ;
           <laboratory_sample_aliquot_id> @linkml:String ? ;
           <laboratory_sample_batch_id> @linkml:String ?
        ) ;

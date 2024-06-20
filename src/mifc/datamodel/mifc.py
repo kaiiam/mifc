@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T13:50:21
+# Generation date: 2024-06-20T14:29:29
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -47,7 +47,8 @@ DEFAULT_ = MIFC
 # Types
 
 # Class references
-
+class FoodFoodId(extended_str):
+    pass
 
 
 @dataclass
@@ -59,15 +60,11 @@ class NamedThing(YAMLRoot):
     class_name: ClassVar[str] = "NamedThing"
     class_model_uri: ClassVar[URIRef] = MIFC.NamedThing
 
-    id: Optional[str] = None
     laboratory_sample_id: Optional[str] = None
     laboratory_sample_aliquot_id: Optional[str] = None
     laboratory_sample_batch_id: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.id is not None and not isinstance(self.id, str):
-            self.id = str(self.id)
-
         if self.laboratory_sample_id is not None and not isinstance(self.laboratory_sample_id, str):
             self.laboratory_sample_id = str(self.laboratory_sample_id)
 
@@ -92,6 +89,7 @@ class Food(NamedThing):
     class_name: ClassVar[str] = "Food"
     class_model_uri: ClassVar[URIRef] = MIFC.Food
 
+    food_id: Union[str, FoodFoodId] = None
     food_primary_type: Optional[str] = None
     food_primary_type_label: Optional[str] = None
     food_upc_code: Optional[int] = None
@@ -116,6 +114,11 @@ class Food(NamedThing):
     food_additional_types: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.food_id):
+            self.MissingRequiredField("food_id")
+        if not isinstance(self.food_id, FoodFoodId):
+            self.food_id = FoodFoodId(self.food_id)
+
         if self.food_primary_type is not None and not isinstance(self.food_primary_type, str):
             self.food_primary_type = str(self.food_primary_type)
 
@@ -197,6 +200,7 @@ class Component(NamedThing):
     class_name: ClassVar[str] = "Component"
     class_model_uri: ClassVar[URIRef] = MIFC.Component
 
+    component_id: Optional[str] = None
     component_type: Optional[str] = None
     component_type_label: Optional[str] = None
     component_recorded_value: Optional[float] = None
@@ -217,6 +221,9 @@ class Component(NamedThing):
     component_quality_control_remeasurement: Optional[Union[bool, Bool]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self.component_id is not None and not isinstance(self.component_id, str):
+            self.component_id = str(self.component_id)
+
         if self.component_type is not None and not isinstance(self.component_type, str):
             self.component_type = str(self.component_type)
 
@@ -316,14 +323,12 @@ class Container(YAMLRoot):
     class_name: ClassVar[str] = "Container"
     class_model_uri: ClassVar[URIRef] = MIFC.Container
 
-    foods: Optional[Union[Union[dict, Food], List[Union[dict, Food]]]] = empty_list()
+    foods: Optional[Union[Dict[Union[str, FoodFoodId], Union[dict, Food]], List[Union[dict, Food]]]] = empty_dict()
     components: Optional[Union[Union[dict, Component], List[Union[dict, Component]]]] = empty_list()
     provenances: Optional[Union[Union[dict, Provenance], List[Union[dict, Provenance]]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if not isinstance(self.foods, list):
-            self.foods = [self.foods] if self.foods is not None else []
-        self.foods = [v if isinstance(v, Food) else Food(**as_dict(v)) for v in self.foods]
+        self._normalize_inlined_as_list(slot_name="foods", slot_type=Food, key_name="food_id", keyed=True)
 
         if not isinstance(self.components, list):
             self.components = [self.components] if self.components is not None else []
@@ -503,9 +508,6 @@ class FoodCookingMethod(EnumDefinitionImpl):
 class slots:
     pass
 
-slots.id = Slot(uri=MIFC.id, name="id", curie=MIFC.curie('id'),
-                   model_uri=MIFC.id, domain=None, range=Optional[str])
-
 slots.laboratory_sample_id = Slot(uri=MIFC.laboratory_sample_id, name="laboratory_sample_id", curie=MIFC.curie('laboratory_sample_id'),
                    model_uri=MIFC.laboratory_sample_id, domain=None, range=Optional[str])
 
@@ -514,6 +516,9 @@ slots.laboratory_sample_aliquot_id = Slot(uri=MIFC.laboratory_sample_aliquot_id,
 
 slots.laboratory_sample_batch_id = Slot(uri=MIFC.laboratory_sample_batch_id, name="laboratory_sample_batch_id", curie=MIFC.curie('laboratory_sample_batch_id'),
                    model_uri=MIFC.laboratory_sample_batch_id, domain=None, range=Optional[str])
+
+slots.food_id = Slot(uri=MIFC.food_id, name="food_id", curie=MIFC.curie('food_id'),
+                   model_uri=MIFC.food_id, domain=None, range=URIRef)
 
 slots.food_primary_type = Slot(uri=SCHEMA.name, name="food_primary_type", curie=SCHEMA.curie('name'),
                    model_uri=MIFC.food_primary_type, domain=None, range=Optional[str])
@@ -580,6 +585,9 @@ slots.food_category_label = Slot(uri=MIFC.food_category_label, name="food_catego
 
 slots.food_additional_types = Slot(uri=MIFC.food_additional_types, name="food_additional_types", curie=MIFC.curie('food_additional_types'),
                    model_uri=MIFC.food_additional_types, domain=None, range=Optional[str])
+
+slots.component_id = Slot(uri=MIFC.component_id, name="component_id", curie=MIFC.curie('component_id'),
+                   model_uri=MIFC.component_id, domain=None, range=Optional[str])
 
 slots.component_type = Slot(uri=MIFC.component_type, name="component_type", curie=MIFC.curie('component_type'),
                    model_uri=MIFC.component_type, domain=None, range=Optional[str])
@@ -648,7 +656,7 @@ slots.organization_name = Slot(uri=MIFC.organization_name, name="organization_na
                    model_uri=MIFC.organization_name, domain=None, range=Optional[str])
 
 slots.container__foods = Slot(uri=MIFC.foods, name="container__foods", curie=MIFC.curie('foods'),
-                   model_uri=MIFC.container__foods, domain=None, range=Optional[Union[Union[dict, Food], List[Union[dict, Food]]]])
+                   model_uri=MIFC.container__foods, domain=None, range=Optional[Union[Dict[Union[str, FoodFoodId], Union[dict, Food]], List[Union[dict, Food]]]])
 
 slots.container__components = Slot(uri=MIFC.components, name="container__components", curie=MIFC.curie('components'),
                    model_uri=MIFC.container__components, domain=None, range=Optional[Union[Union[dict, Component], List[Union[dict, Component]]]])

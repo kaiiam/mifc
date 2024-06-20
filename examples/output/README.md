@@ -2,31 +2,31 @@
 ### Input
 ```yaml
 foods:
-- food_preservation_state: raw
+- food_id: FDC:167512
+  food_preservation_state: raw
   food_primary_type: FOOD:11954
   food_primary_type_label: Tomatillos, raw
-  id: FDC:167512
-- food_preservation_state: raw
+- food_id: FDC:167513
+  food_preservation_state: raw
   food_primary_type: FOOD:10100
   food_primary_type_label: Pork, fresh, variety meats and by-products, ears, frozen,
     raw
   food_storage_temperature_state: frozen
-  id: FDC:167513
 
 ```
 ## Container-001-illegal-primary-preservation
 ### Input
 ```yaml
 foods:
-- food_preservation_state: raw
+- food_id: FDC:167512
+  food_preservation_state: raw
   food_primary_type: FOOD:11954
   food_primary_type_label: Tomatillos, raw
-  id: FDC:167512
-- food_preservation_state: 1
+- food_id: FDC:167513
+  food_preservation_state: 1
   food_primary_type: FOOD:10100
   food_primary_type_label: Pork, fresh, variety meats and by-products, ears, frozen,
     raw
   food_storage_temperature_state: frozen
-  id: FDC:167513
 
 ```

@@ -42,6 +42,10 @@
                     "description": "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).",
                     "type": "string"
                 },
+                "component_id": {
+                    "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.",
+                    "type": "string"
+                },
                 "component_limit_of_quantitation": {
                     "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.",
                     "type": "string"
@@ -68,9 +72,6 @@
                 },
                 "component_type_label": {
                     "description": "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.",
-                    "type": "string"
-                },
-                "id": {
                     "type": "string"
                 },
                 "laboratory_conducting_analytical_analysis": {
@@ -203,6 +204,10 @@
                     "description": "A datetime value representing the food expiration data as shown on the labeling information of the food sample.",
                     "type": "string"
                 },
+                "food_id": {
+                    "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.",
+                    "type": "string"
+                },
                 "food_preservation_state": {
                     "$ref": "#/$defs/FoodPreservationState",
                     "description": "An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., \"raw\")."
@@ -227,9 +232,6 @@
                     "description": "An integer denoting a Universal Product Code (UPC) barcode of a food sample.",
                     "type": "integer"
                 },
-                "id": {
-                    "type": "string"
-                },
                 "laboratory_sample_aliquot_id": {
                     "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
                     "type": "string"
@@ -243,6 +245,9 @@
                     "type": "string"
                 }
             },
+            "required": [
+                "food_id"
+            ],
             "title": "Food",
             "type": "object"
         },
@@ -361,9 +366,6 @@
                 },
                 "dataset_label": {
                     "description": "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\").",
-                    "type": "string"
-                },
-                "id": {
                     "type": "string"
                 },
                 "laboratory_sample_aliquot_id": {

@@ -640,18 +640,6 @@
   ],
   "slots": [
     {
-      "name": "id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/id",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/id",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
       "name": "laboratory_sample_id",
       "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_id",
       "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
@@ -688,6 +676,21 @@
         "NamedThing"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_id",
+      "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_id",
+      "identifier": true,
+      "owner": "Food",
+      "domain_of": [
+        "Food"
+      ],
+      "range": "string",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1005,6 +1008,19 @@
       "owner": "Food",
       "domain_of": [
         "Food"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "component_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_id",
+      "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_id",
+      "owner": "Component",
+      "domain_of": [
+        "Component"
       ],
       "range": "string",
       "@type": "SlotDefinition"
@@ -1363,7 +1379,6 @@
       ],
       "abstract": true,
       "slots": [
-        "id",
         "laboratory_sample_id",
         "laboratory_sample_aliquot_id",
         "laboratory_sample_batch_id"
@@ -1385,10 +1400,10 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "id",
         "laboratory_sample_id",
         "laboratory_sample_aliquot_id",
         "laboratory_sample_batch_id",
+        "food_id",
         "food_primary_type",
         "food_primary_type_label",
         "food_upc_code",
@@ -1426,10 +1441,10 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "id",
         "laboratory_sample_id",
         "laboratory_sample_aliquot_id",
         "laboratory_sample_batch_id",
+        "component_id",
         "component_type",
         "component_type_label",
         "component_recorded_value",
@@ -1463,7 +1478,6 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "id",
         "laboratory_sample_id",
         "laboratory_sample_aliquot_id",
         "laboratory_sample_batch_id",
@@ -1516,9 +1530,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-11T18:24:55",
-  "source_file_size": 16671,
-  "generation_date": "2024-06-20T13:50:21",
+  "source_file_date": "2024-06-20T14:28:17",
+  "source_file_size": 17114,
+  "generation_date": "2024-06-20T14:29:29",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

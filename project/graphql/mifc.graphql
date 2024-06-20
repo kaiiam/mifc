@@ -1,10 +1,10 @@
 # metamodel_version: 1.7.0
 type Component
   {
-    id: String
     laboratorySampleId: String
     laboratorySampleAliquotId: String
     laboratorySampleBatchId: String
+    componentId: String
     componentType: String
     componentTypeLabel: String
     componentRecordedValue: Float
@@ -34,10 +34,10 @@ type Container
 
 type Food
   {
-    id: String
     laboratorySampleId: String
     laboratorySampleAliquotId: String
     laboratorySampleBatchId: String
+    foodId: String!
     foodPrimaryType: String
     foodPrimaryTypeLabel: String
     foodUpcCode: Integer
@@ -64,7 +64,6 @@ type Food
 
 interface NamedThing
   {
-    id: String
     laboratorySampleId: String
     laboratorySampleAliquotId: String
     laboratorySampleBatchId: String
@@ -72,7 +71,6 @@ interface NamedThing
 
 type Provenance
   {
-    id: String
     laboratorySampleId: String
     laboratorySampleAliquotId: String
     laboratorySampleBatchId: String

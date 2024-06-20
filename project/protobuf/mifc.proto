@@ -4,10 +4,10 @@
 // Metadata about components of nutritional interest measured from foods.
 message Component
  {
-  string id = 0
   string laboratorySampleId = 0
   string laboratorySampleAliquotId = 0
   string laboratorySampleBatchId = 0
+  string componentId = 0
   string componentType = 0
   string componentTypeLabel = 0
   float componentRecordedValue = 0
@@ -36,10 +36,10 @@ message Container
 // Metadata about foods analyzed for components of nutritional interest.
 message Food
  {
-  string id = 0
   string laboratorySampleId = 0
   string laboratorySampleAliquotId = 0
   string laboratorySampleBatchId = 0
+  string foodId = 0
   string foodPrimaryType = 0
   string foodPrimaryTypeLabel = 0
   integer foodUpcCode = 0
@@ -66,7 +66,6 @@ message Food
 // Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
 message Provenance
  {
-  string id = 0
   string laboratorySampleId = 0
   string laboratorySampleAliquotId = 0
   string laboratorySampleBatchId = 0
