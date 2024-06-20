@@ -28,6 +28,8 @@
 
 * Rename `compound_value_remeasured_for_quality_control` to `component_quality_control_remeasurement`
 
+* Rename `analytical_analysis_measurement_method` to `compound_analytical_measurement_method`
+
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**

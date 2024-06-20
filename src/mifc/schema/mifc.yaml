@@ -91,7 +91,7 @@ classes:
       - laboratory_sample_aggregation_median_measured_compound_value
       - laboratory_sample_aggregation_measured_compound_standard_deviation
       - analytical_analysis_measurement_protocol_doi
-      - analytical_analysis_measurement_method
+      - compound_analytical_measurement_method
       - laboratory_conducting_analytical_analysis
       - component_quality_control_remeasurement
 
@@ -256,8 +256,8 @@ slots:
     range: float
   analytical_analysis_measurement_protocol_doi: # TODO Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
     description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
-  analytical_analysis_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
-    description: A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC).
+  compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
+    description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
     range: AnalyticalMeasurementMethod
   laboratory_conducting_analytical_analysis:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
