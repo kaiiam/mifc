@@ -31,7 +31,6 @@ classes:
   NamedThing:
     abstract: true     ## should not be instantiated directly
     slots:
-     - laboratory_sample_id
      - laboratory_sample_aliquot_id
      - laboratory_sample_batch_id
     close_mappings:
@@ -66,6 +65,7 @@ classes:
      - food_expiration_date
      - food_category_label
      - food_additional_types
+     - food_laboratory_sample_id
     id_prefixes:
       - mifc
 
@@ -124,8 +124,6 @@ classes:
 
 slots:
   # Common slots
-  laboratory_sample_id:
-    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
   laboratory_sample_aliquot_id:
     description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
   laboratory_sample_batch_id:
@@ -210,6 +208,9 @@ slots:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
+  food_laboratory_sample_id:
+    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
+    comments: Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.
 
 
   # Component slots
