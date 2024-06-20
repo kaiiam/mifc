@@ -1,0 +1,41 @@
+components:
+- laboratory_sample_id: CY124QU
+  laboratory_sample_aliquot_id: NFY122JPN
+  laboratory_sample_batch_id: o
+  component_id: '167512'
+  component_type: COMPONENT:1075
+  component_type_label: galactose
+  component_recorded_value: 0.52
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 1
+  component_analysis_date: March 8, 2023
+  analytical_analysis_measurement_protocol_doi: SUGR-GALAC-CHG
+  laboratory_conducting_analytical_analysis: Silliker
+  component_quality_control_remeasurement: false
+- laboratory_sample_id: CY124QX
+  laboratory_sample_aliquot_id: NFY122JRQ
+  laboratory_sample_batch_id: o
+  component_id: '167513'
+  component_type: COMPONENT:1014
+  component_type_label: maltose
+  component_recorded_value: 0.0
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 1
+  component_analysis_date: March 9, 2023
+  component_limit_of_quantitation: <0.25
+  analytical_analysis_measurement_protocol_doi: SUGR-DP1-2-CHG
+  laboratory_conducting_analytical_analysis: Silliker
+- laboratory_sample_id: CY124R2
+  laboratory_sample_aliquot_id: NFY122JV9
+  laboratory_sample_batch_id: q
+  component_id: '167514'
+  component_type: COMPONENT:1011
+  component_type_label: glucose
+  component_recorded_value: 0.0
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 1
+  component_analysis_date: March 17, 2023
+  component_limit_of_quantitation: <0.25
+  analytical_analysis_measurement_protocol_doi: SUGR-DP1-2-CHG
+  laboratory_conducting_analytical_analysis: Silliker
+  component_quality_control_remeasurement: true
