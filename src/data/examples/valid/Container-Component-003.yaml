@@ -1,7 +1,7 @@
 components:
 - component_sample_id: CY124QU
   food_laboratory_sample_aliquot_id: NFY122JPN
-  laboratory_sample_batch_id: o
+  food_laboratory_sample_batch_id: o
   component_type: COMPONENT:1075
   component_type_label: galactose
   component_recorded_value: 0.52
@@ -13,7 +13,7 @@ components:
   component_quality_control_remeasurement: false
 - component_sample_id: CY124QX
   food_laboratory_sample_aliquot_id: NFY122JRQ
-  laboratory_sample_batch_id: o
+  food_laboratory_sample_batch_id: o
   component_type: COMPONENT:1014
   component_type_label: maltose
   component_recorded_value: 0.0
@@ -25,7 +25,7 @@ components:
   compound_analytical_laboratory_name: Silliker
 - component_sample_id: CY124R2
   food_laboratory_sample_aliquot_id: NFY122JV9
-  laboratory_sample_batch_id: q
+  food_laboratory_sample_batch_id: q
   component_type: COMPONENT:1011
   component_type_label: glucose
   component_recorded_value: 0.0

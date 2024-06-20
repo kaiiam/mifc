@@ -30,8 +30,6 @@ classes:
   ## --
   NamedThing:
     abstract: true     ## should not be instantiated directly
-    slots:
-     - laboratory_sample_batch_id
     close_mappings:
      - schema:Thing
 
@@ -66,6 +64,7 @@ classes:
      - food_additional_types
      - food_laboratory_sample_id
      - food_laboratory_sample_aliquot_id
+     - food_laboratory_sample_batch_id
     id_prefixes:
       - mifc
 
@@ -96,6 +95,7 @@ classes:
       - component_quality_control_remeasurement
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
+      - food_laboratory_sample_batch_id
 
   Provenance:
     description: >-
@@ -125,11 +125,6 @@ classes:
         range: Provenance
 
 slots:
-  # Common slots
-  laboratory_sample_batch_id:
-     description: A string denoting an identifier of a batch of laboratory samples analysed together.
-
-
   # Food slots
   food_sample_id:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
@@ -208,13 +203,6 @@ slots:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
-  food_laboratory_sample_id:
-    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
-    comments: Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.
-  food_laboratory_sample_aliquot_id:
-    description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
-    comments: Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.
-
 
   # Component slots
   component_sample_id:
@@ -281,6 +269,15 @@ slots:
   organization_name:
     description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
 
+  # Slots common to both Food and Component classes
+  food_laboratory_sample_id:
+    description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
+    comments: Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.
+  food_laboratory_sample_aliquot_id:
+    description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
+    comments: Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.
+  food_laboratory_sample_batch_id:
+     description: A string denoting an identifier of a batch of laboratory samples analysed together.
 
 
 
