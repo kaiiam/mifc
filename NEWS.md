@@ -4,6 +4,8 @@
 
 **Component**
 
+* Remove `id` from NamedThing and replace with `component_id`
+
 * Rename `measured_compound` to `component_type`
 
 * Rename `measured_compound_label` to `component_type_label`
@@ -29,6 +31,8 @@
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**
+
+* Rename `id` from NamedThing and replace with `food_id`
 
 * Rename `primary_food_type` to `food_primary_type`
 

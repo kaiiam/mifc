@@ -31,7 +31,6 @@ classes:
   NamedThing:
     abstract: true     ## should not be instantiated directly
     slots:
-     - id
      - laboratory_sample_id
      - laboratory_sample_aliquot_id
      - laboratory_sample_batch_id
@@ -44,6 +43,7 @@ classes:
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
     slots:            ## Slots specific to foods
+     - food_id
      - food_primary_type
      - food_primary_type_label
      - food_upc_code
@@ -75,6 +75,7 @@ classes:
     is_a: NamedThing
     class_uri: schema:Component
     slots:            ## Slots specific to components of nutritional interest
+      - component_id
       - component_type
       - component_type_label
       - component_recorded_value
@@ -123,8 +124,6 @@ classes:
 
 slots:
   # Common slots
-  id:
- #   identifier: true # Forces keys to be unique, we'd want this for food IDs but not for components. Perhaps need to split it into two different slots?
   laboratory_sample_id:
     description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
   laboratory_sample_aliquot_id:
@@ -134,6 +133,9 @@ slots:
 
 
   # Food slots
+  food_id:
+    description: A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.
+    identifier: true # Forces food_id keys to be unique
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
     comments: The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
@@ -210,6 +212,8 @@ slots:
 
 
   # Component slots
+  component_id:
+    description: A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
   component_type_label:

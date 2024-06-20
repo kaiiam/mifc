@@ -1,9 +1,9 @@
 foods:
-  - id: FDC:167512
+  - food_id: FDC:167512
     food_primary_type: FOOD:11954
     food_primary_type_label: Tomatillos, raw
     food_preservation_state: raw
-  - id: FDC:167513
+  - food_id: FDC:167513
     food_primary_type: FOOD:10100
     food_primary_type_label: Pork, fresh, variety meats and by-products, ears, frozen, raw
     food_preservation_state: raw
