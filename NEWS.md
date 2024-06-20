@@ -30,6 +30,8 @@
 
 * Rename `analytical_analysis_measurement_method` to `compound_analytical_measurement_method`
 
+* Rename `analytical_analysis_measurement_protocol_doi` to `compound_analytical_measurement_protocol_doi`
+
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**

@@ -28,14 +28,14 @@ components:
   component_recorded_value: 2.12
   component_measurement_unit: ug/(100.g)
   component_data_points_number: 1
-  analytical_analysis_measurement_protocol_doi: ' AOAC 934.06 mod'
+  compound_analytical_measurement_protocol_doi: ' AOAC 934.06 mod'
   compound_analytical_measurement_method: Gravimetric
 - component_id: FDC:167513
   component_type: COMPONENT:1003
   component_recorded_value: 4.34
   component_measurement_unit: g/(100.g)
   component_data_points_number: 2
-  analytical_analysis_measurement_protocol_doi: AOAC 985.01 + 984.27
+  compound_analytical_measurement_protocol_doi: AOAC 985.01 + 984.27
   compound_analytical_measurement_method: Fluorometric
 - component_id: FDC:167513
   component_type: COMPONENT:1007
@@ -48,7 +48,7 @@ components:
   component_recorded_value: 1381.0
   component_measurement_unit: g/(100.g)
   component_data_points_number: 0
-  analytical_analysis_measurement_protocol_doi: AOAC 996.06
+  compound_analytical_measurement_protocol_doi: AOAC 996.06
   compound_analytical_measurement_method: HPLC
 - component_id: FDC:167513
   component_type: COMPONENT:1079
