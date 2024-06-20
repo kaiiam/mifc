@@ -213,17 +213,6 @@
       NamedThing &lt;|-- Component
         click NamedThing href "../NamedThing"
 
-      Component : analytical_analysis_measurement_method
-
-
-
-
-    Component --&gt; "0..1" AnalyticalMeasurementMethod : analytical_analysis_measurement_method
-    click AnalyticalMeasurementMethod href "../AnalyticalMeasurementMethod"
-
-
-      Component : analytical_analysis_measurement_protocol_doi
-
       Component : component_analysis_date
 
       Component : component_comment
@@ -247,6 +236,17 @@
       Component : component_type
 
       Component : component_type_label
+
+      Component : compound_analytical_measurement_method
+
+
+
+
+    Component --&gt; "0..1" AnalyticalMeasurementMethod : compound_analytical_measurement_method
+    click AnalyticalMeasurementMethod href "../AnalyticalMeasurementMethod"
+
+
+      Component : compound_analytical_measurement_protocol_doi
 
       Component : laboratory_conducting_analytical_analysis
 
@@ -375,15 +375,15 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../analytical_analysis_measurement_protocol_doi/">analytical_analysis_measurement_protocol_doi</a></td>
+<td><a href="../compound_analytical_measurement_protocol_doi/">compound_analytical_measurement_protocol_doi</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting a digital object identifier link to a measurement protocol ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../analytical_analysis_measurement_method/">analytical_analysis_measurement_method</a></td>
+<td><a href="../compound_analytical_measurement_method/">compound_analytical_measurement_method</a></td>
 <td>0..1 <br/> <a href="../AnalyticalMeasurementMethod/">AnalyticalMeasurementMethod</a></td>
-<td>A controlled vocabulary term denoting method used to conduct an analytical an...</td>
+<td>A controlled vocabulary term denoting the method used to conduct an analytica...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -485,8 +485,8 @@ slots:
 - laboratory_sample_aggregation_maximum_measured_compound_value
 - laboratory_sample_aggregation_median_measured_compound_value
 - laboratory_sample_aggregation_measured_compound_standard_deviation
-- analytical_analysis_measurement_protocol_doi
-- analytical_analysis_measurement_method
+- compound_analytical_measurement_protocol_doi
+- compound_analytical_measurement_method
 - laboratory_conducting_analytical_analysis
 - component_quality_control_remeasurement
 class_uri: schema:Component
@@ -679,24 +679,24 @@ attributes:
     domain_of:
     - Component
     range: float
-  analytical_analysis_measurement_protocol_doi:
-    name: analytical_analysis_measurement_protocol_doi
+  compound_analytical_measurement_protocol_doi:
+    name: compound_analytical_measurement_protocol_doi
     description: A string denoting a digital object identifier link to a measurement
       protocol used to conduct an analytical analysis on a sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: analytical_analysis_measurement_protocol_doi
+    alias: compound_analytical_measurement_protocol_doi
     owner: Component
     domain_of:
     - Component
     range: string
-  analytical_analysis_measurement_method:
-    name: analytical_analysis_measurement_method
-    description: A controlled vocabulary term denoting method used to conduct an analytical
-      analysis on a sample, (e.g., HPLC).
+  compound_analytical_measurement_method:
+    name: compound_analytical_measurement_method
+    description: A controlled vocabulary term denoting the method used to conduct
+      an analytical analysis on a sample, (e.g., HPLC).
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: analytical_analysis_measurement_method
+    alias: compound_analytical_measurement_method
     owner: Component
     domain_of:
     - Component

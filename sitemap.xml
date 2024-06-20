@@ -156,16 +156,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/analytical_analysis_measurement_method/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/analytical_analysis_measurement_protocol_doi/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/component_analysis_date/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -227,6 +217,16 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/components/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_analytical_measurement_method/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_analytical_measurement_protocol_doi/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
