@@ -1,0 +1,11 @@
+{
+  "provenances": [
+    {
+      "dataset_label": "Standard Reference (SR) Legacy",
+      "mifc_version_tag": "v1.0.1",
+      "contributor_orcid": "https://orcid.org/0000-0002-3410-4655",
+      "organization_name": "USDA"
+    }
+  ],
+  "@type": "Container"
+}
