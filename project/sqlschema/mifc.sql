@@ -48,8 +48,8 @@
 --     * Slot: laboratory_sample_aggregation_maximum_measured_compound_value Description: A float representing the maximum measured compound value of an aggregation of samples.
 --     * Slot: laboratory_sample_aggregation_median_measured_compound_value Description: A float representing the median measured compound value of an aggregation of samples.
 --     * Slot: laboratory_sample_aggregation_measured_compound_standard_deviation Description: A float representing the standard deviation of a measured compound value of an aggregation of samples.
---     * Slot: analytical_analysis_measurement_protocol_doi Description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
---     * Slot: analytical_analysis_measurement_method Description: A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC).
+--     * Slot: compound_analytical_measurement_protocol_doi Description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
+--     * Slot: compound_analytical_measurement_method Description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
 --     * Slot: laboratory_conducting_analytical_analysis Description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
 --     * Slot: component_quality_control_remeasurement Description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
 --     * Slot: laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
@@ -128,8 +128,8 @@ CREATE TABLE "Component" (
 	laboratory_sample_aggregation_maximum_measured_compound_value FLOAT, 
 	laboratory_sample_aggregation_median_measured_compound_value FLOAT, 
 	laboratory_sample_aggregation_measured_compound_standard_deviation FLOAT, 
-	analytical_analysis_measurement_protocol_doi TEXT, 
-	analytical_analysis_measurement_method VARCHAR(12), 
+	compound_analytical_measurement_protocol_doi TEXT, 
+	compound_analytical_measurement_method VARCHAR(12), 
 	laboratory_conducting_analytical_analysis TEXT, 
 	component_quality_control_remeasurement BOOLEAN, 
 	laboratory_sample_id TEXT, 

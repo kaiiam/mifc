@@ -11,7 +11,7 @@
       "component_measurement_unit": "g/(100.g)",
       "component_data_points_number": 1,
       "component_analysis_date": "March 8, 2023",
-      "analytical_analysis_measurement_protocol_doi": "SUGR-GALAC-CHG",
+      "compound_analytical_measurement_protocol_doi": "SUGR-GALAC-CHG",
       "laboratory_conducting_analytical_analysis": "Silliker",
       "component_quality_control_remeasurement": false
     },
@@ -27,7 +27,7 @@
       "component_data_points_number": 1,
       "component_analysis_date": "March 9, 2023",
       "component_limit_of_quantitation": "<0.25",
-      "analytical_analysis_measurement_protocol_doi": "SUGR-DP1-2-CHG",
+      "compound_analytical_measurement_protocol_doi": "SUGR-DP1-2-CHG",
       "laboratory_conducting_analytical_analysis": "Silliker"
     },
     {
@@ -42,7 +42,7 @@
       "component_data_points_number": 1,
       "component_analysis_date": "March 17, 2023",
       "component_limit_of_quantitation": "<0.25",
-      "analytical_analysis_measurement_protocol_doi": "SUGR-DP1-2-CHG",
+      "compound_analytical_measurement_protocol_doi": "SUGR-DP1-2-CHG",
       "laboratory_conducting_analytical_analysis": "Silliker",
       "component_quality_control_remeasurement": true
     }

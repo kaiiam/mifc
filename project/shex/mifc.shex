@@ -62,8 +62,8 @@ linkml:Sparqlpath xsd:string
           <laboratory_sample_aggregation_maximum_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_median_measured_compound_value> @linkml:Float ? ;
           <laboratory_sample_aggregation_measured_compound_standard_deviation> @linkml:Float ? ;
-          <analytical_analysis_measurement_protocol_doi> @linkml:String ? ;
-          <analytical_analysis_measurement_method> [ <http://purl.obolibrary.org/obo/OBI_0002116>
+          <compound_analytical_measurement_protocol_doi> @linkml:String ? ;
+          <compound_analytical_measurement_method> [ <http://purl.obolibrary.org/obo/OBI_0002116>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry>

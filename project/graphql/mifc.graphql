@@ -19,8 +19,8 @@ type Component
     laboratorySampleAggregationMaximumMeasuredCompoundValue: Float
     laboratorySampleAggregationMedianMeasuredCompoundValue: Float
     laboratorySampleAggregationMeasuredCompoundStandardDeviation: Float
-    analyticalAnalysisMeasurementProtocolDoi: String
-    analyticalAnalysisMeasurementMethod: AnalyticalMeasurementMethod
+    compoundAnalyticalMeasurementProtocolDoi: String
+    compoundAnalyticalMeasurementMethod: AnalyticalMeasurementMethod
     laboratoryConductingAnalyticalAnalysis: String
     componentQualityControlRemeasurement: Boolean
   }

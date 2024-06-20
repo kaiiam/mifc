@@ -1,87 +1,34 @@
 {
-  "components": [
+  "foods": [
     {
-      "component_id": "FDC:167512",
-      "component_type": "COMPONENT:1003",
-      "component_recorded_value": 5.88,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 1,
-      "analytical_analysis_measurement_method": "HPLC"
+      "food_id": "FDC:392739",
+      "food_primary_type": "FOOD:4601",
+      "food_primary_type_label": "Butter, light, stick, with salt",
+      "food_upc_code": 40822011143,
+      "food_preservation_state": "fresh",
+      "food_acquisition_city": "PITTSBURGH",
+      "food_acquisition_country": "USA",
+      "food_acquisition_country_subdivision": "PA",
+      "food_acquisition_date": "2015-11-02",
+      "food_distributor_city": "Cincinnati",
+      "food_distributor_country": "United States of America",
+      "food_distributor_country_subdivision": "Ohio",
+      "food_expiration_date": "2015-12-07"
     },
     {
-      "component_id": "FDC:167512",
-      "component_type": "COMPONENT:1007",
-      "component_recorded_value": 3.5,
-      "component_measurement_unit": "kcal/(100.g)",
-      "component_data_points_number": 1,
-      "analytical_analysis_measurement_method": "GC"
-    },
-    {
-      "component_id": "FDC:167512",
-      "component_type": "COMPONENT:1062",
-      "component_recorded_value": 1286.0,
-      "component_measurement_unit": "kJ/(100.g)",
-      "component_data_points_number": 2,
-      "analytical_analysis_measurement_method": "GLC"
-    },
-    {
-      "component_id": "FDC:167512",
-      "component_type": "COMPONENT:1079",
-      "component_recorded_value": 1.2,
-      "component_measurement_unit": "mg/(100.g)",
-      "component_data_points_number": 0,
-      "analytical_analysis_measurement_method": "Nephelometry"
-    },
-    {
-      "component_id": "FDC:167512",
-      "component_type": "COMPONENT:1089",
-      "component_recorded_value": 2.12,
-      "component_measurement_unit": "ug/(100.g)",
-      "component_data_points_number": 1,
-      "analytical_analysis_measurement_protocol_doi": " AOAC 934.06 mod",
-      "analytical_analysis_measurement_method": "Gravimetric"
-    },
-    {
-      "component_id": "FDC:167513",
-      "component_type": "COMPONENT:1003",
-      "component_recorded_value": 4.34,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 2,
-      "analytical_analysis_measurement_protocol_doi": "AOAC 985.01 + 984.27",
-      "analytical_analysis_measurement_method": "Fluorometric"
-    },
-    {
-      "component_id": "FDC:167513",
-      "component_type": "COMPONENT:1007",
-      "component_recorded_value": 3.08,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 1,
-      "analytical_analysis_measurement_method": "Kjeldahl"
-    },
-    {
-      "component_id": "FDC:167513",
-      "component_type": "COMPONENT:1062",
-      "component_recorded_value": 1381.0,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 0,
-      "analytical_analysis_measurement_protocol_doi": "AOAC 996.06",
-      "analytical_analysis_measurement_method": "HPLC"
-    },
-    {
-      "component_id": "FDC:167513",
-      "component_type": "COMPONENT:1079",
-      "component_recorded_value": 1.4,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 6,
-      "analytical_analysis_measurement_method": "HPLC"
-    },
-    {
-      "component_id": "FDC:167513",
-      "component_type": "COMPONENT:1089",
-      "component_recorded_value": 1.93,
-      "component_measurement_unit": "g/(100.g)",
-      "component_data_points_number": 3,
-      "analytical_analysis_measurement_method": "HPLC"
+      "food_id": "FDC:392740",
+      "food_primary_type": "FOOD:11601",
+      "food_primary_type_label": "Yam, raw",
+      "food_upc_code": 79893110196,
+      "food_preservation_state": "raw",
+      "food_acquisition_city": "TUCSON",
+      "food_acquisition_country": "USA",
+      "food_acquisition_country_subdivision": "AZ",
+      "food_acquisition_date": "2018-05-22",
+      "food_distributor_city": "Veracruz",
+      "food_distributor_country": "Mexico",
+      "food_distributor_country_subdivision": "Veracruz",
+      "food_expiration_date": "2018-04-25"
     }
   ],
   "@type": "Container"

@@ -1218,11 +1218,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "analytical_analysis_measurement_protocol_doi",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
+      "name": "compound_analytical_measurement_protocol_doi",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_measurement_protocol_doi",
       "description": "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_protocol_doi",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_measurement_protocol_doi",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -1231,11 +1231,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "analytical_analysis_measurement_method",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
-      "description": "A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC).",
+      "name": "compound_analytical_measurement_method",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_measurement_method",
+      "description": "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/analytical_analysis_measurement_method",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_measurement_method",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -1460,8 +1460,8 @@
         "laboratory_sample_aggregation_maximum_measured_compound_value",
         "laboratory_sample_aggregation_median_measured_compound_value",
         "laboratory_sample_aggregation_measured_compound_standard_deviation",
-        "analytical_analysis_measurement_protocol_doi",
-        "analytical_analysis_measurement_method",
+        "compound_analytical_measurement_protocol_doi",
+        "compound_analytical_measurement_method",
         "laboratory_conducting_analytical_analysis",
         "component_quality_control_remeasurement"
       ],
@@ -1531,9 +1531,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-20T15:06:17",
-  "source_file_size": 17152,
-  "generation_date": "2024-06-20T16:13:34",
+  "source_file_date": "2024-06-20T16:29:33",
+  "source_file_size": 17156,
+  "generation_date": "2024-06-20T16:33:59",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

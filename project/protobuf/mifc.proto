@@ -22,8 +22,8 @@ message Component
   float laboratorySampleAggregationMaximumMeasuredCompoundValue = 0
   float laboratorySampleAggregationMedianMeasuredCompoundValue = 0
   float laboratorySampleAggregationMeasuredCompoundStandardDeviation = 0
-  string analyticalAnalysisMeasurementProtocolDoi = 0
-  analyticalMeasurementMethod analyticalAnalysisMeasurementMethod = 0
+  string compoundAnalyticalMeasurementProtocolDoi = 0
+  analyticalMeasurementMethod compoundAnalyticalMeasurementMethod = 0
   string laboratoryConductingAnalyticalAnalysis = 0
   boolean componentQualityControlRemeasurement = 0
  }

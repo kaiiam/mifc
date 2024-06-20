@@ -18,14 +18,6 @@
             "additionalProperties": false,
             "description": "Metadata about components of nutritional interest measured from foods.",
             "properties": {
-                "analytical_analysis_measurement_method": {
-                    "$ref": "#/$defs/AnalyticalMeasurementMethod",
-                    "description": "A controlled vocabulary term denoting method used to conduct an analytical analysis on a sample, (e.g., HPLC)."
-                },
-                "analytical_analysis_measurement_protocol_doi": {
-                    "description": "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.",
-                    "type": "string"
-                },
                 "component_analysis_date": {
                     "description": "A datetime value representing the date in which a component of nutritional interest was analyzed.",
                     "type": "string"
@@ -72,6 +64,14 @@
                 },
                 "component_type_label": {
                     "description": "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.",
+                    "type": "string"
+                },
+                "compound_analytical_measurement_method": {
+                    "$ref": "#/$defs/AnalyticalMeasurementMethod",
+                    "description": "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC)."
+                },
+                "compound_analytical_measurement_protocol_doi": {
+                    "description": "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.",
                     "type": "string"
                 },
                 "laboratory_conducting_analytical_analysis": {

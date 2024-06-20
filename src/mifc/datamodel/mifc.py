@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T16:13:35
+# Generation date: 2024-06-20T16:34:00
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -215,8 +215,8 @@ class Component(NamedThing):
     laboratory_sample_aggregation_maximum_measured_compound_value: Optional[float] = None
     laboratory_sample_aggregation_median_measured_compound_value: Optional[float] = None
     laboratory_sample_aggregation_measured_compound_standard_deviation: Optional[float] = None
-    analytical_analysis_measurement_protocol_doi: Optional[str] = None
-    analytical_analysis_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
+    compound_analytical_measurement_protocol_doi: Optional[str] = None
+    compound_analytical_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
     laboratory_conducting_analytical_analysis: Optional[str] = None
     component_quality_control_remeasurement: Optional[Union[bool, Bool]] = None
 
@@ -268,11 +268,11 @@ class Component(NamedThing):
         if self.laboratory_sample_aggregation_measured_compound_standard_deviation is not None and not isinstance(self.laboratory_sample_aggregation_measured_compound_standard_deviation, float):
             self.laboratory_sample_aggregation_measured_compound_standard_deviation = float(self.laboratory_sample_aggregation_measured_compound_standard_deviation)
 
-        if self.analytical_analysis_measurement_protocol_doi is not None and not isinstance(self.analytical_analysis_measurement_protocol_doi, str):
-            self.analytical_analysis_measurement_protocol_doi = str(self.analytical_analysis_measurement_protocol_doi)
+        if self.compound_analytical_measurement_protocol_doi is not None and not isinstance(self.compound_analytical_measurement_protocol_doi, str):
+            self.compound_analytical_measurement_protocol_doi = str(self.compound_analytical_measurement_protocol_doi)
 
-        if self.analytical_analysis_measurement_method is not None and not isinstance(self.analytical_analysis_measurement_method, AnalyticalMeasurementMethod):
-            self.analytical_analysis_measurement_method = AnalyticalMeasurementMethod(self.analytical_analysis_measurement_method)
+        if self.compound_analytical_measurement_method is not None and not isinstance(self.compound_analytical_measurement_method, AnalyticalMeasurementMethod):
+            self.compound_analytical_measurement_method = AnalyticalMeasurementMethod(self.compound_analytical_measurement_method)
 
         if self.laboratory_conducting_analytical_analysis is not None and not isinstance(self.laboratory_conducting_analytical_analysis, str):
             self.laboratory_conducting_analytical_analysis = str(self.laboratory_conducting_analytical_analysis)
@@ -633,11 +633,11 @@ slots.laboratory_sample_aggregation_median_measured_compound_value = Slot(uri=MI
 slots.laboratory_sample_aggregation_measured_compound_standard_deviation = Slot(uri=MIFC.laboratory_sample_aggregation_measured_compound_standard_deviation, name="laboratory_sample_aggregation_measured_compound_standard_deviation", curie=MIFC.curie('laboratory_sample_aggregation_measured_compound_standard_deviation'),
                    model_uri=MIFC.laboratory_sample_aggregation_measured_compound_standard_deviation, domain=None, range=Optional[float])
 
-slots.analytical_analysis_measurement_protocol_doi = Slot(uri=MIFC.analytical_analysis_measurement_protocol_doi, name="analytical_analysis_measurement_protocol_doi", curie=MIFC.curie('analytical_analysis_measurement_protocol_doi'),
-                   model_uri=MIFC.analytical_analysis_measurement_protocol_doi, domain=None, range=Optional[str])
+slots.compound_analytical_measurement_protocol_doi = Slot(uri=MIFC.compound_analytical_measurement_protocol_doi, name="compound_analytical_measurement_protocol_doi", curie=MIFC.curie('compound_analytical_measurement_protocol_doi'),
+                   model_uri=MIFC.compound_analytical_measurement_protocol_doi, domain=None, range=Optional[str])
 
-slots.analytical_analysis_measurement_method = Slot(uri=MIFC.analytical_analysis_measurement_method, name="analytical_analysis_measurement_method", curie=MIFC.curie('analytical_analysis_measurement_method'),
-                   model_uri=MIFC.analytical_analysis_measurement_method, domain=None, range=Optional[Union[str, "AnalyticalMeasurementMethod"]])
+slots.compound_analytical_measurement_method = Slot(uri=MIFC.compound_analytical_measurement_method, name="compound_analytical_measurement_method", curie=MIFC.curie('compound_analytical_measurement_method'),
+                   model_uri=MIFC.compound_analytical_measurement_method, domain=None, range=Optional[Union[str, "AnalyticalMeasurementMethod"]])
 
 slots.laboratory_conducting_analytical_analysis = Slot(uri=MIFC.laboratory_conducting_analytical_analysis, name="laboratory_conducting_analytical_analysis", curie=MIFC.curie('laboratory_conducting_analytical_analysis'),
                    model_uri=MIFC.laboratory_conducting_analytical_analysis, domain=None, range=Optional[str])
