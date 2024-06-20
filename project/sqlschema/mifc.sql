@@ -55,10 +55,10 @@
 --     * Slot: Container_id Description: Autocreated FK slot
 -- # Class: "Provenance" Description: "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC."
 --     * Slot: id Description: 
---     * Slot: dataset_label Description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
---     * Slot: mifc_version_tag Description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
---     * Slot: contributor_orcid Description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
---     * Slot: organization_name Description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
+--     * Slot: provenance_dataset_label Description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
+--     * Slot: provenance_mifc_version_tag Description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
+--     * Slot: provenance_contributor_orcid Description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
+--     * Slot: provenance_organization_name Description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
 --     * Slot: Container_id Description: Autocreated FK slot
 -- # Class: "Container" Description: ""
 --     * Slot: id Description: 
@@ -132,10 +132,10 @@ CREATE TABLE "Component" (
 );
 CREATE TABLE "Provenance" (
 	id INTEGER NOT NULL, 
-	dataset_label TEXT, 
-	mifc_version_tag TEXT, 
-	contributor_orcid TEXT, 
-	organization_name TEXT, 
+	provenance_dataset_label TEXT, 
+	provenance_mifc_version_tag TEXT, 
+	provenance_contributor_orcid TEXT, 
+	provenance_organization_name TEXT, 
 	"Container_id" INTEGER, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Container_id") REFERENCES "Container" (id)

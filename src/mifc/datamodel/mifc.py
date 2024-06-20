@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T17:58:37
+# Generation date: 2024-06-20T18:07:12
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -302,23 +302,23 @@ class Provenance(NamedThing):
     class_name: ClassVar[str] = "Provenance"
     class_model_uri: ClassVar[URIRef] = MIFC.Provenance
 
-    dataset_label: Optional[str] = None
-    mifc_version_tag: Optional[str] = None
-    contributor_orcid: Optional[str] = None
-    organization_name: Optional[str] = None
+    provenance_dataset_label: Optional[str] = None
+    provenance_mifc_version_tag: Optional[str] = None
+    provenance_contributor_orcid: Optional[str] = None
+    provenance_organization_name: Optional[str] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.dataset_label is not None and not isinstance(self.dataset_label, str):
-            self.dataset_label = str(self.dataset_label)
+        if self.provenance_dataset_label is not None and not isinstance(self.provenance_dataset_label, str):
+            self.provenance_dataset_label = str(self.provenance_dataset_label)
 
-        if self.mifc_version_tag is not None and not isinstance(self.mifc_version_tag, str):
-            self.mifc_version_tag = str(self.mifc_version_tag)
+        if self.provenance_mifc_version_tag is not None and not isinstance(self.provenance_mifc_version_tag, str):
+            self.provenance_mifc_version_tag = str(self.provenance_mifc_version_tag)
 
-        if self.contributor_orcid is not None and not isinstance(self.contributor_orcid, str):
-            self.contributor_orcid = str(self.contributor_orcid)
+        if self.provenance_contributor_orcid is not None and not isinstance(self.provenance_contributor_orcid, str):
+            self.provenance_contributor_orcid = str(self.provenance_contributor_orcid)
 
-        if self.organization_name is not None and not isinstance(self.organization_name, str):
-            self.organization_name = str(self.organization_name)
+        if self.provenance_organization_name is not None and not isinstance(self.provenance_organization_name, str):
+            self.provenance_organization_name = str(self.provenance_organization_name)
 
         super().__post_init__(**kwargs)
 
@@ -643,17 +643,17 @@ slots.compound_analytical_laboratory_name = Slot(uri=MIFC.compound_analytical_la
 slots.component_quality_control_remeasurement = Slot(uri=MIFC.component_quality_control_remeasurement, name="component_quality_control_remeasurement", curie=MIFC.curie('component_quality_control_remeasurement'),
                    model_uri=MIFC.component_quality_control_remeasurement, domain=None, range=Optional[Union[bool, Bool]])
 
-slots.dataset_label = Slot(uri=MIFC.dataset_label, name="dataset_label", curie=MIFC.curie('dataset_label'),
-                   model_uri=MIFC.dataset_label, domain=None, range=Optional[str])
+slots.provenance_dataset_label = Slot(uri=MIFC.provenance_dataset_label, name="provenance_dataset_label", curie=MIFC.curie('provenance_dataset_label'),
+                   model_uri=MIFC.provenance_dataset_label, domain=None, range=Optional[str])
 
-slots.mifc_version_tag = Slot(uri=MIFC.mifc_version_tag, name="mifc_version_tag", curie=MIFC.curie('mifc_version_tag'),
-                   model_uri=MIFC.mifc_version_tag, domain=None, range=Optional[str])
+slots.provenance_mifc_version_tag = Slot(uri=MIFC.provenance_mifc_version_tag, name="provenance_mifc_version_tag", curie=MIFC.curie('provenance_mifc_version_tag'),
+                   model_uri=MIFC.provenance_mifc_version_tag, domain=None, range=Optional[str])
 
-slots.contributor_orcid = Slot(uri=MIFC.contributor_orcid, name="contributor_orcid", curie=MIFC.curie('contributor_orcid'),
-                   model_uri=MIFC.contributor_orcid, domain=None, range=Optional[str])
+slots.provenance_contributor_orcid = Slot(uri=MIFC.provenance_contributor_orcid, name="provenance_contributor_orcid", curie=MIFC.curie('provenance_contributor_orcid'),
+                   model_uri=MIFC.provenance_contributor_orcid, domain=None, range=Optional[str])
 
-slots.organization_name = Slot(uri=MIFC.organization_name, name="organization_name", curie=MIFC.curie('organization_name'),
-                   model_uri=MIFC.organization_name, domain=None, range=Optional[str])
+slots.provenance_organization_name = Slot(uri=MIFC.provenance_organization_name, name="provenance_organization_name", curie=MIFC.curie('provenance_organization_name'),
+                   model_uri=MIFC.provenance_organization_name, domain=None, range=Optional[str])
 
 slots.food_laboratory_sample_id = Slot(uri=MIFC.food_laboratory_sample_id, name="food_laboratory_sample_id", curie=MIFC.curie('food_laboratory_sample_id'),
                    model_uri=MIFC.food_laboratory_sample_id, domain=None, range=Optional[str])

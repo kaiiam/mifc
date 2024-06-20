@@ -90,10 +90,10 @@ components:
 ### Input
 ```yaml
 provenances:
-- contributor_orcid: https://orcid.org/0000-0002-3410-4655
-  dataset_label: Standard Reference (SR) Legacy
-  mifc_version_tag: v1.0.1
-  organization_name: USDA
+- provenance_contributor_orcid: https://orcid.org/0000-0002-3410-4655
+  provenance_dataset_label: Standard Reference (SR) Legacy
+  provenance_mifc_version_tag: v1.0.1
+  provenance_organization_name: USDA
 
 ```
 ## Container-Component-003

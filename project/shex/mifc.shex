@@ -185,10 +185,10 @@ linkml:Sparqlpath xsd:string
 <Provenance> CLOSED {
     (  $<Provenance_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
-          <dataset_label> @linkml:String ? ;
-          <mifc_version_tag> @linkml:String ? ;
-          <contributor_orcid> @linkml:String ? ;
-          <organization_name> @linkml:String ?
+          <provenance_dataset_label> @linkml:String ? ;
+          <provenance_mifc_version_tag> @linkml:String ? ;
+          <provenance_contributor_orcid> @linkml:String ? ;
+          <provenance_organization_name> @linkml:String ?
        ) ;
        rdf:type [ schema1:Provenance ] ?
     )

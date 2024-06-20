@@ -363,19 +363,19 @@
             "additionalProperties": false,
             "description": "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.",
             "properties": {
-                "contributor_orcid": {
+                "provenance_contributor_orcid": {
                     "description": "A string corresponding to a \"|\" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.",
                     "type": "string"
                 },
-                "dataset_label": {
+                "provenance_dataset_label": {
                     "description": "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\").",
                     "type": "string"
                 },
-                "mifc_version_tag": {
+                "provenance_mifc_version_tag": {
                     "description": "A string corresponding to a named MIFC release number (e.g., \"v1.0.1\").",
                     "type": "string"
                 },
-                "organization_name": {
+                "provenance_organization_name": {
                     "description": "A string corresponding to a \"|\" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., \"USDA\".",
                     "type": "string"
                 }

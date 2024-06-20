@@ -66,8 +66,8 @@ message Food
 // Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
 message Provenance
  {
-  string datasetLabel = 0
-  string mifcVersionTag = 0
-  string contributorOrcid = 0
-  string organizationName = 0
+  string provenanceDatasetLabel = 0
+  string provenanceMifcVersionTag = 0
+  string provenanceContributorOrcid = 0
+  string provenanceOrganizationName = 0
  }

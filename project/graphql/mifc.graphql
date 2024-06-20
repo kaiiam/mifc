@@ -68,9 +68,9 @@ interface NamedThing
 
 type Provenance
   {
-    datasetLabel: String
-    mifcVersionTag: String
-    contributorOrcid: String
-    organizationName: String
+    provenanceDatasetLabel: String
+    provenanceMifcVersionTag: String
+    provenanceContributorOrcid: String
+    provenanceOrganizationName: String
   }
 

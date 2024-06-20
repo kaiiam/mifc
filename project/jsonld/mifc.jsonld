@@ -1234,11 +1234,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dataset_label",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/dataset_label",
+      "name": "provenance_dataset_label",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/provenance_dataset_label",
       "description": "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\").",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/dataset_label",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/provenance_dataset_label",
       "owner": "Provenance",
       "domain_of": [
         "Provenance"
@@ -1247,11 +1247,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "mifc_version_tag",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/mifc_version_tag",
+      "name": "provenance_mifc_version_tag",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/provenance_mifc_version_tag",
       "description": "A string corresponding to a named MIFC release number (e.g., \"v1.0.1\").",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/mifc_version_tag",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/provenance_mifc_version_tag",
       "owner": "Provenance",
       "domain_of": [
         "Provenance"
@@ -1260,11 +1260,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "contributor_orcid",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/contributor_orcid",
+      "name": "provenance_contributor_orcid",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/provenance_contributor_orcid",
       "description": "A string corresponding to a \"|\" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/contributor_orcid",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/provenance_contributor_orcid",
       "owner": "Provenance",
       "domain_of": [
         "Provenance"
@@ -1273,11 +1273,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "organization_name",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/organization_name",
+      "name": "provenance_organization_name",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/provenance_organization_name",
       "description": "A string corresponding to a \"|\" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., \"USDA\".",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/organization_name",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/provenance_organization_name",
       "owner": "Provenance",
       "domain_of": [
         "Provenance"
@@ -1483,10 +1483,10 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "dataset_label",
-        "mifc_version_tag",
-        "contributor_orcid",
-        "organization_name"
+        "provenance_dataset_label",
+        "provenance_mifc_version_tag",
+        "provenance_contributor_orcid",
+        "provenance_organization_name"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Provenance",
@@ -1532,9 +1532,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-20T17:55:42",
-  "source_file_size": 17587,
-  "generation_date": "2024-06-20T17:58:37",
+  "source_file_date": "2024-06-20T18:03:28",
+  "source_file_size": 17675,
+  "generation_date": "2024-06-20T18:07:12",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",
