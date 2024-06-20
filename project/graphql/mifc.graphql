@@ -12,10 +12,10 @@ type Component
     componentComment: String
     componentDerivationType: String
     componentLimitOfQuantitation: String
-    laboratorySampleAggregationMinimumMeasuredCompoundValue: Float
-    laboratorySampleAggregationMaximumMeasuredCompoundValue: Float
-    laboratorySampleAggregationMedianMeasuredCompoundValue: Float
-    laboratorySampleAggregationMeasuredCompoundStandardDeviation: Float
+    compoundSampleAggregationMinimumValue: Float
+    compoundSampleAggregationMaximumValue: Float
+    compoundSampleAggregationMedianValue: Float
+    compoundSampleAggregationStandardDeviation: Float
     compoundAnalyticalMeasurementProtocolDoi: String
     compoundAnalyticalMeasurementMethod: AnalyticalMeasurementMethod
     compoundAnalyticalLaboratoryName: String

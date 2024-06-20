@@ -75,9 +75,9 @@ components:
   component_recorded_value: 1.4
   component_sample_id: FDC:167513
   component_type: COMPONENT:1079
-  laboratory_sample_aggregation_maximum_measured_compound_value: 2.2
-  laboratory_sample_aggregation_median_measured_compound_value: 1.5
-  laboratory_sample_aggregation_minimum_measured_compound_value: 0.8
+  compound_sample_aggregation_maximum_value: 2.2
+  compound_sample_aggregation_median_value: 1.5
+  compound_sample_aggregation_minimum_value: 0.8
 - component_data_points_number: 3
   component_derivation_type: Analytical
   component_measurement_unit: g/(100.g)

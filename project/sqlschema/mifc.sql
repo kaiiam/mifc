@@ -41,10 +41,10 @@
 --     * Slot: component_comment Description: A comment relating to an analyzed component of nutritional interest.
 --     * Slot: component_derivation_type Description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
 --     * Slot: component_limit_of_quantitation Description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.
---     * Slot: laboratory_sample_aggregation_minimum_measured_compound_value Description: A float representing the minimum measured compound value of an aggregation of samples.
---     * Slot: laboratory_sample_aggregation_maximum_measured_compound_value Description: A float representing the maximum measured compound value of an aggregation of samples.
---     * Slot: laboratory_sample_aggregation_median_measured_compound_value Description: A float representing the median measured compound value of an aggregation of samples.
---     * Slot: laboratory_sample_aggregation_measured_compound_standard_deviation Description: A float representing the standard deviation of a measured compound value of an aggregation of samples.
+--     * Slot: compound_sample_aggregation_minimum_value Description: A float representing the minimum measured compound value of an aggregation of compound samples.
+--     * Slot: compound_sample_aggregation_maximum_value Description: A float representing the maximum measured compound value of an aggregation of compound samples.
+--     * Slot: compound_sample_aggregation_median_value Description: A float representing the median measured compound value of an aggregation of compound samples.
+--     * Slot: compound_sample_aggregation_standard_deviation Description: A float representing the standard deviation of a measured compound value of an aggregation of compound samples.
 --     * Slot: compound_analytical_measurement_protocol_doi Description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
 --     * Slot: compound_analytical_measurement_method Description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
 --     * Slot: compound_analytical_laboratory_name Description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
@@ -115,10 +115,10 @@ CREATE TABLE "Component" (
 	component_comment TEXT, 
 	component_derivation_type TEXT, 
 	component_limit_of_quantitation TEXT, 
-	laboratory_sample_aggregation_minimum_measured_compound_value FLOAT, 
-	laboratory_sample_aggregation_maximum_measured_compound_value FLOAT, 
-	laboratory_sample_aggregation_median_measured_compound_value FLOAT, 
-	laboratory_sample_aggregation_measured_compound_standard_deviation FLOAT, 
+	compound_sample_aggregation_minimum_value FLOAT, 
+	compound_sample_aggregation_maximum_value FLOAT, 
+	compound_sample_aggregation_median_value FLOAT, 
+	compound_sample_aggregation_standard_deviation FLOAT, 
 	compound_analytical_measurement_protocol_doi TEXT, 
 	compound_analytical_measurement_method VARCHAR(12), 
 	compound_analytical_laboratory_name TEXT, 

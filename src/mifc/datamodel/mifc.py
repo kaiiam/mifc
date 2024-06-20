@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T17:37:48
+# Generation date: 2024-06-20T17:58:37
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -206,10 +206,10 @@ class Component(NamedThing):
     component_comment: Optional[str] = None
     component_derivation_type: Optional[str] = None
     component_limit_of_quantitation: Optional[str] = None
-    laboratory_sample_aggregation_minimum_measured_compound_value: Optional[float] = None
-    laboratory_sample_aggregation_maximum_measured_compound_value: Optional[float] = None
-    laboratory_sample_aggregation_median_measured_compound_value: Optional[float] = None
-    laboratory_sample_aggregation_measured_compound_standard_deviation: Optional[float] = None
+    compound_sample_aggregation_minimum_value: Optional[float] = None
+    compound_sample_aggregation_maximum_value: Optional[float] = None
+    compound_sample_aggregation_median_value: Optional[float] = None
+    compound_sample_aggregation_standard_deviation: Optional[float] = None
     compound_analytical_measurement_protocol_doi: Optional[str] = None
     compound_analytical_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
     compound_analytical_laboratory_name: Optional[str] = None
@@ -254,17 +254,17 @@ class Component(NamedThing):
         if self.component_limit_of_quantitation is not None and not isinstance(self.component_limit_of_quantitation, str):
             self.component_limit_of_quantitation = str(self.component_limit_of_quantitation)
 
-        if self.laboratory_sample_aggregation_minimum_measured_compound_value is not None and not isinstance(self.laboratory_sample_aggregation_minimum_measured_compound_value, float):
-            self.laboratory_sample_aggregation_minimum_measured_compound_value = float(self.laboratory_sample_aggregation_minimum_measured_compound_value)
+        if self.compound_sample_aggregation_minimum_value is not None and not isinstance(self.compound_sample_aggregation_minimum_value, float):
+            self.compound_sample_aggregation_minimum_value = float(self.compound_sample_aggregation_minimum_value)
 
-        if self.laboratory_sample_aggregation_maximum_measured_compound_value is not None and not isinstance(self.laboratory_sample_aggregation_maximum_measured_compound_value, float):
-            self.laboratory_sample_aggregation_maximum_measured_compound_value = float(self.laboratory_sample_aggregation_maximum_measured_compound_value)
+        if self.compound_sample_aggregation_maximum_value is not None and not isinstance(self.compound_sample_aggregation_maximum_value, float):
+            self.compound_sample_aggregation_maximum_value = float(self.compound_sample_aggregation_maximum_value)
 
-        if self.laboratory_sample_aggregation_median_measured_compound_value is not None and not isinstance(self.laboratory_sample_aggregation_median_measured_compound_value, float):
-            self.laboratory_sample_aggregation_median_measured_compound_value = float(self.laboratory_sample_aggregation_median_measured_compound_value)
+        if self.compound_sample_aggregation_median_value is not None and not isinstance(self.compound_sample_aggregation_median_value, float):
+            self.compound_sample_aggregation_median_value = float(self.compound_sample_aggregation_median_value)
 
-        if self.laboratory_sample_aggregation_measured_compound_standard_deviation is not None and not isinstance(self.laboratory_sample_aggregation_measured_compound_standard_deviation, float):
-            self.laboratory_sample_aggregation_measured_compound_standard_deviation = float(self.laboratory_sample_aggregation_measured_compound_standard_deviation)
+        if self.compound_sample_aggregation_standard_deviation is not None and not isinstance(self.compound_sample_aggregation_standard_deviation, float):
+            self.compound_sample_aggregation_standard_deviation = float(self.compound_sample_aggregation_standard_deviation)
 
         if self.compound_analytical_measurement_protocol_doi is not None and not isinstance(self.compound_analytical_measurement_protocol_doi, str):
             self.compound_analytical_measurement_protocol_doi = str(self.compound_analytical_measurement_protocol_doi)
@@ -619,17 +619,17 @@ slots.component_derivation_type = Slot(uri=MIFC.component_derivation_type, name=
 slots.component_limit_of_quantitation = Slot(uri=MIFC.component_limit_of_quantitation, name="component_limit_of_quantitation", curie=MIFC.curie('component_limit_of_quantitation'),
                    model_uri=MIFC.component_limit_of_quantitation, domain=None, range=Optional[str])
 
-slots.laboratory_sample_aggregation_minimum_measured_compound_value = Slot(uri=MIFC.laboratory_sample_aggregation_minimum_measured_compound_value, name="laboratory_sample_aggregation_minimum_measured_compound_value", curie=MIFC.curie('laboratory_sample_aggregation_minimum_measured_compound_value'),
-                   model_uri=MIFC.laboratory_sample_aggregation_minimum_measured_compound_value, domain=None, range=Optional[float])
+slots.compound_sample_aggregation_minimum_value = Slot(uri=MIFC.compound_sample_aggregation_minimum_value, name="compound_sample_aggregation_minimum_value", curie=MIFC.curie('compound_sample_aggregation_minimum_value'),
+                   model_uri=MIFC.compound_sample_aggregation_minimum_value, domain=None, range=Optional[float])
 
-slots.laboratory_sample_aggregation_maximum_measured_compound_value = Slot(uri=MIFC.laboratory_sample_aggregation_maximum_measured_compound_value, name="laboratory_sample_aggregation_maximum_measured_compound_value", curie=MIFC.curie('laboratory_sample_aggregation_maximum_measured_compound_value'),
-                   model_uri=MIFC.laboratory_sample_aggregation_maximum_measured_compound_value, domain=None, range=Optional[float])
+slots.compound_sample_aggregation_maximum_value = Slot(uri=MIFC.compound_sample_aggregation_maximum_value, name="compound_sample_aggregation_maximum_value", curie=MIFC.curie('compound_sample_aggregation_maximum_value'),
+                   model_uri=MIFC.compound_sample_aggregation_maximum_value, domain=None, range=Optional[float])
 
-slots.laboratory_sample_aggregation_median_measured_compound_value = Slot(uri=MIFC.laboratory_sample_aggregation_median_measured_compound_value, name="laboratory_sample_aggregation_median_measured_compound_value", curie=MIFC.curie('laboratory_sample_aggregation_median_measured_compound_value'),
-                   model_uri=MIFC.laboratory_sample_aggregation_median_measured_compound_value, domain=None, range=Optional[float])
+slots.compound_sample_aggregation_median_value = Slot(uri=MIFC.compound_sample_aggregation_median_value, name="compound_sample_aggregation_median_value", curie=MIFC.curie('compound_sample_aggregation_median_value'),
+                   model_uri=MIFC.compound_sample_aggregation_median_value, domain=None, range=Optional[float])
 
-slots.laboratory_sample_aggregation_measured_compound_standard_deviation = Slot(uri=MIFC.laboratory_sample_aggregation_measured_compound_standard_deviation, name="laboratory_sample_aggregation_measured_compound_standard_deviation", curie=MIFC.curie('laboratory_sample_aggregation_measured_compound_standard_deviation'),
-                   model_uri=MIFC.laboratory_sample_aggregation_measured_compound_standard_deviation, domain=None, range=Optional[float])
+slots.compound_sample_aggregation_standard_deviation = Slot(uri=MIFC.compound_sample_aggregation_standard_deviation, name="compound_sample_aggregation_standard_deviation", curie=MIFC.curie('compound_sample_aggregation_standard_deviation'),
+                   model_uri=MIFC.compound_sample_aggregation_standard_deviation, domain=None, range=Optional[float])
 
 slots.compound_analytical_measurement_protocol_doi = Slot(uri=MIFC.compound_analytical_measurement_protocol_doi, name="compound_analytical_measurement_protocol_doi", curie=MIFC.curie('compound_analytical_measurement_protocol_doi'),
                    model_uri=MIFC.compound_analytical_measurement_protocol_doi, domain=None, range=Optional[str])

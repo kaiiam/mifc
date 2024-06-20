@@ -58,10 +58,10 @@ linkml:Sparqlpath xsd:string
           <component_comment> @linkml:String ? ;
           <component_derivation_type> @linkml:String ? ;
           <component_limit_of_quantitation> @linkml:String ? ;
-          <laboratory_sample_aggregation_minimum_measured_compound_value> @linkml:Float ? ;
-          <laboratory_sample_aggregation_maximum_measured_compound_value> @linkml:Float ? ;
-          <laboratory_sample_aggregation_median_measured_compound_value> @linkml:Float ? ;
-          <laboratory_sample_aggregation_measured_compound_standard_deviation> @linkml:Float ? ;
+          <compound_sample_aggregation_minimum_value> @linkml:Float ? ;
+          <compound_sample_aggregation_maximum_value> @linkml:Float ? ;
+          <compound_sample_aggregation_median_value> @linkml:Float ? ;
+          <compound_sample_aggregation_standard_deviation> @linkml:Float ? ;
           <compound_analytical_measurement_protocol_doi> @linkml:String ? ;
           <compound_analytical_measurement_method> [ <http://purl.obolibrary.org/obo/OBI_0002116>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC>

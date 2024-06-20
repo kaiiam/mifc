@@ -56,9 +56,9 @@ components:
     sampling plan.  Some fish had been treated during processing to retain moisture
     on thawing.  Untreated fish = 265 mg sodium/100g.
   component_derivation_type: Analytical
-  laboratory_sample_aggregation_minimum_measured_compound_value: 0.8
-  laboratory_sample_aggregation_maximum_measured_compound_value: 2.2
-  laboratory_sample_aggregation_median_measured_compound_value: 1.5
+  compound_sample_aggregation_minimum_value: 0.8
+  compound_sample_aggregation_maximum_value: 2.2
+  compound_sample_aggregation_median_value: 1.5
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1089
   component_recorded_value: 1.93
