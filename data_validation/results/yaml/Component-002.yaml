@@ -1,64 +1,64 @@
 components:
-- id: FDC:167512
-  measured_compound: COMPONENT:1003
-  measured_compound_value: 5.88
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 1
+- component_id: FDC:167512
+  component_type: COMPONENT:1003
+  component_recorded_value: 5.88
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 1
   analytical_analysis_measurement_method: HPLC
-- id: FDC:167512
-  measured_compound: COMPONENT:1007
-  measured_compound_value: 3.5
-  measured_compound_unit: kcal/(100.g)
-  measured_compound_data_points_number: 1
+- component_id: FDC:167512
+  component_type: COMPONENT:1007
+  component_recorded_value: 3.5
+  component_measurement_unit: kcal/(100.g)
+  component_data_points_number: 1
   analytical_analysis_measurement_method: GC
-- id: FDC:167512
-  measured_compound: COMPONENT:1062
-  measured_compound_value: 1286.0
-  measured_compound_unit: kJ/(100.g)
-  measured_compound_data_points_number: 2
+- component_id: FDC:167512
+  component_type: COMPONENT:1062
+  component_recorded_value: 1286.0
+  component_measurement_unit: kJ/(100.g)
+  component_data_points_number: 2
   analytical_analysis_measurement_method: GLC
-- id: FDC:167512
-  measured_compound: COMPONENT:1079
-  measured_compound_value: 1.2
-  measured_compound_unit: mg/(100.g)
-  measured_compound_data_points_number: 0
+- component_id: FDC:167512
+  component_type: COMPONENT:1079
+  component_recorded_value: 1.2
+  component_measurement_unit: mg/(100.g)
+  component_data_points_number: 0
   analytical_analysis_measurement_method: Nephelometry
-- id: FDC:167512
-  measured_compound: COMPONENT:1089
-  measured_compound_value: 2.12
-  measured_compound_unit: ug/(100.g)
-  measured_compound_data_points_number: 1
+- component_id: FDC:167512
+  component_type: COMPONENT:1089
+  component_recorded_value: 2.12
+  component_measurement_unit: ug/(100.g)
+  component_data_points_number: 1
   analytical_analysis_measurement_protocol_doi: ' AOAC 934.06 mod'
   analytical_analysis_measurement_method: Gravimetric
-- id: FDC:167513
-  measured_compound: COMPONENT:1003
-  measured_compound_value: 4.34
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 2
+- component_id: FDC:167513
+  component_type: COMPONENT:1003
+  component_recorded_value: 4.34
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 2
   analytical_analysis_measurement_protocol_doi: AOAC 985.01 + 984.27
   analytical_analysis_measurement_method: Fluorometric
-- id: FDC:167513
-  measured_compound: COMPONENT:1007
-  measured_compound_value: 3.08
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 1
+- component_id: FDC:167513
+  component_type: COMPONENT:1007
+  component_recorded_value: 3.08
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 1
   analytical_analysis_measurement_method: Kjeldahl
-- id: FDC:167513
-  measured_compound: COMPONENT:1062
-  measured_compound_value: 1381.0
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 0
+- component_id: FDC:167513
+  component_type: COMPONENT:1062
+  component_recorded_value: 1381.0
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 0
   analytical_analysis_measurement_protocol_doi: AOAC 996.06
   analytical_analysis_measurement_method: HPLC
-- id: FDC:167513
-  measured_compound: COMPONENT:1079
-  measured_compound_value: 1.4
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 6
+- component_id: FDC:167513
+  component_type: COMPONENT:1079
+  component_recorded_value: 1.4
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 6
   analytical_analysis_measurement_method: HPLC
-- id: FDC:167513
-  measured_compound: COMPONENT:1089
-  measured_compound_value: 1.93
-  measured_compound_unit: g/(100.g)
-  measured_compound_data_points_number: 3
+- component_id: FDC:167513
+  component_type: COMPONENT:1089
+  component_recorded_value: 1.93
+  component_measurement_unit: g/(100.g)
+  component_data_points_number: 3
   analytical_analysis_measurement_method: HPLC
