@@ -250,7 +250,7 @@ slots:
     description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
     description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
-    range: AnalyticalMeasurementMethod
+    range: CompoundAnalyticalMeasurementMethod
   compound_analytical_laboratory_name:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
   component_quality_control_remeasurement:
@@ -282,7 +282,7 @@ slots:
 
 
 enums:
-  AnalyticalMeasurementMethod: # lab_method.csv has list for FDC
+  CompoundAnalyticalMeasurementMethod: # lab_method.csv has list for FDC
     permissible_values:
       HPLC:
         description: High performance liquid chromotography
