@@ -250,19 +250,19 @@
 
       Component : compound_analytical_measurement_protocol_doi
 
+      Component : compound_sample_aggregation_maximum_value
+
+      Component : compound_sample_aggregation_median_value
+
+      Component : compound_sample_aggregation_minimum_value
+
+      Component : compound_sample_aggregation_standard_deviation
+
       Component : food_laboratory_sample_aliquot_id
 
       Component : food_laboratory_sample_batch_id
 
       Component : food_laboratory_sample_id
-
-      Component : laboratory_sample_aggregation_maximum_measured_compound_value
-
-      Component : laboratory_sample_aggregation_measured_compound_standard_deviation
-
-      Component : laboratory_sample_aggregation_median_measured_compound_value
-
-      Component : laboratory_sample_aggregation_minimum_measured_compound_value
 
 
 </div>
@@ -351,25 +351,25 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_aggregation_minimum_measured_compound_value/">laboratory_sample_aggregation_minimum_measured_compound_value</a></td>
+<td><a href="../compound_sample_aggregation_minimum_value/">compound_sample_aggregation_minimum_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the minimum measured compound value of an aggregation of...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_aggregation_maximum_measured_compound_value/">laboratory_sample_aggregation_maximum_measured_compound_value</a></td>
+<td><a href="../compound_sample_aggregation_maximum_value/">compound_sample_aggregation_maximum_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the maximum measured compound value of an aggregation of...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_aggregation_median_measured_compound_value/">laboratory_sample_aggregation_median_measured_compound_value</a></td>
+<td><a href="../compound_sample_aggregation_median_value/">compound_sample_aggregation_median_value</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the median measured compound value of an aggregation of ...</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_aggregation_measured_compound_standard_deviation/">laboratory_sample_aggregation_measured_compound_standard_deviation</a></td>
+<td><a href="../compound_sample_aggregation_standard_deviation/">compound_sample_aggregation_standard_deviation</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the standard deviation of a measured compound value of a...</td>
 <td>direct</td>
@@ -481,10 +481,10 @@ slots:
 - component_comment
 - component_derivation_type
 - component_limit_of_quantitation
-- laboratory_sample_aggregation_minimum_measured_compound_value
-- laboratory_sample_aggregation_maximum_measured_compound_value
-- laboratory_sample_aggregation_median_measured_compound_value
-- laboratory_sample_aggregation_measured_compound_standard_deviation
+- compound_sample_aggregation_minimum_value
+- compound_sample_aggregation_maximum_value
+- compound_sample_aggregation_median_value
+- compound_sample_aggregation_standard_deviation
 - compound_analytical_measurement_protocol_doi
 - compound_analytical_measurement_method
 - compound_analytical_laboratory_name
@@ -638,46 +638,46 @@ attributes:
     domain_of:
     - Component
     range: string
-  laboratory_sample_aggregation_minimum_measured_compound_value:
-    name: laboratory_sample_aggregation_minimum_measured_compound_value
+  compound_sample_aggregation_minimum_value:
+    name: compound_sample_aggregation_minimum_value
     description: A float representing the minimum measured compound value of an aggregation
-      of samples.
+      of compound samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_aggregation_minimum_measured_compound_value
+    alias: compound_sample_aggregation_minimum_value
     owner: Component
     domain_of:
     - Component
     range: float
-  laboratory_sample_aggregation_maximum_measured_compound_value:
-    name: laboratory_sample_aggregation_maximum_measured_compound_value
+  compound_sample_aggregation_maximum_value:
+    name: compound_sample_aggregation_maximum_value
     description: A float representing the maximum measured compound value of an aggregation
-      of samples.
+      of compound samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_aggregation_maximum_measured_compound_value
+    alias: compound_sample_aggregation_maximum_value
     owner: Component
     domain_of:
     - Component
     range: float
-  laboratory_sample_aggregation_median_measured_compound_value:
-    name: laboratory_sample_aggregation_median_measured_compound_value
+  compound_sample_aggregation_median_value:
+    name: compound_sample_aggregation_median_value
     description: A float representing the median measured compound value of an aggregation
-      of samples.
+      of compound samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_aggregation_median_measured_compound_value
+    alias: compound_sample_aggregation_median_value
     owner: Component
     domain_of:
     - Component
     range: float
-  laboratory_sample_aggregation_measured_compound_standard_deviation:
-    name: laboratory_sample_aggregation_measured_compound_standard_deviation
+  compound_sample_aggregation_standard_deviation:
+    name: compound_sample_aggregation_standard_deviation
     description: A float representing the standard deviation of a measured compound
-      value of an aggregation of samples.
+      value of an aggregation of compound samples.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_aggregation_measured_compound_standard_deviation
+    alias: compound_sample_aggregation_standard_deviation
     owner: Component
     domain_of:
     - Component

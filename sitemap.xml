@@ -236,6 +236,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/compound_sample_aggregation_maximum_value/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_sample_aggregation_median_value/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_sample_aggregation_minimum_value/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_sample_aggregation_standard_deviation/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/contributor_orcid/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -377,26 +397,6 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/foods/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aggregation_maximum_measured_compound_value/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aggregation_measured_compound_standard_deviation/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aggregation_median_measured_compound_value/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aggregation_minimum_measured_compound_value/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
