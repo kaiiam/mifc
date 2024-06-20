@@ -213,13 +213,13 @@
       NamedThing &lt;|-- Provenance
         click NamedThing href "../NamedThing"
 
-      Provenance : contributor_orcid
+      Provenance : provenance_contributor_orcid
 
-      Provenance : dataset_label
+      Provenance : provenance_dataset_label
 
-      Provenance : mifc_version_tag
+      Provenance : provenance_mifc_version_tag
 
-      Provenance : organization_name
+      Provenance : provenance_organization_name
 
 
 </div>
@@ -242,25 +242,25 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../dataset_label/">dataset_label</a></td>
+<td><a href="../provenance_dataset_label/">provenance_dataset_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to the labeled name of dataset (e</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../mifc_version_tag/">mifc_version_tag</a></td>
+<td><a href="../provenance_mifc_version_tag/">provenance_mifc_version_tag</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a named MIFC release number (e</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../contributor_orcid/">contributor_orcid</a></td>
+<td><a href="../provenance_contributor_orcid/">provenance_contributor_orcid</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a "</td>
 <td>" delimited list of ORCIDs of people who contri...</td>
 </tr>
 <tr>
-<td><a href="../organization_name/">organization_name</a></td>
+<td><a href="../provenance_organization_name/">provenance_organization_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a "</td>
 <td>" delimited list of organizations who created o...</td>
@@ -320,10 +320,10 @@ description: Supplemental data about the provenance of a Food and Component data
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 slots:
-- dataset_label
-- mifc_version_tag
-- contributor_orcid
-- organization_name
+- provenance_dataset_label
+- provenance_mifc_version_tag
+- provenance_contributor_orcid
+- provenance_organization_name
 class_uri: schema:Provenance
 
 </code></pre>
@@ -336,45 +336,45 @@ description: Supplemental data about the provenance of a Food and Component data
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 attributes:
-  dataset_label:
-    name: dataset_label
+  provenance_dataset_label:
+    name: provenance_dataset_label
     description: A string corresponding to the labeled name of dataset (e.g., "Standard
       Reference (SR) Legacy").
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: dataset_label
+    alias: provenance_dataset_label
     owner: Provenance
     domain_of:
     - Provenance
     range: string
-  mifc_version_tag:
-    name: mifc_version_tag
+  provenance_mifc_version_tag:
+    name: provenance_mifc_version_tag
     description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: mifc_version_tag
+    alias: provenance_mifc_version_tag
     owner: Provenance
     domain_of:
     - Provenance
     range: string
-  contributor_orcid:
-    name: contributor_orcid
+  provenance_contributor_orcid:
+    name: provenance_contributor_orcid
     description: A string corresponding to a "|" delimited list of ORCIDs of people
       who contributed to a MIFC formatted dataset. See https://orcid.org/.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: contributor_orcid
+    alias: provenance_contributor_orcid
     owner: Provenance
     domain_of:
     - Provenance
     range: string
-  organization_name:
-    name: organization_name
+  provenance_organization_name:
+    name: provenance_organization_name
     description: A string corresponding to a "|" delimited list of organizations who
       created or help to create to a MIFC formatted dataset. E.g., "USDA".
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: organization_name
+    alias: provenance_organization_name
     owner: Provenance
     domain_of:
     - Provenance
