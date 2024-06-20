@@ -1,10 +1,7 @@
 # metamodel_version: 1.7.0
 type Component
   {
-    laboratorySampleId: String
-    laboratorySampleAliquotId: String
-    laboratorySampleBatchId: String
-    componentId: String!
+    componentSampleId: String!
     componentType: String
     componentTypeLabel: String
     componentRecordedValue: Float
@@ -21,8 +18,11 @@ type Component
     laboratorySampleAggregationMeasuredCompoundStandardDeviation: Float
     compoundAnalyticalMeasurementProtocolDoi: String
     compoundAnalyticalMeasurementMethod: AnalyticalMeasurementMethod
-    laboratoryConductingAnalyticalAnalysis: String
+    compoundAnalyticalLaboratoryName: String
     componentQualityControlRemeasurement: Boolean
+    foodLaboratorySampleId: String
+    foodLaboratorySampleAliquotId: String
+    foodLaboratorySampleBatchId: String
   }
 
 type Container
@@ -34,10 +34,7 @@ type Container
 
 type Food
   {
-    laboratorySampleId: String
-    laboratorySampleAliquotId: String
-    laboratorySampleBatchId: String
-    foodId: String!
+    foodSampleId: String!
     foodPrimaryType: String
     foodPrimaryTypeLabel: String
     foodUpcCode: Integer
@@ -60,20 +57,17 @@ type Food
     foodExpirationDate: String
     foodCategoryLabel: String
     foodAdditionalTypes: String
+    foodLaboratorySampleId: String
+    foodLaboratorySampleAliquotId: String
+    foodLaboratorySampleBatchId: String
   }
 
 interface NamedThing
   {
-    laboratorySampleId: String
-    laboratorySampleAliquotId: String
-    laboratorySampleBatchId: String
   }
 
 type Provenance
   {
-    laboratorySampleId: String
-    laboratorySampleAliquotId: String
-    laboratorySampleBatchId: String
     datasetLabel: String
     mifcVersionTag: String
     contributorOrcid: String

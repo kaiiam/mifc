@@ -47,7 +47,7 @@ linkml:Sparqlpath xsd:string
 <Component> CLOSED {
     (  $<Component_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
-          <component_id> @linkml:String ;
+          <component_sample_id> @linkml:String ;
           <component_type> @linkml:String ? ;
           <component_type_label> @linkml:String ? ;
           <component_recorded_value> @linkml:Float ? ;
@@ -70,8 +70,11 @@ linkml:Sparqlpath xsd:string
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric>
              <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> ] ? ;
-          <laboratory_conducting_analytical_analysis> @linkml:String ? ;
-          <component_quality_control_remeasurement> @linkml:Boolean ?
+          <compound_analytical_laboratory_name> @linkml:String ? ;
+          <component_quality_control_remeasurement> @linkml:Boolean ? ;
+          <food_laboratory_sample_id> @linkml:String ? ;
+          <food_laboratory_sample_aliquot_id> @linkml:String ? ;
+          <food_laboratory_sample_batch_id> @linkml:String ?
        ) ;
        rdf:type [ schema1:Component ] ?
     )
@@ -160,7 +163,10 @@ linkml:Sparqlpath xsd:string
           <food_distributor_country_subdivision> @linkml:String ? ;
           <food_expiration_date> @linkml:String ? ;
           <food_category_label> @linkml:String ? ;
-          <food_additional_types> @linkml:String ?
+          <food_additional_types> @linkml:String ? ;
+          <food_laboratory_sample_id> @linkml:String ? ;
+          <food_laboratory_sample_aliquot_id> @linkml:String ? ;
+          <food_laboratory_sample_batch_id> @linkml:String ?
        ) ;
        rdf:type [ schema1:Food ]
     )
@@ -171,10 +177,7 @@ linkml:Sparqlpath xsd:string
 )
 
 <NamedThing_struct> {
-    (  $<NamedThing_tes> (  <laboratory_sample_id> @linkml:String ? ;
-          <laboratory_sample_aliquot_id> @linkml:String ? ;
-          <laboratory_sample_batch_id> @linkml:String ?
-       ) ;
+    (  $<NamedThing_tes> rdf:type . * ;
        rdf:type [ <NamedThing> ] ?
     )
 }

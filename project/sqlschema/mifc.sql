@@ -1,10 +1,7 @@
 -- # Class: "NamedThing" Description: ""
 --     * Slot: id Description: 
---     * Slot: laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
 -- # Class: "Food" Description: "Metadata about foods analyzed for components of nutritional interest."
---     * Slot: food_id Description: A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.
+--     * Slot: food_sample_id Description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
 --     * Slot: food_primary_type Description: A controlled vocabulary term representing the primary food material which was sampled.
 --     * Slot: food_primary_type_label Description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
 --     * Slot: food_upc_code Description: An integer denoting a Universal Product Code (UPC) barcode of a food sample.
@@ -27,13 +24,13 @@
 --     * Slot: food_expiration_date Description: A datetime value representing the food expiration data as shown on the labeling information of the food sample.
 --     * Slot: food_category_label Description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
 --     * Slot: food_additional_types Description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
---     * Slot: laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
+--     * Slot: food_laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
+--     * Slot: food_laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
+--     * Slot: food_laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
 --     * Slot: Container_id Description: Autocreated FK slot
 -- # Class: "Component" Description: "Metadata about components of nutritional interest measured from foods."
 --     * Slot: id Description: 
---     * Slot: component_id Description: A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.
+--     * Slot: component_sample_id Description: A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
 --     * Slot: component_type Description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
 --     * Slot: component_type_label Description: A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.
 --     * Slot: component_recorded_value Description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
@@ -50,11 +47,11 @@
 --     * Slot: laboratory_sample_aggregation_measured_compound_standard_deviation Description: A float representing the standard deviation of a measured compound value of an aggregation of samples.
 --     * Slot: compound_analytical_measurement_protocol_doi Description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
 --     * Slot: compound_analytical_measurement_method Description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
---     * Slot: laboratory_conducting_analytical_analysis Description: A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.
+--     * Slot: compound_analytical_laboratory_name Description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
 --     * Slot: component_quality_control_remeasurement Description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
---     * Slot: laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
+--     * Slot: food_laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
+--     * Slot: food_laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
+--     * Slot: food_laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
 --     * Slot: Container_id Description: Autocreated FK slot
 -- # Class: "Provenance" Description: "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC."
 --     * Slot: id Description: 
@@ -62,18 +59,12 @@
 --     * Slot: mifc_version_tag Description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
 --     * Slot: contributor_orcid Description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
 --     * Slot: organization_name Description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
---     * Slot: laboratory_sample_id Description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_aliquot_id Description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
---     * Slot: laboratory_sample_batch_id Description: A string denoting an identifier of a batch of laboratory samples analysed together.
 --     * Slot: Container_id Description: Autocreated FK slot
 -- # Class: "Container" Description: ""
 --     * Slot: id Description: 
 
 CREATE TABLE "NamedThing" (
 	id INTEGER NOT NULL, 
-	laboratory_sample_id TEXT, 
-	laboratory_sample_aliquot_id TEXT, 
-	laboratory_sample_batch_id TEXT, 
 	PRIMARY KEY (id)
 );
 CREATE TABLE "Container" (
@@ -81,7 +72,7 @@ CREATE TABLE "Container" (
 	PRIMARY KEY (id)
 );
 CREATE TABLE "Food" (
-	food_id TEXT NOT NULL, 
+	food_sample_id TEXT NOT NULL, 
 	food_primary_type TEXT, 
 	food_primary_type_label TEXT, 
 	food_upc_code INTEGER, 
@@ -104,16 +95,16 @@ CREATE TABLE "Food" (
 	food_expiration_date TEXT, 
 	food_category_label TEXT, 
 	food_additional_types TEXT, 
-	laboratory_sample_id TEXT, 
-	laboratory_sample_aliquot_id TEXT, 
-	laboratory_sample_batch_id TEXT, 
+	food_laboratory_sample_id TEXT, 
+	food_laboratory_sample_aliquot_id TEXT, 
+	food_laboratory_sample_batch_id TEXT, 
 	"Container_id" INTEGER, 
-	PRIMARY KEY (food_id), 
+	PRIMARY KEY (food_sample_id), 
 	FOREIGN KEY("Container_id") REFERENCES "Container" (id)
 );
 CREATE TABLE "Component" (
 	id INTEGER NOT NULL, 
-	component_id TEXT NOT NULL, 
+	component_sample_id TEXT NOT NULL, 
 	component_type TEXT, 
 	component_type_label TEXT, 
 	component_recorded_value FLOAT, 
@@ -130,11 +121,11 @@ CREATE TABLE "Component" (
 	laboratory_sample_aggregation_measured_compound_standard_deviation FLOAT, 
 	compound_analytical_measurement_protocol_doi TEXT, 
 	compound_analytical_measurement_method VARCHAR(12), 
-	laboratory_conducting_analytical_analysis TEXT, 
+	compound_analytical_laboratory_name TEXT, 
 	component_quality_control_remeasurement BOOLEAN, 
-	laboratory_sample_id TEXT, 
-	laboratory_sample_aliquot_id TEXT, 
-	laboratory_sample_batch_id TEXT, 
+	food_laboratory_sample_id TEXT, 
+	food_laboratory_sample_aliquot_id TEXT, 
+	food_laboratory_sample_batch_id TEXT, 
 	"Container_id" INTEGER, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Container_id") REFERENCES "Container" (id)
@@ -145,9 +136,6 @@ CREATE TABLE "Provenance" (
 	mifc_version_tag TEXT, 
 	contributor_orcid TEXT, 
 	organization_name TEXT, 
-	laboratory_sample_id TEXT, 
-	laboratory_sample_aliquot_id TEXT, 
-	laboratory_sample_batch_id TEXT, 
 	"Container_id" INTEGER, 
 	PRIMARY KEY (id), 
 	FOREIGN KEY("Container_id") REFERENCES "Container" (id)

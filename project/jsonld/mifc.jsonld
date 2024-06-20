@@ -640,50 +640,11 @@
   ],
   "slots": [
     {
-      "name": "laboratory_sample_id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_id",
-      "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
+      "name": "food_sample_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_sample_id",
+      "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_id",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "laboratory_sample_aliquot_id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aliquot_id",
-      "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_aliquot_id",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "laboratory_sample_batch_id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_batch_id",
-      "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_sample_batch_id",
-      "owner": "NamedThing",
-      "domain_of": [
-        "NamedThing"
-      ],
-      "range": "string",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "food_id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/food_id",
-      "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.",
-      "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/food_id",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_sample_id",
       "identifier": true,
       "owner": "Food",
       "domain_of": [
@@ -1013,11 +974,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "component_id",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/component_id",
-      "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.",
+      "name": "component_sample_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/component_sample_id",
+      "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/component_id",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/component_sample_id",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -1244,11 +1205,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "laboratory_conducting_analytical_analysis",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/laboratory_conducting_analytical_analysis",
-      "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.",
+      "name": "compound_analytical_laboratory_name",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_laboratory_name",
+      "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.",
       "from_schema": "https://w3id.org/kaiiam/mifc",
-      "slot_uri": "https://w3id.org/kaiiam/mifc/laboratory_conducting_analytical_analysis",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/compound_analytical_laboratory_name",
       "owner": "Component",
       "domain_of": [
         "Component"
@@ -1325,6 +1286,54 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "food_laboratory_sample_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_id",
+      "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
+      "comments": [
+        "Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id."
+      ],
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_id",
+      "owner": "Component",
+      "domain_of": [
+        "Food",
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_laboratory_sample_aliquot_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_aliquot_id",
+      "description": "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.",
+      "comments": [
+        "Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id."
+      ],
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_aliquot_id",
+      "owner": "Component",
+      "domain_of": [
+        "Food",
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "food_laboratory_sample_batch_id",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_batch_id",
+      "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
+      "from_schema": "https://w3id.org/kaiiam/mifc",
+      "slot_uri": "https://w3id.org/kaiiam/mifc/food_laboratory_sample_batch_id",
+      "owner": "Component",
+      "domain_of": [
+        "Food",
+        "Component"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "container__foods",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "slot_uri": "https://w3id.org/kaiiam/mifc/foods",
@@ -1379,11 +1388,6 @@
         "schema:Thing"
       ],
       "abstract": true,
-      "slots": [
-        "laboratory_sample_id",
-        "laboratory_sample_aliquot_id",
-        "laboratory_sample_batch_id"
-      ],
       "slot_usage": {},
       "class_uri": "https://w3id.org/kaiiam/mifc/NamedThing",
       "@type": "ClassDefinition"
@@ -1401,10 +1405,7 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "laboratory_sample_id",
-        "laboratory_sample_aliquot_id",
-        "laboratory_sample_batch_id",
-        "food_id",
+        "food_sample_id",
         "food_primary_type",
         "food_primary_type_label",
         "food_upc_code",
@@ -1426,7 +1427,10 @@
         "food_distributor_country_subdivision",
         "food_expiration_date",
         "food_category_label",
-        "food_additional_types"
+        "food_additional_types",
+        "food_laboratory_sample_id",
+        "food_laboratory_sample_aliquot_id",
+        "food_laboratory_sample_batch_id"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Food",
@@ -1442,10 +1446,7 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "laboratory_sample_id",
-        "laboratory_sample_aliquot_id",
-        "laboratory_sample_batch_id",
-        "component_id",
+        "component_sample_id",
         "component_type",
         "component_type_label",
         "component_recorded_value",
@@ -1462,8 +1463,11 @@
         "laboratory_sample_aggregation_measured_compound_standard_deviation",
         "compound_analytical_measurement_protocol_doi",
         "compound_analytical_measurement_method",
-        "laboratory_conducting_analytical_analysis",
-        "component_quality_control_remeasurement"
+        "compound_analytical_laboratory_name",
+        "component_quality_control_remeasurement",
+        "food_laboratory_sample_id",
+        "food_laboratory_sample_aliquot_id",
+        "food_laboratory_sample_batch_id"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Component",
@@ -1479,9 +1483,6 @@
       ],
       "is_a": "NamedThing",
       "slots": [
-        "laboratory_sample_id",
-        "laboratory_sample_aliquot_id",
-        "laboratory_sample_batch_id",
         "dataset_label",
         "mifc_version_tag",
         "contributor_orcid",
@@ -1531,9 +1532,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-20T16:29:33",
-  "source_file_size": 17156,
-  "generation_date": "2024-06-20T16:33:59",
+  "source_file_date": "2024-06-20T17:34:49",
+  "source_file_size": 17711,
+  "generation_date": "2024-06-20T17:37:48",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

@@ -4,10 +4,7 @@
 // Metadata about components of nutritional interest measured from foods.
 message Component
  {
-  string laboratorySampleId = 0
-  string laboratorySampleAliquotId = 0
-  string laboratorySampleBatchId = 0
-  string componentId = 0
+  string componentSampleId = 0
   string componentType = 0
   string componentTypeLabel = 0
   float componentRecordedValue = 0
@@ -24,8 +21,11 @@ message Component
   float laboratorySampleAggregationMeasuredCompoundStandardDeviation = 0
   string compoundAnalyticalMeasurementProtocolDoi = 0
   analyticalMeasurementMethod compoundAnalyticalMeasurementMethod = 0
-  string laboratoryConductingAnalyticalAnalysis = 0
+  string compoundAnalyticalLaboratoryName = 0
   boolean componentQualityControlRemeasurement = 0
+  string foodLaboratorySampleId = 0
+  string foodLaboratorySampleAliquotId = 0
+  string foodLaboratorySampleBatchId = 0
  }
 message Container
  {
@@ -36,10 +36,7 @@ message Container
 // Metadata about foods analyzed for components of nutritional interest.
 message Food
  {
-  string laboratorySampleId = 0
-  string laboratorySampleAliquotId = 0
-  string laboratorySampleBatchId = 0
-  string foodId = 0
+  string foodSampleId = 0
   string foodPrimaryType = 0
   string foodPrimaryTypeLabel = 0
   integer foodUpcCode = 0
@@ -62,13 +59,13 @@ message Food
   string foodExpirationDate = 0
   string foodCategoryLabel = 0
   string foodAdditionalTypes = 0
+  string foodLaboratorySampleId = 0
+  string foodLaboratorySampleAliquotId = 0
+  string foodLaboratorySampleBatchId = 0
  }
 // Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
 message Provenance
  {
-  string laboratorySampleId = 0
-  string laboratorySampleAliquotId = 0
-  string laboratorySampleBatchId = 0
   string datasetLabel = 0
   string mifcVersionTag = 0
   string contributorOrcid = 0

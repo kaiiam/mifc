@@ -34,10 +34,6 @@
                     "description": "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).",
                     "type": "string"
                 },
-                "component_id": {
-                    "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.",
-                    "type": "string"
-                },
                 "component_limit_of_quantitation": {
                     "description": "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.",
                     "type": "string"
@@ -58,12 +54,20 @@
                     "description": "A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.",
                     "type": "number"
                 },
+                "component_sample_id": {
+                    "description": "A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.",
+                    "type": "string"
+                },
                 "component_type": {
                     "description": "A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.",
                     "type": "string"
                 },
                 "component_type_label": {
                     "description": "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.",
+                    "type": "string"
+                },
+                "compound_analytical_laboratory_name": {
+                    "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.",
                     "type": "string"
                 },
                 "compound_analytical_measurement_method": {
@@ -74,8 +78,16 @@
                     "description": "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.",
                     "type": "string"
                 },
-                "laboratory_conducting_analytical_analysis": {
-                    "description": "A string denoting the name of a laboratory that conducted the analytical analysis of a measured_compound.",
+                "food_laboratory_sample_aliquot_id": {
+                    "description": "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.",
+                    "type": "string"
+                },
+                "food_laboratory_sample_batch_id": {
+                    "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
+                    "type": "string"
+                },
+                "food_laboratory_sample_id": {
+                    "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
                     "type": "string"
                 },
                 "laboratory_sample_aggregation_maximum_measured_compound_value": {
@@ -93,22 +105,10 @@
                 "laboratory_sample_aggregation_minimum_measured_compound_value": {
                     "description": "A float representing the minimum measured compound value of an aggregation of samples.",
                     "type": "number"
-                },
-                "laboratory_sample_aliquot_id": {
-                    "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
-                    "type": "string"
-                },
-                "laboratory_sample_batch_id": {
-                    "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
-                    "type": "string"
-                },
-                "laboratory_sample_id": {
-                    "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
-                    "type": "string"
                 }
             },
             "required": [
-                "component_id"
+                "component_sample_id"
             ],
             "title": "Component",
             "type": "object"
@@ -207,8 +207,16 @@
                     "description": "A datetime value representing the food expiration data as shown on the labeling information of the food sample.",
                     "type": "string"
                 },
-                "food_id": {
-                    "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.",
+                "food_laboratory_sample_aliquot_id": {
+                    "description": "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.",
+                    "type": "string"
+                },
+                "food_laboratory_sample_batch_id": {
+                    "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
+                    "type": "string"
+                },
+                "food_laboratory_sample_id": {
+                    "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
                     "type": "string"
                 },
                 "food_preservation_state": {
@@ -227,6 +235,10 @@
                     "$ref": "#/$defs/FoodRipenessState",
                     "description": "An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis."
                 },
+                "food_sample_id": {
+                    "description": "A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.",
+                    "type": "string"
+                },
                 "food_storage_temperature_state": {
                     "$ref": "#/$defs/FoodStorageTemperatureState",
                     "description": "An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., \"Refrigerated\")."
@@ -234,22 +246,10 @@
                 "food_upc_code": {
                     "description": "An integer denoting a Universal Product Code (UPC) barcode of a food sample.",
                     "type": "integer"
-                },
-                "laboratory_sample_aliquot_id": {
-                    "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
-                    "type": "string"
-                },
-                "laboratory_sample_batch_id": {
-                    "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
-                    "type": "string"
-                },
-                "laboratory_sample_id": {
-                    "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
-                    "type": "string"
                 }
             },
             "required": [
-                "food_id"
+                "food_sample_id"
             ],
             "title": "Food",
             "type": "object"
@@ -369,18 +369,6 @@
                 },
                 "dataset_label": {
                     "description": "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\").",
-                    "type": "string"
-                },
-                "laboratory_sample_aliquot_id": {
-                    "description": "A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.",
-                    "type": "string"
-                },
-                "laboratory_sample_batch_id": {
-                    "description": "A string denoting an identifier of a batch of laboratory samples analysed together.",
-                    "type": "string"
-                },
-                "laboratory_sample_id": {
-                    "description": "A string denoting an identifier of a laboratory sample which was prepared from a food sample.",
                     "type": "string"
                 },
                 "mifc_version_tag": {
