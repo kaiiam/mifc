@@ -107,6 +107,9 @@
                     "type": "string"
                 }
             },
+            "required": [
+                "component_id"
+            ],
             "title": "Component",
             "type": "object"
         },

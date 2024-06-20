@@ -4,7 +4,7 @@ type Component
     laboratorySampleId: String
     laboratorySampleAliquotId: String
     laboratorySampleBatchId: String
-    componentId: String
+    componentId: String!
     componentType: String
     componentTypeLabel: String
     componentRecordedValue: Float

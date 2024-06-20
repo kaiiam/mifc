@@ -47,7 +47,7 @@ linkml:Sparqlpath xsd:string
 <Component> CLOSED {
     (  $<Component_tes> (  &<NamedThing_tes> ;
           rdf:type [ <NamedThing> ] ? ;
-          <component_id> @linkml:String ? ;
+          <component_id> @linkml:String ;
           <component_type> @linkml:String ? ;
           <component_type_label> @linkml:String ? ;
           <component_recorded_value> @linkml:Float ? ;

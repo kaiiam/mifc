@@ -1023,6 +1023,7 @@
         "Component"
       ],
       "range": "string",
+      "required": true,
       "@type": "SlotDefinition"
     },
     {
@@ -1530,9 +1531,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-20T14:28:17",
-  "source_file_size": 17114,
-  "generation_date": "2024-06-20T14:29:29",
+  "source_file_date": "2024-06-20T15:06:17",
+  "source_file_size": 17152,
+  "generation_date": "2024-06-20T16:13:34",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

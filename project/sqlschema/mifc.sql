@@ -113,7 +113,7 @@ CREATE TABLE "Food" (
 );
 CREATE TABLE "Component" (
 	id INTEGER NOT NULL, 
-	component_id TEXT, 
+	component_id TEXT NOT NULL, 
 	component_type TEXT, 
 	component_type_label TEXT, 
 	component_recorded_value FLOAT, 

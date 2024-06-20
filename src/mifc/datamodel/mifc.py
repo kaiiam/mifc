@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T14:29:29
+# Generation date: 2024-06-20T16:13:35
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -200,7 +200,7 @@ class Component(NamedThing):
     class_name: ClassVar[str] = "Component"
     class_model_uri: ClassVar[URIRef] = MIFC.Component
 
-    component_id: Optional[str] = None
+    component_id: str = None
     component_type: Optional[str] = None
     component_type_label: Optional[str] = None
     component_recorded_value: Optional[float] = None
@@ -221,7 +221,9 @@ class Component(NamedThing):
     component_quality_control_remeasurement: Optional[Union[bool, Bool]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.component_id is not None and not isinstance(self.component_id, str):
+        if self._is_empty(self.component_id):
+            self.MissingRequiredField("component_id")
+        if not isinstance(self.component_id, str):
             self.component_id = str(self.component_id)
 
         if self.component_type is not None and not isinstance(self.component_type, str):
@@ -587,7 +589,7 @@ slots.food_additional_types = Slot(uri=MIFC.food_additional_types, name="food_ad
                    model_uri=MIFC.food_additional_types, domain=None, range=Optional[str])
 
 slots.component_id = Slot(uri=MIFC.component_id, name="component_id", curie=MIFC.curie('component_id'),
-                   model_uri=MIFC.component_id, domain=None, range=Optional[str])
+                   model_uri=MIFC.component_id, domain=None, range=str)
 
 slots.component_type = Slot(uri=MIFC.component_type, name="component_type", curie=MIFC.curie('component_type'),
                    model_uri=MIFC.component_type, domain=None, range=Optional[str])
