@@ -1,6 +1,6 @@
 components:
 - component_sample_id: CY124QU
-  laboratory_sample_aliquot_id: NFY122JPN
+  food_laboratory_sample_aliquot_id: NFY122JPN
   laboratory_sample_batch_id: o
   component_type: COMPONENT:1075
   component_type_label: galactose
@@ -12,7 +12,7 @@ components:
   compound_analytical_laboratory_name: Silliker
   component_quality_control_remeasurement: false
 - component_sample_id: CY124QX
-  laboratory_sample_aliquot_id: NFY122JRQ
+  food_laboratory_sample_aliquot_id: NFY122JRQ
   laboratory_sample_batch_id: o
   component_type: COMPONENT:1014
   component_type_label: maltose
@@ -24,7 +24,7 @@ components:
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
   compound_analytical_laboratory_name: Silliker
 - component_sample_id: CY124R2
-  laboratory_sample_aliquot_id: NFY122JV9
+  food_laboratory_sample_aliquot_id: NFY122JV9
   laboratory_sample_batch_id: q
   component_type: COMPONENT:1011
   component_type_label: glucose

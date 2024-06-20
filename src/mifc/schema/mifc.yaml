@@ -31,7 +31,6 @@ classes:
   NamedThing:
     abstract: true     ## should not be instantiated directly
     slots:
-     - laboratory_sample_aliquot_id
      - laboratory_sample_batch_id
     close_mappings:
      - schema:Thing
@@ -66,6 +65,7 @@ classes:
      - food_category_label
      - food_additional_types
      - food_laboratory_sample_id
+     - food_laboratory_sample_aliquot_id
     id_prefixes:
       - mifc
 
@@ -94,6 +94,8 @@ classes:
       - compound_analytical_measurement_method
       - compound_analytical_laboratory_name
       - component_quality_control_remeasurement
+      - food_laboratory_sample_id
+      - food_laboratory_sample_aliquot_id
 
   Provenance:
     description: >-
@@ -124,8 +126,6 @@ classes:
 
 slots:
   # Common slots
-  laboratory_sample_aliquot_id:
-    description: A string denoting an identifier of a unique aliquot of a laboratory sample which was prepared from a food sample.
   laboratory_sample_batch_id:
      description: A string denoting an identifier of a batch of laboratory samples analysed together.
 
@@ -211,6 +211,9 @@ slots:
   food_laboratory_sample_id:
     description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
     comments: Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.
+  food_laboratory_sample_aliquot_id:
+    description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
+    comments: Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.
 
 
   # Component slots
