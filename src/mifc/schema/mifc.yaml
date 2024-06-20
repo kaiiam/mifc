@@ -75,7 +75,7 @@ classes:
     is_a: NamedThing
     class_uri: schema:Component
     slots:            ## Slots specific to components of nutritional interest
-      - component_id
+      - component_sample_id
       - component_type
       - component_type_label
       - component_recorded_value
@@ -134,7 +134,7 @@ slots:
 
   # Food slots
   food_id:
-    description: A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_id from the Component class.
+    description: A string denoting the primary identifier for a sample of the class Food. Note that food_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
     required: true
     identifier: true # Forces food_id keys to be unique
   food_primary_type:
@@ -213,8 +213,8 @@ slots:
 
 
   # Component slots
-  component_id:
-    description: A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.
+  component_sample_id:
+    description: A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.
     required: true
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.

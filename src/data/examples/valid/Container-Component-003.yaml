@@ -1,6 +1,5 @@
 components:
-- component_id: '167512'
-  laboratory_sample_id: CY124QU
+- component_sample_id: CY124QU
   laboratory_sample_aliquot_id: NFY122JPN
   laboratory_sample_batch_id: o
   component_type: COMPONENT:1075
@@ -12,8 +11,7 @@ components:
   compound_analytical_measurement_protocol_doi: SUGR-GALAC-CHG
   compound_analytical_laboratory_name: Silliker
   component_quality_control_remeasurement: false
-- component_id: '167513'
-  laboratory_sample_id: CY124QX
+- component_sample_id: CY124QX
   laboratory_sample_aliquot_id: NFY122JRQ
   laboratory_sample_batch_id: o
   component_type: COMPONENT:1014
@@ -25,8 +23,7 @@ components:
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
   compound_analytical_laboratory_name: Silliker
-- component_id: '167514'
-  laboratory_sample_id: CY124R2
+- component_sample_id: CY124R2
   laboratory_sample_aliquot_id: NFY122JV9
   laboratory_sample_batch_id: q
   component_type: COMPONENT:1011
