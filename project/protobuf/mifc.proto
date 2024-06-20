@@ -20,7 +20,7 @@ message Component
   float compoundSampleAggregationMedianValue = 0
   float compoundSampleAggregationStandardDeviation = 0
   string compoundAnalyticalMeasurementProtocolDoi = 0
-  analyticalMeasurementMethod compoundAnalyticalMeasurementMethod = 0
+  compoundAnalyticalMeasurementMethod compoundAnalyticalMeasurementMethod = 0
   string compoundAnalyticalLaboratoryName = 0
   boolean componentQualityControlRemeasurement = 0
   string foodLaboratorySampleId = 0

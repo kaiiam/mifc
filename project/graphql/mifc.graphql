@@ -17,7 +17,7 @@ type Component
     compoundSampleAggregationMedianValue: Float
     compoundSampleAggregationStandardDeviation: Float
     compoundAnalyticalMeasurementProtocolDoi: String
-    compoundAnalyticalMeasurementMethod: AnalyticalMeasurementMethod
+    compoundAnalyticalMeasurementMethod: CompoundAnalyticalMeasurementMethod
     compoundAnalyticalLaboratoryName: String
     componentQualityControlRemeasurement: Boolean
     foodLaboratorySampleId: String

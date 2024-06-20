@@ -15,23 +15,23 @@ mifc:Container a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Container" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom mifc:Component ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:provenances ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:components ],
         [ a owl:Restriction ;
-            owl:allValuesFrom mifc:Food ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:foods ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:Component ;
+            owl:onProperty mifc:components ],
         [ a owl:Restriction ;
             owl:allValuesFrom mifc:Provenance ;
             owl:onProperty mifc:provenances ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:provenances ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:foods ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:components ] ;
+            owl:allValuesFrom mifc:Food ;
+            owl:onProperty mifc:foods ] ;
     skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
 mifc:Component a owl:Class,
@@ -39,202 +39,202 @@ mifc:Component a owl:Class,
     rdfs:label "Component" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+            owl:onProperty mifc:component_analysis_date ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+            owl:onProperty mifc:component_derivation_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:compound_analytical_measurement_protocol_doi ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_record_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_sample_aggregation_median_value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:component_sample_id ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_comment ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_type_label ],
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty mifc:component_comment ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:component_derivation_type ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:component_recorded_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:compound_analytical_laboratory_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_recorded_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_sample_aggregation_minimum_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_record_date ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty mifc:component_measurement_unit ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_derivation_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_analytical_laboratory_name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Integer ;
             owl:onProperty mifc:component_data_points_number ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_analytical_measurement_protocol_doi ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_analysis_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_analytical_laboratory_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_measurement_unit ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_quality_control_remeasurement ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_data_points_number ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_measurement_unit ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:compound_sample_aggregation_minimum_value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:compound_analytical_measurement_protocol_doi ],
+            owl:onProperty mifc:component_type_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_recorded_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_sample_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:compound_sample_aggregation_median_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_analysis_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_quality_control_remeasurement ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:CompoundAnalyticalMeasurementMethod ;
+            owl:onProperty mifc:compound_analytical_measurement_method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_data_points_number ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_comment ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:compound_analytical_laboratory_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:component_limit_of_quantitation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:compound_sample_aggregation_minimum_value ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_comment ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:compound_analytical_measurement_method ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty mifc:component_sample_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:component_derivation_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:component_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:compound_analytical_measurement_method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:component_record_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:compound_sample_aggregation_median_value ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:component_type_label ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_data_points_number ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_analysis_date ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_analysis_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_analytical_measurement_method ],
+            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty mifc:compound_analytical_measurement_protocol_doi ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_sample_aggregation_median_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_quality_control_remeasurement ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_limit_of_quantitation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_recorded_value ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_comment ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_analytical_measurement_protocol_doi ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_record_date ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:component_recorded_value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:compound_sample_aggregation_minimum_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_data_points_number ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:component_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_recorded_value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:AnalyticalMeasurementMethod ;
-            owl:onProperty mifc:compound_analytical_measurement_method ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_measurement_unit ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_analysis_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_sample_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:compound_analytical_laboratory_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_derivation_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:compound_sample_aggregation_median_value ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Boolean ;
             owl:onProperty mifc:component_quality_control_remeasurement ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_type_label ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_sample_aggregation_standard_deviation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_sample_aggregation_median_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_limit_of_quantitation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_sample_aggregation_minimum_value ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_analytical_measurement_method ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:component_comment ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_limit_of_quantitation ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:component_measurement_unit ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_quality_control_remeasurement ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:compound_analytical_laboratory_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:component_record_date ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:compound_sample_aggregation_maximum_value ],
         mifc:NamedThing ;
     skos:definition "Metadata about components of nutritional interest measured from foods." ;
     skos:exactMatch schema1:Component ;
@@ -244,239 +244,239 @@ mifc:Food a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Food" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_latitude ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodRipenessState ;
+            owl:onProperty mifc:food_ripeness_state ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodStorageTemperatureState ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodPreservationState ;
+            owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_organization ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_city ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_location_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_date ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_upc_code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_sample_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_distributor_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_longitude ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_category_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_distributor_city ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodAcquisitionLocationType ;
+            owl:onProperty mifc:food_acquisition_location_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Float ;
+            owl:onProperty mifc:food_acquisition_latitude ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_distributor_country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_laboratory_sample_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_primary_type ],
+        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:food_preservation_state ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_primary_type ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_primary_type ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_location_type ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:food_sample_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_country_subdivision ],
+            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty mifc:food_distributor_city ],
         [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_storage_temperature_state ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+            owl:onProperty mifc:food_acquisition_organization ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_organization ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
+            owl:onProperty mifc:food_acquisition_country_subdivision ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_agent_name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_ripeness_state ],
+            owl:onProperty mifc:food_primary_type_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_latitude ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom mifc:FoodCookingMethod ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_primary_type_label ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_cooking_method ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:food_acquisition_date ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_city ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:food_acquisition_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_expiration_date ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_acquisition_country ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:food_acquisition_longitude ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Integer ;
             owl:onProperty mifc:food_upc_code ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_ripeness_state ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_date ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_distributor_country_subdivision ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_expiration_date ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_cooking_method ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_sample_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_primary_type ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty mifc:food_distributor_country_subdivision ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_additional_types ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:FoodPreservationState ;
-            owl:onProperty mifc:food_preservation_state ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Float ;
-            owl:onProperty mifc:food_acquisition_latitude ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_city ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_distributor_city ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_longitude ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_latitude ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_location_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_primary_type_label ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_city ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_upc_code ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:FoodAcquisitionLocationType ;
-            owl:onProperty mifc:food_acquisition_location_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_category_label ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_organization ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_category_label ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_organization ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_expiration_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_agent_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_agent_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_primary_type_label ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_primary_type_label ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_organization ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_latitude ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_additional_types ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_category_label ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_agent_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_country_subdivision ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_primary_type ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_storage_temperature_state ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_acquisition_country ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_expiration_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_batch_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:FoodStorageTemperatureState ;
-            owl:onProperty mifc:food_storage_temperature_state ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_location_type ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:FoodRipenessState ;
-            owl:onProperty mifc:food_ripeness_state ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_preservation_state ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom mifc:FoodCookingMethod ;
-            owl:onProperty mifc:food_cooking_method ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:food_distributor_country ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_country ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_additional_types ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_country_subdivision ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_country ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty mifc:food_sample_id ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_primary_type ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_distributor_city ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
+            owl:onProperty mifc:food_upc_code ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Float ;
             owl:onProperty mifc:food_acquisition_longitude ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_distributor_country ],
+            owl:onProperty mifc:food_additional_types ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:food_primary_type_label ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_storage_temperature_state ],
+            owl:onProperty mifc:food_ripeness_state ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_laboratory_sample_aliquot_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_distributor_country_subdivision ],
+            owl:onProperty mifc:food_ripeness_state ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty mifc:food_cooking_method ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_upc_code ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_distributor_country ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:food_acquisition_date ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:food_acquisition_city ],
+            owl:onProperty mifc:food_acquisition_country_subdivision ],
         mifc:NamedThing ;
     skos:definition "Metadata about foods analyzed for components of nutritional interest." ;
     skos:exactMatch schema1:Food ;
@@ -487,79 +487,79 @@ mifc:Provenance a owl:Class,
     rdfs:label "Provenance" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:provenance_contributor_orcid ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:provenance_mifc_version_tag ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:provenance_mifc_version_tag ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:provenance_mifc_version_tag ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty mifc:provenance_organization_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty mifc:provenance_contributor_orcid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty mifc:provenance_dataset_label ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty mifc:provenance_dataset_label ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty mifc:provenance_organization_name ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty mifc:provenance_contributor_orcid ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty mifc:provenance_organization_name ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:provenance_mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:provenance_mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:provenance_contributor_orcid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty mifc:provenance_dataset_label ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:provenance_mifc_version_tag ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty mifc:provenance_contributor_orcid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty mifc:provenance_contributor_orcid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty mifc:provenance_organization_name ],
         mifc:NamedThing ;
     skos:definition "Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC." ;
     skos:exactMatch schema1:Provenance ;
     skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
 OBI:0002116 a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "HPLC" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Fluorometric> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "Fluorometric" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GC> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "GC" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GLC> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "GLC" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Gravimetric> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "Gravimetric" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Kjeldahl> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "Kjeldahl" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
-<https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> a owl:Class,
-        mifc:AnalyticalMeasurementMethod ;
+<https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Nephelometry> a owl:Class,
+        mifc:CompoundAnalyticalMeasurementMethod ;
     rdfs:label "Nephelometry" ;
-    rdfs:subClassOf mifc:AnalyticalMeasurementMethod .
+    rdfs:subClassOf mifc:CompoundAnalyticalMeasurementMethod .
 
 <https://w3id.org/kaiiam/mifc/FoodAcquisitionLocationType#biobank> a owl:Class,
         mifc:FoodAcquisitionLocationType ;
@@ -1021,7 +1021,7 @@ mifc:compound_analytical_laboratory_name a owl:ObjectProperty,
 mifc:compound_analytical_measurement_method a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "compound_analytical_measurement_method" ;
-    rdfs:range mifc:AnalyticalMeasurementMethod ;
+    rdfs:range mifc:CompoundAnalyticalMeasurementMethod ;
     skos:definition "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC)." ;
     skos:inScheme <https://w3id.org/kaiiam/mifc> .
 
@@ -1275,16 +1275,16 @@ mifc:FoodStorageTemperatureState a owl:Class,
         <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#frozen>,
         <https://w3id.org/kaiiam/mifc/FoodStorageTemperatureState#refrigerated> .
 
-mifc:AnalyticalMeasurementMethod a owl:Class,
+mifc:CompoundAnalyticalMeasurementMethod a owl:Class,
         linkml:EnumDefinition ;
-    owl:unionOf ( OBI:0002116 <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric> <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> ) ;
+    owl:unionOf ( OBI:0002116 <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GLC> <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GC> <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Nephelometry> <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Gravimetric> <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Fluorometric> <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Kjeldahl> ) ;
     linkml:permissible_values OBI:0002116,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric>,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC>,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC>,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric>,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl>,
-        <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry> .
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Fluorometric>,
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GC>,
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GLC>,
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Gravimetric>,
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Kjeldahl>,
+        <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Nephelometry> .
 
 mifc:FoodAcquisitionLocationType a owl:Class,
         linkml:EnumDefinition ;

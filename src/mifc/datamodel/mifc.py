@@ -1,5 +1,5 @@
 # Auto generated from mifc.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-06-20T18:07:12
+# Generation date: 2024-06-20T18:10:34
 # Schema: mifc
 #
 # id: https://w3id.org/kaiiam/mifc
@@ -211,7 +211,7 @@ class Component(NamedThing):
     compound_sample_aggregation_median_value: Optional[float] = None
     compound_sample_aggregation_standard_deviation: Optional[float] = None
     compound_analytical_measurement_protocol_doi: Optional[str] = None
-    compound_analytical_measurement_method: Optional[Union[str, "AnalyticalMeasurementMethod"]] = None
+    compound_analytical_measurement_method: Optional[Union[str, "CompoundAnalyticalMeasurementMethod"]] = None
     compound_analytical_laboratory_name: Optional[str] = None
     component_quality_control_remeasurement: Optional[Union[bool, Bool]] = None
     food_laboratory_sample_id: Optional[str] = None
@@ -269,8 +269,8 @@ class Component(NamedThing):
         if self.compound_analytical_measurement_protocol_doi is not None and not isinstance(self.compound_analytical_measurement_protocol_doi, str):
             self.compound_analytical_measurement_protocol_doi = str(self.compound_analytical_measurement_protocol_doi)
 
-        if self.compound_analytical_measurement_method is not None and not isinstance(self.compound_analytical_measurement_method, AnalyticalMeasurementMethod):
-            self.compound_analytical_measurement_method = AnalyticalMeasurementMethod(self.compound_analytical_measurement_method)
+        if self.compound_analytical_measurement_method is not None and not isinstance(self.compound_analytical_measurement_method, CompoundAnalyticalMeasurementMethod):
+            self.compound_analytical_measurement_method = CompoundAnalyticalMeasurementMethod(self.compound_analytical_measurement_method)
 
         if self.compound_analytical_laboratory_name is not None and not isinstance(self.compound_analytical_laboratory_name, str):
             self.compound_analytical_laboratory_name = str(self.compound_analytical_laboratory_name)
@@ -351,7 +351,7 @@ class Container(YAMLRoot):
 
 
 # Enumerations
-class AnalyticalMeasurementMethod(EnumDefinitionImpl):
+class CompoundAnalyticalMeasurementMethod(EnumDefinitionImpl):
 
     HPLC = PermissibleValue(
         text="HPLC",
@@ -367,7 +367,7 @@ class AnalyticalMeasurementMethod(EnumDefinitionImpl):
     Kjeldahl = PermissibleValue(text="Kjeldahl")
 
     _defn = EnumDefinition(
-        name="AnalyticalMeasurementMethod",
+        name="CompoundAnalyticalMeasurementMethod",
     )
 
 class FoodPreservationState(EnumDefinitionImpl):
@@ -635,7 +635,7 @@ slots.compound_analytical_measurement_protocol_doi = Slot(uri=MIFC.compound_anal
                    model_uri=MIFC.compound_analytical_measurement_protocol_doi, domain=None, range=Optional[str])
 
 slots.compound_analytical_measurement_method = Slot(uri=MIFC.compound_analytical_measurement_method, name="compound_analytical_measurement_method", curie=MIFC.curie('compound_analytical_measurement_method'),
-                   model_uri=MIFC.compound_analytical_measurement_method, domain=None, range=Optional[Union[str, "AnalyticalMeasurementMethod"]])
+                   model_uri=MIFC.compound_analytical_measurement_method, domain=None, range=Optional[Union[str, "CompoundAnalyticalMeasurementMethod"]])
 
 slots.compound_analytical_laboratory_name = Slot(uri=MIFC.compound_analytical_laboratory_name, name="compound_analytical_laboratory_name", curie=MIFC.curie('compound_analytical_laboratory_name'),
                    model_uri=MIFC.compound_analytical_laboratory_name, domain=None, range=Optional[str])

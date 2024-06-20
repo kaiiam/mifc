@@ -1,19 +1,5 @@
 {
     "$defs": {
-        "AnalyticalMeasurementMethod": {
-            "description": "",
-            "enum": [
-                "HPLC",
-                "GLC",
-                "GC",
-                "Nephelometry",
-                "Gravimetric",
-                "Fluorometric",
-                "Kjeldahl"
-            ],
-            "title": "AnalyticalMeasurementMethod",
-            "type": "string"
-        },
         "Component": {
             "additionalProperties": false,
             "description": "Metadata about components of nutritional interest measured from foods.",
@@ -71,7 +57,7 @@
                     "type": "string"
                 },
                 "compound_analytical_measurement_method": {
-                    "$ref": "#/$defs/AnalyticalMeasurementMethod",
+                    "$ref": "#/$defs/CompoundAnalyticalMeasurementMethod",
                     "description": "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC)."
                 },
                 "compound_analytical_measurement_protocol_doi": {
@@ -112,6 +98,20 @@
             ],
             "title": "Component",
             "type": "object"
+        },
+        "CompoundAnalyticalMeasurementMethod": {
+            "description": "",
+            "enum": [
+                "HPLC",
+                "GLC",
+                "GC",
+                "Nephelometry",
+                "Gravimetric",
+                "Fluorometric",
+                "Kjeldahl"
+            ],
+            "title": "CompoundAnalyticalMeasurementMethod",
+            "type": "string"
         },
         "Container": {
             "additionalProperties": false,

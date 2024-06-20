@@ -362,8 +362,8 @@
   ],
   "enums": [
     {
-      "name": "AnalyticalMeasurementMethod",
-      "definition_uri": "https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod",
+      "name": "CompoundAnalyticalMeasurementMethod",
+      "definition_uri": "https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod",
       "from_schema": "https://w3id.org/kaiiam/mifc",
       "permissible_values": [
         {
@@ -1201,7 +1201,7 @@
       "domain_of": [
         "Component"
       ],
-      "range": "AnalyticalMeasurementMethod",
+      "range": "CompoundAnalyticalMeasurementMethod",
       "@type": "SlotDefinition"
     },
     {
@@ -1532,9 +1532,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "mifc.yaml",
-  "source_file_date": "2024-06-20T18:03:28",
-  "source_file_size": 17675,
-  "generation_date": "2024-06-20T18:07:12",
+  "source_file_date": "2024-06-20T18:10:19",
+  "source_file_size": 17691,
+  "generation_date": "2024-06-20T18:10:33",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",

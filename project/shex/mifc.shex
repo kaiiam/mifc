@@ -64,12 +64,12 @@ linkml:Sparqlpath xsd:string
           <compound_sample_aggregation_standard_deviation> @linkml:Float ? ;
           <compound_analytical_measurement_protocol_doi> @linkml:String ? ;
           <compound_analytical_measurement_method> [ <http://purl.obolibrary.org/obo/OBI_0002116>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GLC>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#GC>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Nephelometry>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Gravimetric>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Fluorometric>
-             <https://w3id.org/kaiiam/mifc/AnalyticalMeasurementMethod#Kjeldahl> ] ? ;
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GLC>
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#GC>
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Nephelometry>
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Gravimetric>
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Fluorometric>
+             <https://w3id.org/kaiiam/mifc/CompoundAnalyticalMeasurementMethod#Kjeldahl> ] ? ;
           <compound_analytical_laboratory_name> @linkml:String ? ;
           <component_quality_control_remeasurement> @linkml:Boolean ? ;
           <food_laboratory_sample_id> @linkml:String ? ;
