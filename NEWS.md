@@ -40,6 +40,14 @@
 
 * Rename `laboratory_sample_id` to `food_laboratory_sample_id`
 
+* Rename `laboratory_sample_aggregation_minimum_measured_compound_value` to `compound_sample_aggregation_minimum_value`
+
+* Rename `laboratory_sample_aggregation_maximum_measured_compound_value` to `compound_sample_aggregation_maximum_value`
+
+* Rename `laboratory_sample_aggregation_median_measured_compound_value` to `compound_sample_aggregation_median_value`
+
+* Rename `laboratory_sample_aggregation_measured_compound_standard_deviation` to `compound_sample_aggregation_standard_deviation`
+
 * Remove slots: `measured_compound_denominator_value` and `measured_compound_denominator_unit` and instead capture that information within the `measured_compound_unit` slot.
 
 **Food**
