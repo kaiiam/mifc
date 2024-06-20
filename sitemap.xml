@@ -176,11 +176,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/component_id/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/component_limit_of_quantitation/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -206,6 +201,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/component_sample_id/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/component_type/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -217,6 +217,11 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/components/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/compound_analytical_laboratory_name/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -321,7 +326,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/food_id/</loc>
+         <loc>https://kaiiam.github.io/mifc/food_laboratory_sample_aliquot_id/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_laboratory_sample_batch_id/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_laboratory_sample_id/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -346,6 +361,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kaiiam.github.io/mifc/food_sample_id/</loc>
+         <lastmod>2024-06-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kaiiam.github.io/mifc/food_storage_temperature_state/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
@@ -357,11 +377,6 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/foods/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_conducting_analytical_analysis/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -382,21 +397,6 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/laboratory_sample_aggregation_minimum_measured_compound_value/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_aliquot_id/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_batch_id/</loc>
-         <lastmod>2024-06-20</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/laboratory_sample_id/</loc>
          <lastmod>2024-06-20</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/component_id/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_laboratory_sample_id/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: component_id - mifc</title>
+        <title>Slot: food_laboratory_sample_id - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-component_id" class="md-skip">
+        <a href="#slot-food_laboratory_sample_id" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: component_id
+              Slot: food_laboratory_sample_id
             
           </span>
         </div>
@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#identifier-and-mapping-information" class="md-nav__link">
     Identifier and Mapping Information
   </a>
@@ -310,15 +317,15 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/component_id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_laboratory_sample_id.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-component_id">Slot: component_id</h1>
-<p><em>A string denoting the primary identifier for a sample of the class Component. Note that component_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_id from the Food class.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/component_id">mifc:component_id</a></p>
+<h1 id="slot-food_laboratory_sample_id">Slot: food_laboratory_sample_id</h1>
+<p><em>A string denoting an identifier of a laboratory sample which was prepared from a food sample.</em></p>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_laboratory_sample_id">mifc:food_laboratory_sample_id</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -336,16 +343,20 @@
 <td>Metadata about components of nutritional interest measured from foods</td>
 <td>no</td>
 </tr>
+<tr>
+<td><a href="../Food/">Food</a></td>
+<td>Metadata about foods analyzed for components of nutritional interest</td>
+<td>no</td>
+</tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p>Range: <a href="../String/">String</a></p>
-</li>
-<li>
-<p>Required: True</p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
+</ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -355,17 +366,19 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: component_id
-description: A string denoting the primary identifier for a sample of the class Component.
-  Note that component_id does not need be unique in a given dataset and should be
-  used to relate Food and Component records via food_id from the Food class.
+<pre><code class="language-yaml">name: food_laboratory_sample_id
+description: A string denoting an identifier of a laboratory sample which was prepared
+  from a food sample.
+comments:
+- Only use this attribute if a separate ID is assigned to laboratory samples derived
+  from food samples. Otherwise just use the food_sample_id.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: component_id
+alias: food_laboratory_sample_id
 domain_of:
+- Food
 - Component
 range: string
-required: true
 
 </code></pre>
 

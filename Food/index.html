@@ -264,7 +264,11 @@
 
       Food : food_expiration_date
 
-      Food : food_id
+      Food : food_laboratory_sample_aliquot_id
+
+      Food : food_laboratory_sample_batch_id
+
+      Food : food_laboratory_sample_id
 
       Food : food_preservation_state
 
@@ -288,6 +292,8 @@
     click FoodRipenessState href "../FoodRipenessState"
 
 
+      Food : food_sample_id
+
       Food : food_storage_temperature_state
 
 
@@ -298,12 +304,6 @@
 
 
       Food : food_upc_code
-
-      Food : laboratory_sample_aliquot_id
-
-      Food : laboratory_sample_batch_id
-
-      Food : laboratory_sample_id
 
 
 </div>
@@ -326,7 +326,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../food_id/">food_id</a></td>
+<td><a href="../food_sample_id/">food_sample_id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting the primary identifier for a sample of the class Food</td>
 <td>direct</td>
@@ -464,22 +464,22 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_id/">laboratory_sample_id</a></td>
+<td><a href="../food_laboratory_sample_id/">food_laboratory_sample_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting an identifier of a laboratory sample which was prepared fro...</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_aliquot_id/">laboratory_sample_aliquot_id</a></td>
+<td><a href="../food_laboratory_sample_aliquot_id/">food_laboratory_sample_aliquot_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string denoting an identifier of a unique aliquot of a laboratory sample wh...</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td>A string denoting an identifier of a unique aliquot of a food laboratory samp...</td>
+<td>direct</td>
 </tr>
 <tr>
-<td><a href="../laboratory_sample_batch_id/">laboratory_sample_batch_id</a></td>
+<td><a href="../food_laboratory_sample_batch_id/">food_laboratory_sample_batch_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting an identifier of a batch of laboratory samples analysed tog...</td>
-<td><a href="../NamedThing/">NamedThing</a></td>
+<td>direct</td>
 </tr>
 </tbody>
 </table>
@@ -542,7 +542,7 @@ description: Metadata about foods analyzed for components of nutritional interes
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 slots:
-- food_id
+- food_sample_id
 - food_primary_type
 - food_primary_type_label
 - food_upc_code
@@ -565,6 +565,9 @@ slots:
 - food_expiration_date
 - food_category_label
 - food_additional_types
+- food_laboratory_sample_id
+- food_laboratory_sample_aliquot_id
+- food_laboratory_sample_batch_id
 class_uri: schema:Food
 
 </code></pre>
@@ -578,15 +581,16 @@ description: Metadata about foods analyzed for components of nutritional interes
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 attributes:
-  food_id:
-    name: food_id
+  food_sample_id:
+    name: food_sample_id
     description: A string denoting the primary identifier for a sample of the class
-      Food. Note that food_id should be unique in a given dataset and should be used
-      to relate Food and Component records via component_id from the Component class.
+      Food. Note that food_sample_id should be unique in a given dataset and should
+      be used to relate Food and Component records via component_sample_id from the
+      Component class.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     identifier: true
-    alias: food_id
+    alias: food_sample_id
     owner: Food
     domain_of:
     - Food
@@ -854,38 +858,47 @@ attributes:
     domain_of:
     - Food
     range: string
-  laboratory_sample_id:
-    name: laboratory_sample_id
+  food_laboratory_sample_id:
+    name: food_laboratory_sample_id
     description: A string denoting an identifier of a laboratory sample which was
       prepared from a food sample.
+    comments:
+    - Only use this attribute if a separate ID is assigned to laboratory samples derived
+      from food samples. Otherwise just use the food_sample_id.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_id
+    alias: food_laboratory_sample_id
     owner: Food
     domain_of:
-    - NamedThing
+    - Food
+    - Component
     range: string
-  laboratory_sample_aliquot_id:
-    name: laboratory_sample_aliquot_id
-    description: A string denoting an identifier of a unique aliquot of a laboratory
+  food_laboratory_sample_aliquot_id:
+    name: food_laboratory_sample_aliquot_id
+    description: A string denoting an identifier of a unique aliquot of a food laboratory
       sample which was prepared from a food sample.
+    comments:
+    - Only use this attribute if identifiers are assigned to aliquots/sub-samples
+      of food laboratory samples denoted by their food_laboratory_sample_id.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_aliquot_id
+    alias: food_laboratory_sample_aliquot_id
     owner: Food
     domain_of:
-    - NamedThing
+    - Food
+    - Component
     range: string
-  laboratory_sample_batch_id:
-    name: laboratory_sample_batch_id
+  food_laboratory_sample_batch_id:
+    name: food_laboratory_sample_batch_id
     description: A string denoting an identifier of a batch of laboratory samples
       analysed together.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: laboratory_sample_batch_id
+    alias: food_laboratory_sample_batch_id
     owner: Food
     domain_of:
-    - NamedThing
+    - Food
+    - Component
     range: string
 class_uri: schema:Food
 
