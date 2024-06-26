@@ -33,4 +33,5 @@ jobs:
         run: poetry install --no-interaction
 
       - name: Run test suite
-        run: make test
+#        run: make test
+        run: make all-all

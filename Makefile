@@ -170,11 +170,18 @@ examples/%.ttl: src/data/examples/%.yaml
 
 test-examples: examples/output
 
+# @turbomam 2024-06-26 deviation from the cookiecutter Makefile
+# added --output-formats ttl
+# the linkml RDF/TTL conversion code does not convert referenced identifiers to IRIs
+# nmdc-schema gives identifiers the range: uriorcurie
+# and then feeds the raw TTL into nmdc_schema/anyuri_strings_to_iris.py
+
 examples/output: src/mifc/schema/mifc.yaml
 	mkdir -p $@
 	$(RUN) linkml-run-examples \
 		--output-formats json \
 		--output-formats yaml \
+		--output-formats ttl \
 		--counter-example-input-directory src/data/examples/invalid \
 		--input-directory src/data/examples/valid \
 		--output-directory $@ \

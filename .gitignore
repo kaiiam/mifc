@@ -1,4 +1,7 @@
 .idea/
+examples/output/
+project/
+src/mifc/datamodel/
 
 /docs/
 /project/docs/
