@@ -1,4 +1,4 @@
-laboratory_sample_id	laboratory_sample_aliquot_id	laboratory_sample_batch_id	component_type	component_type_label	component_recorded_value	component_limit_of_quantitation	component_measurement_unit	component_data_points_number	component_analysis_date	analytical_analysis_measurement_protocol_doi	laboratory_conducting_analytical_analysis	component_quality_control_remeasurement
-CY124QU	NFY122JPN	o	COMPONENT:1075	galactose	0.52		g/(100.g)	1	March 8, 2023	SUGR-GALAC-CHG	Silliker	False
-CY124QX	NFY122JRQ	o	COMPONENT:1014	maltose	0	<0.25	g/(100.g)	1	March 9, 2023	SUGR-DP1-2-CHG	Silliker	
-CY124R2	NFY122JV9	q	COMPONENT:1011	glucose	0	<0.25	g/(100.g)	1	March 17, 2023	SUGR-DP1-2-CHG	Silliker	True
+component_sample_id	component_type	component_type_label	component_recorded_value	component_measurement_unit	component_data_points_number	component_analysis_date	compound_analytical_measurement_protocol_doi	compound_analytical_laboratory_name	component_quality_control_remeasurement	food_laboratory_sample_aliquot_id	food_laboratory_sample_batch_id	component_limit_of_quantitation
+CY124QU	COMPONENT:1075	galactose	0.52	g/(100.g)	1	March 8, 2023	SUGR-GALAC-CHG	Silliker	False	NFY122JPN	o	
+CY124QX	COMPONENT:1014	maltose	0.0	g/(100.g)	1	March 9, 2023	SUGR-DP1-2-CHG	Silliker		NFY122JRQ	o	<0.25
+CY124R2	COMPONENT:1011	glucose	0.0	g/(100.g)	1	March 17, 2023	SUGR-DP1-2-CHG	Silliker	True	NFY122JV9	q	<0.25

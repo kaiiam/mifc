@@ -1,7 +1,7 @@
 {
   "foods": [
     {
-      "food_id": "FDC:392739",
+      "food_sample_id": "FDC:392739",
       "food_primary_type": "FOOD:4601",
       "food_primary_type_label": "Butter, light, stick, with salt",
       "food_upc_code": 40822011143,
@@ -16,7 +16,7 @@
       "food_expiration_date": "2015-12-07"
     },
     {
-      "food_id": "FDC:392740",
+      "food_sample_id": "FDC:392740",
       "food_primary_type": "FOOD:11601",
       "food_primary_type_label": "Yam, raw",
       "food_upc_code": 79893110196,
