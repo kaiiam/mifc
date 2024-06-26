@@ -1,4 +1,36 @@
-## Container-Component-002
+## Container-foods-002
+### Input
+```yaml
+foods:
+- food_acquisition_city: PITTSBURGH
+  food_acquisition_country: USA
+  food_acquisition_country_subdivision: PA
+  food_acquisition_date: '2015-11-02'
+  food_distributor_city: Cincinnati
+  food_distributor_country: United States of America
+  food_distributor_country_subdivision: Ohio
+  food_expiration_date: '2015-12-07'
+  food_preservation_state: fresh
+  food_primary_type: FOOD:4601
+  food_primary_type_label: Butter, light, stick, with salt
+  food_sample_id: FDC:392739
+  food_upc_code: 40822011143
+- food_acquisition_city: TUCSON
+  food_acquisition_country: USA
+  food_acquisition_country_subdivision: AZ
+  food_acquisition_date: '2018-05-22'
+  food_distributor_city: Veracruz
+  food_distributor_country: Mexico
+  food_distributor_country_subdivision: Veracruz
+  food_expiration_date: '2018-04-25'
+  food_preservation_state: raw
+  food_primary_type: FOOD:11601
+  food_primary_type_label: Yam, raw
+  food_sample_id: FDC:392740
+  food_upc_code: 79893110196
+
+```
+## Container-components-002
 ### Input
 ```yaml
 components:
@@ -67,55 +99,7 @@ components:
   compound_analytical_measurement_method: HPLC
 
 ```
-## Container-Food-002
-### Input
-```yaml
-foods:
-- food_acquisition_city: PITTSBURGH
-  food_acquisition_country: USA
-  food_acquisition_country_subdivision: PA
-  food_acquisition_date: '2015-11-02'
-  food_distributor_city: Cincinnati
-  food_distributor_country: United States of America
-  food_distributor_country_subdivision: Ohio
-  food_expiration_date: '2015-12-07'
-  food_preservation_state: fresh
-  food_primary_type: FOOD:4601
-  food_primary_type_label: Butter, light, stick, with salt
-  food_sample_id: FDC:392739
-  food_upc_code: 40822011143
-- food_acquisition_city: TUCSON
-  food_acquisition_country: USA
-  food_acquisition_country_subdivision: AZ
-  food_acquisition_date: '2018-05-22'
-  food_distributor_city: Veracruz
-  food_distributor_country: Mexico
-  food_distributor_country_subdivision: Veracruz
-  food_expiration_date: '2018-04-25'
-  food_preservation_state: raw
-  food_primary_type: FOOD:11601
-  food_primary_type_label: Yam, raw
-  food_sample_id: FDC:392740
-  food_upc_code: 79893110196
-
-```
-## Container-Food-001
-### Input
-```yaml
-foods:
-- food_preservation_state: raw
-  food_primary_type: FOOD:11954
-  food_primary_type_label: Tomatillos, raw
-  food_sample_id: FDC:167512
-- food_preservation_state: raw
-  food_primary_type: FOOD:10100
-  food_primary_type_label: Pork, fresh, variety meats and by-products, ears, frozen,
-    raw
-  food_sample_id: FDC:167513
-  food_storage_temperature_state: frozen
-
-```
-## Container-Provenance-001
+## Container-provenances-001
 ### Input
 ```yaml
 provenances:
@@ -125,7 +109,23 @@ provenances:
   provenance_organization_name: USDA
 
 ```
-## Container-Component-001
+## Container-foods-001
+### Input
+```yaml
+foods:
+- food_preservation_state: raw
+  food_primary_type: FOOD:11954
+  food_primary_type_label: Tomatillos, raw
+  food_sample_id: FDC:167512
+- food_preservation_state: fresh
+  food_primary_type: FOOD:10100
+  food_primary_type_label: Pork, fresh, variety meats and by-products, ears, frozen,
+    raw
+  food_sample_id: FDC:167513
+  food_storage_temperature_state: frozen
+
+```
+## Container-components-001
 ### Input
 ```yaml
 components:
@@ -197,7 +197,7 @@ components:
   component_type: COMPONENT:1089
 
 ```
-## Container-Component-003
+## Container-components-003
 ### Input
 ```yaml
 components:

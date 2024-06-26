@@ -1,0 +1,10 @@
+@prefix mifc: <https://w3id.org/kaiiam/mifc/> .
+@prefix schema1: <http://schema.org/> .
+
+[] a mifc:Container ;
+    mifc:provenances [ a schema1:Provenance ;
+            mifc:provenance_contributor_orcid "https://orcid.org/0000-0002-3410-4655" ;
+            mifc:provenance_dataset_label "Standard Reference (SR) Legacy" ;
+            mifc:provenance_mifc_version_tag "v1.0.1" ;
+            mifc:provenance_organization_name "USDA" ] .
+

@@ -31,114 +31,12 @@ schema1:Component a sh:NodeShape ;
     sh:closed true ;
     sh:description "Metadata about components of nutritional interest measured from foods." ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a batch of laboratory samples analysed together." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 21 ;
-            sh:path mifc:food_laboratory_sample_batch_id ],
-        [ sh:datatype xsd:integer ;
+    sh:property [ sh:datatype xsd:integer ;
             sh:description "An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 5 ;
             sh:path mifc:component_data_points_number ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing the maximum measured compound value of an aggregation of compound samples." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 12 ;
-            sh:path mifc:compound_sample_aggregation_maximum_value ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing the minimum measured compound value of an aggregation of compound samples." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path mifc:compound_sample_aggregation_minimum_value ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path mifc:compound_analytical_laboratory_name ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing the standard deviation of a measured compound value of an aggregation of compound samples." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 14 ;
-            sh:path mifc:compound_sample_aggregation_standard_deviation ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing the median measured compound value of an aggregation of compound samples." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path mifc:compound_sample_aggregation_median_value ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path mifc:food_laboratory_sample_aliquot_id ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a laboratory sample which was prepared from a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 19 ;
-            sh:path mifc:food_laboratory_sample_id ],
-        [ sh:datatype xsd:string ;
-            sh:description "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path mifc:component_derivation_type ],
-        [ sh:datatype xsd:boolean ;
-            sh:description "A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path mifc:component_quality_control_remeasurement ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path mifc:component_recorded_value ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 15 ;
-            sh:path mifc:compound_analytical_measurement_protocol_doi ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path mifc:component_type_label ],
-        [ sh:description "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC)." ;
-            sh:in ( OBI:0002116 "GLC" "GC" "Nephelometry" "Gravimetric" "Fluorometric" "Kjeldahl" ) ;
-            sh:maxCount 1 ;
-            sh:order 16 ;
-            sh:path mifc:compound_analytical_measurement_method ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path mifc:component_sample_id ],
-        [ sh:datatype xsd:string ;
-            sh:description "A comment relating to an analyzed component of nutritional interest." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path mifc:component_comment ],
-        [ sh:datatype xsd:string ;
-            sh:description "A unit code representing the unit of measurement in which a component_recorded_value is measured." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 4 ;
-            sh:path mifc:component_measurement_unit ],
         [ sh:datatype xsd:string ;
             sh:description "A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample." ;
             sh:maxCount 1 ;
@@ -146,11 +44,113 @@ schema1:Component a sh:NodeShape ;
             sh:order 1 ;
             sh:path mifc:component_type ],
         [ sh:datatype xsd:string ;
+            sh:description "A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path mifc:compound_analytical_laboratory_name ],
+        [ sh:datatype xsd:string ;
             sh:description "A datetime value representing recorded date pertaining to an analyzed sample." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 6 ;
             sh:path mifc:component_record_date ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 15 ;
+            sh:path mifc:compound_analytical_measurement_protocol_doi ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path mifc:component_sample_id ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path mifc:component_recorded_value ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 20 ;
+            sh:path mifc:food_laboratory_sample_aliquot_id ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing the maximum measured compound value of an aggregation of compound samples." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 12 ;
+            sh:path mifc:compound_sample_aggregation_maximum_value ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing the median measured compound value of an aggregation of compound samples." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path mifc:compound_sample_aggregation_median_value ],
+        [ sh:description "A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC)." ;
+            sh:in ( OBI:0002116 "GLC" "GC" "Nephelometry" "Gravimetric" "Fluorometric" "Kjeldahl" ) ;
+            sh:maxCount 1 ;
+            sh:order 16 ;
+            sh:path mifc:compound_analytical_measurement_method ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing the standard deviation of a measured compound value of an aggregation of compound samples." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 14 ;
+            sh:path mifc:compound_sample_aggregation_standard_deviation ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path mifc:component_type_label ],
+        [ sh:datatype xsd:string ;
+            sh:description "A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path mifc:component_derivation_type ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing the minimum measured compound value of an aggregation of compound samples." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path mifc:compound_sample_aggregation_minimum_value ],
+        [ sh:datatype xsd:string ;
+            sh:description "A comment relating to an analyzed component of nutritional interest." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 8 ;
+            sh:path mifc:component_comment ],
+        [ sh:datatype xsd:boolean ;
+            sh:description "A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path mifc:component_quality_control_remeasurement ],
+        [ sh:datatype xsd:string ;
+            sh:description "A unit code representing the unit of measurement in which a component_recorded_value is measured." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 4 ;
+            sh:path mifc:component_measurement_unit ],
+        [ sh:datatype xsd:string ;
+            sh:description "A datetime value representing the date in which a component of nutritional interest was analyzed." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 7 ;
+            sh:path mifc:component_analysis_date ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting an identifier of a batch of laboratory samples analysed together." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 21 ;
+            sh:path mifc:food_laboratory_sample_batch_id ],
         [ sh:datatype xsd:string ;
             sh:description "A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest." ;
             sh:maxCount 1 ;
@@ -158,11 +158,11 @@ schema1:Component a sh:NodeShape ;
             sh:order 10 ;
             sh:path mifc:component_limit_of_quantitation ],
         [ sh:datatype xsd:string ;
-            sh:description "A datetime value representing the date in which a component of nutritional interest was analyzed." ;
+            sh:description "A string denoting an identifier of a laboratory sample which was prepared from a food sample." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 7 ;
-            sh:path mifc:component_analysis_date ] ;
+            sh:order 19 ;
+            sh:path mifc:food_laboratory_sample_id ] ;
     sh:targetClass schema1:Component .
 
 schema1:Food a sh:NodeShape ;
@@ -170,122 +170,16 @@ schema1:Food a sh:NodeShape ;
     sh:description "Metadata about foods analyzed for components of nutritional interest." ;
     sh:ignoredProperties ( rdf:type ) ;
     sh:property [ sh:datatype xsd:string ;
-            sh:description "A string denoting the country code from which a food sample was acquired." ;
+            sh:description "A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 9 ;
-            sh:path mifc:food_acquisition_country ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the name of the agent (person, device or other type of service) that acquired the food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 15 ;
-            sh:path mifc:food_acquisition_agent_name ],
-        [ sh:datatype xsd:string ;
-            sh:description "A datetime value representing the date a food sample was acquired." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 11 ;
-            sh:path mifc:food_acquisition_date ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the country subdivision from which a food sample was acquired (e.g., state or province)." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 10 ;
-            sh:path mifc:food_acquisition_country_subdivision ],
-        [ sh:description "A string describing the type of location from which a food sample was acquired (e.g., a supermarket)." ;
-            sh:in ( "field" "fresh market" "small grocery" "supermarket" "biobank" "unknown" "other" ) ;
-            sh:maxCount 1 ;
-            sh:order 12 ;
-            sh:path mifc:food_acquisition_location_type ],
-        [ sh:description "An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis." ;
-            sh:in ( "ripe" "overripe" "unripe" "slightly ripe" ) ;
-            sh:maxCount 1 ;
-            sh:order 6 ;
-            sh:path mifc:food_ripeness_state ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string or controlled vocabulary denoting the label of the food group or category of the primary food material." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 21 ;
-            sh:path mifc:food_category_label ],
-        [ sh:datatype xsd:float ;
-            sh:description "A float representing the latitude of the place from which the food sample was acquired." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 13 ;
-            sh:path mifc:food_acquisition_latitude ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the country code of a distributor organization from which a food sample was acquired." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 18 ;
-            sh:path mifc:food_distributor_country ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class." ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path mifc:food_sample_id ],
-        [ sh:description "An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., \"raw\")." ;
-            sh:in ( "air-dried" "artificially dried" "brined" "candied" "canned" "cured" "dried" "fermented" "freeze-dried" "fresh" "heat treated" "irradiated" "jellied" "kippered" "naturally dried" "pasteurized" "pickled" "raw" "shelf stable" "sun-dried" "ultraviolet light exposed" ) ;
-            sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path mifc:food_preservation_state ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 24 ;
-            sh:path mifc:food_laboratory_sample_aliquot_id ],
-        [ sh:datatype xsd:string ;
-            sh:description "A controlled vocabulary term representing the primary food material which was sampled." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 1 ;
-            sh:path schema1:name ],
-        [ sh:datatype xsd:integer ;
-            sh:description "An integer denoting a Universal Product Code (UPC) barcode of a food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 3 ;
-            sh:path mifc:food_upc_code ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a batch of laboratory samples analysed together." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 25 ;
-            sh:path mifc:food_laboratory_sample_batch_id ],
+            sh:order 22 ;
+            sh:path mifc:food_additional_types ],
         [ sh:description "An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., \"baked\")." ;
             sh:in ( "baked" "blanched" "boiled" "braised" "broiled" "cooked" "dry-heat cooked" "dry-roasted" "fried" "grilled" "heated" "microwaved" "moist-heat cooked" "oil-roasted" "pan-broiled" "pan-browned" "pan-fried" "parboiled" "partially fried" "poached" "precooked" "refried" "roasted" "sauteed" "simmered" "slow-roasted" "smoked" "spit-roasted" "steamed" "stewed" "stir-fried" "toasted" "uncooked" "unheated" ) ;
             sh:maxCount 1 ;
             sh:order 7 ;
             sh:path mifc:food_cooking_method ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the city in which a food sample was acquired." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 8 ;
-            sh:path mifc:food_acquisition_city ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the city of a distributor organization from which a food sample was acquired." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 17 ;
-            sh:path mifc:food_distributor_city ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the name of the organization responsible for acquired the food sample." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 16 ;
-            sh:path mifc:food_acquisition_organization ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 2 ;
-            sh:path mifc:food_primary_type_label ],
         [ sh:datatype xsd:string ;
             sh:description "A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province)." ;
             sh:maxCount 1 ;
@@ -293,22 +187,70 @@ schema1:Food a sh:NodeShape ;
             sh:order 19 ;
             sh:path mifc:food_distributor_country_subdivision ],
         [ sh:datatype xsd:string ;
-            sh:description "A datetime value representing the food expiration data as shown on the labeling information of the food sample." ;
+            sh:description "A string denoting the city in which a food sample was acquired." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 20 ;
-            sh:path mifc:food_expiration_date ],
+            sh:order 8 ;
+            sh:path mifc:food_acquisition_city ],
         [ sh:description "An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., \"Refrigerated\")." ;
             sh:in ( "chilled" "foodsafe chilled" "frozen" "refrigerated" ) ;
             sh:maxCount 1 ;
             sh:order 5 ;
             sh:path mifc:food_storage_temperature_state ],
+        [ sh:description "A string describing the type of location from which a food sample was acquired (e.g., a supermarket)." ;
+            sh:in ( "field" "fresh market" "small grocery" "supermarket" "biobank" "unknown" "other" ) ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path mifc:food_acquisition_location_type ],
         [ sh:datatype xsd:string ;
-            sh:description "A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample." ;
+            sh:description "A string denoting the name of the organization responsible for acquired the food sample." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 22 ;
-            sh:path mifc:food_additional_types ],
+            sh:order 16 ;
+            sh:path mifc:food_acquisition_organization ],
+        [ sh:datatype xsd:string ;
+            sh:description "A controlled vocabulary term representing the primary food material which was sampled." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 1 ;
+            sh:path schema1:name ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting an identifier of a laboratory sample which was prepared from a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 23 ;
+            sh:path mifc:food_laboratory_sample_id ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the city of a distributor organization from which a food sample was acquired." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 17 ;
+            sh:path mifc:food_distributor_city ],
+        [ sh:datatype xsd:float ;
+            sh:description "A float representing the latitude of the place from which the food sample was acquired." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 13 ;
+            sh:path mifc:food_acquisition_latitude ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string or controlled vocabulary denoting the label of the food group or category of the primary food material." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 21 ;
+            sh:path mifc:food_category_label ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the country code from which a food sample was acquired." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 9 ;
+            sh:path mifc:food_acquisition_country ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class." ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path mifc:food_sample_id ],
         [ sh:datatype xsd:float ;
             sh:description "A float representing the longitude of the place from which the food sample was acquired." ;
             sh:maxCount 1 ;
@@ -316,11 +258,69 @@ schema1:Food a sh:NodeShape ;
             sh:order 14 ;
             sh:path mifc:food_acquisition_longitude ],
         [ sh:datatype xsd:string ;
-            sh:description "A string denoting an identifier of a laboratory sample which was prepared from a food sample." ;
+            sh:description "A datetime value representing the food expiration data as shown on the labeling information of the food sample." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:order 23 ;
-            sh:path mifc:food_laboratory_sample_id ] ;
+            sh:order 20 ;
+            sh:path mifc:food_expiration_date ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 24 ;
+            sh:path mifc:food_laboratory_sample_aliquot_id ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path mifc:food_primary_type_label ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting an identifier of a batch of laboratory samples analysed together." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 25 ;
+            sh:path mifc:food_laboratory_sample_batch_id ],
+        [ sh:description "An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis." ;
+            sh:in ( "ripe" "overripe" "unripe" "slightly ripe" ) ;
+            sh:maxCount 1 ;
+            sh:order 6 ;
+            sh:path mifc:food_ripeness_state ],
+        [ sh:datatype xsd:string ;
+            sh:description "A datetime value representing the date a food sample was acquired." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 11 ;
+            sh:path mifc:food_acquisition_date ],
+        [ sh:description "An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., \"raw\")." ;
+            sh:in ( "air-dried" "artificially dried" "brined" "candied" "canned" "cured" "dried" "fermented" "freeze-dried" "fresh" "heat treated" "irradiated" "jellied" "kippered" "naturally dried" "pasteurized" "pickled" "raw" "shelf stable" "sun-dried" "ultraviolet light exposed" ) ;
+            sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path mifc:food_preservation_state ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the country code of a distributor organization from which a food sample was acquired." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 18 ;
+            sh:path mifc:food_distributor_country ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the name of the agent (person, device or other type of service) that acquired the food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 15 ;
+            sh:path mifc:food_acquisition_agent_name ],
+        [ sh:datatype xsd:string ;
+            sh:description "A string denoting the country subdivision from which a food sample was acquired (e.g., state or province)." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 10 ;
+            sh:path mifc:food_acquisition_country_subdivision ],
+        [ sh:datatype xsd:integer ;
+            sh:description "An integer denoting a Universal Product Code (UPC) barcode of a food sample." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 3 ;
+            sh:path mifc:food_upc_code ] ;
     sh:targetClass schema1:Food .
 
 schema1:Provenance a sh:NodeShape ;
@@ -334,6 +334,12 @@ schema1:Provenance a sh:NodeShape ;
             sh:order 1 ;
             sh:path mifc:provenance_mifc_version_tag ],
         [ sh:datatype xsd:string ;
+            sh:description "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\")." ;
+            sh:maxCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:order 0 ;
+            sh:path mifc:provenance_dataset_label ],
+        [ sh:datatype xsd:string ;
             sh:description "A string corresponding to a \"|\" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., \"USDA\"." ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
@@ -344,12 +350,6 @@ schema1:Provenance a sh:NodeShape ;
             sh:maxCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:order 2 ;
-            sh:path mifc:provenance_contributor_orcid ],
-        [ sh:datatype xsd:string ;
-            sh:description "A string corresponding to the labeled name of dataset (e.g., \"Standard Reference (SR) Legacy\")." ;
-            sh:maxCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:order 0 ;
-            sh:path mifc:provenance_dataset_label ] ;
+            sh:path mifc:provenance_contributor_orcid ] ;
     sh:targetClass schema1:Provenance .
 

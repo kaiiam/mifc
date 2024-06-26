@@ -1534,7 +1534,7 @@
   "source_file": "mifc.yaml",
   "source_file_date": "2024-06-24T10:45:02",
   "source_file_size": 17691,
-  "generation_date": "2024-06-24T10:45:20",
+  "generation_date": "2024-06-26T09:46:10",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/mifc.context.jsonld",
