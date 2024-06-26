@@ -23,7 +23,7 @@ tsv-data-to-yaml: $(patsubst src/data/examples/TSV/%.tsv,src/data/examples/valid
 src/data/examples/valid/%.yaml: src/data/examples/TSV/%.tsv
 	@echo Converting $< to $@
 	$(eval INDEX_SLOT=$(shell echo $(notdir $<) | cut -d'-' -f2))
-	linkml-convert \
+	poetry run linkml-convert \
 		--schema src/mifc/schema/mifc.yaml \
 		--output $@ \
 		--target-class Container \
