@@ -14,7 +14,8 @@ careful-clean:
 	rm -rf tmp
 	rm -fr docs/*
 	# rm -fr $(PYMODEL)/* # src/"mifc"/datamodel/*
-	rm -rf $(PYMODEL)/$(SCHEMA_NAME).*
+	rm -rf $(PYMODEL)/$(SCHEMA_NAME).* # todo do not make this target via point-and-click in an IDE! It will try to delete the whole project because PYMODEL and SCHEMA_NAME will be undefined
+	rm -rf examples/output/*
 
 .PHONY: tsv-data-to-yaml
 tsv-data-to-yaml: $(patsubst src/data/examples/TSV/%.tsv,src/data/examples/valid/%.yaml,$(wildcard src/data/examples/TSV/*.tsv))

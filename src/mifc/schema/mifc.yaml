@@ -31,40 +31,40 @@ classes:
   NamedThing:
     abstract: true     ## should not be instantiated directly
     close_mappings:
-     - schema:Thing
+      - schema:Thing
 
   Food:
     description: >-
       Metadata about foods analyzed for components of nutritional interest.
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
-    slots:            ## Slots specific to foods
-     - food_sample_id
-     - food_primary_type
-     - food_primary_type_label
-     - food_upc_code
-     - food_preservation_state
-     - food_storage_temperature_state
-     - food_ripeness_state
-     - food_cooking_method
-     - food_acquisition_city
-     - food_acquisition_country
-     - food_acquisition_country_subdivision
-     - food_acquisition_date
-     - food_acquisition_location_type
-     - food_acquisition_latitude
-     - food_acquisition_longitude
-     - food_acquisition_agent_name
-     - food_acquisition_organization
-     - food_distributor_city
-     - food_distributor_country
-     - food_distributor_country_subdivision
-     - food_expiration_date
-     - food_category_label
-     - food_additional_types
-     - food_laboratory_sample_id
-     - food_laboratory_sample_aliquot_id
-     - food_laboratory_sample_batch_id
+    slots: ## Slots specific to foods
+      - food_sample_id
+      - food_primary_type
+      - food_primary_type_label
+      - food_upc_code
+      - food_preservation_state
+      - food_storage_temperature_state
+      - food_ripeness_state
+      - food_cooking_method
+      - food_acquisition_city
+      - food_acquisition_country
+      - food_acquisition_country_subdivision
+      - food_acquisition_date
+      - food_acquisition_location_type
+      - food_acquisition_latitude
+      - food_acquisition_longitude
+      - food_acquisition_agent_name
+      - food_acquisition_organization
+      - food_distributor_city
+      - food_distributor_country
+      - food_distributor_country_subdivision
+      - food_expiration_date
+      - food_category_label
+      - food_additional_types
+      - food_laboratory_sample_id
+      - food_laboratory_sample_aliquot_id
+      - food_laboratory_sample_batch_id
     id_prefixes:
       - mifc
 
@@ -73,7 +73,8 @@ classes:
       Metadata about components of nutritional interest measured from foods.
     is_a: NamedThing
     class_uri: schema:Component
-    slots:            ## Slots specific to components of nutritional interest
+    slots: ## Slots specific to components of nutritional interest
+      - canary
       - component_sample_id
       - component_type
       - component_type_label
@@ -102,7 +103,7 @@ classes:
       Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
     is_a: NamedThing
     class_uri: schema:Provenance
-    slots:            ## Slots specific to Provenance
+    slots: ## Slots specific to Provenance
       - provenance_dataset_label
       - provenance_mifc_version_tag
       - provenance_contributor_orcid
@@ -125,6 +126,7 @@ classes:
         range: Provenance
 
 slots:
+  canary: { }
   # Food slots
   food_sample_id:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
@@ -257,7 +259,7 @@ slots:
     description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
     comments: This could be alternatively be modeled with an integer rather than a boolean.
     range: boolean
-#    is_a: boolean_slot
+  #    is_a: boolean_slot
 
   # Provenance slots
   provenance_dataset_label:
@@ -277,7 +279,7 @@ slots:
     description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
     comments: Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.
   food_laboratory_sample_batch_id:
-     description: A string denoting an identifier of a batch of laboratory samples analysed together.
+    description: A string denoting an identifier of a batch of laboratory samples analysed together.
 
 
 
