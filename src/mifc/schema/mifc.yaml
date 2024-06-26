@@ -74,7 +74,6 @@ classes:
     is_a: NamedThing
     class_uri: schema:Component
     slots: ## Slots specific to components of nutritional interest
-      - canary
       - component_sample_id
       - component_type
       - component_type_label
@@ -126,7 +125,6 @@ classes:
         range: Provenance
 
 slots:
-  canary: { }
   # Food slots
   food_sample_id:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
