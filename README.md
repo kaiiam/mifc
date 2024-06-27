@@ -2,11 +2,11 @@
 
 ### About MIFC
 
-The Minimum Information (about any) Food Composition (MIFC), data standard. MIFC provides a general-purpose schema for the description of Food Composition Tables and Databases (FCT/D). MIFC is intended to enumerate, standardize and validate (meta)/data relevant to FCT/D. MIFC is a Minimum Information Standard (MIS) for food composition data. MIS are sets of guidelines and data reporting formats that are used to standardize scientific data. 
+The **M**inimum **I**nformation (about any) **F**ood **C**omposition (**MIFC**), data standard. MIFC provides a general-purpose schema for the description of Food Composition Tables and Databases (FCT/D). MIFC is intended to enumerate, standardize and validate (meta)/data relevant to FCT/D. MIFC is a Minimum Information Standard (MIS) for food composition data. MIS are sets of guidelines and data reporting formats that are used to standardize scientific data. 
 
 ### Contribution
 
-MIFC is an open-source project. MIFC development is led by the United States Department of Agriculture USDA) FoodData Central (FDC), as well as the open source MIFC Standard Consortium. Contributors welcome! Please help us improve the content of MIFC by making issues and or submitting pull requests.
+MIFC is an open-source project. MIFC development is led by the United States Department of Agriculture (USDA) FoodData Central (FDC), as well as the open source MIFC Standard Consortium. Contributors welcome! Please help us improve the content of MIFC by making issues and or submitting pull requests.
 
 ### Note
 
