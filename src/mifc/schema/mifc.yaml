@@ -47,6 +47,7 @@ classes:
       - food_storage_temperature_state
       - food_ripeness_state
       - food_cooking_method
+      - food_origin_country
       - food_acquisition_city
       - food_acquisition_country
       - food_acquisition_country_subdivision
@@ -156,6 +157,8 @@ slots:
   food_cooking_method:
     description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     range: FoodCookingMethod
+  food_origin_country:
+    description: A string denoting the country code from which a food sample originates.
   food_acquisition_city:
     description: A string denoting the city in which a food sample was acquired.
     close_mappings:
