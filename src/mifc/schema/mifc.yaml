@@ -141,8 +141,8 @@ slots:
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
   food_upc_code:
-    description: An integer denoting a Universal Product Code (UPC) barcode of a food sample.
-    range: integer
+    description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
+    range: string
   food_preservation_state:
     description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
     range: FoodPreservationState
