@@ -345,8 +345,8 @@
 </tr>
 <tr>
 <td><a href="../food_upc_code/">food_upc_code</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>An integer denoting a Universal Product Code (UPC) barcode of a food sample</td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>An string denoting a Universal Product Code (UPC) barcode of a food sample</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -628,7 +628,7 @@ attributes:
     range: string
   food_upc_code:
     name: food_upc_code
-    description: An integer denoting a Universal Product Code (UPC) barcode of a food
+    description: An string denoting a Universal Product Code (UPC) barcode of a food
       sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
@@ -636,7 +636,7 @@ attributes:
     owner: Food
     domain_of:
     - Food
-    range: integer
+    range: string
   food_preservation_state:
     name: food_preservation_state
     description: An enumerated set of controlled vocabulary terms representing the
