@@ -270,6 +270,8 @@
 
       Food : food_laboratory_sample_id
 
+      Food : food_origin_country
+
       Food : food_preservation_state
 
 
@@ -371,6 +373,12 @@
 <td><a href="../food_cooking_method/">food_cooking_method</a></td>
 <td>0..1 <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_origin_country/">food_origin_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country code from which a food sample originates</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -550,6 +558,7 @@ slots:
 - food_storage_temperature_state
 - food_ripeness_state
 - food_cooking_method
+- food_origin_country
 - food_acquisition_city
 - food_acquisition_country
 - food_acquisition_country_subdivision
@@ -682,6 +691,16 @@ attributes:
     domain_of:
     - Food
     range: FoodCookingMethod
+  food_origin_country:
+    name: food_origin_country
+    description: A string denoting the country code from which a food sample originates.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_origin_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
   food_acquisition_city:
     name: food_acquisition_city
     description: A string denoting the city in which a food sample was acquired.
