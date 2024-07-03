@@ -62,6 +62,7 @@ classes:
       - food_distributor_country
       - food_distributor_country_subdivision
       - food_expiration_date
+      - food_sell_by_date
       - food_category_label
       - food_additional_types
       - food_laboratory_sample_id
@@ -206,6 +207,9 @@ slots:
     description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the food expiration data as shown on the labeling information of the food sample.
+  food_sell_by_date:
+    description: A datetime value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.
+    comments: Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
   food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
   food_additional_types:
