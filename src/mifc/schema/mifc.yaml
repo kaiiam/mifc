@@ -71,6 +71,7 @@ classes:
       - food_brand_name
       - food_lot_number
       - food_label_weight
+      - food_label_weight_unit
     id_prefixes:
       - mifc
 
@@ -224,6 +225,8 @@ slots:
   food_label_weight:
     description: A float denoting the mass, (or weight on earth) as specified on the product label of a sampled primary food material.
     comments: This field should be used in along with food_acquisition_label_weight_unit to express the units the food_label_weight was measured.
+  food_label_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_label_weight is measured.
 
   # Component slots
   component_sample_id:
