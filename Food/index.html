@@ -230,6 +230,8 @@
 
       Food : food_acquisition_latitude
 
+      Food : food_acquisition_location_name
+
       Food : food_acquisition_location_type
 
 
@@ -244,6 +246,8 @@
       Food : food_acquisition_organization
 
       Food : food_additional_types
+
+      Food : food_brand_name
 
       Food : food_category_label
 
@@ -295,6 +299,8 @@
 
 
       Food : food_sample_id
+
+      Food : food_sell_by_date
 
       Food : food_storage_temperature_state
 
@@ -412,6 +418,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../food_acquisition_location_name/">food_acquisition_location_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string describing the name of the location from which a food sample was acq...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../food_acquisition_latitude/">food_acquisition_latitude</a></td>
 <td>0..1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing the latitude of the place from which the food sample was...</td>
@@ -460,6 +472,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../food_sell_by_date/">food_sell_by_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing a date that indicates to stores how long to dis...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../food_category_label/">food_category_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string or controlled vocabulary denoting the label of the food group or cat...</td>
@@ -487,6 +505,12 @@
 <td><a href="../food_laboratory_sample_batch_id/">food_laboratory_sample_batch_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting an identifier of a batch of laboratory samples analysed tog...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_brand_name/">food_brand_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting a name identifying a product, service, or organization sell...</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -564,6 +588,7 @@ slots:
 - food_acquisition_country_subdivision
 - food_acquisition_date
 - food_acquisition_location_type
+- food_acquisition_location_name
 - food_acquisition_latitude
 - food_acquisition_longitude
 - food_acquisition_agent_name
@@ -572,11 +597,13 @@ slots:
 - food_distributor_country
 - food_distributor_country_subdivision
 - food_expiration_date
+- food_sell_by_date
 - food_category_label
 - food_additional_types
 - food_laboratory_sample_id
 - food_laboratory_sample_aliquot_id
 - food_laboratory_sample_batch_id
+- food_brand_name
 class_uri: schema:Food
 
 </code></pre>
@@ -759,6 +786,17 @@ attributes:
     domain_of:
     - Food
     range: FoodAcquisitionLocationType
+  food_acquisition_location_name:
+    name: food_acquisition_location_name
+    description: A string describing the name of the location from which a food sample
+      was acquired (e.g., "Safeway").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_location_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
   food_acquisition_latitude:
     name: food_acquisition_latitude
     description: A float representing the latitude of the place from which the food
@@ -855,6 +893,19 @@ attributes:
     domain_of:
     - Food
     range: string
+  food_sell_by_date:
+    name: food_sell_by_date
+    description: A datetime value representing a date that indicates to stores how
+      long to display a food product for sale for inventory management purposes.
+    comments:
+    - Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_sell_by_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
   food_category_label:
     name: food_category_label
     description: A string or controlled vocabulary denoting the label of the food
@@ -918,6 +969,17 @@ attributes:
     domain_of:
     - Food
     - Component
+    range: string
+  food_brand_name:
+    name: food_brand_name
+    description: A string denoting a name identifying a product, service, or organization
+      selling and or distributing the primary food material.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_brand_name
+    owner: Food
+    domain_of:
+    - Food
     range: string
 class_uri: schema:Food
 
