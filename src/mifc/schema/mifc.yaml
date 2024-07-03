@@ -67,6 +67,7 @@ classes:
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
+      - food_brand_name
     id_prefixes:
       - mifc
 
@@ -209,6 +210,8 @@ slots:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
+  food_brand_name:
+    description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
 
   # Component slots
   component_sample_id:
