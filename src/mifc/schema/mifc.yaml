@@ -69,6 +69,7 @@ classes:
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
       - food_brand_name
+      - food_lot_number
     id_prefixes:
       - mifc
 
@@ -216,6 +217,9 @@ slots:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
   food_brand_name:
     description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
+  food_lot_number:
+    description: A string denoting the identifying lot number number assigned by a manufacturer to a particular quantity, (or lot) of the sampled primary food material.
+    comments: A lot number can also be referred to as lot code.
 
   # Component slots
   component_sample_id:
