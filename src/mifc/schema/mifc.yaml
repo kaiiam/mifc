@@ -46,6 +46,7 @@ classes:
       - food_primary_type_icncp_group_name
       - food_primary_type_icncp_cultivar_name
       - food_primary_type_animal_breed_name
+      - food_primary_type_ncbi_taxon_id
       - food_upc_code
       - food_preservation_state
       - food_storage_temperature_state
@@ -163,6 +164,9 @@ slots:
   food_primary_type_animal_breed_name:
     description: A string denoting the breed name of the primary food material.
     comments: This slot should only be used in cases where food material is an animal with a recognizable breed name that is managed by a national breed registry, breed association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+  food_primary_type_ncbi_taxon_id:
+    description: A curie from the ontology representation of the NCBI organismal taxonomy (NCBITaxon) describing the taxonomic identifier of the primary food material.
+    comments: To do specify an NCBITaxon curie as the range for the slot.
   food_upc_code:
     description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
