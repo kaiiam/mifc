@@ -43,6 +43,7 @@ classes:
       - food_primary_type
       - food_primary_type_label
       - food_primary_type_scientific_name
+      - food_primary_type_icncp_group_name
       - food_upc_code
       - food_preservation_state
       - food_storage_temperature_state
@@ -151,6 +152,9 @@ slots:
   food_primary_type_scientific_name:
     description: A string denoting the scientific name, (in binomial nomenclature) of an organism that a food material is primarily composed of.
     comments: This slot should only be used in cases where food materials are single ingredient foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted anchovies canned in oil".
+  food_primary_type_icncp_group_name:
+    description: A string denoting the Group (or cultivar-group) formal taxon category as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).
+    comments: This slot requires discussion as it alternatively be included as part of the food_primary_type_scientific_name slot.
   food_upc_code:
     description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
