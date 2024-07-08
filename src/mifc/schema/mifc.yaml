@@ -42,6 +42,7 @@ classes:
       - food_sample_id
       - food_primary_type
       - food_primary_type_label
+      - food_primary_type_scientific_name
       - food_upc_code
       - food_preservation_state
       - food_storage_temperature_state
@@ -147,6 +148,9 @@ slots:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
+  food_primary_type_scientific_name:
+    description: A string denoting the scientific name, (in binomial nomenclature) of an organism that a food material is primarily composed of.
+    comments: This slot should only be used in cases where food materials are single ingredient foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted anchovies canned in oil".
   food_upc_code:
     description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
