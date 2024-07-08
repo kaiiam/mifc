@@ -293,7 +293,17 @@
 
       Food : food_primary_type
 
+      Food : food_primary_type_animal_breed_name
+
+      Food : food_primary_type_icncp_cultivar_name
+
+      Food : food_primary_type_icncp_group_name
+
       Food : food_primary_type_label
+
+      Food : food_primary_type_ncbi_taxon_id
+
+      Food : food_primary_type_scientific_name
 
       Food : food_ripeness_state
 
@@ -355,6 +365,36 @@
 <td><a href="../food_primary_type_label/">food_primary_type_label</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting the label of a controlled vocabulary term representing the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_scientific_name/">food_primary_type_scientific_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the scientific name, (in binomial nomenclature) of an organ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_icncp_group_name/">food_primary_type_icncp_group_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the Group (or cultivar-group) formal taxon category of the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_icncp_cultivar_name/">food_primary_type_icncp_cultivar_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the cultivar name of the primary food material as specified...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_animal_breed_name/">food_primary_type_animal_breed_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the breed name of the primary food material</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_ncbi_taxon_id/">food_primary_type_ncbi_taxon_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A curie from the ontology representation of the NCBI organismal taxonomy (NCB...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -601,6 +641,11 @@ slots:
 - food_sample_id
 - food_primary_type
 - food_primary_type_label
+- food_primary_type_scientific_name
+- food_primary_type_icncp_group_name
+- food_primary_type_icncp_cultivar_name
+- food_primary_type_animal_breed_name
+- food_primary_type_ncbi_taxon_id
 - food_upc_code
 - food_preservation_state
 - food_storage_temperature_state
@@ -685,6 +730,78 @@ attributes:
     - PTFI:Specimen_Food_Product_Name
     rank: 1000
     alias: food_primary_type_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_scientific_name:
+    name: food_primary_type_scientific_name
+    description: A string denoting the scientific name, (in binomial nomenclature)
+      of an organism that a food material is primarily composed of.
+    comments:
+    - This slot should only be used in cases where food materials are single ingredient
+      foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted
+      anchovies canned in oil".
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_scientific_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_icncp_group_name:
+    name: food_primary_type_icncp_group_name
+    description: A string denoting the Group (or cultivar-group) formal taxon category
+      of the primary food material as specified by the International Code of Nomenclature
+      for Cultivated Plants (ICNCP).
+    comments:
+    - This slot requires discussion as it alternatively be included as part of the
+      food_primary_type_scientific_name slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_icncp_group_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_icncp_cultivar_name:
+    name: food_primary_type_icncp_cultivar_name
+    description: A string denoting the cultivar name of the primary food material
+      as specified by the International Code of Nomenclature for Cultivated Plants
+      (ICNCP).
+    comments:
+    - The ICNCP only applies to algae, fungi, and plant species. If present this slot
+      should be used in addition to the food_primary_type_icncp_group_name slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_icncp_cultivar_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_animal_breed_name:
+    name: food_primary_type_animal_breed_name
+    description: A string denoting the breed name of the primary food material.
+    comments:
+    - This slot should only be used in cases where food material is an animal with
+      a recognizable breed name that is managed by a national breed registry, breed
+      association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_animal_breed_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_ncbi_taxon_id:
+    name: food_primary_type_ncbi_taxon_id
+    description: A curie from the ontology representation of the NCBI organismal taxonomy
+      (NCBITaxon) describing the taxonomic identifier of the primary food material.
+    comments:
+    - To do specify an NCBITaxon curie as the range for the slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_ncbi_taxon_id
     owner: Food
     domain_of:
     - Food

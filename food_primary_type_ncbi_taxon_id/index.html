@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/Uri/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_primary_type_ncbi_taxon_id/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.5.10">
     
     
       
-        <title>Type: Uri - mifc</title>
+        <title>Slot: food_primary_type_ncbi_taxon_id - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#type-uri" class="md-skip">
+        <a href="#slot-food_primary_type_ncbi_taxon_id" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Type: Uri
+              Slot: food_primary_type_ncbi_taxon_id
             
           </span>
         </div>
@@ -256,6 +256,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#applicable-classes" class="md-nav__link">
+    Applicable Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -289,6 +303,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#linkml-source" class="md-nav__link">
+    LinkML Source
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -303,29 +324,41 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/Uri.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_primary_type_ncbi_taxon_id.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="type-uri">Type: Uri</h1>
-<p><em>a complete URI</em></p>
-<p>URI: <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a></p>
+<h1 id="slot-food_primary_type_ncbi_taxon_id">Slot: food_primary_type_ncbi_taxon_id</h1>
+<p><em>A curie from the ontology representation of the NCBI organismal taxonomy (NCBITaxon) describing the taxonomic identifier of the primary food material.</em></p>
+<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_primary_type_ncbi_taxon_id">mifc:food_primary_type_ncbi_taxon_id</a></p>
+<!-- no inheritance hierarchy -->
+
+<h2 id="applicable-classes">Applicable Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Modifies Slot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Food/">Food</a></td>
+<td>Metadata about foods analyzed for components of nutritional interest</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p><a href="https://w3id.org/linkml/base">base</a>: URI</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/uri">uri</a>: xsd:anyURI</p>
-</li>
-<li>
-<p><a href="https://w3id.org/linkml/repr">repr</a>: str</p>
-</li>
+<li>Range: <a href="../String/">String</a></li>
 </ul>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node</li>
+<li>To do specify an NCBITaxon curie as the range for the slot.</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -343,18 +376,32 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>xsd:anyURI</td>
+<td>mifc:food_primary_type_ncbi_taxon_id</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:uri</td>
-</tr>
-<tr>
-<td>close</td>
-<td>schema:URL</td>
+<td>mifc:food_primary_type_ncbi_taxon_id</td>
 </tr>
 </tbody>
 </table>
+<h2 id="linkml-source">LinkML Source</h2>
+<details>
+
+<pre><code class="language-yaml">name: food_primary_type_ncbi_taxon_id
+description: A curie from the ontology representation of the NCBI organismal taxonomy
+  (NCBITaxon) describing the taxonomic identifier of the primary food material.
+comments:
+- To do specify an NCBITaxon curie as the range for the slot.
+from_schema: https://w3id.org/kaiiam/mifc
+rank: 1000
+alias: food_primary_type_ncbi_taxon_id
+domain_of:
+- Food
+range: string
+
+</code></pre>
+
+</details>
 
 
 
