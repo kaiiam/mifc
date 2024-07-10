@@ -207,62 +207,61 @@
 <h1 id="class-component">Class: Component</h1>
 <p><em>Metadata about components of nutritional interest measured from foods.</em></p>
 <p>URI: <a href="http://schema.org/Component">schema:Component</a></p>
-<div class="mermaid"> classDiagram
-    class Component
-    click Component href "../Component"
-      NamedThing &lt;|-- Component
-        click NamedThing href "../NamedThing"
-
-      Component : component_analysis_date
-
-      Component : component_comment
-
-      Component : component_data_points_number
-
-      Component : component_derivation_type
-
-      Component : component_limit_of_quantitation
-
-      Component : component_measurement_unit
-
-      Component : component_quality_control_remeasurement
-
-      Component : component_record_date
-
-      Component : component_recorded_value
-
-      Component : component_sample_id
-
-      Component : component_type
-
-      Component : component_type_label
-
-      Component : compound_analytical_laboratory_name
-
-      Component : compound_analytical_measurement_method
+<div class="mermaid">classDiagram
+  class Component
+  click Component href "../Component"
+    NamedThing &lt;|-- Component
+      click NamedThing href "../NamedThing"
 
 
 
+  Component : component_analysis_date
 
-    Component --&gt; "0..1" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
+  Component : component_comment
+
+  Component : component_data_points_number
+
+  Component : component_derivation_type
+
+  Component : component_limit_of_quantitation
+
+  Component : component_measurement_unit
+
+  Component : component_quality_control_remeasurement
+
+  Component : component_record_date
+
+  Component : component_recorded_value
+
+  Component : component_sample_id
+
+  Component : component_type
+
+  Component : component_type_label
+
+  Component : compound_analytical_laboratory_name
+
+  Component : compound_analytical_measurement_method
+
+      Component --&gt; "0..1" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
     click CompoundAnalyticalMeasurementMethod href "../CompoundAnalyticalMeasurementMethod"
 
+  Component : compound_analytical_measurement_protocol_doi
 
-      Component : compound_analytical_measurement_protocol_doi
+  Component : compound_sample_aggregation_maximum_value
 
-      Component : compound_sample_aggregation_maximum_value
+  Component : compound_sample_aggregation_median_value
 
-      Component : compound_sample_aggregation_median_value
+  Component : compound_sample_aggregation_minimum_value
 
-      Component : compound_sample_aggregation_minimum_value
+  Component : compound_sample_aggregation_standard_deviation
 
-      Component : compound_sample_aggregation_standard_deviation
+  Component : food_laboratory_sample_aliquot_id
 
-      Component : food_laboratory_sample_aliquot_id
+  Component : food_laboratory_sample_batch_id
 
-      Component : food_laboratory_sample_batch_id
+  Component : food_laboratory_sample_id
 
-      Component : food_laboratory_sample_id
 
 
 </div>
@@ -440,7 +439,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/kaiiam/mifc</li>
+<li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -799,6 +798,8 @@ class_uri: schema:Component
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>
