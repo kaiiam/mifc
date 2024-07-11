@@ -23,6 +23,7 @@ DEST = project
 PYMODEL = $(SRC)/$(SCHEMA_NAME)/datamodel
 DOCDIR = docs
 EXAMPLEDIR = examples
+TEMPLATEDIR = doc-templates
 SHEET_MODULE = personinfo_enums
 SHEET_ID = $(LINKML_SCHEMA_GOOGLE_SHEET_ID)
 SHEET_TABS = $(LINKML_SCHEMA_GOOGLE_SHEET_TABS)
@@ -199,8 +200,10 @@ $(DOCDIR):
 	mkdir -p $@
 
 gendoc: $(DOCDIR)
-	cp -rf $(SRC)/docs/* $(DOCDIR) ; \
-	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	cp $(SRC)/docs/*md $(DOCDIR) ; \
+	$(RUN) gen-doc -d $(DOCDIR) --template-directory $(SRC)/$(TEMPLATEDIR) $(SOURCE_SCHEMA_PATH)
+	mkdir -p $(DOCDIR)/javascripts
+	$(RUN) cp $(SRC)/scripts/*.js $(DOCDIR)/javascripts/
 
 testdoc: gendoc serve
 
