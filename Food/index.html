@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -212,122 +212,105 @@
 <h1 id="class-food">Class: Food</h1>
 <p><em>Metadata about foods analyzed for components of nutritional interest.</em></p>
 <p>URI: <a href="http://schema.org/Food">schema:Food</a></p>
-<div class="mermaid"> classDiagram
-    class Food
-    click Food href "../Food"
-      NamedThing &lt;|-- Food
-        click NamedThing href "../NamedThing"
-
-      Food : food_acquisition_agent_name
-
-      Food : food_acquisition_city
-
-      Food : food_acquisition_country
-
-      Food : food_acquisition_country_subdivision
-
-      Food : food_acquisition_date
-
-      Food : food_acquisition_latitude
-
-      Food : food_acquisition_location_name
-
-      Food : food_acquisition_location_type
+<div class="mermaid">classDiagram
+  class Food
+  click Food href "../Food"
+    NamedThing &lt;|-- Food
+      click NamedThing href "../NamedThing"
 
 
 
+  Food : food_acquisition_agent_name
 
-    Food --&gt; "0..1" FoodAcquisitionLocationType : food_acquisition_location_type
+  Food : food_acquisition_city
+
+  Food : food_acquisition_country
+
+  Food : food_acquisition_country_subdivision
+
+  Food : food_acquisition_date
+
+  Food : food_acquisition_latitude
+
+  Food : food_acquisition_location_name
+
+  Food : food_acquisition_location_type
+
+      Food --&gt; "0..1" FoodAcquisitionLocationType : food_acquisition_location_type
     click FoodAcquisitionLocationType href "../FoodAcquisitionLocationType"
 
+  Food : food_acquisition_longitude
 
-      Food : food_acquisition_longitude
+  Food : food_acquisition_organization
 
-      Food : food_acquisition_organization
+  Food : food_additional_types
 
-      Food : food_additional_types
+  Food : food_brand_name
 
-      Food : food_brand_name
+  Food : food_category_label
 
-      Food : food_category_label
+  Food : food_cooking_method
 
-      Food : food_cooking_method
-
-
-
-
-    Food --&gt; "0..1" FoodCookingMethod : food_cooking_method
+      Food --&gt; "0..1" FoodCookingMethod : food_cooking_method
     click FoodCookingMethod href "../FoodCookingMethod"
 
+  Food : food_distributor_city
 
-      Food : food_distributor_city
+  Food : food_distributor_country
 
-      Food : food_distributor_country
+  Food : food_distributor_country_subdivision
 
-      Food : food_distributor_country_subdivision
+  Food : food_expiration_date
 
-      Food : food_expiration_date
+  Food : food_label_weight
 
-      Food : food_label_weight
+  Food : food_label_weight_unit
 
-      Food : food_label_weight_unit
+  Food : food_laboratory_sample_aliquot_id
 
-      Food : food_laboratory_sample_aliquot_id
+  Food : food_laboratory_sample_batch_id
 
-      Food : food_laboratory_sample_batch_id
+  Food : food_laboratory_sample_id
 
-      Food : food_laboratory_sample_id
+  Food : food_lot_number
 
-      Food : food_lot_number
+  Food : food_origin_country
 
-      Food : food_origin_country
+  Food : food_preservation_state
 
-      Food : food_preservation_state
-
-
-
-
-    Food --&gt; "0..1" FoodPreservationState : food_preservation_state
+      Food --&gt; "0..1" FoodPreservationState : food_preservation_state
     click FoodPreservationState href "../FoodPreservationState"
 
+  Food : food_primary_type
 
-      Food : food_primary_type
+  Food : food_primary_type_animal_breed_name
 
-      Food : food_primary_type_animal_breed_name
+  Food : food_primary_type_icncp_cultivar_name
 
-      Food : food_primary_type_icncp_cultivar_name
+  Food : food_primary_type_icncp_group_name
 
-      Food : food_primary_type_icncp_group_name
+  Food : food_primary_type_label
 
-      Food : food_primary_type_label
+  Food : food_primary_type_ncbi_taxon_id
 
-      Food : food_primary_type_ncbi_taxon_id
+  Food : food_primary_type_scientific_name
 
-      Food : food_primary_type_scientific_name
+  Food : food_ripeness_state
 
-      Food : food_ripeness_state
-
-
-
-
-    Food --&gt; "0..1" FoodRipenessState : food_ripeness_state
+      Food --&gt; "0..1" FoodRipenessState : food_ripeness_state
     click FoodRipenessState href "../FoodRipenessState"
 
+  Food : food_sample_id
 
-      Food : food_sample_id
+  Food : food_sell_by_date
 
-      Food : food_sell_by_date
+  Food : food_storage_temperature_state
 
-      Food : food_storage_temperature_state
-
-
-
-
-    Food --&gt; "0..1" FoodStorageTemperatureState : food_storage_temperature_state
+      Food --&gt; "0..1" FoodStorageTemperatureState : food_storage_temperature_state
     click FoodStorageTemperatureState href "../FoodStorageTemperatureState"
 
+  Food : food_upc_code
 
-      Food : food_upc_code
 
 
 </div>
@@ -606,7 +589,7 @@
 </ul>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/kaiiam/mifc</li>
+<li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -1193,6 +1176,8 @@ class_uri: schema:Food
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>

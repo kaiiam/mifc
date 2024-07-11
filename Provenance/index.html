@@ -123,7 +123,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../about.md">
+<a class="md-nav__link" href="../about/">
         About
       </a>
 </li>
@@ -207,19 +207,22 @@
 <h1 id="class-provenance">Class: Provenance</h1>
 <p><em>Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.</em></p>
 <p>URI: <a href="http://schema.org/Provenance">schema:Provenance</a></p>
-<div class="mermaid"> classDiagram
-    class Provenance
-    click Provenance href "../Provenance"
-      NamedThing &lt;|-- Provenance
-        click NamedThing href "../NamedThing"
+<div class="mermaid">classDiagram
+  class Provenance
+  click Provenance href "../Provenance"
+    NamedThing &lt;|-- Provenance
+      click NamedThing href "../NamedThing"
 
-      Provenance : provenance_contributor_orcid
 
-      Provenance : provenance_dataset_label
 
-      Provenance : provenance_mifc_version_tag
+  Provenance : provenance_contributor_orcid
 
-      Provenance : provenance_organization_name
+  Provenance : provenance_dataset_label
+
+  Provenance : provenance_mifc_version_tag
+
+  Provenance : provenance_organization_name
+
 
 
 </div>
@@ -289,7 +292,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/kaiiam/mifc</li>
+<li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -408,6 +411,8 @@ class_uri: schema:Provenance
 </div>
 <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
 <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
 <script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
 mermaid.initialize({});</script></body>
