@@ -38,6 +38,60 @@ Use the `make` command to generate project artefacts:
 * `make deploy`: deploys site
 </details>
 
+
+
+## Usage and Pull Requests
+
+
+* 1) Make sure you're up to date:
+
+`git pull`
+
+* 2) Start or address an issue
+
+gets an issue number e.g. issue https://github.com/kaiiam/mifc/issues/28
+
+* 3) checkout a branch corresponding to that issue.
+
+`git checkout -b issue-28`
+
+* 4) Make relevant changes 
+
+* 5) Add/commit changes
+
+`git commit README.md -m 'Modify README file to include Usage and Pull Requests section'`
+
+* 6) Push your branch to origin to create a pull request
+
+For example the command would be something like git push origin issue-28. However you can just run `git push` and it should prompt you with the line to run E.g `git push --set-upstream origin issue-28`.
+
+* 7) Create Pull Request
+
+On the [Pull requests tab](https://github.com/kaiiam/mifc/pulls)
+
+`Compare and Create Pull Request`
+
+* 8) Switch from branch back to main:
+
+`git checkout main`
+
+
+# Working with the MIFC Repo
+
+* 1) Activates a poetry shell from the `pyproject.toml` 
+`poetry shell`
+
+* 2) Keep poetry up to date
+`poetry update`
+
+* 3) Update poetry.lock file
+`poetry install`
+
+* 4) Run MIFC build and test suite
+`make all-all`
+
+
+
 ## Credits
 
 This project was made with
