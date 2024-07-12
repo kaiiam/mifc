@@ -78,7 +78,7 @@ On the [Pull requests tab](https://github.com/kaiiam/mifc/pulls)
 
 # Working with the MIFC Repo
 
-* 1) Activates a poetry shell from the `pyproject.toml` 
+* 1) Activates a poetry shell from the `pyproject.toml` \
 `poetry shell`
 
 * 2) Keep poetry up to date
