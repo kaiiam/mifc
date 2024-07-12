@@ -1,0 +1,1184 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://kaiiam.github.io/mifc/Food/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-8.5.10" name="generator"/>
+<title>Class: Food - mifc</title>
+<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="None" data-md-color-primary="None" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#class-food">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="mifc" class="md-header__button md-logo" data-md-component="logo" href=".." title="mifc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            mifc
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Class: Food
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/kaiiam/mifc" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="mifc" class="md-nav__button md-logo" data-md-component="logo" href=".." title="mifc">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    mifc
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/kaiiam/mifc" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Index
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
+        About
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slots">
+    Slots
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usages">
+    Usages
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-and-mapping-information">
+    Identifier and Mapping Information
+  </a>
+<nav aria-label="Identifier and Mapping Information" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#valid-id-prefixes">
+    Valid ID Prefixes
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schema-source">
+    Schema Source
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mappings">
+    Mappings
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkml-source">
+    LinkML Source
+  </a>
+<nav aria-label="LinkML Source" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+    Direct
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#induced">
+    Induced
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Food.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="class-food">Class: Food</h1>
+<p><em>Metadata about foods analyzed for components of nutritional interest.</em></p>
+<p>URI: <a href="http://schema.org/Food">schema:Food</a></p>
+<div class="mermaid">classDiagram
+  class Food
+  click Food href "../Food"
+    NamedThing &lt;|-- Food
+      click NamedThing href "../NamedThing"
+
+
+
+  Food : food_acquisition_agent_name
+
+  Food : food_acquisition_city
+
+  Food : food_acquisition_country
+
+  Food : food_acquisition_country_subdivision
+
+  Food : food_acquisition_date
+
+  Food : food_acquisition_latitude
+
+  Food : food_acquisition_location_name
+
+  Food : food_acquisition_location_type
+
+      Food --&gt; "0..1" FoodAcquisitionLocationType : food_acquisition_location_type
+    click FoodAcquisitionLocationType href "../FoodAcquisitionLocationType"
+
+  Food : food_acquisition_longitude
+
+  Food : food_acquisition_organization
+
+  Food : food_additional_types
+
+  Food : food_brand_name
+
+  Food : food_category_label
+
+  Food : food_cooking_method
+
+      Food --&gt; "0..1" FoodCookingMethod : food_cooking_method
+    click FoodCookingMethod href "../FoodCookingMethod"
+
+  Food : food_distributor_city
+
+  Food : food_distributor_country
+
+  Food : food_distributor_country_subdivision
+
+  Food : food_expiration_date
+
+  Food : food_label_weight
+
+  Food : food_label_weight_unit
+
+  Food : food_laboratory_sample_aliquot_id
+
+  Food : food_laboratory_sample_batch_id
+
+  Food : food_laboratory_sample_id
+
+  Food : food_lot_number
+
+  Food : food_origin_country
+
+  Food : food_preservation_state
+
+      Food --&gt; "0..1" FoodPreservationState : food_preservation_state
+    click FoodPreservationState href "../FoodPreservationState"
+
+  Food : food_primary_type
+
+  Food : food_primary_type_animal_breed_name
+
+  Food : food_primary_type_icncp_cultivar_name
+
+  Food : food_primary_type_icncp_group_name
+
+  Food : food_primary_type_label
+
+  Food : food_primary_type_ncbi_taxon_id
+
+  Food : food_primary_type_scientific_name
+
+  Food : food_ripeness_state
+
+      Food --&gt; "0..1" FoodRipenessState : food_ripeness_state
+    click FoodRipenessState href "../FoodRipenessState"
+
+  Food : food_sample_id
+
+  Food : food_sell_by_date
+
+  Food : food_storage_temperature_state
+
+      Food --&gt; "0..1" FoodStorageTemperatureState : food_storage_temperature_state
+    click FoodStorageTemperatureState href "../FoodStorageTemperatureState"
+
+  Food : food_upc_code
+
+
+
+</div>
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><a href="../NamedThing/">NamedThing</a><ul>
+<li><strong>Food</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../food_sample_id/">food_sample_id</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the primary identifier for a sample of the class Food</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type/">food_primary_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the primary food material which was...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_label/">food_primary_type_label</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the label of a controlled vocabulary term representing the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_scientific_name/">food_primary_type_scientific_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the scientific name, (in binomial nomenclature) of an organ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_icncp_group_name/">food_primary_type_icncp_group_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the Group (or cultivar-group) formal taxon category of the ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_icncp_cultivar_name/">food_primary_type_icncp_cultivar_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the cultivar name of the primary food material as specified...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_animal_breed_name/">food_primary_type_animal_breed_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the breed name of the primary food material</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_ncbi_taxon_id/">food_primary_type_ncbi_taxon_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A curie from the ontology representation of the NCBI organismal taxonomy (NCB...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_upc_code/">food_upc_code</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>An string denoting a Universal Product Code (UPC) barcode of a food sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_preservation_state/">food_preservation_state</a></td>
+<td>0..1 <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the preservatio...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_storage_temperature_state/">food_storage_temperature_state</a></td>
+<td>0..1 <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_ripeness_state/">food_ripeness_state</a></td>
+<td>0..1 <br/> <a href="../FoodRipenessState/">FoodRipenessState</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_cooking_method/">food_cooking_method</a></td>
+<td>0..1 <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_origin_country/">food_origin_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country code from which a food sample originates</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_city/">food_acquisition_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the city in which a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country/">food_acquisition_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country code from which a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_country_subdivision/">food_acquisition_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country subdivision from which a food sample was acquir...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_date/">food_acquisition_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing the date a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_location_type/">food_acquisition_location_type</a></td>
+<td>0..1 <br/> <a href="../FoodAcquisitionLocationType/">FoodAcquisitionLocationType</a></td>
+<td>A string describing the type of location from which a food sample was acquire...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_location_name/">food_acquisition_location_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string describing the name of the location from which a food sample was acq...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_latitude/">food_acquisition_latitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the latitude of the place from which the food sample was...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_longitude/">food_acquisition_longitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the longitude of the place from which the food sample wa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_agent_name/">food_acquisition_agent_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the name of the agent (person, device or other type of serv...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_organization/">food_acquisition_organization</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the name of the organization responsible for acquired the f...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_city/">food_distributor_city</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the city of a distributor organization from which a food sa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country/">food_distributor_country</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country code of a distributor organization from which a...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_distributor_country_subdivision/">food_distributor_country_subdivision</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country subdivision of a distributor organization from ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_expiration_date/">food_expiration_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing the food expiration data as shown on the labeli...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_sell_by_date/">food_sell_by_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing a date that indicates to stores how long to dis...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_category_label/">food_category_label</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string or controlled vocabulary denoting the label of the food group or cat...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_additional_types/">food_additional_types</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A list of controlled vocabulary denoting the label(s) of additional food type...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_laboratory_sample_id/">food_laboratory_sample_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a laboratory sample which was prepared fro...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_laboratory_sample_aliquot_id/">food_laboratory_sample_aliquot_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a unique aliquot of a food laboratory samp...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_laboratory_sample_batch_id/">food_laboratory_sample_batch_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting an identifier of a batch of laboratory samples analysed tog...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_brand_name/">food_brand_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting a name identifying a product, service, or organization sell...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_lot_number/">food_lot_number</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the identifying lot number number assigned by a manufacture...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_weight/">food_label_weight</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A float denoting the mass, (or weight on earth) as specified on the product l...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_weight_unit/">food_label_weight_unit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A unit code representing the unit of measurement in which a food_label_weight...</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="usages">Usages</h2>
+<table>
+<thead>
+<tr>
+<th>used by</th>
+<th>used in</th>
+<th>type</th>
+<th>used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Container/">Container</a></td>
+<td><a href="../foods/">foods</a></td>
+<td>range</td>
+<td><a href="./">Food</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="valid-id-prefixes">Valid ID Prefixes</h3>
+<p>Instances of this class <em>should</em> have identifiers with one of the following prefixes:</p>
+<ul>
+<li>mifc</li>
+</ul>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>schema:Food</td>
+</tr>
+<tr>
+<td>native</td>
+<td>mifc:Food</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: Food
+id_prefixes:
+- mifc
+description: Metadata about foods analyzed for components of nutritional interest.
+from_schema: https://w3id.org/kaiiam/mifc
+is_a: NamedThing
+slots:
+- food_sample_id
+- food_primary_type
+- food_primary_type_label
+- food_primary_type_scientific_name
+- food_primary_type_icncp_group_name
+- food_primary_type_icncp_cultivar_name
+- food_primary_type_animal_breed_name
+- food_primary_type_ncbi_taxon_id
+- food_upc_code
+- food_preservation_state
+- food_storage_temperature_state
+- food_ripeness_state
+- food_cooking_method
+- food_origin_country
+- food_acquisition_city
+- food_acquisition_country
+- food_acquisition_country_subdivision
+- food_acquisition_date
+- food_acquisition_location_type
+- food_acquisition_location_name
+- food_acquisition_latitude
+- food_acquisition_longitude
+- food_acquisition_agent_name
+- food_acquisition_organization
+- food_distributor_city
+- food_distributor_country
+- food_distributor_country_subdivision
+- food_expiration_date
+- food_sell_by_date
+- food_category_label
+- food_additional_types
+- food_laboratory_sample_id
+- food_laboratory_sample_aliquot_id
+- food_laboratory_sample_batch_id
+- food_brand_name
+- food_lot_number
+- food_label_weight
+- food_label_weight_unit
+class_uri: schema:Food
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: Food
+id_prefixes:
+- mifc
+description: Metadata about foods analyzed for components of nutritional interest.
+from_schema: https://w3id.org/kaiiam/mifc
+is_a: NamedThing
+attributes:
+  food_sample_id:
+    name: food_sample_id
+    description: A string denoting the primary identifier for a sample of the class
+      Food. Note that food_sample_id should be unique in a given dataset and should
+      be used to relate Food and Component records via component_sample_id from the
+      Component class.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    identifier: true
+    alias: food_sample_id
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    required: true
+  food_primary_type:
+    name: food_primary_type
+    description: A controlled vocabulary term representing the primary food material
+      which was sampled.
+    comments:
+    - The food_primary_type could be sourced from one of various food vocabularies
+      such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - FDC:NDB_number
+    rank: 1000
+    slot_uri: schema:name
+    alias: food_primary_type
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_label:
+    name: food_primary_type_label
+    description: A string denoting the label of a controlled vocabulary term representing
+      the primary food material which was sampled.
+    from_schema: https://w3id.org/kaiiam/mifc
+    close_mappings:
+    - PTFI:Specimen_Food_Product_Name
+    rank: 1000
+    alias: food_primary_type_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_scientific_name:
+    name: food_primary_type_scientific_name
+    description: A string denoting the scientific name, (in binomial nomenclature)
+      of an organism that a food material is primarily composed of.
+    comments:
+    - This slot should only be used in cases where food materials are single ingredient
+      foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted
+      anchovies canned in oil".
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_scientific_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_icncp_group_name:
+    name: food_primary_type_icncp_group_name
+    description: A string denoting the Group (or cultivar-group) formal taxon category
+      of the primary food material as specified by the International Code of Nomenclature
+      for Cultivated Plants (ICNCP).
+    comments:
+    - This slot requires discussion as it alternatively be included as part of the
+      food_primary_type_scientific_name slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_icncp_group_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_icncp_cultivar_name:
+    name: food_primary_type_icncp_cultivar_name
+    description: A string denoting the cultivar name of the primary food material
+      as specified by the International Code of Nomenclature for Cultivated Plants
+      (ICNCP).
+    comments:
+    - The ICNCP only applies to algae, fungi, and plant species. If present this slot
+      should be used in addition to the food_primary_type_icncp_group_name slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_icncp_cultivar_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_animal_breed_name:
+    name: food_primary_type_animal_breed_name
+    description: A string denoting the breed name of the primary food material.
+    comments:
+    - This slot should only be used in cases where food material is an animal with
+      a recognizable breed name that is managed by a national breed registry, breed
+      association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_animal_breed_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_primary_type_ncbi_taxon_id:
+    name: food_primary_type_ncbi_taxon_id
+    description: A curie from the ontology representation of the NCBI organismal taxonomy
+      (NCBITaxon) describing the taxonomic identifier of the primary food material.
+    comments:
+    - To do specify an NCBITaxon curie as the range for the slot.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_primary_type_ncbi_taxon_id
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_upc_code:
+    name: food_upc_code
+    description: An string denoting a Universal Product Code (UPC) barcode of a food
+      sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_upc_code
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_preservation_state:
+    name: food_preservation_state
+    description: An enumerated set of controlled vocabulary terms representing the
+      preservation state(s) of a food sample (e.g., "raw").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_preservation_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodPreservationState
+  food_storage_temperature_state:
+    name: food_storage_temperature_state
+    description: An enumerated set of controlled vocabulary terms representing the
+      qualitative temperature state at which a food sample was stored prior to acquisition
+      (e.g., "Refrigerated").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_storage_temperature_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodStorageTemperatureState
+  food_ripeness_state:
+    name: food_ripeness_state
+    description: An enumerated set of controlled vocabulary terms representing the
+      qualitative freshness state of a food sample when prepared for analysis.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_ripeness_state
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodRipenessState
+  food_cooking_method:
+    name: food_cooking_method
+    description: An enumerated set of controlled vocabulary terms representing the
+      any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_cooking_method
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodCookingMethod
+  food_origin_country:
+    name: food_origin_country
+    description: A string denoting the country code from which a food sample originates.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_origin_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_city:
+    name: food_acquisition_city
+    description: A string denoting the city in which a food sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    close_mappings:
+    - PTFI:Collection_Location
+    rank: 1000
+    alias: food_acquisition_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_country:
+    name: food_acquisition_country
+    description: A string denoting the country code from which a food sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_country_subdivision:
+    name: food_acquisition_country_subdivision
+    description: A string denoting the country subdivision from which a food sample
+      was acquired (e.g., state or province).
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_date:
+    name: food_acquisition_date
+    description: A datetime value representing the date a food sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collection_Date
+    rank: 1000
+    alias: food_acquisition_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_location_type:
+    name: food_acquisition_location_type
+    description: A string describing the type of location from which a food sample
+      was acquired (e.g., a supermarket).
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collection_Type
+    rank: 1000
+    alias: food_acquisition_location_type
+    owner: Food
+    domain_of:
+    - Food
+    range: FoodAcquisitionLocationType
+  food_acquisition_location_name:
+    name: food_acquisition_location_name
+    description: A string describing the name of the location from which a food sample
+      was acquired (e.g., "Safeway").
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_location_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_latitude:
+    name: food_acquisition_latitude
+    description: A float representing the latitude of the place from which the food
+      sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collection_Latitude
+    rank: 1000
+    alias: food_acquisition_latitude
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_acquisition_longitude:
+    name: food_acquisition_longitude
+    description: A float representing the longitude of the place from which the food
+      sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collection_Longitude
+    rank: 1000
+    alias: food_acquisition_longitude
+    owner: Food
+    domain_of:
+    - Food
+    range: float
+  food_acquisition_agent_name:
+    name: food_acquisition_agent_name
+    description: A string denoting the name of the agent (person, device or other
+      type of service) that acquired the food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collector_Name
+    rank: 1000
+    alias: food_acquisition_agent_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_acquisition_organization:
+    name: food_acquisition_organization
+    description: A string denoting the name of the organization responsible for acquired
+      the food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    exact_mappings:
+    - PTFI:Collector_Organization
+    rank: 1000
+    alias: food_acquisition_organization
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_city:
+    name: food_distributor_city
+    description: A string denoting the city of a distributor organization from which
+      a food sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_city
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_country:
+    name: food_distributor_country
+    description: A string denoting the country code of a distributor organization
+      from which a food sample was acquired.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_country
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_distributor_country_subdivision:
+    name: food_distributor_country_subdivision
+    description: A string denoting the country subdivision of a distributor organization
+      from which a food sample was acquired, (e.g., state or province).
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_distributor_country_subdivision
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_expiration_date:
+    name: food_expiration_date
+    description: A datetime value representing the food expiration data as shown on
+      the labeling information of the food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_expiration_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_sell_by_date:
+    name: food_sell_by_date
+    description: A datetime value representing a date that indicates to stores how
+      long to display a food product for sale for inventory management purposes.
+    comments:
+    - Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_sell_by_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_category_label:
+    name: food_category_label
+    description: A string or controlled vocabulary denoting the label of the food
+      group or category of the primary food material.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_category_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_additional_types:
+    name: food_additional_types
+    description: A list of controlled vocabulary denoting the label(s) of additional
+      food types, not including the food_primary_type that are in a food sample.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_additional_types
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_laboratory_sample_id:
+    name: food_laboratory_sample_id
+    description: A string denoting an identifier of a laboratory sample which was
+      prepared from a food sample.
+    comments:
+    - Only use this attribute if a separate ID is assigned to laboratory samples derived
+      from food samples. Otherwise just use the food_sample_id.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_laboratory_sample_id
+    owner: Food
+    domain_of:
+    - Food
+    - Component
+    range: string
+  food_laboratory_sample_aliquot_id:
+    name: food_laboratory_sample_aliquot_id
+    description: A string denoting an identifier of a unique aliquot of a food laboratory
+      sample which was prepared from a food sample.
+    comments:
+    - Only use this attribute if identifiers are assigned to aliquots/sub-samples
+      of food laboratory samples denoted by their food_laboratory_sample_id.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_laboratory_sample_aliquot_id
+    owner: Food
+    domain_of:
+    - Food
+    - Component
+    range: string
+  food_laboratory_sample_batch_id:
+    name: food_laboratory_sample_batch_id
+    description: A string denoting an identifier of a batch of laboratory samples
+      analysed together.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_laboratory_sample_batch_id
+    owner: Food
+    domain_of:
+    - Food
+    - Component
+    range: string
+  food_brand_name:
+    name: food_brand_name
+    description: A string denoting a name identifying a product, service, or organization
+      selling and or distributing the primary food material.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_brand_name
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_lot_number:
+    name: food_lot_number
+    description: A string denoting the identifying lot number number assigned by a
+      manufacturer to a particular quantity, (or lot) of the sampled primary food
+      material.
+    comments:
+    - A lot number can also be referred to as lot code.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_lot_number
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_label_weight:
+    name: food_label_weight
+    description: A float denoting the mass, (or weight on earth) as specified on the
+      product label of a sampled primary food material.
+    comments:
+    - This field should be used in along with food_acquisition_label_weight_unit to
+      express the units the food_label_weight was measured.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_label_weight
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_label_weight_unit:
+    name: food_label_weight_unit
+    description: A unit code representing the unit of measurement in which a food_label_weight
+      is measured.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_label_weight_unit
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+class_uri: schema:Food
+
+</code></pre>
+</details>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+<script src="../javascripts/tablesort.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script><script type="module">import mermaid from "https://unpkg.com/mermaid@10.9.0/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>
