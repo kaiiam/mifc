@@ -81,13 +81,13 @@ On the [Pull requests tab](https://github.com/kaiiam/mifc/pulls)
 * 1) Activates a poetry shell from the `pyproject.toml` \
 `poetry shell`
 
-* 2) Keep poetry up to date
+* 2) Keep poetry up to date \
 `poetry update`
 
-* 3) Update poetry.lock file
+* 3) Update poetry.lock file \
 `poetry install`
 
-* 4) Run MIFC build and test suite
+* 4) Run MIFC build and test suite \
 `make all-all`
 
 
