@@ -63,7 +63,7 @@ gets an issue number e.g. issue https://github.com/kaiiam/mifc/issues/28
 
 * 6) Push your branch to origin to create a pull request
 
-For example the command would be something like git push origin issue-28. However you can just run `git push` and it should prompt you with the line to run.
+For example the command would be something like git push origin issue-28. However you can just run `git push` and it should prompt you with the line to run E.g `git push --set-upstream origin issue-28`.
 
 * 7) Create Pull Request
 
