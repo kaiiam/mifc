@@ -49,7 +49,7 @@ Use the `make` command to generate project artefacts:
 
 * 2) Start or address an issue
 
-gets an issue number e.g. issue https://github.com/kaiiam/mifc/issues/28
+Gets an issue number e.g. issue https://github.com/kaiiam/mifc/issues/28
 
 * 3) checkout a branch corresponding to that issue.
 
