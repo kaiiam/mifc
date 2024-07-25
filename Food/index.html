@@ -251,7 +251,7 @@
 
   Food : food_cooking_method
 
-      Food --&gt; "0..1" FoodCookingMethod : food_cooking_method
+      Food --&gt; "*" FoodCookingMethod : food_cooking_method
     click FoodCookingMethod href "../FoodCookingMethod"
 
   Food : food_distributor_city
@@ -406,7 +406,7 @@
 </tr>
 <tr>
 <td><a href="../food_cooking_method/">food_cooking_method</a></td>
-<td>0..1 <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>* <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
 <td>direct</td>
 </tr>
@@ -845,6 +845,7 @@ attributes:
     domain_of:
     - Food
     range: FoodCookingMethod
+    multivalued: true
   food_origin_country:
     name: food_origin_country
     description: A string denoting the country code from which a food sample originates.
