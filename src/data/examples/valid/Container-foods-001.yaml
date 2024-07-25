@@ -9,3 +9,9 @@ foods:
     raw
   food_preservation_state: fresh
   food_storage_temperature_state: frozen
+- food_sample_id: FDC:170166
+  food_primary_type: FOOD:12095
+  food_primary_type_label: Nuts, chestnuts, chinese, boiled and steamed
+  food_cooking_method:
+  - boiled
+  - steamed
