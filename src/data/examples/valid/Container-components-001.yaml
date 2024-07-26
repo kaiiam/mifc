@@ -1,56 +1,65 @@
 components:
 - component_sample_id: FDC:167512
   component_type: COMPONENT:1003
+  component_type_label: Protein
   component_recorded_value: 5.88
   component_measurement_unit: g/(100.g)
   component_data_points_number: 1
   component_derivation_type: Analytical
 - component_sample_id: FDC:167512
   component_type: COMPONENT:1007
+  component_type_label: Ash
   component_recorded_value: 3.5
   component_measurement_unit: kcal/(100.g)
   component_data_points_number: 1
   component_derivation_type: Analytical
 - component_sample_id: FDC:167512
   component_type: COMPONENT:1062
+  component_type_label: Energy (kJ)
   component_recorded_value: 1286.0
   component_measurement_unit: kJ/(100.g)
   component_data_points_number: 2
   component_derivation_type: Analytical
 - component_sample_id: FDC:167512
   component_type: COMPONENT:1079
+  component_type_label: Fiber, total dietary
   component_recorded_value: 1.2
   component_measurement_unit: mg/(100.g)
   component_data_points_number: 0
   component_derivation_type: Calculated
 - component_sample_id: FDC:167512
   component_type: COMPONENT:1089
+  component_type_label: Iron, Fe
   component_recorded_value: 2.12
   component_measurement_unit: ug/(100.g)
   component_data_points_number: 1
   component_derivation_type: Estimated
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1003
+  component_type_label: Protein
   component_recorded_value: 4.34
   component_measurement_unit: g/(100.g)
   component_data_points_number: 2
   component_derivation_type: Analytical
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1007
+  component_type_label: Ash
   component_recorded_value: 3.08
-  component_measurement_unit: g/(100.g)
+  component_measurement_unit: kcal/(100.g)
   component_data_points_number: 1
   component_derivation_type: Analytical
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1062
+  component_type_label: Energy (kJ)
   component_recorded_value: 1381.0
-  component_measurement_unit: g/(100.g)
+  component_measurement_unit: kJ/(100.g)
   component_data_points_number: 0
   component_derivation_type: Sourced from literature
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1079
+  component_type_label: Fiber, total dietary
   component_recorded_value: 1.4
-  component_measurement_unit: g/(100.g)
+  component_measurement_unit: mg/(100.g)
   component_data_points_number: 6
   component_comment: Samples were obtained from 12 retail stores using a probability-based
     sampling plan.  Some fish had been treated during processing to retain moisture
@@ -61,7 +70,8 @@ components:
   compound_sample_aggregation_median_value: 1.5
 - component_sample_id: FDC:167513
   component_type: COMPONENT:1089
+  component_type_label: Iron, Fe
   component_recorded_value: 1.93
-  component_measurement_unit: g/(100.g)
+  component_measurement_unit: ug/(100.g)
   component_data_points_number: 3
   component_derivation_type: Analytical
