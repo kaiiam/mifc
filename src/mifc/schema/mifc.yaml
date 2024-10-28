@@ -216,15 +216,24 @@ slots:
       - PTFI:Collection_Location
   food_acquisition_country: # See ISO 3166 for country codes
     description: A string denoting the country code from which a food sample was acquired.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
     description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
     description: A datetime value representing the date a food sample was acquired.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
     exact_mappings:
       - PTFI:Collection_Date
   food_acquisition_location_type:
     description: A string describing the type of location from which a food sample was acquired (e.g., a supermarket).
     range: FoodAcquisitionLocationType #Can maybe set default to unknown
+    recommended: true
+    in_subset:
+      - RecommendedSubset
     exact_mappings:
       - PTFI:Collection_Type
   food_acquisition_location_name:
@@ -281,26 +290,47 @@ slots:
       - RecommendedSubset
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   component_type_label:
     description: A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
     description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
+    required: true
     range: float
+    in_subset:
+      - RecommendedSubset
   component_measurement_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
+    required: true
+    in_subset:
+      - RecommendedSubset
   component_data_points_number: # TODO add default 1 perhaps with ifabsent
     description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
+    required: true
     range: integer
+    in_subset:
+      - RecommendedSubset
   component_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
     description: A datetime value representing recorded date pertaining to an analyzed sample.
     comments: Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis.
   component_analysis_date:
     description: A datetime value representing the date in which a component of nutritional interest was analyzed.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
     comments: Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date.
   component_comment:
     description: A comment relating to an analyzed component of nutritional interest.
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   component_limit_of_quantitation:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.
@@ -319,9 +349,15 @@ slots:
     range: float
   compound_analytical_measurement_protocol_doi: # TODO Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
     description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
     description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
+    recommended: true
     range: CompoundAnalyticalMeasurementMethod
+    in_subset:
+      - RecommendedSubset
   compound_analytical_laboratory_name:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
   component_quality_control_remeasurement:
@@ -333,12 +369,24 @@ slots:
   # Provenance slots
   provenance_dataset_label:
     description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
+    recommended: true #Might want to make this field required
+    in_subset:
+      - RecommendedSubset
   provenance_mifc_version_tag:
     description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
+    recommended: true #Might want to make this field required
+    in_subset:
+      - RecommendedSubset
   provenance_contributor_orcid:
     description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   provenance_organization_name:
     description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
+    recommended: true
+    in_subset:
+      - RecommendedSubset
 
   # Slots common to both Food and Component classes
   food_laboratory_sample_id:
