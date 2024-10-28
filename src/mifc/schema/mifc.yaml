@@ -44,6 +44,8 @@ classes:
       Metadata about foods analyzed for components of nutritional interest.
     is_a: NamedThing  ## inheritance
     class_uri: schema:Food
+    in_subset:
+      - RecommendedSubset
     slots: ## Slots specific to foods
       - food_sample_id
       - food_primary_type
@@ -91,6 +93,8 @@ classes:
       Metadata about components of nutritional interest measured from foods.
     is_a: NamedThing
     class_uri: schema:Component
+    in_subset:
+      - RecommendedSubset
     slots: ## Slots specific to components of nutritional interest
       - component_sample_id
       - component_type
@@ -120,6 +124,8 @@ classes:
       Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
     is_a: NamedThing
     class_uri: schema:Provenance
+    in_subset:
+      - RecommendedSubset
     slots: ## Slots specific to Provenance
       - provenance_dataset_label
       - provenance_mifc_version_tag
