@@ -1,3 +1,3 @@
-food_sample_id	food_primary_type	food_primary_type_label	food_preservation_state	food_acquisition_city	food_acquisition_country	food_acquisition_country_subdivision	food_acquisition_date	food_distributor_city	food_distributor_country	food_distributor_country_subdivision	food_upc_code	food_expiration_date
+food_sample_id	food_primary_type	food_description_label	food_preservation_state	food_acquisition_city	food_acquisition_country	food_acquisition_country_subdivision	food_acquisition_date	food_distributor_city	food_distributor_country	food_distributor_country_subdivision	food_upc_code	food_expiration_date
 FDC:392739	FOOD:4601	Butter, light, stick, with salt	fresh	PITTSBURGH	USA	PA	2015-11-02	Cincinnati	United States of America	Ohio	40822011143	2015-12-07
 FDC:392740	FOOD:11601	Yam, raw	raw	TUCSON	USA	AZ	2018-05-22	Veracruz	Mexico	Veracruz	79893110196	2018-04-25
