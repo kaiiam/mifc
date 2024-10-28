@@ -254,6 +254,8 @@
       Food --&gt; "* _recommended_" FoodCookingMethod : food_cooking_method
     click FoodCookingMethod href "../FoodCookingMethod"
 
+  Food : food_description_label
+
   Food : food_distributor_city
 
   Food : food_distributor_country
@@ -336,6 +338,12 @@
 <td><a href="../food_sample_id/">food_sample_id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting the primary identifier for a sample of the class Food</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_description_label/">food_description_label</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string clearly and unambiguous describing the sampled primary food material...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -618,10 +626,13 @@
 id_prefixes:
 - mifc
 description: Metadata about foods analyzed for components of nutritional interest.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 slots:
 - food_sample_id
+- food_description_label
 - food_primary_type
 - food_primary_type_label
 - food_primary_type_scientific_name
@@ -669,6 +680,8 @@ class_uri: schema:Food
 id_prefixes:
 - mifc
 description: Metadata about foods analyzed for components of nutritional interest.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 is_a: NamedThing
 attributes:
@@ -684,6 +697,24 @@ attributes:
     rank: 1000
     identifier: true
     alias: food_sample_id
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+    required: true
+  food_description_label:
+    name: food_description_label
+    description: A string clearly and unambiguous describing the sampled primary food
+      material, in accordance with globally accepted guidelines for the description
+      of foods.
+    comments:
+    - 'For reference see book by Greenfield and Southgate ''Food Composition Data:
+      Production Management and Use'' ISBN-10 9251049491 and cited literature'
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_description_label
     owner: Food
     domain_of:
     - Food
@@ -713,6 +744,9 @@ attributes:
     name: food_primary_type_label
     description: A string denoting the label of a controlled vocabulary term representing
       the primary food material which was sampled.
+    comments:
+    - This field is to be used only for the string labels of from controlled vocabulary
+      terms which are mapped to the food_description_label.
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc

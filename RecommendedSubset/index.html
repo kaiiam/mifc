@@ -276,6 +276,40 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#classes-in-subset" class="md-nav__link">
+    Classes in subset
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes in subset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-component-also-in-recommendedsubset" class="md-nav__link">
+    Slots from Component also in RecommendedSubset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-food-also-in-recommendedsubset" class="md-nav__link">
+    Slots from Food also in RecommendedSubset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slots-from-provenance-also-in-recommendedsubset" class="md-nav__link">
+    Slots from Provenance also in RecommendedSubset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#slots-in-subset" class="md-nav__link">
     Slots in subset
   </a>
@@ -310,6 +344,185 @@
 <ul>
 <li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
+<h2 id="classes-in-subset">Classes in subset</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Component/">Component</a></td>
+<td>Metadata about components of nutritional interest measured from foods</td>
+</tr>
+<tr>
+<td><a href="../Food/">Food</a></td>
+<td>Metadata about foods analyzed for components of nutritional interest</td>
+</tr>
+<tr>
+<td><a href="../Provenance/">Provenance</a></td>
+<td>Supplemental data about the provenance of a Food and Component dataset collec...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-component-also-in-recommendedsubset">Slots from <a href="../Component/">Component</a> also in <em>RecommendedSubset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../component_analysis_date/">component_analysis_date</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing the date in which a component of nutritional in...</td>
+</tr>
+<tr>
+<td><a href="../component_data_points_number/">component_data_points_number</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>An integer representing the number of individual samples that comprise a comp...</td>
+</tr>
+<tr>
+<td><a href="../component_derivation_type/">component_derivation_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term denoting how a component of nutritional interest...</td>
+</tr>
+<tr>
+<td><a href="../component_measurement_unit/">component_measurement_unit</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A unit code representing the unit of measurement in which a component_recorde...</td>
+</tr>
+<tr>
+<td><a href="../component_recorded_value/">component_recorded_value</a></td>
+<td>1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing a recorded value of a component of nutritional interest ...</td>
+</tr>
+<tr>
+<td><a href="../component_sample_id/">component_sample_id</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the primary identifier for a sample of the class Component</td>
+</tr>
+<tr>
+<td><a href="../component_type/">component_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the type of component of nutritiona...</td>
+</tr>
+<tr>
+<td><a href="../component_type_label/">component_type_label</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string denoting the label of a controlled vocabulary term representing an a...</td>
+</tr>
+<tr>
+<td><a href="../compound_analytical_measurement_method/">compound_analytical_measurement_method</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../CompoundAnalyticalMeasurementMethod/">CompoundAnalyticalMeasurementMethod</a></td>
+<td>A controlled vocabulary term denoting the method used to conduct an analytica...</td>
+</tr>
+<tr>
+<td><a href="../compound_analytical_measurement_protocol_doi/">compound_analytical_measurement_protocol_doi</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string denoting a digital object identifier link to a measurement protocol ...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-food-also-in-recommendedsubset">Slots from <a href="../Food/">Food</a> also in <em>RecommendedSubset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../food_acquisition_country/">food_acquisition_country</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string denoting the country code from which a food sample was acquired</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_date/">food_acquisition_date</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A datetime value representing the date a food sample was acquired</td>
+</tr>
+<tr>
+<td><a href="../food_acquisition_location_type/">food_acquisition_location_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodAcquisitionLocationType/">FoodAcquisitionLocationType</a></td>
+<td>A string describing the type of location from which a food sample was acquire...</td>
+</tr>
+<tr>
+<td><a href="../food_cooking_method/">food_cooking_method</a></td>
+<td>* <em>recommended</em> <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
+</tr>
+<tr>
+<td><a href="../food_description_label/">food_description_label</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string clearly and unambiguous describing the sampled primary food material...</td>
+</tr>
+<tr>
+<td><a href="../food_preservation_state/">food_preservation_state</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the preservatio...</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type/">food_primary_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the primary food material which was...</td>
+</tr>
+<tr>
+<td><a href="../food_primary_type_label/">food_primary_type_label</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string denoting the label of a controlled vocabulary term representing the ...</td>
+</tr>
+<tr>
+<td><a href="../food_sample_id/">food_sample_id</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A string denoting the primary identifier for a sample of the class Food <strong>identifier</strong></td>
+</tr>
+<tr>
+<td><a href="../food_storage_temperature_state/">food_storage_temperature_state</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
+<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="slots-from-provenance-also-in-recommendedsubset">Slots from <a href="../Provenance/">Provenance</a> also in <em>RecommendedSubset</em></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../provenance_contributor_orcid/">provenance_contributor_orcid</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string corresponding to a "</td>
+</tr>
+<tr>
+<td><a href="../provenance_dataset_label/">provenance_dataset_label</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string corresponding to the labeled name of dataset (e</td>
+</tr>
+<tr>
+<td><a href="../provenance_mifc_version_tag/">provenance_mifc_version_tag</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string corresponding to a named MIFC release number (e</td>
+</tr>
+<tr>
+<td><a href="../provenance_organization_name/">provenance_organization_name</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A string corresponding to a "</td>
+</tr>
+</tbody>
+</table>
 <h2 id="slots-in-subset">Slots in subset</h2>
 <table>
 <thead>
@@ -374,6 +587,10 @@
 <tr>
 <td><a href="../food_cooking_method/">food_cooking_method</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
+</tr>
+<tr>
+<td><a href="../food_description_label/">food_description_label</a></td>
+<td>A string clearly and unambiguous describing the sampled primary food material...</td>
 </tr>
 <tr>
 <td><a href="../food_preservation_state/">food_preservation_state</a></td>
