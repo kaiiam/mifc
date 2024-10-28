@@ -353,6 +353,9 @@
 <li>
 <p>Multivalued: True</p>
 </li>
+<li>
+<p>Recommended: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -384,12 +387,15 @@
 <pre><code class="language-yaml">name: food_cooking_method
 description: An enumerated set of controlled vocabulary terms representing the any
   cooking method(s) applied to a food sample prior to analysis (e.g., &quot;baked&quot;).
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: food_cooking_method
 domain_of:
 - Food
 range: FoodCookingMethod
+recommended: true
 multivalued: true
 
 </code></pre>

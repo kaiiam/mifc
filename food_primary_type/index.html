@@ -354,7 +354,12 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>
+<p>Range: <a href="../String/">String</a></p>
+</li>
+<li>
+<p>Recommended: True</p>
+</li>
 </ul>
 <h2 id="comments">Comments</h2>
 <ul>
@@ -397,6 +402,8 @@ description: A controlled vocabulary term representing the primary food material
 comments:
 - The food_primary_type could be sourced from one of various food vocabularies such
   as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 exact_mappings:
 - FDC:NDB_number
@@ -406,6 +413,7 @@ alias: food_primary_type
 domain_of:
 - Food
 range: string
+recommended: true
 
 </code></pre>
 

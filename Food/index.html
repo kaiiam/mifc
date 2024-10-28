@@ -251,7 +251,7 @@
 
   Food : food_cooking_method
 
-      Food --&gt; "*" FoodCookingMethod : food_cooking_method
+      Food --&gt; "* _recommended_" FoodCookingMethod : food_cooking_method
     click FoodCookingMethod href "../FoodCookingMethod"
 
   Food : food_distributor_city
@@ -278,7 +278,7 @@
 
   Food : food_preservation_state
 
-      Food --&gt; "0..1" FoodPreservationState : food_preservation_state
+      Food --&gt; "0..1 _recommended_" FoodPreservationState : food_preservation_state
     click FoodPreservationState href "../FoodPreservationState"
 
   Food : food_primary_type
@@ -306,7 +306,7 @@
 
   Food : food_storage_temperature_state
 
-      Food --&gt; "0..1" FoodStorageTemperatureState : food_storage_temperature_state
+      Food --&gt; "0..1 _recommended_" FoodStorageTemperatureState : food_storage_temperature_state
     click FoodStorageTemperatureState href "../FoodStorageTemperatureState"
 
   Food : food_upc_code
@@ -340,13 +340,13 @@
 </tr>
 <tr>
 <td><a href="../food_primary_type/">food_primary_type</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A controlled vocabulary term representing the primary food material which was...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_primary_type_label/">food_primary_type_label</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string denoting the label of a controlled vocabulary term representing the ...</td>
 <td>direct</td>
 </tr>
@@ -388,13 +388,13 @@
 </tr>
 <tr>
 <td><a href="../food_preservation_state/">food_preservation_state</a></td>
-<td>0..1 <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the preservatio...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_storage_temperature_state/">food_storage_temperature_state</a></td>
-<td>0..1 <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
 <td>direct</td>
 </tr>
@@ -406,7 +406,7 @@
 </tr>
 <tr>
 <td><a href="../food_cooking_method/">food_cooking_method</a></td>
-<td>* <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
+<td>* <em>recommended</em> <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
 <td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
 <td>direct</td>
 </tr>
@@ -696,6 +696,8 @@ attributes:
     comments:
     - The food_primary_type could be sourced from one of various food vocabularies
       such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     exact_mappings:
     - FDC:NDB_number
@@ -706,10 +708,13 @@ attributes:
     domain_of:
     - Food
     range: string
+    recommended: true
   food_primary_type_label:
     name: food_primary_type_label
     description: A string denoting the label of a controlled vocabulary term representing
       the primary food material which was sampled.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     close_mappings:
     - PTFI:Specimen_Food_Product_Name
@@ -719,6 +724,7 @@ attributes:
     domain_of:
     - Food
     range: string
+    recommended: true
   food_primary_type_scientific_name:
     name: food_primary_type_scientific_name
     description: A string denoting the scientific name, (in binomial nomenclature)
@@ -806,6 +812,8 @@ attributes:
     name: food_preservation_state
     description: An enumerated set of controlled vocabulary terms representing the
       preservation state(s) of a food sample (e.g., "raw").
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_preservation_state
@@ -813,11 +821,14 @@ attributes:
     domain_of:
     - Food
     range: FoodPreservationState
+    recommended: true
   food_storage_temperature_state:
     name: food_storage_temperature_state
     description: An enumerated set of controlled vocabulary terms representing the
       qualitative temperature state at which a food sample was stored prior to acquisition
       (e.g., "Refrigerated").
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_storage_temperature_state
@@ -825,6 +836,7 @@ attributes:
     domain_of:
     - Food
     range: FoodStorageTemperatureState
+    recommended: true
   food_ripeness_state:
     name: food_ripeness_state
     description: An enumerated set of controlled vocabulary terms representing the
@@ -840,6 +852,8 @@ attributes:
     name: food_cooking_method
     description: An enumerated set of controlled vocabulary terms representing the
       any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_cooking_method
@@ -847,6 +861,7 @@ attributes:
     domain_of:
     - Food
     range: FoodCookingMethod
+    recommended: true
     multivalued: true
   food_origin_country:
     name: food_origin_country

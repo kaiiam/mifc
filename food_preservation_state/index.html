@@ -347,7 +347,12 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../FoodPreservationState/">FoodPreservationState</a></li>
+<li>
+<p>Range: <a href="../FoodPreservationState/">FoodPreservationState</a></p>
+</li>
+<li>
+<p>Recommended: True</p>
+</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -379,12 +384,15 @@
 <pre><code class="language-yaml">name: food_preservation_state
 description: An enumerated set of controlled vocabulary terms representing the preservation
   state(s) of a food sample (e.g., &quot;raw&quot;).
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: food_preservation_state
 domain_of:
 - Food
 range: FoodPreservationState
+recommended: true
 
 </code></pre>
 
