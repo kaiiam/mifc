@@ -177,6 +177,14 @@ slots:
     recommended: true
     in_subset:
       - RecommendedSubset
+  food_description_match_type:
+    description: A controlled vocabulary term representing the type of mapping between the food_description_label and the label of the food_primary_type.
+    recommended: true
+    comments:
+      - TODO add enumeration
+      - 'See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml'
+    in_subset:
+      - RecommendedSubset
   food_primary_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     recommended: true
