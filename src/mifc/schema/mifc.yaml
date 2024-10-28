@@ -156,8 +156,14 @@ slots:
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   food_primary_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
+    recommended: true
+    in_subset:
+      - RecommendedSubset
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
   food_primary_type_scientific_name:
@@ -181,17 +187,27 @@ slots:
   food_preservation_state:
     description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
     range: FoodPreservationState
+    recommended: true
+    in_subset:
+      - RecommendedSubset
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
     range: FoodStorageTemperatureState
+    recommended: true
+    in_subset:
+      - RecommendedSubset
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
   food_cooking_method:
     description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     range: FoodCookingMethod
+    recommended: true
     multivalued: true
+    in_subset:
+      - RecommendedSubset
+
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
   food_acquisition_city:
