@@ -154,7 +154,10 @@ slots:
   food_sample_id:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
     required: true
-    identifier: true # Forces food_sample_id keys to be unique
+    range: string
+    #identifier: true # Forces food_sample_id keys to be unique
+    comments:
+      - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
     in_subset:
       - RecommendedSubset
   food_description_label:
