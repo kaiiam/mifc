@@ -148,6 +148,8 @@ slots:
     description: A string denoting the primary identifier for a sample of the class Food. Note that food_sample_id should be unique in a given dataset and should be used to relate Food and Component records via component_sample_id from the Component class.
     required: true
     identifier: true # Forces food_sample_id keys to be unique
+    in_subset:
+      - RecommendedSubset
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
     comments: The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
@@ -259,6 +261,8 @@ slots:
   component_sample_id:
     description: A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
     required: true
+    in_subset:
+      - RecommendedSubset
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
   component_type_label:
