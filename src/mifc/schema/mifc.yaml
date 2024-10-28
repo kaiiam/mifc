@@ -48,6 +48,7 @@ classes:
       - RecommendedSubset
     slots: ## Slots specific to foods
       - food_sample_id
+      - food_description_label
       - food_primary_type
       - food_primary_type_label
       - food_primary_type_scientific_name
@@ -156,9 +157,17 @@ slots:
     identifier: true # Forces food_sample_id keys to be unique
     in_subset:
       - RecommendedSubset
+  food_description_label:
+    description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
+    required: true
+    comments:
+      - "For reference see book by Greenfield and Southgate 'Food Composition Data: Production Management and Use' ISBN-10 9251049491 and cited literature"
+    in_subset:
+      - RecommendedSubset
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
-    comments: The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    comments:
+      - The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
@@ -168,6 +177,8 @@ slots:
   food_primary_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     recommended: true
+    comments:
+      - This field is to be used only for the string labels of from controlled vocabulary terms which are mapped to the food_description_label.
     in_subset:
       - RecommendedSubset
     close_mappings:
