@@ -243,7 +243,7 @@
 
   Component : compound_analytical_measurement_method
 
-      Component --&gt; "0..1" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
+      Component --&gt; "0..1 _recommended_" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
     click CompoundAnalyticalMeasurementMethod href "../CompoundAnalyticalMeasurementMethod"
 
   Component : compound_analytical_measurement_protocol_doi
@@ -291,31 +291,31 @@
 </tr>
 <tr>
 <td><a href="../component_type/">component_type</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A controlled vocabulary term representing the type of component of nutritiona...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../component_type_label/">component_type_label</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string denoting the label of a controlled vocabulary term representing an a...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../component_recorded_value/">component_recorded_value</a></td>
-<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>1 <br/> <a href="../Float/">Float</a></td>
 <td>A float representing a recorded value of a component of nutritional interest ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../component_measurement_unit/">component_measurement_unit</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
 <td>A unit code representing the unit of measurement in which a component_recorde...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../component_data_points_number/">component_data_points_number</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
 <td>An integer representing the number of individual samples that comprise a comp...</td>
 <td>direct</td>
 </tr>
@@ -327,7 +327,7 @@
 </tr>
 <tr>
 <td><a href="../component_analysis_date/">component_analysis_date</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A datetime value representing the date in which a component of nutritional in...</td>
 <td>direct</td>
 </tr>
@@ -339,7 +339,7 @@
 </tr>
 <tr>
 <td><a href="../component_derivation_type/">component_derivation_type</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A controlled vocabulary term denoting how a component of nutritional interest...</td>
 <td>direct</td>
 </tr>
@@ -375,13 +375,13 @@
 </tr>
 <tr>
 <td><a href="../compound_analytical_measurement_protocol_doi/">compound_analytical_measurement_protocol_doi</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string denoting a digital object identifier link to a measurement protocol ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../compound_analytical_measurement_method/">compound_analytical_measurement_method</a></td>
-<td>0..1 <br/> <a href="../CompoundAnalyticalMeasurementMethod/">CompoundAnalyticalMeasurementMethod</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../CompoundAnalyticalMeasurementMethod/">CompoundAnalyticalMeasurementMethod</a></td>
 <td>A controlled vocabulary term denoting the method used to conduct an analytica...</td>
 <td>direct</td>
 </tr>
@@ -522,6 +522,8 @@ attributes:
     name: component_type
     description: A controlled vocabulary term representing the type of component of
       nutritional interest analyzed from a food sample.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_type
@@ -529,10 +531,13 @@ attributes:
     domain_of:
     - Component
     range: string
+    recommended: true
   component_type_label:
     name: component_type_label
     description: A string denoting the label of a controlled vocabulary term representing
       an analyzed component_type from a food sample.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_type_label
@@ -540,10 +545,13 @@ attributes:
     domain_of:
     - Component
     range: string
+    recommended: true
   component_recorded_value:
     name: component_recorded_value
     description: A float representing a recorded value of a component of nutritional
       interest measured from a laboratory sample derived from a food sample.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_recorded_value
@@ -551,10 +559,13 @@ attributes:
     domain_of:
     - Component
     range: float
+    required: true
   component_measurement_unit:
     name: component_measurement_unit
     description: A unit code representing the unit of measurement in which a component_recorded_value
       is measured.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_measurement_unit
@@ -562,10 +573,13 @@ attributes:
     domain_of:
     - Component
     range: string
+    required: true
   component_data_points_number:
     name: component_data_points_number
     description: An integer representing the number of individual samples that comprise
       a component sample. 1 if an individual sample &gt;1 if an aggregation of samples.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_data_points_number
@@ -573,6 +587,7 @@ attributes:
     domain_of:
     - Component
     range: integer
+    required: true
   component_record_date:
     name: component_record_date
     description: A datetime value representing recorded date pertaining to an analyzed
@@ -595,6 +610,8 @@ attributes:
     comments:
     - Use this field if the exact date of analysis is known if there is date ambiguity
       use component_record_date.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_analysis_date
@@ -602,6 +619,7 @@ attributes:
     domain_of:
     - Component
     range: string
+    recommended: true
   component_comment:
     name: component_comment
     description: A comment relating to an analyzed component of nutritional interest.
@@ -616,6 +634,8 @@ attributes:
     name: component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated, (e.g., Analytical or Calculated).
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_derivation_type
@@ -623,6 +643,7 @@ attributes:
     domain_of:
     - Component
     range: string
+    recommended: true
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
     description: A string representing the lowest analyte concentration likely to
@@ -687,6 +708,8 @@ attributes:
     name: compound_analytical_measurement_protocol_doi
     description: A string denoting a digital object identifier link to a measurement
       protocol used to conduct an analytical analysis on a sample.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_analytical_measurement_protocol_doi
@@ -694,10 +717,13 @@ attributes:
     domain_of:
     - Component
     range: string
+    recommended: true
   compound_analytical_measurement_method:
     name: compound_analytical_measurement_method
     description: A controlled vocabulary term denoting the method used to conduct
       an analytical analysis on a sample, (e.g., HPLC).
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_analytical_measurement_method
@@ -705,6 +731,7 @@ attributes:
     domain_of:
     - Component
     range: CompoundAnalyticalMeasurementMethod
+    recommended: true
   compound_analytical_laboratory_name:
     name: compound_analytical_laboratory_name
     description: A string denoting the name of a laboratory that conducted the analytical

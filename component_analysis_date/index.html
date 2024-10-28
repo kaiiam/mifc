@@ -354,7 +354,12 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>
+<p>Range: <a href="../String/">String</a></p>
+</li>
+<li>
+<p>Recommended: True</p>
+</li>
 </ul>
 <h2 id="comments">Comments</h2>
 <ul>
@@ -393,12 +398,15 @@ description: A datetime value representing the date in which a component of nutr
 comments:
 - Use this field if the exact date of analysis is known if there is date ambiguity
   use component_record_date.
+in_subset:
+- RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: component_analysis_date
 domain_of:
 - Component
 range: string
+recommended: true
 
 </code></pre>
 

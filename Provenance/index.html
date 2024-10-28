@@ -246,25 +246,25 @@
 <tbody>
 <tr>
 <td><a href="../provenance_dataset_label/">provenance_dataset_label</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to the labeled name of dataset (e</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../provenance_mifc_version_tag/">provenance_mifc_version_tag</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a named MIFC release number (e</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../provenance_contributor_orcid/">provenance_contributor_orcid</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a "</td>
 <td>" delimited list of ORCIDs of people who contri...</td>
 </tr>
 <tr>
 <td><a href="../provenance_organization_name/">provenance_organization_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>A string corresponding to a "</td>
 <td>" delimited list of organizations who created o...</td>
 </tr>
@@ -343,6 +343,8 @@ attributes:
     name: provenance_dataset_label
     description: A string corresponding to the labeled name of dataset (e.g., "Standard
       Reference (SR) Legacy").
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: provenance_dataset_label
@@ -350,9 +352,12 @@ attributes:
     domain_of:
     - Provenance
     range: string
+    recommended: true
   provenance_mifc_version_tag:
     name: provenance_mifc_version_tag
     description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: provenance_mifc_version_tag
@@ -360,10 +365,13 @@ attributes:
     domain_of:
     - Provenance
     range: string
+    recommended: true
   provenance_contributor_orcid:
     name: provenance_contributor_orcid
     description: A string corresponding to a "|" delimited list of ORCIDs of people
       who contributed to a MIFC formatted dataset. See https://orcid.org/.
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: provenance_contributor_orcid
@@ -371,10 +379,13 @@ attributes:
     domain_of:
     - Provenance
     range: string
+    recommended: true
   provenance_organization_name:
     name: provenance_organization_name
     description: A string corresponding to a "|" delimited list of organizations who
       created or help to create to a MIFC formatted dataset. E.g., "USDA".
+    in_subset:
+    - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: provenance_organization_name
@@ -382,6 +393,7 @@ attributes:
     domain_of:
     - Provenance
     range: string
+    recommended: true
 class_uri: schema:Provenance
 
 </code></pre>
