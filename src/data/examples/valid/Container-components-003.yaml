@@ -1,10 +1,10 @@
 components:
 - component_sample_id: CY124QU
-  component_type: COMPONENT:1075
-  component_type_label: galactose
   component_recorded_value: 0.52
   component_measurement_unit: g/(100.g)
   component_data_points_number: 1
+  component_type: COMPONENT:1075
+  component_type_label: galactose
   component_analysis_date: March 8, 2023
   compound_analytical_measurement_protocol_doi: SUGR-GALAC-CHG
   compound_analytical_laboratory_name: Silliker
@@ -12,11 +12,11 @@ components:
   food_laboratory_sample_aliquot_id: NFY122JPN
   food_laboratory_sample_batch_id: o
 - component_sample_id: CY124QX
-  component_type: COMPONENT:1014
-  component_type_label: maltose
   component_recorded_value: 0.0
   component_measurement_unit: g/(100.g)
   component_data_points_number: 1
+  component_type: COMPONENT:1014
+  component_type_label: maltose
   component_analysis_date: March 9, 2023
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
@@ -24,11 +24,11 @@ components:
   food_laboratory_sample_aliquot_id: NFY122JRQ
   food_laboratory_sample_batch_id: o
 - component_sample_id: CY124R2
-  component_type: COMPONENT:1011
-  component_type_label: glucose
   component_recorded_value: 0.0
   component_measurement_unit: g/(100.g)
   component_data_points_number: 1
+  component_type: COMPONENT:1011
+  component_type_label: glucose
   component_analysis_date: March 17, 2023
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
