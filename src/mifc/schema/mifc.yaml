@@ -24,6 +24,12 @@ default_range: string
 imports:
   - linkml:types
 
+subsets:
+  RecommendedSubset:
+    title: recommended subset
+    description: |-
+      A subset of the MIFC slots that are required and recommended for use use in a Food Composition Table/Database.
+
 classes:
   ## --
   ## Parent class for Foods and Components
