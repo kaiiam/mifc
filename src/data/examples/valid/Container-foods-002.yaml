@@ -1,7 +1,7 @@
 foods:
 - food_sample_id: FDC:392739
+  food_description_label: Butter, light, stick, with salt
   food_primary_type: FOOD:4601
-  food_primary_type_label: Butter, light, stick, with salt
   food_upc_code: '40822011143'
   food_preservation_state: fresh
   food_acquisition_city: PITTSBURGH
@@ -13,8 +13,8 @@ foods:
   food_distributor_country_subdivision: Ohio
   food_expiration_date: '2015-12-07'
 - food_sample_id: FDC:392740
+  food_description_label: Yam, raw
   food_primary_type: FOOD:11601
-  food_primary_type_label: Yam, raw
   food_upc_code: '79893110196'
   food_preservation_state: raw
   food_acquisition_city: TUCSON
