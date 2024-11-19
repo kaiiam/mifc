@@ -329,27 +329,42 @@
 </thead>
 <tbody>
 <tr>
-<td>HPLC</td>
-<td>OBI:0002116</td>
-<td>High performance liquid chromotography</td>
-</tr>
-<tr>
-<td>GLC</td>
+<td>AAS</td>
 <td>None</td>
-<td>gas-liquid chromatography</td>
+<td>Atomic absorption spectroscopy</td>
 </tr>
 <tr>
-<td>GC</td>
+<td>AES</td>
+<td>None</td>
+<td>Atomic emission spectroscopy</td>
+</tr>
+<tr>
+<td>Colorimetric</td>
+<td>None</td>
+<td>Colorimetric analysis</td>
+</tr>
+<tr>
+<td>Combustion</td>
 <td>None</td>
 <td></td>
 </tr>
 <tr>
-<td>Nephelometry</td>
+<td>Enzymatic-colorimetric</td>
 <td>None</td>
 <td></td>
 </tr>
 <tr>
-<td>Gravimetric</td>
+<td>Enzymatic-gravimetric</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Enzymatic-spectrometric</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Extraction</td>
 <td>None</td>
 <td></td>
 </tr>
@@ -359,7 +374,92 @@
 <td></td>
 </tr>
 <tr>
+<td>GC</td>
+<td>None</td>
+<td>Gas chromatography</td>
+</tr>
+<tr>
+<td>GLC</td>
+<td>None</td>
+<td>Gas-liquid chromatography</td>
+</tr>
+<tr>
+<td>Gravimetric</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>HPAEC-PAD</td>
+<td>None</td>
+<td>High-performance anion-exchange chromatography with pulsed amperometric detec...</td>
+</tr>
+<tr>
+<td>HPLC</td>
+<td>OBI:0002116</td>
+<td>High-performance liquid chromatography</td>
+</tr>
+<tr>
+<td>HPLC-MS/MS</td>
+<td>None</td>
+<td>High-performance liquid chromatography with tandem mass spectrometry</td>
+</tr>
+<tr>
+<td>HPLC-UV</td>
+<td>None</td>
+<td>High-performance liquid chromatography with ultra-violet spectroscopy</td>
+</tr>
+<tr>
+<td>ICP</td>
+<td>None</td>
+<td>Inductively coupled plasma</td>
+</tr>
+<tr>
+<td>ICP-MS</td>
+<td>None</td>
+<td>Inductively coupled plasma mass spectrometry</td>
+</tr>
+<tr>
+<td>ID-GC-MS</td>
+<td>None</td>
+<td>Isotope dilution gas chromatography mass spectrometry</td>
+</tr>
+<tr>
 <td>Kjeldahl</td>
+<td>None</td>
+<td>Kjeldahl digestion</td>
+</tr>
+<tr>
+<td>Nephelometric</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>LC</td>
+<td>None</td>
+<td>Liquid chromatography</td>
+</tr>
+<tr>
+<td>LC-FLD</td>
+<td>None</td>
+<td>Liquid chromatography with fluorescence detection</td>
+</tr>
+<tr>
+<td>LC-ESI-IDMS</td>
+<td>None</td>
+<td>Liquid chromatography with electrospray ionization-isotope dilution mass spec...</td>
+</tr>
+<tr>
+<td>Microbiological</td>
+<td>None</td>
+<td>Microbiological assay</td>
+</tr>
+<tr>
+<td>Microfluorometric</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Polarimetry</td>
 <td>None</td>
 <td></td>
 </tr>
@@ -392,23 +492,80 @@
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 permissible_values:
-  HPLC:
-    text: HPLC
-    description: High performance liquid chromotography
-    meaning: OBI:0002116
-  GLC:
-    text: GLC
-    description: gas-liquid chromatography
-  GC:
-    text: GC
-  Nephelometry:
-    text: Nephelometry
-  Gravimetric:
-    text: Gravimetric
+  AAS:
+    text: AAS
+    description: Atomic absorption spectroscopy
+  AES:
+    text: AES
+    description: Atomic emission spectroscopy
+  Colorimetric:
+    text: Colorimetric
+    description: Colorimetric analysis
+  Combustion:
+    text: Combustion
+  Enzymatic-colorimetric:
+    text: Enzymatic-colorimetric
+  Enzymatic-gravimetric:
+    text: Enzymatic-gravimetric
+  Enzymatic-spectrometric:
+    text: Enzymatic-spectrometric
+  Extraction:
+    text: Extraction
   Fluorometric:
     text: Fluorometric
+  GC:
+    text: GC
+    description: Gas chromatography
+  GLC:
+    text: GLC
+    description: Gas-liquid chromatography
+  Gravimetric:
+    text: Gravimetric
+  HPAEC-PAD:
+    text: HPAEC-PAD
+    description: High-performance anion-exchange chromatography with pulsed amperometric
+      detection
+  HPLC:
+    text: HPLC
+    description: High-performance liquid chromatography
+    meaning: OBI:0002116
+  HPLC-MS/MS:
+    text: HPLC-MS/MS
+    description: High-performance liquid chromatography with tandem mass spectrometry
+  HPLC-UV:
+    text: HPLC-UV
+    description: High-performance liquid chromatography with ultra-violet spectroscopy
+  ICP:
+    text: ICP
+    description: Inductively coupled plasma
+  ICP-MS:
+    text: ICP-MS
+    description: Inductively coupled plasma mass spectrometry
+  ID-GC-MS:
+    text: ID-GC-MS
+    description: Isotope dilution gas chromatography mass spectrometry
   Kjeldahl:
     text: Kjeldahl
+    description: Kjeldahl digestion
+  Nephelometric:
+    text: Nephelometric
+  LC:
+    text: LC
+    description: Liquid chromatography
+  LC-FLD:
+    text: LC-FLD
+    description: Liquid chromatography with fluorescence detection
+  LC-ESI-IDMS:
+    text: LC-ESI-IDMS
+    description: Liquid chromatography with electrospray ionization-isotope dilution
+      mass spectrometry
+  Microbiological:
+    text: Microbiological
+    description: Microbiological assay
+  Microfluorometric:
+    text: Microfluorometric
+  Polarimetry:
+    text: Polarimetry
 
 </code></pre>
 
