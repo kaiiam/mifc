@@ -476,7 +476,7 @@ enums:
       Microbiological:
         description: Microbiological assay
       Microfluorometric:
-      Polarimetry:
+      Polarimetric:
   FoodPreservationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
       air-dried:
