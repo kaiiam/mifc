@@ -431,17 +431,52 @@ slots:
 enums:
   CompoundAnalyticalMeasurementMethod: # lab_method.csv has list for FDC
     permissible_values:
-      HPLC:
-        description: High performance liquid chromotography
-        meaning: OBI:0002116
-      GLC:
-        description: gas-liquid chromatography
-        #meaning: CHMO:0001016 # also MMO:0000471
-      GC:
-      Nephelometry:
-      Gravimetric:
+      AAS:
+        description: Atomic absorption spectroscopy
+      AES:
+        description: Atomic emission spectroscopy
+      Colorimetric:
+        description: Colorimetric analysis
+      Combustion:
+      Enzymatic-colorimetric:
+      Enzymatic-gravimetric:
+      Enzymatic-spectrometric:
+      Extraction:
       Fluorometric:
+      GC:
+        description: Gas chromatography
+      GLC:
+        description: Gas-liquid chromatography
+        #meaning: CHMO:0001016 # also MMO:0000471
+      Gravimetric:
+      HPAEC-PAD:
+        description: High-performance anion-exchange chromatography with pulsed amperometric detection
+      HPLC:
+        description: High-performance liquid chromatography
+        meaning: OBI:0002116
+      HPLC-MS/MS:
+        description: High-performance liquid chromatography with tandem mass spectrometry
+      HPLC-UV:
+        description: High-performance liquid chromatography with ultra-violet spectroscopy
+      ICP:
+        description: Inductively coupled plasma
+      ICP-MS:
+        description: Inductively coupled plasma mass spectrometry
+      ID-GC-MS:
+        description: Isotope dilution gas chromatography mass spectrometry
       Kjeldahl:
+        description: Kjeldahl digestion
+      Nephelometric:
+      LC:
+        description: Liquid chromatography
+      LC-FLD:
+        description: Liquid chromatography with fluorescence detection
+      LC-ESI-IDMS:
+        description: Liquid chromatography with electrospray ionization-isotope dilution mass spectrometry
+      Microbiological:
+        description: Microbiological assay
+      Microfluorometric:
+      Polarimetry:
   FoodPreservationState: # See FOODON Characteristics TODO add cooked terms or make separate enum for it. PFTI separates this into two fields.
     permissible_values:
       air-dried:
