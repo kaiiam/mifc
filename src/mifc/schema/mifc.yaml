@@ -254,6 +254,8 @@ slots:
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
     range: CountryCode
+    examples:
+      - value: AFG
   food_acquisition_city:
     description: A string denoting the city in which a food sample was acquired.
     close_mappings:
@@ -264,6 +266,8 @@ slots:
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: AFG
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
     description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
@@ -306,6 +310,8 @@ slots:
   food_distributor_country:
     description: A string denoting the country code of a distributor organization from which a food sample was acquired.
     range: CountryCode
+    examples:
+      - value: AFG
   food_distributor_country_subdivision:
     description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
