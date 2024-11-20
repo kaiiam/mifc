@@ -271,7 +271,8 @@ slots:
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
     description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
   food_acquisition_date: #TODO add ISO datetime requirement?
-    description: A datetime value representing the date a food sample was acquired.
+    description: A date value representing the date a food sample was acquired.
+    range: date
     recommended: true
     in_subset:
       - RecommendedSubset
@@ -315,9 +316,11 @@ slots:
   food_distributor_country_subdivision:
     description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
   food_expiration_date: #TODO add ISO datetime requirement?
-    description: A datetime value representing the food expiration data as shown on the labeling information of the food sample.
+    description: A date value representing the food expiration data as shown on the labeling information of the food sample.
+    range: date
   food_sell_by_date:
-    description: A datetime value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.
+    description: A date value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.
+    range: date
     comments: Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
   food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
@@ -368,10 +371,12 @@ slots:
     in_subset:
       - RecommendedSubset
   component_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
-    description: A datetime value representing recorded date pertaining to an analyzed sample.
+    description: A date value representing recorded date pertaining to an analyzed sample.
+    range: date
     comments: Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis.
   component_analysis_date:
-    description: A datetime value representing the date in which a component of nutritional interest was analyzed.
+    description: A date value representing the date in which a component of nutritional interest was analyzed.
+    range: date
     recommended: true
     in_subset:
       - RecommendedSubset
@@ -415,7 +420,7 @@ slots:
   component_quality_control_remeasurement:
     description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
     comments: This could be alternatively be modeled with an integer rather than a boolean.
-    range: boolean
+    #range: boolean
   #    is_a: boolean_slot
 
   # Provenance slots
