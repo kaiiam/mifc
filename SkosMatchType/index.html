@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_laboratory_sample_id/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/SkosMatchType/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: food_laboratory_sample_id - mifc</title>
+        <title>Enum: SkosMatchType - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-food_laboratory_sample_id" class="md-skip">
+        <a href="#enum-skosmatchtype" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: food_laboratory_sample_id
+              Enum: SkosMatchType
             
           </span>
         </div>
@@ -256,22 +256,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -297,13 +290,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mappings" class="md-nav__link">
-    Mappings
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#linkml-source" class="md-nav__link">
     LinkML Source
   </a>
@@ -324,87 +310,121 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_laboratory_sample_id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/SkosMatchType.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-food_laboratory_sample_id">Slot: food_laboratory_sample_id</h1>
-<p><em>A string denoting an identifier of a laboratory sample which was prepared from a food sample.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_laboratory_sample_id">mifc:food_laboratory_sample_id</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-skosmatchtype">Enum: SkosMatchType</h1>
+<p>URI: <a href="./">SkosMatchType</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skos:exactMatch</td>
+<td>skos:exactMatch</td>
+<td>Mappings assessed to indicate a high degree of confidence that the concepts e...</td>
+</tr>
+<tr>
+<td>skos:closeMatch</td>
+<td>skos:closeMatch</td>
+<td>Mappings between the subject and object terms that convey a high degree of si...</td>
+</tr>
+<tr>
+<td>skos:broadMatch</td>
+<td>skos:broadMatch</td>
+<td>Mappings between a subject and object terms, where the object term is above t...</td>
+</tr>
+<tr>
+<td>skos:narrowMatch</td>
+<td>skos:narrowMatch</td>
+<td>Mappings between a subject and object terms, where the object term that is be...</td>
+</tr>
+<tr>
+<td>skos:relatedMatch</td>
+<td>skos:relatedMatch</td>
+<td>Mappings between subject and object terms that might have some association bu...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Description</th>
-<th>Modifies Slot</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../Food/">Food</a></td>
-<td>Metadata about foods analyzed for components of nutritional interest</td>
-<td>no</td>
-</tr>
-<tr>
-<td><a href="../Component/">Component</a></td>
-<td>Metadata about components of nutritional interest measured from foods</td>
-<td>no</td>
+<td><a href="../food_description_match_type/">food_description_match_type</a></td>
+<td>A controlled vocabulary term representing the type of mapping between the foo...</td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../String/">String</a></li>
-</ul>
-<h2 id="comments">Comments</h2>
-<ul>
-<li>Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.</li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
 <li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
-<h2 id="mappings">Mappings</h2>
-<table>
-<thead>
-<tr>
-<th>Mapping Type</th>
-<th>Mapped Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>self</td>
-<td>mifc:food_laboratory_sample_id</td>
-</tr>
-<tr>
-<td>native</td>
-<td>mifc:food_laboratory_sample_id</td>
-</tr>
-</tbody>
-</table>
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: food_laboratory_sample_id
-description: A string denoting an identifier of a laboratory sample which was prepared
-  from a food sample.
-comments:
-- Only use this attribute if a separate ID is assigned to laboratory samples derived
-  from food samples. Otherwise just use the food_sample_id.
+<pre><code class="language-yaml">name: SkosMatchType
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_laboratory_sample_id
-domain_of:
-- Food
-- Component
-range: string
+permissible_values:
+  skos:exactMatch:
+    text: skos:exactMatch
+    description: Mappings assessed to indicate a high degree of confidence that the
+      concepts expressed in the subject and object terms can be used interchangeably.
+    meaning: skos:exactMatch
+    comments:
+    - 'From the sssom_schema: The subject and the object can, with a high degree of
+      confidence, be used interchangeably across a wide range of information retrieval
+      applications.'
+    - In SKOS this is described as following the transitive property.
+  skos:closeMatch:
+    text: skos:closeMatch
+    description: Mappings between the subject and object terms that convey a high
+      degree of similarity, but are not exactly the same or interchangeable.
+    meaning: skos:closeMatch
+    comments:
+    - 'From the sssom_schema: The subject and the object are sufficiently similar
+      that they can be used interchangeably in some information retrieval applications.'
+  skos:broadMatch:
+    text: skos:broadMatch
+    description: Mappings between a subject and object terms, where the object term
+      is above the subject within a concept hierarchy.
+    meaning: skos:broadMatch
+    comments:
+    - 'From the SKOS primer: A triple skos:broader (and skos:broadMatch) asserts that,
+      the object of the triple, is a broader concept than , the subject of the triple.'
+  skos:narrowMatch:
+    text: skos:narrowMatch
+    description: Mappings between a subject and object terms, where the object term
+      that is below the subject within a concept hierarchy.
+    meaning: skos:narrowMatch
+    comments:
+    - 'From the SKOS primer: A triple skos:narrower (and skos:narrowMatch) asserts
+      that, the object of the triple, is a narrower concept than , the subject of
+      the triple.'
+  skos:relatedMatch:
+    text: skos:relatedMatch
+    description: Mappings between subject and object terms that might have some association
+      but are not clearly not referring to the the same or similar concepts.
+    meaning: skos:relatedMatch
+    comments:
+    - 'From the sssom_schema: The subject and the object are associated in some unspecified
+      way.'
 
 </code></pre>
 

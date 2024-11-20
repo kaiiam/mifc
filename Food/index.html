@@ -256,6 +256,11 @@
 
   Food : food_description_label
 
+  Food : food_description_match_type
+
+      Food --&gt; "0..1 _recommended_" SkosMatchType : food_description_match_type
+    click SkosMatchType href "../SkosMatchType"
+
   Food : food_distributor_city
 
   Food : food_distributor_country
@@ -386,6 +391,12 @@
 <td><a href="../food_primary_type_ncbi_taxon_id/">food_primary_type_ncbi_taxon_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A curie from the ontology representation of the NCBI organismal taxonomy (NCB...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_description_match_type/">food_description_match_type</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../SkosMatchType/">SkosMatchType</a></td>
+<td>A controlled vocabulary term representing the type of mapping between the foo...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -640,6 +651,7 @@ slots:
 - food_primary_type_icncp_cultivar_name
 - food_primary_type_animal_breed_name
 - food_primary_type_ncbi_taxon_id
+- food_description_match_type
 - food_upc_code
 - food_preservation_state
 - food_storage_temperature_state
@@ -832,6 +844,23 @@ attributes:
     domain_of:
     - Food
     range: string
+  food_description_match_type:
+    name: food_description_match_type
+    description: A controlled vocabulary term representing the type of mapping between
+      the food_description_label and the label of the food_primary_type.
+    comments:
+    - TODO add enumeration
+    - See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_description_match_type
+    owner: Food
+    domain_of:
+    - Food
+    range: SkosMatchType
+    recommended: true
   food_upc_code:
     name: food_upc_code
     description: An string denoting a Universal Product Code (UPC) barcode of a food
