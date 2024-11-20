@@ -266,7 +266,7 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      value: boiled
+      value: [boiled|steamed]
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
     range: CountryCode
