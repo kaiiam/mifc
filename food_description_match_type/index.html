@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -331,7 +338,7 @@
 
 
 <h1 id="slot-food_description_match_type">Slot: food_description_match_type</h1>
-<p><em>A controlled vocabulary term representing the type of mapping between the food_description_label and the label of the food_primary_type.</em></p>
+<p><em>A controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.</em></p>
 <p>URI: <a href="https://w3id.org/kaiiam/mifc/food_description_match_type">mifc:food_description_match_type</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -361,9 +368,34 @@
 <p>Recommended: True</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>skos:exactMatch</td>
+</tr>
+<tr>
+<td>skos:closeMatch</td>
+</tr>
+<tr>
+<td>skos:broadMatch</td>
+</tr>
+<tr>
+<td>skos:narrowMatch</td>
+</tr>
+<tr>
+<td>skos:relatedMatch</td>
+</tr>
+</tbody>
+</table>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>TODO add enumeration</li>
+<li>Note that the subject is the food_description_label and the object is food_primary_type_label</li>
 <li>See <a href="https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml">https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -395,10 +427,27 @@
 
 <pre><code class="language-yaml">name: food_description_match_type
 description: A controlled vocabulary term representing the type of mapping between
-  the food_description_label and the label of the food_primary_type.
+  the food_description_label and food_primary_type_label.
 comments:
-- TODO add enumeration
+- Note that the subject is the food_description_label and the object is food_primary_type_label
 - See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml
+examples:
+- value: skos:exactMatch
+  description: Mappings assessed to indicate a high degree of confidence that the
+    concepts expressed in the subject and object terms can be used interchangeably.
+    In SKOS this is described as following the transitive property.
+- value: skos:closeMatch
+  description: Mappings between the subject and object terms that convey a high degree
+    of similarity, but are not exactly the same or interchangeable.
+- value: skos:broadMatch
+  description: Mappings between a subject and object terms, where the object term
+    is above the subject within a concept hierarchy.
+- value: skos:narrowMatch
+  description: Mappings between a subject and object terms, where the object term
+    that is below the subject within a concept hierarchy.
+- value: skos:relatedMatch
+  description: Mappings between subject and object terms that might have some association
+    but are not clearly not referring to the the same or similar concepts.
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
