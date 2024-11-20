@@ -15,7 +15,7 @@
     
     
       
-        <title>Slot: food_description_match_type - mifc</title>
+        <title>food_description_match_type - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-food_description_match_type" class="md-skip">
+        <a href="#food_description_match_type" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: food_description_match_type
+              food_description_match_type
             
           </span>
         </div>
@@ -256,13 +256,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#properties" class="md-nav__link">
     Properties
   </a>
@@ -284,26 +277,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#identifier-and-mapping-information" class="md-nav__link">
-    Identifier and Mapping Information
-  </a>
-  
-    <nav class="md-nav" aria-label="Identifier and Mapping Information">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schema-source" class="md-nav__link">
-    Schema Source
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -311,8 +284,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#linkml-source" class="md-nav__link">
-    LinkML Source
+  <a href="#schema-developer-documentation" class="md-nav__link">
+    Schema developer documentation
   </a>
   
 </li>
@@ -337,71 +310,57 @@
   </a>
 
 
-<h1 id="slot-food_description_match_type">Slot: food_description_match_type</h1>
+<h1 id="food_description_match_type">food_description_match_type</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_description_match_type">mifc:food_description_match_type</a></p>
+<p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
+<div class="admonition info">
+<p class="admonition-title">Description</p>
 <p><em>A controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.</em></p>
-<p>URI: <a href="https://w3id.org/kaiiam/mifc/food_description_match_type">mifc:food_description_match_type</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-<th>Modifies Slot</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Food/">Food</a></td>
-<td>Metadata about foods analyzed for components of nutritional interest</td>
-<td>no</td>
-</tr>
-</tbody>
-</table>
+</div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p>Range: <a href="../SkosMatchType/">SkosMatchType</a></p>
+<p><strong>Range</strong>: <a href="../SkosMatchType/">SkosMatchType</a>. The range of the element is the type of the value that can be assigned to it.</p>
 </li>
 <li>
-<p>Recommended: True</p>
+<p><strong>Required?</strong>: Recommended (We suggest adding this element to the mapping or mapping set, but it is not required.</p>
 </li>
 </ul>
 <h2 id="examples">Examples</h2>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>skos:exactMatch</td>
-</tr>
-<tr>
-<td>skos:closeMatch</td>
-</tr>
-<tr>
-<td>skos:broadMatch</td>
-</tr>
-<tr>
-<td>skos:narrowMatch</td>
-</tr>
-<tr>
-<td>skos:relatedMatch</td>
-</tr>
-</tbody>
-</table>
+<div class="admonition example">
+<p class="admonition-title">Example: skos:exactMatch</p>
+<p><strong>Example value</strong>:</p>
+<p><code>skos:exactMatch</code></p>
+<p><strong>Description</strong>: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably. In SKOS this is described as following the transitive property.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: skos:closeMatch</p>
+<p><strong>Example value</strong>:</p>
+<p><code>skos:closeMatch</code></p>
+<p><strong>Description</strong>: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: skos:broadMatch</p>
+<p><strong>Example value</strong>:</p>
+<p><code>skos:broadMatch</code></p>
+<p><strong>Description</strong>: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: skos:narrowMatch</p>
+<p><strong>Example value</strong>:</p>
+<p><code>skos:narrowMatch</code></p>
+<p><strong>Description</strong>: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: skos:relatedMatch</p>
+<p><strong>Example value</strong>:</p>
+<p><code>skos:relatedMatch</code></p>
+<p><strong>Description</strong>: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.</p>
+</div>
 <h2 id="comments">Comments</h2>
 <ul>
 <li>Note that the subject is the food_description_label and the object is food_primary_type_label</li>
 <li>See <a href="https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml">https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml</a></li>
-</ul>
-<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
-<h3 id="schema-source">Schema Source</h3>
-<ul>
-<li>from schema: <a href="https://w3id.org/kaiiam/mifc">https://w3id.org/kaiiam/mifc</a></li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -422,8 +381,9 @@
 </tr>
 </tbody>
 </table>
-<h2 id="linkml-source">LinkML Source</h2>
-<details>
+<h2 id="schema-developer-documentation">Schema developer documentation</h2>
+<details><summary>LinkML source</summary>
+
 
 <pre><code class="language-yaml">name: food_description_match_type
 description: A controlled vocabulary term representing the type of mapping between
