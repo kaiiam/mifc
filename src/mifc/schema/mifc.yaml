@@ -372,6 +372,8 @@ slots:
     required: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: g/(100.g)
   component_data_points_number: # TODO add default 1 perhaps with ifabsent
     description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
     required: true
@@ -422,11 +424,13 @@ slots:
     in_subset:
       - RecommendedSubset
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
-    description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample, (e.g., HPLC).
+    description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample.
     recommended: true
     range: CompoundAnalyticalMeasurementMethod
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: HPLC
   compound_analytical_laboratory_name:
     description: A string denoting the name of a laboratory that conducted the analytical analysis of a component of nutritional interest.
   component_quality_control_remeasurement:
