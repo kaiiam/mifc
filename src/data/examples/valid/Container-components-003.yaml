@@ -5,10 +5,10 @@ components:
   component_data_points_number: 1
   component_type: COMPONENT:1075
   component_type_label: galactose
-  component_analysis_date: March 8, 2023
+  component_analysis_date: '2023-03-08'
   compound_analytical_measurement_protocol_doi: SUGR-GALAC-CHG
   compound_analytical_laboratory_name: Silliker
-  component_quality_control_remeasurement: false
+  component_quality_control_remeasurement: 'FALSE'
   food_laboratory_sample_aliquot_id: NFY122JPN
   food_laboratory_sample_batch_id: o
 - component_sample_id: CY124QX
@@ -17,7 +17,7 @@ components:
   component_data_points_number: 1
   component_type: COMPONENT:1014
   component_type_label: maltose
-  component_analysis_date: March 9, 2023
+  component_analysis_date: '2023-03-09'
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
   compound_analytical_laboratory_name: Silliker
@@ -29,10 +29,10 @@ components:
   component_data_points_number: 1
   component_type: COMPONENT:1011
   component_type_label: glucose
-  component_analysis_date: March 17, 2023
+  component_analysis_date: '2023-03-17'
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_doi: SUGR-DP1-2-CHG
   compound_analytical_laboratory_name: Silliker
-  component_quality_control_remeasurement: true
+  component_quality_control_remeasurement: 'TRUE'
   food_laboratory_sample_aliquot_id: NFY122JV9
   food_laboratory_sample_batch_id: q
