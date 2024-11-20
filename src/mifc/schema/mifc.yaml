@@ -365,6 +365,8 @@ slots:
     range: float
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: 0.52
   component_measurement_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
     required: true
