@@ -182,14 +182,25 @@ slots:
     in_subset:
       - RecommendedSubset
   food_description_match_type:
-    description: A controlled vocabulary term representing the type of mapping between the food_description_label and the label of the food_primary_type.
+    description: A controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.
     recommended: true
     range: SkosMatchType
     comments:
-      - TODO add enumeration
+      - Note that the subject is the food_description_label and the object is food_primary_type_label
       - 'See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml'
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: skos:exactMatch
+        description: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably. In SKOS this is described as following the transitive property.
+      - value: skos:closeMatch
+        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.
+      - value: skos:broadMatch
+        description: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.
+      - value: skos:narrowMatch
+        description: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.
+      - value: skos:relatedMatch
+        description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
   food_primary_type_label:
     description: A string denoting the label of a controlled vocabulary term representing the primary food material which was sampled.
     recommended: true
