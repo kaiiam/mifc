@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -312,6 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: 2023-03-08</p>
+<p><strong>Example value</strong>:</p>
+<p><code>2023-03-08</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -338,6 +351,8 @@
 <pre><code class="language-yaml">name: food_expiration_date
 description: A date value representing the food expiration data as shown on the labeling
   information of the food sample.
+examples:
+- value: '2023-03-08'
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: food_expiration_date
