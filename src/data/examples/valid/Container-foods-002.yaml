@@ -9,7 +9,7 @@ foods:
   food_acquisition_country_subdivision: PA
   food_acquisition_date: '2015-11-02'
   food_distributor_city: Cincinnati
-  food_distributor_country: United States of America
+  food_distributor_country: USA
   food_distributor_country_subdivision: Ohio
   food_expiration_date: '2015-12-07'
 - food_sample_id: FDC:392740
@@ -22,6 +22,6 @@ foods:
   food_acquisition_country_subdivision: AZ
   food_acquisition_date: '2018-05-22'
   food_distributor_city: Veracruz
-  food_distributor_country: Mexico
+  food_distributor_country: MEX
   food_distributor_country_subdivision: Veracruz
   food_expiration_date: '2018-04-25'
