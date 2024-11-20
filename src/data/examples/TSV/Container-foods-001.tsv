@@ -1,4 +1,4 @@
 food_sample_id	food_description_label	food_description_match_type	food_primary_type	food_primary_type_label	food_preservation_state	food_storage_temperature_state	food_cooking_method
-168566	"Tomatillos, raw"		FOOD:11954	"Tomatillos, raw"	raw		
-167857	"Pork, fresh, variety meats and by-products, ears, frozen, raw"		FOOD:10100	"Pork, fresh, variety meats and by-products, ears, frozen, raw"	fresh	frozen	
-170166	"Nuts, chestnuts, chinese, boiled and steamed"		FOOD:12095	"Nuts, chestnuts, chinese, boiled and steamed"			[boiled|steamed]
+168566	"Tomatillos, raw"	skos:exactMatch	FOOD:11954	"Tomatillos, raw"	raw		
+167857	"Pork, fresh, variety meats and by-products, ears, frozen, raw"	skos:exactMatch	FOOD:10100	"Pork, fresh, variety meats and by-products, ears, frozen, raw"	fresh	frozen	
+170166	"Nuts, chestnuts, chinese, boiled and steamed"	skos:exactMatch	FOOD:12095	"Nuts, chestnuts, chinese, boiled and steamed"			[boiled|steamed]
