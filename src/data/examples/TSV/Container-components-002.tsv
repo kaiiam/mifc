@@ -2,8 +2,8 @@ component_sample_id	component_type	component_type_label	component_recorded_value
 FDC:167512	COMPONENT:1003	Protein	5.88	g/(100.g)	1	HPLC	
 FDC:167512	COMPONENT:1007	Ash	3.5	kcal/(100.g)	1	GC	
 FDC:167512	COMPONENT:1062	Energy (kJ)	1286	kJ/(100.g)	2	GLC	
-FDC:167512	COMPONENT:1079	Fiber, total dietary	1.2	mg/(100.g)	0	Nephelometry	
-FDC:167512	COMPONENT:1089	Iron, Fe	2.12	ug/(100.g)	1	Gravimetric	 AOAC 934.06 mod
+FDC:167512	COMPONENT:1079	Fiber, total dietary	1.2	mg/(100.g)	0	Nephelometric	
+FDC:167512	COMPONENT:1089	Iron, Fe	2.12	ug/(100.g)	1	Gravimetric	AOAC 934.06 mod
 FDC:167513	COMPONENT:1003	Protein	4.34	g/(100.g)	2	Fluorometric	AOAC 985.01 + 984.27
 FDC:167513	COMPONENT:1007	Ash	3.08	kcal/(100.g)	1	Kjeldahl	
 FDC:167513	COMPONENT:1062	Energy (kJ)	1381	kJ/(100.g)	0	HPLC	AOAC 996.06
