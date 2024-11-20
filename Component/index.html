@@ -321,14 +321,14 @@
 </tr>
 <tr>
 <td><a href="../component_record_date/">component_record_date</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing recorded date pertaining to an analyzed sample</td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing recorded date pertaining to an analyzed sample</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../component_analysis_date/">component_analysis_date</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing the date in which a component of nutritional in...</td>
+<td>0..1 <em>recommended</em> <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the date in which a component of nutritional intere...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -393,7 +393,7 @@
 </tr>
 <tr>
 <td><a href="../component_quality_control_remeasurement/">component_quality_control_remeasurement</a></td>
-<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A boolean value denoting TRUE if a component_recorded_value was measured more...</td>
 <td>direct</td>
 </tr>
@@ -594,7 +594,7 @@ attributes:
     required: true
   component_record_date:
     name: component_record_date
-    description: A datetime value representing recorded date pertaining to an analyzed
+    description: A date value representing recorded date pertaining to an analyzed
       sample.
     comments:
     - Allows for ambiguity of date record relative to component_analysis_date. Use
@@ -606,10 +606,10 @@ attributes:
     owner: Component
     domain_of:
     - Component
-    range: string
+    range: date
   component_analysis_date:
     name: component_analysis_date
-    description: A datetime value representing the date in which a component of nutritional
+    description: A date value representing the date in which a component of nutritional
       interest was analyzed.
     comments:
     - Use this field if the exact date of analysis is known if there is date ambiguity
@@ -622,7 +622,7 @@ attributes:
     owner: Component
     domain_of:
     - Component
-    range: string
+    range: date
     recommended: true
   component_comment:
     name: component_comment
@@ -759,7 +759,7 @@ attributes:
     owner: Component
     domain_of:
     - Component
-    range: boolean
+    range: string
   food_laboratory_sample_id:
     name: food_laboratory_sample_id
     description: A string denoting an identifier of a laboratory sample which was

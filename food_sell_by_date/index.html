@@ -308,12 +308,12 @@
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A datetime value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.</em></p>
+<p><em>A date value representing a date that indicates to stores how long to display a food product for sale for inventory management purposes.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Date/">Date</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
@@ -347,8 +347,8 @@
 
 
 <pre><code class="language-yaml">name: food_sell_by_date
-description: A datetime value representing a date that indicates to stores how long
-  to display a food product for sale for inventory management purposes.
+description: A date value representing a date that indicates to stores how long to
+  display a food product for sale for inventory management purposes.
 comments:
 - Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
 from_schema: https://w3id.org/kaiiam/mifc
@@ -356,7 +356,7 @@ rank: 1000
 alias: food_sell_by_date
 domain_of:
 - Food
-range: string
+range: date
 
 </code></pre>
 

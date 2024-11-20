@@ -301,12 +301,12 @@
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A datetime value representing the food expiration data as shown on the labeling information of the food sample.</em></p>
+<p><em>A date value representing the food expiration data as shown on the labeling information of the food sample.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Date/">Date</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
@@ -336,14 +336,14 @@
 
 
 <pre><code class="language-yaml">name: food_expiration_date
-description: A datetime value representing the food expiration data as shown on the
-  labeling information of the food sample.
+description: A date value representing the food expiration data as shown on the labeling
+  information of the food sample.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: food_expiration_date
 domain_of:
 - Food
-range: string
+range: date
 
 </code></pre>
 

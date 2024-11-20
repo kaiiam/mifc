@@ -301,12 +301,12 @@
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A datetime value representing the date a food sample was acquired.</em></p>
+<p><em>A date value representing the date a food sample was acquired.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Date/">Date</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
@@ -340,7 +340,7 @@
 
 
 <pre><code class="language-yaml">name: food_acquisition_date
-description: A datetime value representing the date a food sample was acquired.
+description: A date value representing the date a food sample was acquired.
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -350,7 +350,7 @@ rank: 1000
 alias: food_acquisition_date
 domain_of:
 - Food
-range: string
+range: date
 recommended: true
 
 </code></pre>

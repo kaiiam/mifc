@@ -464,8 +464,8 @@
 </tr>
 <tr>
 <td><a href="../food_acquisition_date/">food_acquisition_date</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing the date a food sample was acquired</td>
+<td>0..1 <em>recommended</em> <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the date a food sample was acquired</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -524,14 +524,14 @@
 </tr>
 <tr>
 <td><a href="../food_expiration_date/">food_expiration_date</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing the food expiration data as shown on the labeli...</td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the food expiration data as shown on the labeling i...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_sell_by_date/">food_sell_by_date</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A datetime value representing a date that indicates to stores how long to dis...</td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing a date that indicates to stores how long to display...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -956,6 +956,8 @@ attributes:
   food_origin_country:
     name: food_origin_country
     description: A string denoting the country code from which a food sample originates.
+    examples:
+    - value: AFG
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_origin_country
@@ -978,6 +980,8 @@ attributes:
   food_acquisition_country:
     name: food_acquisition_country
     description: A string denoting the country code from which a food sample was acquired.
+    examples:
+    - value: AFG
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1001,7 +1005,7 @@ attributes:
     range: string
   food_acquisition_date:
     name: food_acquisition_date
-    description: A datetime value representing the date a food sample was acquired.
+    description: A date value representing the date a food sample was acquired.
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1012,7 +1016,7 @@ attributes:
     owner: Food
     domain_of:
     - Food
-    range: string
+    range: date
     recommended: true
   food_acquisition_location_type:
     name: food_acquisition_location_type
@@ -1108,6 +1112,8 @@ attributes:
     name: food_distributor_country
     description: A string denoting the country code of a distributor organization
       from which a food sample was acquired.
+    examples:
+    - value: AFG
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_distributor_country
@@ -1128,19 +1134,19 @@ attributes:
     range: string
   food_expiration_date:
     name: food_expiration_date
-    description: A datetime value representing the food expiration data as shown on
-      the labeling information of the food sample.
+    description: A date value representing the food expiration data as shown on the
+      labeling information of the food sample.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_expiration_date
     owner: Food
     domain_of:
     - Food
-    range: string
+    range: date
   food_sell_by_date:
     name: food_sell_by_date
-    description: A datetime value representing a date that indicates to stores how
-      long to display a food product for sale for inventory management purposes.
+    description: A date value representing a date that indicates to stores how long
+      to display a food product for sale for inventory management purposes.
     comments:
     - Definition sourced from https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/food-product-dating.
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1149,7 +1155,7 @@ attributes:
     owner: Food
     domain_of:
     - Food
-    range: string
+    range: date
   food_category_label:
     name: food_category_label
     description: A string or controlled vocabulary denoting the label of the food
