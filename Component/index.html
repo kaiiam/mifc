@@ -554,6 +554,8 @@ attributes:
     name: component_recorded_value
     description: A float representing a recorded value of a component of nutritional
       interest measured from a laboratory sample derived from a food sample.
+    examples:
+    - value: '0.52'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -568,6 +570,11 @@ attributes:
     name: component_measurement_unit
     description: A unit code representing the unit of measurement in which a component_recorded_value
       is measured.
+    comments:
+    - TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended
+      LINKML units docs.
+    examples:
+    - value: g/(100.g)
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -729,7 +736,9 @@ attributes:
   compound_analytical_measurement_method:
     name: compound_analytical_measurement_method
     description: A controlled vocabulary term denoting the method used to conduct
-      an analytical analysis on a sample, (e.g., HPLC).
+      an analytical analysis on a sample.
+    examples:
+    - value: HPLC
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc

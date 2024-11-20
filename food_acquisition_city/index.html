@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -312,6 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: Tucson</p>
+<p><strong>Example value</strong>:</p>
+<p><code>Tucson</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -341,6 +354,8 @@
 
 <pre><code class="language-yaml">name: food_acquisition_city
 description: A string denoting the city in which a food sample was acquired.
+examples:
+- value: Tucson
 from_schema: https://w3id.org/kaiiam/mifc
 close_mappings:
 - PTFI:Collection_Location
