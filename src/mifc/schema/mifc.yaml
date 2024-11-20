@@ -15,6 +15,9 @@ prefixes:
   schema: http://schema.org/
   PATO: http://purl.obolibrary.org/obo/PATO_
   OBI: http://purl.obolibrary.org/obo/OBI_
+  skos: http://www.w3.org/2004/02/skos/core#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
   example: https://example.org/
   FDC: https://fdc.nal.usda.gov/
   PTFI: https://foodperiodictable.org/
@@ -56,6 +59,7 @@ classes:
       - food_primary_type_icncp_cultivar_name
       - food_primary_type_animal_breed_name
       - food_primary_type_ncbi_taxon_id
+      - food_description_match_type
       - food_upc_code
       - food_preservation_state
       - food_storage_temperature_state
@@ -180,6 +184,7 @@ slots:
   food_description_match_type:
     description: A controlled vocabulary term representing the type of mapping between the food_description_label and the label of the food_primary_type.
     recommended: true
+    range: SkosMatchType
     comments:
       - TODO add enumeration
       - 'See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml'
@@ -235,7 +240,6 @@ slots:
     multivalued: true
     in_subset:
       - RecommendedSubset
-
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
   food_acquisition_city:
@@ -557,3 +561,31 @@ enums:
       toasted:
       uncooked:
       unheated:
+  SkosMatchType:
+    permissible_values:
+      skos:exactMatch:
+        description: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably.
+        meaning: skos:exactMatch
+        comments:
+          - "From the sssom_schema: The subject and the object can, with a high degree of confidence, be used interchangeably across a wide range of information retrieval applications."
+          - "In SKOS this is described as following the transitive property."
+      skos:closeMatch:
+        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.
+        meaning: skos:closeMatch
+        comments:
+          - "From the sssom_schema: The subject and the object are sufficiently similar that they can be used interchangeably in some information retrieval applications."
+      skos:broadMatch:
+        description: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.
+        meaning: skos:broadMatch
+        comments:
+          - "From the SKOS primer: A triple skos:broader (and skos:broadMatch) asserts that, the object of the triple, is a broader concept than , the subject of the triple."
+      skos:narrowMatch:
+        description: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.
+        meaning: skos:narrowMatch
+        comments:
+          - "From the SKOS primer: A triple skos:narrower (and skos:narrowMatch) asserts that, the object of the triple, is a narrower concept than , the subject of the triple."
+      skos:relatedMatch:
+        description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
+        meaning: skos:relatedMatch
+        comments:
+          - "From the sssom_schema: The subject and the object are associated in some unspecified way."
