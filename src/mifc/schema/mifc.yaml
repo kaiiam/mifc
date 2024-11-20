@@ -164,17 +164,23 @@ slots:
       - "Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html"
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: 168566
   food_description_label:
     description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
     required: true
     comments:
       - "For reference see book by Greenfield and Southgate 'Food Composition Data: Production Management and Use' ISBN-10 9251049491 and cited literature"
+    examples:
+      - value: Yam, raw
     in_subset:
       - RecommendedSubset
   food_primary_type:
     description: A controlled vocabulary term representing the primary food material which was sampled.
     comments:
       - The food_primary_type could be sourced from one of various food vocabularies such as USDA's FDC vocabulary, FoodEx2, LanguaL, or FoodOn.
+    examples:
+      value: FOODON:03311865
     slot_uri: schema:name
     exact_mappings:
       - FDC:NDB_number
@@ -210,6 +216,8 @@ slots:
       - RecommendedSubset
     close_mappings:
       - PTFI:Specimen_Food_Product_Name
+    examples:
+      value: piece of chicken (raw)
   food_primary_type_scientific_name:
     description: A string denoting the scientific name, (in binomial nomenclature) of an organism that a food material is primarily composed of.
     comments: This slot should only be used in cases where food materials are single ingredient foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted anchovies canned in oil".
@@ -228,12 +236,16 @@ slots:
   food_upc_code:
     description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
+    examples:
+      - value: 40822011143
   food_preservation_state:
     description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
     range: FoodPreservationState
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: raw
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
@@ -241,6 +253,8 @@ slots:
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      value: frozen
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
@@ -251,6 +265,8 @@ slots:
     multivalued: true
     in_subset:
       - RecommendedSubset
+    examples:
+      value: boiled
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
     range: CountryCode
@@ -260,6 +276,8 @@ slots:
     description: A string denoting the city in which a food sample was acquired.
     close_mappings:
       - PTFI:Collection_Location
+    examples:
+      value: Tucson
   food_acquisition_country: # See ISO 3166 for country codes
     description: A string denoting the country code from which a food sample was acquired.
     range: CountryCode
@@ -270,6 +288,8 @@ slots:
       - value: AFG
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
     description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
+    examples:
+      value: PA
   food_acquisition_date: #TODO add ISO datetime requirement?
     description: A date value representing the date a food sample was acquired.
     range: date
@@ -310,6 +330,8 @@ slots:
       - PTFI:Collector_Organization
   food_distributor_city:
     description: A string denoting the city of a distributor organization from which a food sample was acquired.
+    examples:
+      value: Veracruz
   food_distributor_country:
     description: A string denoting the country code of a distributor organization from which a food sample was acquired.
     range: CountryCode
@@ -317,6 +339,9 @@ slots:
       - value: AFG
   food_distributor_country_subdivision:
     description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
+    comments: To be determined if state codes should be specified over full names of states/provinces for countries globally.
+    examples:
+      - value: Ohio
   food_expiration_date: #TODO add ISO datetime requirement?
     description: A date value representing the food expiration data as shown on the labeling information of the food sample.
     range: date
@@ -367,11 +392,12 @@ slots:
       - RecommendedSubset
     examples:
       - value: 0.52
-  component_measurement_unit: #TODO find a way to constrain these with valid UCUM codes perhaps enum or recomended LINKML units docs.
+  component_measurement_unit:
     description: A unit code representing the unit of measurement in which a component_recorded_value is measured.
     required: true
     in_subset:
       - RecommendedSubset
+    comments: TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended LINKML units docs.
     examples:
       - value: g/(100.g)
   component_data_points_number: # TODO add default 1 perhaps with ifabsent
