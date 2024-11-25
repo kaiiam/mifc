@@ -217,6 +217,8 @@
 
   Component : component_analysis_date
 
+  Component : component_analysis_organization
+
   Component : component_comment
 
   Component : component_data_points_number
@@ -329,6 +331,12 @@
 <td><a href="../component_analysis_date/">component_analysis_date</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../Date/">Date</a></td>
 <td>A date value representing the date in which a component of nutritional intere...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_analysis_organization/">component_analysis_organization</a></td>
+<td>* <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>One or more string value(s) representing the name(s) of any organization(s) i...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -479,6 +487,7 @@ slots:
 - component_data_points_number
 - component_record_date
 - component_analysis_date
+- component_analysis_organization
 - component_comment
 - component_derivation_type
 - component_limit_of_quantitation
@@ -509,9 +518,11 @@ attributes:
   component_sample_id:
     name: component_sample_id
     description: A string denoting the primary identifier for a sample of the class
-      Component. Note that component_sample_id does not need be unique in a given
-      dataset and should be used to relate Food and Component records via food_sample_id
-      from the Food class.
+      Component.
+    comments:
+    - Note that component_sample_id does not need be unique in a given dataset and
+      should be used to relate Food and Component records via food_sample_id from
+      the Food class.
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -635,6 +646,25 @@ attributes:
     - Component
     range: date
     recommended: true
+  component_analysis_organization:
+    name: component_analysis_organization
+    description: One or more string value(s) representing the name(s) of any organization(s)
+      involved in the analysis of a component of nutritional interest from a food
+      sample.
+    examples:
+    - value: USDA
+    - value: Unknown manufacturer
+    in_subset:
+    - RecommendedSubset
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_analysis_organization
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+    recommended: true
+    multivalued: true
   component_comment:
     name: component_comment
     description: A comment relating to an analyzed component of nutritional interest.
