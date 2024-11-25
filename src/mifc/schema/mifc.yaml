@@ -109,6 +109,7 @@ classes:
       - component_data_points_number
       - component_record_date
       - component_analysis_date
+      - component_analysis_organization
       - component_comment
       - component_derivation_type
       - component_limit_of_quantitation
@@ -412,6 +413,15 @@ slots:
     comments: Allows for ambiguity of date record relative to component_analysis_date. Use this if a date for a record is know but it is unclear if it is specifically the date of analysis.
     examples:
       - value: 2023-03-08
+  component_analysis_organization:
+    description: One or more string value(s) representing the name(s) of any organization(s) involved in the analysis of a component of nutritional interest from a food sample.
+    recommended: true
+    multivalued: true
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: USDA
+      - value: Unknown manufacturer
   component_analysis_date:
     description: A date value representing the date in which a component of nutritional interest was analyzed.
     range: date
