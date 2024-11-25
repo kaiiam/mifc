@@ -371,8 +371,9 @@ slots:
 
   # Component slots
   component_sample_id:
-    description: A string denoting the primary identifier for a sample of the class Component. Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
+    description: A string denoting the primary identifier for a sample of the class Component.
     required: true
+    comments: Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
     in_subset:
       - RecommendedSubset
   component_type:
