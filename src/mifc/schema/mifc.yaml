@@ -127,6 +127,7 @@ classes:
       - component_atwater_protein_conversion_factor
       - component_atwater_fat_conversion_factor
       - component_atwater_carbohydrate_conversion_factor
+      - component_protein_from_nitrogen_conversion_factor
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
@@ -501,6 +502,10 @@ slots:
   component_atwater_carbohydrate_conversion_factor:
     description: A float representing the carbohydrate conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
     range: float
+  component_protein_from_nitrogen_conversion_factor:
+    description: A float representing the nitrogen to protein conversion factor used to calculate a protein value indirectly using a measured nitrogen value.
+    range: float
+    comments: A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
 
   # Provenance slots
   provenance_dataset_label:
