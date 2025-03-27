@@ -56,7 +56,7 @@ classes:
       - food_primary_type_label
       - food_primary_type_scientific_name
       - food_primary_type_icncp_group_name
-      - food_primary_type_icncp_cultivar_name
+      - food_primary_type_cultivar_name
       - food_primary_type_animal_breed_name
       - food_primary_type_ncbi_taxon_id
       - food_description_match_type
@@ -235,9 +235,8 @@ slots:
   food_primary_type_icncp_group_name:
     description: A string denoting the Group (or cultivar-group) formal taxon category of the primary food material as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).
     comments: This slot requires discussion as it alternatively be included as part of the food_primary_type_scientific_name slot.
-  food_primary_type_icncp_cultivar_name:
-    description: A string denoting the cultivar name of the primary food material as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).
-    comments: The ICNCP only applies to algae, fungi, and plant species. If present this slot should be used in addition to the food_primary_type_icncp_group_name slot.
+  food_primary_type_cultivar_name:
+    description: A string denoting the cultivar name of the primary food material.
     examples:
       - value: Adirondack Blue
   food_primary_type_animal_breed_name:
