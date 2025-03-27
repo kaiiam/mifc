@@ -233,8 +233,6 @@
 
   Food : food_acquisition_date
 
-  Food : food_acquisition_date_year
-
   Food : food_acquisition_latitude
 
   Food : food_acquisition_location_name
@@ -247,6 +245,8 @@
   Food : food_acquisition_longitude
 
   Food : food_acquisition_organization
+
+  Food : food_acquisition_year
 
   Food : food_additional_types
 
@@ -473,7 +473,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../food_acquisition_date_year/">food_acquisition_date_year</a></td>
+<td><a href="../food_acquisition_year/">food_acquisition_year</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string value representing the year a food sample was acquired</td>
 <td>direct</td>
@@ -687,7 +687,7 @@ slots:
 - food_acquisition_country
 - food_acquisition_country_subdivision
 - food_acquisition_date
-- food_acquisition_date_year
+- food_acquisition_year
 - food_acquisition_location_type
 - food_acquisition_location_name
 - food_acquisition_latitude
@@ -733,7 +733,7 @@ attributes:
     comments:
     - 'Instead of `identifier: true` perhaps we can use unique_keys https://linkml.io/linkml/schemas/constraints.html'
     examples:
-    - value: '168566'
+    - value: CY121UM
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -872,6 +872,8 @@ attributes:
       (NCBITaxon) describing the taxonomic identifier of the primary food material.
     comments:
     - To do specify an NCBITaxon curie as the range for the slot.
+    examples:
+    - value: NCBITaxon:9031
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_primary_type_ncbi_taxon_id
@@ -963,6 +965,8 @@ attributes:
     name: food_ripeness_state
     description: An enumerated set of controlled vocabulary terms representing the
       qualitative freshness state of a food sample when prepared for analysis.
+    examples:
+    - value: unripe
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_ripeness_state
@@ -1058,14 +1062,16 @@ attributes:
     - Food
     range: date
     recommended: true
-  food_acquisition_date_year:
-    name: food_acquisition_date_year
+  food_acquisition_year:
+    name: food_acquisition_year
     description: A string value representing the year a food sample was acquired.
     comments:
     - When possible food_acquisition_date should be used instead of food_acquisition_date_year.
+    examples:
+    - value: '2011'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: food_acquisition_date_year
+    alias: food_acquisition_year
     owner: Food
     domain_of:
     - Food
@@ -1073,7 +1079,9 @@ attributes:
   food_acquisition_location_type:
     name: food_acquisition_location_type
     description: A string describing the type of location from which a food sample
-      was acquired (e.g., a supermarket).
+      was acquired.
+    examples:
+    - value: supermarket
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1089,7 +1097,9 @@ attributes:
   food_acquisition_location_name:
     name: food_acquisition_location_name
     description: A string describing the name of the location from which a food sample
-      was acquired (e.g., "Safeway").
+      was acquired.
+    examples:
+    - value: Safeway
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_acquisition_location_name
@@ -1223,6 +1233,8 @@ attributes:
     name: food_category_label
     description: A string or controlled vocabulary denoting the label of the food
       group or category of the primary food material.
+    examples:
+    - value: Beverages
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_category_label
@@ -1287,6 +1299,8 @@ attributes:
     name: food_brand_name
     description: A string denoting a name identifying a product, service, or organization
       selling and or distributing the primary food material.
+    examples:
+    - value: Bob's Red Mill
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_brand_name
@@ -1301,6 +1315,8 @@ attributes:
       material.
     comments:
     - A lot number can also be referred to as lot code.
+    examples:
+    - value: '9500'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_lot_number
@@ -1315,6 +1331,8 @@ attributes:
     comments:
     - This field should be used in along with food_acquisition_label_weight_unit to
       express the units the food_label_weight was measured.
+    examples:
+    - value: '24'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_label_weight
@@ -1326,6 +1344,8 @@ attributes:
     name: food_label_weight_unit
     description: A unit code representing the unit of measurement in which a food_label_weight
       is measured.
+    examples:
+    - value: '[oz_av]'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_label_weight_unit
@@ -1336,6 +1356,8 @@ attributes:
   food_sample_publication_date:
     name: food_sample_publication_date
     description: A date value representing the date in which a food sample was published.
+    examples:
+    - value: '2020-10-30'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_sample_publication_date

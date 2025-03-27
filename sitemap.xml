@@ -265,10 +265,6 @@
          <lastmod>2025-03-27</lastmod>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/food_acquisition_date_year/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/food_acquisition_latitude/</loc>
          <lastmod>2025-03-27</lastmod>
     </url>
@@ -286,6 +282,10 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/food_acquisition_organization/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/food_acquisition_year/</loc>
          <lastmod>2025-03-27</lastmod>
     </url>
     <url>
