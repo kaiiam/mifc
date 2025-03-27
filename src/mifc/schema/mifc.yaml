@@ -262,6 +262,7 @@ slots:
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
+    multivalued: true
     range: FoodStorageTemperatureState
     recommended: true
     in_subset:
