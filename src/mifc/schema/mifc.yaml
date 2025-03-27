@@ -541,7 +541,7 @@ slots:
     examples:
       - value: https://doi.org/10.1093/9780197610145.003.3363
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
-    description: A controlled vocabulary term denoting the method used to conduct an analytical analysis on a sample.
+    description: A value from an enumerated set of controlled vocabulary terms denoting the method used to conduct an analytical analysis on a sample.
     recommended: true
     range: CompoundAnalyticalMeasurementMethod
     in_subset:
