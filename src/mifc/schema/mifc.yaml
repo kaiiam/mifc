@@ -83,6 +83,7 @@ classes:
       - food_expiration_date
       - food_sell_by_date
       - food_category_label
+      - food_category_type
       - food_additional_types
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
