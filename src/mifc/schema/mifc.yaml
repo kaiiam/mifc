@@ -603,20 +603,22 @@ slots:
     examples:
       - value: v1.0.1
   resource_contributor_orcid:
-    description: A list of strings representing ORCIDs URLs of people who contributed to a MIFC formatted dataset.
+    description: A list of strings representing ORCIDs URLs of people who contributed to a MIFC-formatted dataset.
     recommended: true
+    multivalued: true
     comments: See https://orcid.org/.
     in_subset:
       - RecommendedSubset
     examples:
-      - value: "https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655"
+      - value: "[https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655]"
   resource_organization_name:
-    description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset.
+    description: A list of strings representing the names of organizations who were involved in the creation of a MIFC-formatted dataset.
     recommended: true
+    multivalued: true
     in_subset:
       - RecommendedSubset
     examples:
-      - value: USDA Food for Health of People and the Environment Laboratory
+      - value: "[USDA Food for Health of People and the Environment Laboratory|University of Maryland]"
 
   # Slots common to both Food and Component classes
   food_laboratory_sample_id:
