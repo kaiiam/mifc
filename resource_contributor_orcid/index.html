@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -308,23 +315,24 @@
 <p><strong>Applicable to</strong>: <a href="../Provenance/">Provenance</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See <a href="https://orcid.org/">https://orcid.org/</a>.</em></p>
+<p><em>A list of strings representing ORCIDs URLs of people who contributed to a MIFC-formatted dataset.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
-</li>
-<li>
-<p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
-</li>
+<li><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</li>
+<li><strong>Multivalued</strong>: True. If the slot is multivalued, more than one value can be attached to the same field. In the TSV format, these are <code>|</code> separated.</li>
+<li><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: <a href="https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655">https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655</a></p>
+<p class="admonition-title">Example: [<a href="https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655">https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655</a>]</p>
 <p><strong>Example value</strong>:</p>
-<p><code>https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655</code></p>
+<p><code>[https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655]</code></p>
 </div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>See <a href="https://orcid.org/">https://orcid.org/</a>.</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -349,10 +357,12 @@
 
 
 <pre><code class="language-yaml">name: resource_contributor_orcid
-description: A string corresponding to a &quot;|&quot; delimited list of ORCIDs of people who
-  contributed to a MIFC formatted dataset. See https://orcid.org/.
+description: A list of strings representing ORCIDs URLs of people who contributed
+  to a MIFC-formatted dataset.
+comments:
+- See https://orcid.org/.
 examples:
-- value: https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655
+- value: '[https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655]'
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -362,6 +372,7 @@ domain_of:
 - Provenance
 range: string
 recommended: true
+multivalued: true
 
 </code></pre>
 

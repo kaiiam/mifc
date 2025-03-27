@@ -258,15 +258,15 @@
 </tr>
 <tr>
 <td><a href="../resource_contributor_orcid/">resource_contributor_orcid</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>A string corresponding to a "</td>
-<td>" delimited list of ORCIDs of people who contri...</td>
+<td>* <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A list of strings representing ORCIDs URLs of people who contributed to a MIF...</td>
+<td>direct</td>
 </tr>
 <tr>
 <td><a href="../resource_organization_name/">resource_organization_name</a></td>
-<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>A string corresponding to a "</td>
-<td>" delimited list of organizations who created o...</td>
+<td>* <em>recommended</em> <br/> <a href="../String/">String</a></td>
+<td>A list of strings representing the names of organizations who were involved i...</td>
+<td>direct</td>
 </tr>
 </tbody>
 </table>
@@ -375,10 +375,12 @@ attributes:
     recommended: true
   resource_contributor_orcid:
     name: resource_contributor_orcid
-    description: A string corresponding to a "|" delimited list of ORCIDs of people
-      who contributed to a MIFC formatted dataset. See https://orcid.org/.
+    description: A list of strings representing ORCIDs URLs of people who contributed
+      to a MIFC-formatted dataset.
+    comments:
+    - See https://orcid.org/.
     examples:
-    - value: https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655
+    - value: '[https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655]'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -389,12 +391,14 @@ attributes:
     - Provenance
     range: string
     recommended: true
+    multivalued: true
   resource_organization_name:
     name: resource_organization_name
-    description: A string corresponding to a "|" delimited list of organizations who
-      created or help to create to a MIFC formatted dataset.
+    description: A list of strings representing the names of organizations who were
+      involved in the creation of a MIFC-formatted dataset.
     examples:
-    - value: USDA Food for Health of People and the Environment Laboratory
+    - value: '[USDA Food for Health of People and the Environment Laboratory|University
+        of Maryland]'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -405,6 +409,7 @@ attributes:
     - Provenance
     range: string
     recommended: true
+    multivalued: true
 class_uri: schema:Provenance
 
 </code></pre>
