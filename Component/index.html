@@ -248,7 +248,7 @@
       Component --&gt; "0..1 _recommended_" CompoundAnalyticalMeasurementMethod : compound_analytical_measurement_method
     click CompoundAnalyticalMeasurementMethod href "../CompoundAnalyticalMeasurementMethod"
 
-  Component : compound_analytical_measurement_protocol_doi
+  Component : compound_analytical_measurement_protocol_url
 
   Component : compound_sample_aggregation_maximum_value
 
@@ -382,9 +382,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../compound_analytical_measurement_protocol_doi/">compound_analytical_measurement_protocol_doi</a></td>
+<td><a href="../compound_analytical_measurement_protocol_url/">compound_analytical_measurement_protocol_url</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
-<td>A string denoting a digital object identifier link to a measurement protocol ...</td>
+<td>A string denoting a uniform resource locator (URL) linking to a measurement p...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -495,7 +495,7 @@ slots:
 - compound_sample_aggregation_maximum_value
 - compound_sample_aggregation_median_value
 - compound_sample_aggregation_standard_deviation
-- compound_analytical_measurement_protocol_doi
+- compound_analytical_measurement_protocol_url
 - compound_analytical_measurement_method
 - compound_analytical_laboratory_name
 - component_quality_control_remeasurement
@@ -749,15 +749,18 @@ attributes:
     domain_of:
     - Component
     range: float
-  compound_analytical_measurement_protocol_doi:
-    name: compound_analytical_measurement_protocol_doi
-    description: A string denoting a digital object identifier link to a measurement
+  compound_analytical_measurement_protocol_url:
+    name: compound_analytical_measurement_protocol_url
+    description: A string denoting a uniform resource locator (URL) linking to a measurement
       protocol used to conduct an analytical analysis on a sample.
+    comments:
+    - Ideally a protocol with a digital object identifier (DOI) should be used in
+      place of a generic URL if possible.
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: compound_analytical_measurement_protocol_doi
+    alias: compound_analytical_measurement_protocol_url
     owner: Component
     domain_of:
     - Component

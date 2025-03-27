@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/compound_analytical_measurement_protocol_doi/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/compound_analytical_measurement_protocol_url/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>compound_analytical_measurement_protocol_doi - mifc</title>
+        <title>compound_analytical_measurement_protocol_url - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#compound_analytical_measurement_protocol_doi" class="md-skip">
+        <a href="#compound_analytical_measurement_protocol_url" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              compound_analytical_measurement_protocol_doi
+              compound_analytical_measurement_protocol_url
             
           </span>
         </div>
@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -290,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/compound_analytical_measurement_protocol_doi.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/compound_analytical_measurement_protocol_url.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="compound_analytical_measurement_protocol_doi">compound_analytical_measurement_protocol_doi</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/compound_analytical_measurement_protocol_doi">mifc:compound_analytical_measurement_protocol_doi</a></p>
+<h1 id="compound_analytical_measurement_protocol_url">compound_analytical_measurement_protocol_url</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/compound_analytical_measurement_protocol_url">mifc:compound_analytical_measurement_protocol_url</a></p>
 <p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.</em></p>
+<p><em>A string denoting a uniform resource locator (URL) linking to a measurement protocol used to conduct an analytical analysis on a sample.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -311,6 +318,10 @@
 <li>
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
 </li>
+</ul>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Ideally a protocol with a digital object identifier (DOI) should be used in place of a generic URL if possible.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -323,11 +334,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:compound_analytical_measurement_protocol_doi</td>
+<td>mifc:compound_analytical_measurement_protocol_url</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:compound_analytical_measurement_protocol_doi</td>
+<td>mifc:compound_analytical_measurement_protocol_url</td>
 </tr>
 </tbody>
 </table>
@@ -335,14 +346,17 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: compound_analytical_measurement_protocol_doi
-description: A string denoting a digital object identifier link to a measurement protocol
-  used to conduct an analytical analysis on a sample.
+<pre><code class="language-yaml">name: compound_analytical_measurement_protocol_url
+description: A string denoting a uniform resource locator (URL) linking to a measurement
+  protocol used to conduct an analytical analysis on a sample.
+comments:
+- Ideally a protocol with a digital object identifier (DOI) should be used in place
+  of a generic URL if possible.
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: compound_analytical_measurement_protocol_doi
+alias: compound_analytical_measurement_protocol_url
 domain_of:
 - Component
 range: string
