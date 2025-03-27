@@ -400,7 +400,7 @@
 <tr>
 <td><a href="../compound_analytical_measurement_method/">compound_analytical_measurement_method</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../CompoundAnalyticalMeasurementMethod/">CompoundAnalyticalMeasurementMethod</a></td>
-<td>A controlled vocabulary term denoting the method used to conduct an analytica...</td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting the me...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -651,6 +651,9 @@ attributes:
     name: component_data_points_number
     description: An integer representing the number of individual samples that comprise
       a component sample. 1 if an individual sample &gt;1 if an aggregation of samples.
+    comments:
+    - This slot defines if component is source from an individual sample, or an aggregated
+      collection of sample (a profile).
     examples:
     - value: '7'
     in_subset:
@@ -735,7 +738,7 @@ attributes:
   component_derivation_type:
     name: component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
-      interest was generated, (e.g., Analytical or Calculated).
+      interest was generated.
     comments:
     - Should make an enumeration with appropriate values (e.g, Analytical as default,
       Calculated, inferred/Estimated, Sourced from literature etc)
@@ -842,8 +845,8 @@ attributes:
     recommended: true
   compound_analytical_measurement_method:
     name: compound_analytical_measurement_method
-    description: A controlled vocabulary term denoting the method used to conduct
-      an analytical analysis on a sample.
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      the method used to conduct an analytical analysis on a sample.
     examples:
     - value: HPLC
     in_subset:

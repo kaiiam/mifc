@@ -403,7 +403,7 @@
 <tr>
 <td><a href="../food_description_match_type/">food_description_match_type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../SkosMatchType/">SkosMatchType</a></td>
-<td>A controlled vocabulary term representing the type of mapping between the foo...</td>
+<td>A value from a controlled vocabulary term representing the type of mapping be...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -415,31 +415,31 @@
 <tr>
 <td><a href="../food_preservation_state/">food_preservation_state</a></td>
 <td>* <em>recommended</em> <br/> <a href="../FoodPreservationState/">FoodPreservationState</a></td>
-<td>An enumerated set of controlled vocabulary terms representing the preservatio...</td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_storage_temperature_state/">food_storage_temperature_state</a></td>
 <td>* <em>recommended</em> <br/> <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a></td>
-<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_ripeness_state/">food_ripeness_state</a></td>
 <td>0..1 <br/> <a href="../FoodRipenessState/">FoodRipenessState</a></td>
-<td>An enumerated set of controlled vocabulary terms representing the qualitative...</td>
+<td>A value from a enumerated set of controlled vocabulary terms representing the...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_cooking_method/">food_cooking_method</a></td>
 <td>* <em>recommended</em> <br/> <a href="../FoodCookingMethod/">FoodCookingMethod</a></td>
-<td>An enumerated set of controlled vocabulary terms representing the any cooking...</td>
+<td>One or multiple values from an enumerated set of controlled vocabulary terms ...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_origin_country/">food_origin_country</a></td>
 <td>0..1 <br/> <a href="../CountryCode/">CountryCode</a></td>
-<td>A string denoting the country code from which a food sample originates</td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -451,13 +451,13 @@
 <tr>
 <td><a href="../food_acquisition_country/">food_acquisition_country</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../CountryCode/">CountryCode</a></td>
-<td>A string denoting the country code from which a food sample was acquired</td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_acquisition_country_subdivision/">food_acquisition_country_subdivision</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string denoting the country subdivision from which a food sample was acquir...</td>
+<td>A string denoting the country subdivision (state or province) from which a fo...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -475,7 +475,7 @@
 <tr>
 <td><a href="../food_acquisition_location_type/">food_acquisition_location_type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../FoodAcquisitionLocationType/">FoodAcquisitionLocationType</a></td>
-<td>A string describing the type of location from which a food sample was acquire...</td>
+<td>A value from an enumerated set of controlled vocabulary terms describing the ...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -517,13 +517,13 @@
 <tr>
 <td><a href="../food_distributor_country/">food_distributor_country</a></td>
 <td>0..1 <br/> <a href="../CountryCode/">CountryCode</a></td>
-<td>A string denoting the country code of a distributor organization from which a...</td>
+<td>A value from an enumerated set of controlled vocabulary terms denoting denoti...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../food_distributor_country_subdivision/">food_distributor_country_subdivision</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string denoting the country subdivision of a distributor organization from ...</td>
+<td>A string denoting the country subdivision (state or province) of a distributo...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -869,8 +869,8 @@ attributes:
     range: string
   food_description_match_type:
     name: food_description_match_type
-    description: A controlled vocabulary term representing the type of mapping between
-      the food_description_label and food_primary_type_label.
+    description: A value from a controlled vocabulary term representing the type of
+      mapping between the food_description_label and food_primary_type_label.
     comments:
     - Note that the subject is the food_description_label and the object is food_primary_type_label
     - See https://github.com/mapping-commons/sssom/blob/master/src/sssom_schema/schema/sssom_schema.yaml
@@ -916,10 +916,10 @@ attributes:
     range: string
   food_preservation_state:
     name: food_preservation_state
-    description: An enumerated set of controlled vocabulary terms representing the
-      preservation state(s) of a food sample.
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the preservation state(s) of a food sample.
     examples:
-    - value: raw
+    - value: '[raw]'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -933,12 +933,12 @@ attributes:
     multivalued: true
   food_storage_temperature_state:
     name: food_storage_temperature_state
-    description: An enumerated set of controlled vocabulary terms representing the
-      qualitative temperature state at which a food sample was stored prior to acquisition
-      (e.g., "Refrigerated").
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the qualitative temperature state at which a food sample
+      was stored prior to acquisition.
     examples:
-    - value: frozen
-    - value: Refrigerated
+    - value: '[frozen]'
+    - value: '[frozen|refrigerated]'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -952,8 +952,8 @@ attributes:
     multivalued: true
   food_ripeness_state:
     name: food_ripeness_state
-    description: An enumerated set of controlled vocabulary terms representing the
-      qualitative freshness state of a food sample when prepared for analysis.
+    description: A value from a enumerated set of controlled vocabulary terms representing
+      the qualitative freshness state of a food sample when prepared for analysis.
     examples:
     - value: unripe
     from_schema: https://w3id.org/kaiiam/mifc
@@ -965,8 +965,9 @@ attributes:
     range: FoodRipenessState
   food_cooking_method:
     name: food_cooking_method
-    description: An enumerated set of controlled vocabulary terms representing the
-      any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
+    description: One or multiple values from an enumerated set of controlled vocabulary
+      terms representing the any cooking method(s) applied to a food sample prior
+      to analysis.
     examples:
     - value: '[boiled|steamed]'
     in_subset:
@@ -982,7 +983,8 @@ attributes:
     multivalued: true
   food_origin_country:
     name: food_origin_country
-    description: A string denoting the country code from which a food sample originates.
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code from which a food sample originates.
     examples:
     - value: AFG
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1008,7 +1010,8 @@ attributes:
     range: string
   food_acquisition_country:
     name: food_acquisition_country
-    description: A string denoting the country code from which a food sample was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code from which a food sample was acquired.
     examples:
     - value: AFG
     in_subset:
@@ -1023,8 +1026,8 @@ attributes:
     recommended: true
   food_acquisition_country_subdivision:
     name: food_acquisition_country_subdivision
-    description: A string denoting the country subdivision from which a food sample
-      was acquired (e.g., state or province).
+    description: A string denoting the country subdivision (state or province) from
+      which a food sample was acquired.
     examples:
     - value: PA
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1067,8 +1070,8 @@ attributes:
     range: string
   food_acquisition_location_type:
     name: food_acquisition_location_type
-    description: A string describing the type of location from which a food sample
-      was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms describing
+      the type of location from which a food sample was acquired.
     examples:
     - value: supermarket
     in_subset:
@@ -1171,8 +1174,9 @@ attributes:
     range: string
   food_distributor_country:
     name: food_distributor_country
-    description: A string denoting the country code of a distributor organization
-      from which a food sample was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms denoting
+      denoting the country code of a distributor organization from which a food sample
+      was acquired.
     examples:
     - value: AFG
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1184,8 +1188,8 @@ attributes:
     range: CountryCode
   food_distributor_country_subdivision:
     name: food_distributor_country_subdivision
-    description: A string denoting the country subdivision of a distributor organization
-      from which a food sample was acquired, (e.g., state or province).
+    description: A string denoting the country subdivision (state or province) of
+      a distributor organization from which a food sample was acquired.
     comments:
     - To be determined if state codes should be specified over full names of states/provinces
       for countries globally.

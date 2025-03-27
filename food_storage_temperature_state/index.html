@@ -308,7 +308,7 @@
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").</em></p>
+<p><em>One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -318,14 +318,14 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: frozen</p>
+<p class="admonition-title">Example: [frozen]</p>
 <p><strong>Example value</strong>:</p>
-<p><code>frozen</code></p>
+<p><code>[frozen]</code></p>
 </div>
 <div class="admonition example">
-<p class="admonition-title">Example: Refrigerated</p>
+<p class="admonition-title">Example: [frozen|refrigerated]</p>
 <p><strong>Example value</strong>:</p>
-<p><code>Refrigerated</code></p>
+<p><code>[frozen|refrigerated]</code></p>
 </div>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -351,12 +351,12 @@
 
 
 <pre><code class="language-yaml">name: food_storage_temperature_state
-description: An enumerated set of controlled vocabulary terms representing the qualitative
-  temperature state at which a food sample was stored prior to acquisition (e.g.,
-  &quot;Refrigerated&quot;).
+description: One or multiple values from an enumerated set of controlled vocabulary
+  terms representing the qualitative temperature state at which a food sample was
+  stored prior to acquisition.
 examples:
-- value: frozen
-- value: Refrigerated
+- value: '[frozen]'
+- value: '[frozen|refrigerated]'
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc

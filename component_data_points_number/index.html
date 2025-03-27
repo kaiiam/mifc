@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -325,6 +332,10 @@
 <p><strong>Example value</strong>:</p>
 <p><code>7</code></p>
 </div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>This slot defines if component is source from an individual sample, or an aggregated collection of sample (a profile).</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -351,6 +362,9 @@
 <pre><code class="language-yaml">name: component_data_points_number
 description: An integer representing the number of individual samples that comprise
   a component sample. 1 if an individual sample &gt;1 if an aggregation of samples.
+comments:
+- This slot defines if component is source from an individual sample, or an aggregated
+  collection of sample (a profile).
 examples:
 - value: '7'
 in_subset:

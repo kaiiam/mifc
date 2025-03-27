@@ -308,7 +308,7 @@
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.</em></p>
+<p><em>One or multiple values from an enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -318,9 +318,9 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: raw</p>
+<p class="admonition-title">Example: [raw]</p>
 <p><strong>Example value</strong>:</p>
-<p><code>raw</code></p>
+<p><code>[raw]</code></p>
 </div>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -346,10 +346,10 @@
 
 
 <pre><code class="language-yaml">name: food_preservation_state
-description: An enumerated set of controlled vocabulary terms representing the preservation
-  state(s) of a food sample.
+description: One or multiple values from an enumerated set of controlled vocabulary
+  terms representing the preservation state(s) of a food sample.
 examples:
-- value: raw
+- value: '[raw]'
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
