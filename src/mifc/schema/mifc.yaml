@@ -323,7 +323,7 @@ slots:
     examples:
       - value: 2011
   food_acquisition_location_type:
-    description: A string describing the type of location from which a food sample was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms describing the type of location from which a food sample was acquired.
     range: FoodAcquisitionLocationType #Can maybe set default to unknown
     recommended: true
     in_subset:
@@ -367,7 +367,7 @@ slots:
     examples:
       value: Veracruz
   food_distributor_country:
-    description: A string denoting the country code of a distributor organization from which a food sample was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code of a distributor organization from which a food sample was acquired.
     range: CountryCode
     examples:
       - value: AFG
