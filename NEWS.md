@@ -16,6 +16,12 @@
 
 * Rename `provenance_dataset_label` to `resource_dataset_label`
 
+* Rename `provenance_mifc_version_tag` to `resource_mifc_version_tag`
+
+* Rename `provenance_contributor_orcid` to `resource_contributor_orcid`
+
+* Rename `provenance_organization_name` to `resource_organization_name`
+
 ### v0.2.0
 
 **Component**
