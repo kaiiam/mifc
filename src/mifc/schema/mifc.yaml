@@ -173,7 +173,7 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      - value: 168566
+      - value: CY121UM
   food_description_label:
     description: A string clearly and unambiguous describing the sampled primary food material, in accordance with globally accepted guidelines for the description of foods.
     required: true
@@ -241,6 +241,8 @@ slots:
   food_primary_type_ncbi_taxon_id:
     description: A curie from the ontology representation of the NCBI organismal taxonomy (NCBITaxon) describing the taxonomic identifier of the primary food material.
     comments: To do specify an NCBITaxon curie as the range for the slot.
+    examples:
+      - value: NCBITaxon:9031
   food_upc_code:
     description: An string denoting a Universal Product Code (UPC) barcode of a food sample.
     range: string
@@ -266,6 +268,8 @@ slots:
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
+    examples:
+      - value: unripe
   food_cooking_method:
     description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     range: FoodCookingMethod
