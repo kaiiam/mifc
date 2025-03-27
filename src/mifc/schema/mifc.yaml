@@ -124,6 +124,7 @@ classes:
       - compound_analytical_laboratory_name
       - component_quality_control_remeasurement
       - compound_individual_sample_id_list
+      - component_atwater_protein_conversion_factor
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
@@ -489,6 +490,9 @@ slots:
   compound_individual_sample_id_list:
     description: A list of component_sample_id's that were used to create a component profile.
     comments: This would typically be the list of individual samples the values of which were averaged to create a generic component profile.
+  component_atwater_protein_conversion_factor:
+    description: A float representing the protein conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
+    range: float
 
   # Provenance slots
   provenance_dataset_label:
