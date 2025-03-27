@@ -539,8 +539,7 @@ slots:
   component_quality_control_remeasurement:
     description: A boolean value denoting TRUE if a component_recorded_value was measured more than once for internal laboratory quality control purposes.
     comments: This could be alternatively be modeled with an integer rather than a boolean.
-    #range: boolean
-  #    is_a: boolean_slot
+    range: boolean
   compound_individual_sample_id_list:
     description: A list of component_sample_id's that were used to create a component profile.
     comments: This would typically be the list of individual samples the values of which were averaged to create a generic component profile.
