@@ -12,6 +12,10 @@
 
 * Remove `food_primary_type_icncp_group_name`
 
+**Provenance** Rename class to **Resource**
+
+* Rename `provenance_dataset_label` to `resource_dataset_label`
+
 ### v0.2.0
 
 **Component**
