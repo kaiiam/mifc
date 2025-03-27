@@ -117,7 +117,7 @@ classes:
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
       - compound_sample_aggregation_standard_deviation
-      - compound_analytical_measurement_protocol_doi
+      - compound_analytical_measurement_protocol_url
       - compound_analytical_measurement_method
       - compound_analytical_laboratory_name
       - component_quality_control_remeasurement
@@ -455,9 +455,10 @@ slots:
   compound_sample_aggregation_standard_deviation:
     description: A float representing the standard deviation of a measured compound value of an aggregation of compound samples.
     range: float
-  compound_analytical_measurement_protocol_doi: # TODO Method on FDC perhaps should be required? #does it need to be a DOI? That info isn't fully present for FF data or seemingly at all for SR
-    description: A string denoting a digital object identifier link to a measurement protocol used to conduct an analytical analysis on a sample.
+  compound_analytical_measurement_protocol_url: # TODO Method on FDC perhaps should be required? That info isn't fully present for FF data or seemingly at all for SR
+    description: A string denoting a uniform resource locator (URL) linking to a measurement protocol used to conduct an analytical analysis on a sample.
     recommended: true
+    comments: Ideally a protocol with a digital object identifier (DOI) should be used in place of a generic URL if possible.
     in_subset:
       - RecommendedSubset
   compound_analytical_measurement_method: # Technique on FDC perhaps should be required? #TODO make enumeration and link to OBI assays/methods e.g., HPLC = OBI:0002116 #lab_method.csv has list
