@@ -361,7 +361,7 @@ slots:
     exact_mappings:
       - PTFI:Collector_Organization
     examples:
-      - value: USDA FHPEL
+      - value: USDA Food for Health of People and the Environment Laboratory
   food_distributor_city:
     description: A string denoting the city of a distributor organization from which a food sample was acquired.
     examples:
@@ -589,25 +589,33 @@ slots:
 
   # Provenance slots
   provenance_dataset_label:
-    description: A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").
+    description: A string corresponding to the labeled name of dataset.
     recommended: true #Might want to make this field required
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: Standard Reference (SR) Legacy
   provenance_mifc_version_tag:
-    description: A string corresponding to a named MIFC release number (e.g., "v1.0.1").
+    description: A string corresponding to a named MIFC release number.
     recommended: true #Might want to make this field required
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: v1.0.1
   provenance_contributor_orcid:
     description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: "https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655"
   provenance_organization_name:
-    description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".
+    description: A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset.
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: USDA Food for Health of People and the Environment Laboratory
 
   # Slots common to both Food and Component classes
   food_laboratory_sample_id:
