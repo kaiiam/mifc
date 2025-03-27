@@ -8,7 +8,7 @@ components:
   component_analysis_date: '2023-03-08'
   compound_analytical_measurement_protocol_url: SUGR-GALAC-CHG
   compound_analytical_laboratory_name: Silliker
-  component_quality_control_remeasurement: 'FALSE'
+  component_quality_control_remeasurement: False
   food_laboratory_sample_aliquot_id: NFY122JPN
   food_laboratory_sample_batch_id: o
 - component_sample_id: CY124QX
@@ -33,6 +33,6 @@ components:
   component_limit_of_quantitation: <0.25
   compound_analytical_measurement_protocol_url: SUGR-DP1-2-CHG
   compound_analytical_laboratory_name: Silliker
-  component_quality_control_remeasurement: 'TRUE'
+  component_quality_control_remeasurement: True
   food_laboratory_sample_aliquot_id: NFY122JV9
   food_laboratory_sample_batch_id: q
