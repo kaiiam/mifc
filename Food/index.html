@@ -233,6 +233,8 @@
 
   Food : food_acquisition_date
 
+  Food : food_acquisition_date_year
+
   Food : food_acquisition_latitude
 
   Food : food_acquisition_location_name
@@ -471,6 +473,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../food_acquisition_date_year/">food_acquisition_date_year</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string value representing the year a food sample was acquired</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../food_acquisition_location_type/">food_acquisition_location_type</a></td>
 <td>0..1 <em>recommended</em> <br/> <a href="../FoodAcquisitionLocationType/">FoodAcquisitionLocationType</a></td>
 <td>A string describing the type of location from which a food sample was acquire...</td>
@@ -679,6 +687,7 @@ slots:
 - food_acquisition_country
 - food_acquisition_country_subdivision
 - food_acquisition_date
+- food_acquisition_date_year
 - food_acquisition_location_type
 - food_acquisition_location_name
 - food_acquisition_latitude
@@ -1049,6 +1058,18 @@ attributes:
     - Food
     range: date
     recommended: true
+  food_acquisition_date_year:
+    name: food_acquisition_date_year
+    description: A string value representing the year a food sample was acquired.
+    comments:
+    - When possible food_acquisition_date should be used instead of food_acquisition_date_year.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_acquisition_date_year
+    owner: Food
+    domain_of:
+    - Food
+    range: string
   food_acquisition_location_type:
     name: food_acquisition_location_type
     description: A string describing the type of location from which a food sample

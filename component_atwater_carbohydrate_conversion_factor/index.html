@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_laboratory_sample_aliquot_id/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/component_atwater_carbohydrate_conversion_factor/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>food_laboratory_sample_aliquot_id - mifc</title>
+        <title>component_atwater_carbohydrate_conversion_factor - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#food_laboratory_sample_aliquot_id" class="md-skip">
+        <a href="#component_atwater_carbohydrate_conversion_factor" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              food_laboratory_sample_aliquot_id
+              component_atwater_carbohydrate_conversion_factor
             
           </span>
         </div>
@@ -263,13 +263,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -297,31 +290,27 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_laboratory_sample_aliquot_id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/component_atwater_carbohydrate_conversion_factor.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="food_laboratory_sample_aliquot_id">food_laboratory_sample_aliquot_id</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_laboratory_sample_aliquot_id">mifc:food_laboratory_sample_aliquot_id</a></p>
-<p><strong>Applicable to</strong>: <a href="../Component/">Component</a>, <a href="../Food/">Food</a></p>
+<h1 id="component_atwater_carbohydrate_conversion_factor">component_atwater_carbohydrate_conversion_factor</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/component_atwater_carbohydrate_conversion_factor">mifc:component_atwater_carbohydrate_conversion_factor</a></p>
+<p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.</em></p>
+<p><em>A float representing the carbohydrate conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Float/">Float</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
 </li>
-</ul>
-<h2 id="comments">Comments</h2>
-<ul>
-<li>Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -334,11 +323,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:food_laboratory_sample_aliquot_id</td>
+<td>mifc:component_atwater_carbohydrate_conversion_factor</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:food_laboratory_sample_aliquot_id</td>
+<td>mifc:component_atwater_carbohydrate_conversion_factor</td>
 </tr>
 </tbody>
 </table>
@@ -346,19 +335,16 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: food_laboratory_sample_aliquot_id
-description: A string denoting an identifier of a unique aliquot of a food laboratory
-  sample which was prepared from a food sample.
-comments:
-- Only use this attribute if identifiers are assigned to aliquots/sub-samples of food
-  laboratory samples denoted by their food_laboratory_sample_id.
+<pre><code class="language-yaml">name: component_atwater_carbohydrate_conversion_factor
+description: A float representing the carbohydrate conversion factor used to calculate
+  the available energy of a food when employing the Atwater system or a derivative
+  thereof.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_laboratory_sample_aliquot_id
+alias: component_atwater_carbohydrate_conversion_factor
 domain_of:
-- Food
 - Component
-range: string
+range: float
 
 </code></pre>
 

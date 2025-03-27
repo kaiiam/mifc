@@ -219,6 +219,12 @@
 
   Component : component_analysis_organization
 
+  Component : component_atwater_carbohydrate_conversion_factor
+
+  Component : component_atwater_fat_conversion_factor
+
+  Component : component_atwater_protein_conversion_factor
+
   Component : component_comment
 
   Component : component_data_points_number
@@ -228,6 +234,8 @@
   Component : component_limit_of_quantitation
 
   Component : component_measurement_unit
+
+  Component : component_protein_from_nitrogen_conversion_factor
 
   Component : component_quality_control_remeasurement
 
@@ -249,6 +257,8 @@
     click CompoundAnalyticalMeasurementMethod href "../CompoundAnalyticalMeasurementMethod"
 
   Component : compound_analytical_measurement_protocol_url
+
+  Component : compound_individual_sample_id_list
 
   Component : compound_sample_aggregation_maximum_value
 
@@ -406,6 +416,36 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../compound_individual_sample_id_list/">compound_individual_sample_id_list</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A list of component_sample_id's that were used to create a component profile</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_atwater_protein_conversion_factor/">component_atwater_protein_conversion_factor</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the protein conversion factor used to calculate the avai...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_atwater_fat_conversion_factor/">component_atwater_fat_conversion_factor</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the fat conversion factor used to calculate the availabl...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_atwater_carbohydrate_conversion_factor/">component_atwater_carbohydrate_conversion_factor</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the carbohydrate conversion factor used to calculate the...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_protein_from_nitrogen_conversion_factor/">component_protein_from_nitrogen_conversion_factor</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the nitrogen to protein conversion factor used to calcul...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../food_laboratory_sample_id/">food_laboratory_sample_id</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string denoting an identifier of a laboratory sample which was prepared fro...</td>
@@ -499,6 +539,11 @@ slots:
 - compound_analytical_measurement_method
 - compound_analytical_laboratory_name
 - component_quality_control_remeasurement
+- compound_individual_sample_id_list
+- component_atwater_protein_conversion_factor
+- component_atwater_fat_conversion_factor
+- component_atwater_carbohydrate_conversion_factor
+- component_protein_from_nitrogen_conversion_factor
 - food_laboratory_sample_id
 - food_laboratory_sample_aliquot_id
 - food_laboratory_sample_batch_id
@@ -806,6 +851,72 @@ attributes:
     domain_of:
     - Component
     range: string
+  compound_individual_sample_id_list:
+    name: compound_individual_sample_id_list
+    description: A list of component_sample_id's that were used to create a component
+      profile.
+    comments:
+    - This would typically be the list of individual samples the values of which were
+      averaged to create a generic component profile.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: compound_individual_sample_id_list
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  component_atwater_protein_conversion_factor:
+    name: component_atwater_protein_conversion_factor
+    description: A float representing the protein conversion factor used to calculate
+      the available energy of a food when employing the Atwater system or a derivative
+      thereof.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_atwater_protein_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_atwater_fat_conversion_factor:
+    name: component_atwater_fat_conversion_factor
+    description: A float representing the fat conversion factor used to calculate
+      the available energy of a food when employing the Atwater system or a derivative
+      thereof.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_atwater_fat_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_atwater_carbohydrate_conversion_factor:
+    name: component_atwater_carbohydrate_conversion_factor
+    description: A float representing the carbohydrate conversion factor used to calculate
+      the available energy of a food when employing the Atwater system or a derivative
+      thereof.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_atwater_carbohydrate_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_protein_from_nitrogen_conversion_factor:
+    name: component_protein_from_nitrogen_conversion_factor
+    description: A float representing the nitrogen to protein conversion factor used
+      to calculate a protein value indirectly using a measured nitrogen value.
+    comments:
+    - A commonly used value for the component_protein_from_nitrogen_conversion_factor
+      is 6.25 based on the assumptions that all proteins have a nitrogen content of
+      16%, and that all nitrogen is derived from protein. It should be noted that
+      these assumptions might not always hold.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_protein_from_nitrogen_conversion_factor
+    owner: Component
+    domain_of:
+    - Component
+    range: float
   food_laboratory_sample_id:
     name: food_laboratory_sample_id
     description: A string denoting an identifier of a laboratory sample which was

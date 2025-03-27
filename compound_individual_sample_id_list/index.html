@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_laboratory_sample_aliquot_id/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/compound_individual_sample_id_list/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>food_laboratory_sample_aliquot_id - mifc</title>
+        <title>compound_individual_sample_id_list - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#food_laboratory_sample_aliquot_id" class="md-skip">
+        <a href="#compound_individual_sample_id_list" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              food_laboratory_sample_aliquot_id
+              compound_individual_sample_id_list
             
           </span>
         </div>
@@ -297,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_laboratory_sample_aliquot_id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/compound_individual_sample_id_list.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="food_laboratory_sample_aliquot_id">food_laboratory_sample_aliquot_id</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_laboratory_sample_aliquot_id">mifc:food_laboratory_sample_aliquot_id</a></p>
-<p><strong>Applicable to</strong>: <a href="../Component/">Component</a>, <a href="../Food/">Food</a></p>
+<h1 id="compound_individual_sample_id_list">compound_individual_sample_id_list</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/compound_individual_sample_id_list">mifc:compound_individual_sample_id_list</a></p>
+<p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.</em></p>
+<p><em>A list of component_sample_id's that were used to create a component profile.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -321,7 +321,7 @@
 </ul>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.</li>
+<li>This would typically be the list of individual samples the values of which were averaged to create a generic component profile.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -334,11 +334,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:food_laboratory_sample_aliquot_id</td>
+<td>mifc:compound_individual_sample_id_list</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:food_laboratory_sample_aliquot_id</td>
+<td>mifc:compound_individual_sample_id_list</td>
 </tr>
 </tbody>
 </table>
@@ -346,17 +346,16 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: food_laboratory_sample_aliquot_id
-description: A string denoting an identifier of a unique aliquot of a food laboratory
-  sample which was prepared from a food sample.
+<pre><code class="language-yaml">name: compound_individual_sample_id_list
+description: A list of component_sample_id's that were used to create a component
+  profile.
 comments:
-- Only use this attribute if identifiers are assigned to aliquots/sub-samples of food
-  laboratory samples denoted by their food_laboratory_sample_id.
+- This would typically be the list of individual samples the values of which were
+  averaged to create a generic component profile.
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_laboratory_sample_aliquot_id
+alias: compound_individual_sample_id_list
 domain_of:
-- Food
 - Component
 range: string
 
