@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/provenance_organization_name/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/resource_contributor_orcid/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>provenance_organization_name - mifc</title>
+        <title>resource_contributor_orcid - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provenance_organization_name" class="md-skip">
+        <a href="#resource_contributor_orcid" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              provenance_organization_name
+              resource_contributor_orcid
             
           </span>
         </div>
@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -290,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/provenance_organization_name.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/resource_contributor_orcid.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="provenance_organization_name">provenance_organization_name</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/provenance_organization_name">mifc:provenance_organization_name</a></p>
+<h1 id="resource_contributor_orcid">resource_contributor_orcid</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/resource_contributor_orcid">mifc:resource_contributor_orcid</a></p>
 <p><strong>Applicable to</strong>: <a href="../Provenance/">Provenance</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to a "|" delimited list of organizations who created or help to create to a MIFC formatted dataset. E.g., "USDA".</em></p>
+<p><em>A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See <a href="https://orcid.org/">https://orcid.org/</a>.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -312,6 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: <a href="https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655">https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655</a></p>
+<p><strong>Example value</strong>:</p>
+<p><code>https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -323,11 +336,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:provenance_organization_name</td>
+<td>mifc:resource_contributor_orcid</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:provenance_organization_name</td>
+<td>mifc:resource_contributor_orcid</td>
 </tr>
 </tbody>
 </table>
@@ -335,14 +348,16 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: provenance_organization_name
-description: A string corresponding to a &quot;|&quot; delimited list of organizations who created
-  or help to create to a MIFC formatted dataset. E.g., &quot;USDA&quot;.
+<pre><code class="language-yaml">name: resource_contributor_orcid
+description: A string corresponding to a &quot;|&quot; delimited list of ORCIDs of people who
+  contributed to a MIFC formatted dataset. See https://orcid.org/.
+examples:
+- value: https://orcid.org/0000-0003-0857-700X|https://orcid.org/0000-0002-3410-4655
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: provenance_organization_name
+alias: resource_contributor_orcid
 domain_of:
 - Provenance
 range: string

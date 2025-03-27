@@ -421,23 +421,23 @@
          <lastmod>2025-03-27</lastmod>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/provenance_contributor_orcid/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/provenance_dataset_label/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/provenance_mifc_version_tag/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
-         <loc>https://kaiiam.github.io/mifc/provenance_organization_name/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/provenances/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/resource_contributor_orcid/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/resource_dataset_label/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/resource_mifc_version_tag/</loc>
+         <lastmod>2025-03-27</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/resource_organization_name/</loc>
          <lastmod>2025-03-27</lastmod>
     </url>
 </urlset>

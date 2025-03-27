@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/provenance_contributor_orcid/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/resource_mifc_version_tag/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>provenance_contributor_orcid - mifc</title>
+        <title>resource_mifc_version_tag - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provenance_contributor_orcid" class="md-skip">
+        <a href="#resource_mifc_version_tag" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              provenance_contributor_orcid
+              resource_mifc_version_tag
             
           </span>
         </div>
@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -290,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/provenance_contributor_orcid.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/resource_mifc_version_tag.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="provenance_contributor_orcid">provenance_contributor_orcid</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/provenance_contributor_orcid">mifc:provenance_contributor_orcid</a></p>
+<h1 id="resource_mifc_version_tag">resource_mifc_version_tag</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/resource_mifc_version_tag">mifc:resource_mifc_version_tag</a></p>
 <p><strong>Applicable to</strong>: <a href="../Provenance/">Provenance</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See <a href="https://orcid.org/">https://orcid.org/</a>.</em></p>
+<p><em>A string corresponding to a named MIFC release number.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -312,6 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: v1.0.1</p>
+<p><strong>Example value</strong>:</p>
+<p><code>v1.0.1</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -323,11 +336,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:provenance_contributor_orcid</td>
+<td>mifc:resource_mifc_version_tag</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:provenance_contributor_orcid</td>
+<td>mifc:resource_mifc_version_tag</td>
 </tr>
 </tbody>
 </table>
@@ -335,14 +348,15 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: provenance_contributor_orcid
-description: A string corresponding to a &quot;|&quot; delimited list of ORCIDs of people who
-  contributed to a MIFC formatted dataset. See https://orcid.org/.
+<pre><code class="language-yaml">name: resource_mifc_version_tag
+description: A string corresponding to a named MIFC release number.
+examples:
+- value: v1.0.1
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: provenance_contributor_orcid
+alias: resource_mifc_version_tag
 domain_of:
 - Provenance
 range: string

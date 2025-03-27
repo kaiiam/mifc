@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/provenance_dataset_label/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/resource_dataset_label/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>provenance_dataset_label - mifc</title>
+        <title>resource_dataset_label - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#provenance_dataset_label" class="md-skip">
+        <a href="#resource_dataset_label" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              provenance_dataset_label
+              resource_dataset_label
             
           </span>
         </div>
@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -290,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/provenance_dataset_label.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/resource_dataset_label.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="provenance_dataset_label">provenance_dataset_label</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/provenance_dataset_label">mifc:provenance_dataset_label</a></p>
+<h1 id="resource_dataset_label">resource_dataset_label</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/resource_dataset_label">mifc:resource_dataset_label</a></p>
 <p><strong>Applicable to</strong>: <a href="../Provenance/">Provenance</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to the labeled name of dataset (e.g., "Standard Reference (SR) Legacy").</em></p>
+<p><em>A string corresponding to the labeled name of dataset.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -312,6 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: Standard Reference (SR) Legacy</p>
+<p><strong>Example value</strong>:</p>
+<p><code>Standard Reference (SR) Legacy</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -323,11 +336,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:provenance_dataset_label</td>
+<td>mifc:resource_dataset_label</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:provenance_dataset_label</td>
+<td>mifc:resource_dataset_label</td>
 </tr>
 </tbody>
 </table>
@@ -335,14 +348,15 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: provenance_dataset_label
-description: A string corresponding to the labeled name of dataset (e.g., &quot;Standard
-  Reference (SR) Legacy&quot;).
+<pre><code class="language-yaml">name: resource_dataset_label
+description: A string corresponding to the labeled name of dataset.
+examples:
+- value: Standard Reference (SR) Legacy
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: provenance_dataset_label
+alias: resource_dataset_label
 domain_of:
 - Provenance
 range: string
