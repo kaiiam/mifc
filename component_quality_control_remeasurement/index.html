@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -313,15 +320,21 @@
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Boolean/">Boolean</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: False</p>
+<p><strong>Example value</strong>:</p>
+<p><code>False</code></p>
+</div>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>This could be alternatively be modeled with an integer rather than a boolean.</li>
+<li>This could be alternatively be modeled with an integer rather than a boolean. Note this might give some issues with the way excel saves boolean values.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -350,13 +363,16 @@
 description: A boolean value denoting TRUE if a component_recorded_value was measured
   more than once for internal laboratory quality control purposes.
 comments:
-- This could be alternatively be modeled with an integer rather than a boolean.
+- This could be alternatively be modeled with an integer rather than a boolean. Note
+  this might give some issues with the way excel saves boolean values.
+examples:
+- value: 'False'
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: component_quality_control_remeasurement
 domain_of:
 - Component
-range: string
+range: boolean
 
 </code></pre>
 

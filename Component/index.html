@@ -411,13 +411,13 @@
 </tr>
 <tr>
 <td><a href="../component_quality_control_remeasurement/">component_quality_control_remeasurement</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
 <td>A boolean value denoting TRUE if a component_recorded_value was measured more...</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../compound_individual_sample_id_list/">compound_individual_sample_id_list</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>A list of component_sample_id's that were used to create a component profile</td>
 <td>direct</td>
 </tr>
@@ -721,6 +721,10 @@ attributes:
   component_comment:
     name: component_comment
     description: A comment relating to an analyzed component of nutritional interest.
+    examples:
+    - value: Samples were obtained from 12 retail stores using a probability-based
+        sampling plan. Some fish had been treated during processing to retain moisture
+        on thawing. Untreated fish = 265 mg sodium/100g.
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_comment
@@ -756,6 +760,8 @@ attributes:
     - LoB, (used in the description) is the highest apparent analyte concentration
       expected to be found when replicates of a blank sample containing no analyte
       are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    examples:
+    - value: &lt;0.25
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_limit_of_quantitation
@@ -767,6 +773,8 @@ attributes:
     name: compound_sample_aggregation_minimum_value
     description: A float representing the minimum measured compound value of an aggregation
       of compound samples.
+    examples:
+    - value: '0.8'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_sample_aggregation_minimum_value
@@ -778,6 +786,8 @@ attributes:
     name: compound_sample_aggregation_maximum_value
     description: A float representing the maximum measured compound value of an aggregation
       of compound samples.
+    examples:
+    - value: '2.2'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_sample_aggregation_maximum_value
@@ -789,6 +799,8 @@ attributes:
     name: compound_sample_aggregation_median_value
     description: A float representing the median measured compound value of an aggregation
       of compound samples.
+    examples:
+    - value: '1.5'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_sample_aggregation_median_value
@@ -800,6 +812,8 @@ attributes:
     name: compound_sample_aggregation_standard_deviation
     description: A float representing the standard deviation of a measured compound
       value of an aggregation of compound samples.
+    examples:
+    - value: '0.61'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_sample_aggregation_standard_deviation
@@ -846,6 +860,8 @@ attributes:
     name: compound_analytical_laboratory_name
     description: A string denoting the name of a laboratory that conducted the analytical
       analysis of a component of nutritional interest.
+    examples:
+    - value: Covance
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_analytical_laboratory_name
@@ -859,13 +875,16 @@ attributes:
       more than once for internal laboratory quality control purposes.
     comments:
     - This could be alternatively be modeled with an integer rather than a boolean.
+      Note this might give some issues with the way excel saves boolean values.
+    examples:
+    - value: 'False'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_quality_control_remeasurement
     owner: Component
     domain_of:
     - Component
-    range: string
+    range: boolean
   compound_individual_sample_id_list:
     name: compound_individual_sample_id_list
     description: A list of component_sample_id's that were used to create a component
@@ -873,6 +892,8 @@ attributes:
     comments:
     - This would typically be the list of individual samples the values of which were
       averaged to create a generic component profile.
+    examples:
+    - value: '[CY123W2|CY123W3|CY123W7|CY123W5|CY123W4|CY123W6]'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: compound_individual_sample_id_list
@@ -880,11 +901,14 @@ attributes:
     domain_of:
     - Component
     range: string
+    multivalued: true
   component_atwater_protein_conversion_factor:
     name: component_atwater_protein_conversion_factor
     description: A float representing the protein conversion factor used to calculate
       the available energy of a food when employing the Atwater system or a derivative
       thereof.
+    examples:
+    - value: '2.78'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_atwater_protein_conversion_factor
@@ -897,6 +921,8 @@ attributes:
     description: A float representing the fat conversion factor used to calculate
       the available energy of a food when employing the Atwater system or a derivative
       thereof.
+    examples:
+    - value: '8.37'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_atwater_fat_conversion_factor
@@ -909,6 +935,8 @@ attributes:
     description: A float representing the carbohydrate conversion factor used to calculate
       the available energy of a food when employing the Atwater system or a derivative
       thereof.
+    examples:
+    - value: '3.84'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_atwater_carbohydrate_conversion_factor
@@ -925,6 +953,8 @@ attributes:
       is 6.25 based on the assumptions that all proteins have a nitrogen content of
       16%, and that all nitrogen is derived from protein. It should be noted that
       these assumptions might not always hold.
+    examples:
+    - value: '6.38'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: component_protein_from_nitrogen_conversion_factor

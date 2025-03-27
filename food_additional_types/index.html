@@ -312,18 +312,15 @@
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
-</li>
-<li>
-<p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
-</li>
+<li><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</li>
+<li><strong>Multivalued</strong>: True. If the slot is multivalued, more than one value can be attached to the same field. In the TSV format, these are <code>|</code> separated.</li>
+<li><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: ['wheat flour (enriched)|syrup|water|salt']</p>
+<p class="admonition-title">Example: [wheat flour (enriched)|syrup|water|salt]</p>
 <p><strong>Example value</strong>:</p>
-<p><code>['wheat flour (enriched)|syrup|water|salt']</code></p>
+<p><code>[wheat flour (enriched)|syrup|water|salt]</code></p>
 </div>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -352,13 +349,14 @@
 description: A list of controlled vocabulary denoting the label(s) of additional food
   types, not including the food_primary_type that are in a food sample.
 examples:
-- value: '[''wheat flour (enriched)|syrup|water|salt'']'
+- value: '[wheat flour (enriched)|syrup|water|salt]'
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: food_additional_types
 domain_of:
 - Food
 range: string
+multivalued: true
 
 </code></pre>
 

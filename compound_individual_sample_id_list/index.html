@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -312,13 +319,16 @@
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
-</li>
-<li>
-<p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
-</li>
+<li><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</li>
+<li><strong>Multivalued</strong>: True. If the slot is multivalued, more than one value can be attached to the same field. In the TSV format, these are <code>|</code> separated.</li>
+<li><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: [CY123W2|CY123W3|CY123W7|CY123W5|CY123W4|CY123W6]</p>
+<p><strong>Example value</strong>:</p>
+<p><code>[CY123W2|CY123W3|CY123W7|CY123W5|CY123W4|CY123W6]</code></p>
+</div>
 <h2 id="comments">Comments</h2>
 <ul>
 <li>This would typically be the list of individual samples the values of which were averaged to create a generic component profile.</li>
@@ -352,12 +362,15 @@ description: A list of component_sample_id's that were used to create a componen
 comments:
 - This would typically be the list of individual samples the values of which were
   averaged to create a generic component profile.
+examples:
+- value: '[CY123W2|CY123W3|CY123W7|CY123W5|CY123W4|CY123W6]'
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
 alias: compound_individual_sample_id_list
 domain_of:
 - Component
 range: string
+multivalued: true
 
 </code></pre>
 

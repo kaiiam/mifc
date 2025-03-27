@@ -552,7 +552,7 @@
 </tr>
 <tr>
 <td><a href="../food_additional_types/">food_additional_types</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
 <td>A list of controlled vocabulary denoting the label(s) of additional food type...</td>
 <td>direct</td>
 </tr>
@@ -965,7 +965,7 @@ attributes:
     description: An enumerated set of controlled vocabulary terms representing the
       any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     examples:
-    - value: '[''boiled|steamed'']'
+    - value: '[boiled|steamed]'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -1254,7 +1254,7 @@ attributes:
     description: A list of controlled vocabulary denoting the label(s) of additional
       food types, not including the food_primary_type that are in a food sample.
     examples:
-    - value: '[''wheat flour (enriched)|syrup|water|salt'']'
+    - value: '[wheat flour (enriched)|syrup|water|salt]'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_additional_types
@@ -1262,6 +1262,7 @@ attributes:
     domain_of:
     - Food
     range: string
+    multivalued: true
   food_laboratory_sample_id:
     name: food_laboratory_sample_id
     description: A string denoting an identifier of a laboratory sample which was
