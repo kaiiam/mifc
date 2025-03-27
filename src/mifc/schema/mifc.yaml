@@ -577,6 +577,8 @@ slots:
   component_protein_from_nitrogen_conversion_factor:
     description: A float representing the nitrogen to protein conversion factor used to calculate a protein value indirectly using a measured nitrogen value.
     range: float
+    examples:
+      - value: 6.38
     comments: A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
 
   # Provenance slots
