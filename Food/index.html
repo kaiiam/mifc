@@ -318,6 +318,8 @@
 
   Food : food_sample_id
 
+  Food : food_sample_publication_date
+
   Food : food_sell_by_date
 
   Food : food_storage_temperature_state
@@ -588,6 +590,12 @@
 <td>A unit code representing the unit of measurement in which a food_label_weight...</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../food_sample_publication_date/">food_sample_publication_date</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A date value representing the date in which a food sample was published</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -691,6 +699,7 @@ slots:
 - food_lot_number
 - food_label_weight
 - food_label_weight_unit
+- food_sample_publication_date
 class_uri: schema:Food
 
 </code></pre>
@@ -1299,6 +1308,16 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_label_weight_unit
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_sample_publication_date:
+    name: food_sample_publication_date
+    description: A date value representing the date in which a food sample was published.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_sample_publication_date
     owner: Food
     domain_of:
     - Food
