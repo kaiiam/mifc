@@ -123,6 +123,7 @@ classes:
       - compound_analytical_measurement_method
       - compound_analytical_laboratory_name
       - component_quality_control_remeasurement
+      - compound_individual_sample_id_list
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
@@ -485,6 +486,9 @@ slots:
     comments: This could be alternatively be modeled with an integer rather than a boolean.
     #range: boolean
   #    is_a: boolean_slot
+  compound_individual_sample_id_list:
+    description: A list of component_sample_id's that were used to create a component profile.
+    comments: This would typically be the list of individual samples the values of which were averaged to create a generic component profile.
 
   # Provenance slots
   provenance_dataset_label:
