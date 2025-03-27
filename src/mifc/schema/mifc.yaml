@@ -492,6 +492,8 @@ slots:
     comments: Use this field if the exact date of analysis is known if there is date ambiguity use component_record_date.
   component_comment:
     description: A comment relating to an analyzed component of nutritional interest.
+    examples:
+      - value: Samples were obtained from 12 retail stores using a probability-based sampling plan. Some fish had been treated during processing to retain moisture on thawing. Untreated fish = 265 mg sodium/100g.
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
     recommended: true
@@ -504,6 +506,8 @@ slots:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.
     comments: LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    examples:
+      - value: <0.25
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
