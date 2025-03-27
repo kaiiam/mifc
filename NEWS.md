@@ -10,6 +10,7 @@
 
 * Rename `food_primary_type_icncp_cultivar_name` to `food_primary_type_cultivar_name`
 
+* Remove `food_primary_type_icncp_group_name`
 
 ### v0.2.0
 
