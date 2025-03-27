@@ -280,7 +280,7 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      value: [boiled|steamed]
+      value: "[boiled|steamed]"
   food_origin_country:
     description: A string denoting the country code from which a food sample originates.
     range: CountryCode
@@ -394,8 +394,9 @@ slots:
       - value: FOOD:1400
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
+    multivalued: true
     examples:
-      - value: "['wheat flour (enriched)|syrup|water|salt']"
+      - value: "[wheat flour (enriched)|syrup|water|salt]"
   food_brand_name:
     description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
     examples:
