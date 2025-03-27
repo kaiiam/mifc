@@ -238,6 +238,8 @@ slots:
   food_primary_type_icncp_cultivar_name:
     description: A string denoting the cultivar name of the primary food material as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).
     comments: The ICNCP only applies to algae, fungi, and plant species. If present this slot should be used in addition to the food_primary_type_icncp_group_name slot.
+    examples:
+      - value: Adirondack Blue
   food_primary_type_animal_breed_name:
     description: A string denoting the breed name of the primary food material.
     comments: This slot should only be used in cases where food material is an animal with a recognizable breed name that is managed by a national breed registry, breed association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
@@ -586,7 +588,7 @@ slots:
     description: A string denoting an identifier of a laboratory sample which was prepared from a food sample.
     comments: Only use this attribute if a separate ID is assigned to laboratory samples derived from food samples. Otherwise just use the food_sample_id.
     examples:
-      - value: CY124YB
+      - value: CY124YB_1
   food_laboratory_sample_aliquot_id:
     description: A string denoting an identifier of a unique aliquot of a food laboratory sample which was prepared from a food sample.
     comments: Only use this attribute if identifiers are assigned to aliquots/sub-samples of food laboratory samples denoted by their food_laboratory_sample_id.
