@@ -315,6 +315,8 @@ slots:
   food_acquisition_year:
     description: A string value representing the year a food sample was acquired.
     comments: When possible food_acquisition_date should be used instead of food_acquisition_date_year.
+    examples:
+      - value: 2011
   food_acquisition_location_type:
     description: A string describing the type of location from which a food sample was acquired (e.g., a supermarket).
     range: FoodAcquisitionLocationType #Can maybe set default to unknown
@@ -323,6 +325,8 @@ slots:
       - RecommendedSubset
     exact_mappings:
       - PTFI:Collection_Type
+    examples:
+      - value: supermarket
   food_acquisition_location_name:
     description: A string describing the name of the location from which a food sample was acquired (e.g., "Safeway").
   food_acquisition_latitude: #TODO add numeric range constraint
