@@ -356,6 +356,8 @@ slots:
       - value: 2023-03-08
   food_category_label:
     description: A string or controlled vocabulary denoting the label of the food group or category of the primary food material.
+  food_category_type:
+    description: A controlled vocabulary term representing the category of the food material that was sampled.
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
   food_brand_name:
