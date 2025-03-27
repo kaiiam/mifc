@@ -141,7 +141,7 @@ classes:
       - RecommendedSubset
     slots: ## Slots specific to Provenance
       - resource_dataset_label
-      - provenance_mifc_version_tag
+      - resource_mifc_version_tag
       - provenance_contributor_orcid
       - provenance_organization_name
 
@@ -595,7 +595,7 @@ slots:
       - RecommendedSubset
     examples:
       - value: Standard Reference (SR) Legacy
-  provenance_mifc_version_tag:
+  resource_mifc_version_tag:
     description: A string corresponding to a named MIFC release number.
     recommended: true #Might want to make this field required
     in_subset:
