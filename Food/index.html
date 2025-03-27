@@ -1124,6 +1124,8 @@ attributes:
     name: food_acquisition_latitude
     description: A float representing the latitude of the place from which the food
       sample was acquired.
+    examples:
+    - value: '25.761681'
     from_schema: https://w3id.org/kaiiam/mifc
     exact_mappings:
     - PTFI:Collection_Latitude
@@ -1137,6 +1139,8 @@ attributes:
     name: food_acquisition_longitude
     description: A float representing the longitude of the place from which the food
       sample was acquired.
+    examples:
+    - value: '-80.191788'
     from_schema: https://w3id.org/kaiiam/mifc
     exact_mappings:
     - PTFI:Collection_Longitude
@@ -1150,6 +1154,8 @@ attributes:
     name: food_acquisition_agent_name
     description: A string denoting the name of the agent (person, device or other
       type of service) that acquired the food sample.
+    examples:
+    - value: Denise Trainer
     from_schema: https://w3id.org/kaiiam/mifc
     exact_mappings:
     - PTFI:Collector_Name
@@ -1163,6 +1169,8 @@ attributes:
     name: food_acquisition_organization
     description: A string denoting the name of the organization responsible for acquired
       the food sample.
+    examples:
+    - value: USDA FHPEL
     from_schema: https://w3id.org/kaiiam/mifc
     exact_mappings:
     - PTFI:Collector_Organization
@@ -1272,6 +1280,8 @@ attributes:
     name: food_additional_types
     description: A list of controlled vocabulary denoting the label(s) of additional
       food types, not including the food_primary_type that are in a food sample.
+    examples:
+    - value: '[''wheat flour (enriched)|syrup|water|salt'']'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_additional_types
