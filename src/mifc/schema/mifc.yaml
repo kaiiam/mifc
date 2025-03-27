@@ -648,31 +648,36 @@ enums:
   SkosMatchType:
     permissible_values:
       skos:exactMatch:
-        description: Mappings assessed to indicate a high degree of confidence that the concepts expressed in the subject and object terms can be used interchangeably.
+        description: Mappings assessed to indicate that the concepts expressed in the subject and object terms can be used interchangeably following the transitive property.
         meaning: skos:exactMatch
         comments:
           - "From the sssom_schema: The subject and the object can, with a high degree of confidence, be used interchangeably across a wide range of information retrieval applications."
           - "In SKOS this is described as following the transitive property."
+          - "Typical use of the vocabulary where strings are exactly the same, or the same words in different orders."
       skos:closeMatch:
-        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable.
+        description: Mappings between the subject and object terms that convey a high degree of similarity, but are not exactly the same or interchangeable. Assignments of closeMatch should only be used when there is no appropriate broadMatch or narrowMatch to be found within the subject and object vocabulaires.
         meaning: skos:closeMatch
         comments:
           - "From the sssom_schema: The subject and the object are sufficiently similar that they can be used interchangeably in some information retrieval applications."
+          - 'Examples include mappings between two multi-component foods that have variation in cooking methods, ingredients or additives.'
       skos:broadMatch:
-        description: Mappings between a subject and object terms, where the object term is above the subject within a concept hierarchy.
+        description: Mappings between a subject and an object term, where the object term is above the subject within a concept hierarchy. A broadMatch is the inverse of a narrowMatch.
         meaning: skos:broadMatch
         comments:
           - "From the SKOS primer: A triple skos:broader (and skos:broadMatch) asserts that, the object of the triple, is a broader concept than , the subject of the triple."
+          - 'Use when mapping to a "higher" level term that is less specific and more general. Preference should be given to to as close as possible a hierarchical match depending on if a hierarchy exists and if there are appropriate concepts as relatively cose as possible.'
       skos:narrowMatch:
-        description: Mappings between a subject and object terms, where the object term that is below the subject within a concept hierarchy.
+        description: Mappings between a subject and an object term, where the object term that is below the subject within a concept hierarchy. A narrowMatch is the inverse of a broadMatch.
         meaning: skos:narrowMatch
         comments:
           - "From the SKOS primer: A triple skos:narrower (and skos:narrowMatch) asserts that, the object of the triple, is a narrower concept than , the subject of the triple."
+          - 'Use when mapping to a more specifc object term that has a greater level of detail then the object. In general broad matches should be used preferably to narrow matches if no appropriate class of the same hierarchical level can be found.'
       skos:relatedMatch:
-        description: Mappings between subject and object terms that might have some association but are not clearly not referring to the the same or similar concepts.
+        description: Mappings between subject and object terms that are not broadMatch, narrowMatch, closeMatch or exactMatch but have some association.
         meaning: skos:relatedMatch
         comments:
           - "From the sssom_schema: The subject and the object are associated in some unspecified way."
+          - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
   CountryCode:
     comments: Source https://www.nationsonline.org/oneworld/country_code_list.htm
     permissible_values:
