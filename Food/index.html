@@ -254,6 +254,8 @@
 
   Food : food_category_label
 
+  Food : food_category_type
+
   Food : food_cooking_method
 
       Food --&gt; "* _recommended_" FoodCookingMethod : food_cooking_method
@@ -551,6 +553,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../food_category_type/">food_category_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A controlled vocabulary term representing the category of the food material t...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../food_additional_types/">food_additional_types</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A list of controlled vocabulary denoting the label(s) of additional food type...</td>
@@ -700,6 +708,7 @@ slots:
 - food_expiration_date
 - food_sell_by_date
 - food_category_label
+- food_category_type
 - food_additional_types
 - food_laboratory_sample_id
 - food_laboratory_sample_aliquot_id
@@ -815,6 +824,8 @@ attributes:
     - This slot should only be used in cases where food materials are single ingredient
       foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted
       anchovies canned in oil".
+    examples:
+    - value: Gallus gallus
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_primary_type_scientific_name
@@ -859,6 +870,8 @@ attributes:
     - This slot should only be used in cases where food material is an animal with
       a recognizable breed name that is managed by a national breed registry, breed
       association, or similar organization. E.g., "Wagyu" for the Wagu cattle breed.
+    examples:
+    - value: Wagyu
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_primary_type_animal_breed_name
@@ -1238,6 +1251,19 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_category_label
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_category_type:
+    name: food_category_type
+    description: A controlled vocabulary term representing the category of the food
+      material that was sampled.
+    examples:
+    - value: FOOD:1400
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_category_type
     owner: Food
     domain_of:
     - Food
