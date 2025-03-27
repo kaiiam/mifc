@@ -251,7 +251,8 @@ slots:
     examples:
       - value: 40822011143
   food_preservation_state:
-    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample (e.g., "raw").
+    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.
+    multivalued: true
     range: FoodPreservationState
     recommended: true
     in_subset:
