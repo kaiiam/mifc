@@ -466,6 +466,7 @@ slots:
     description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
     required: true
     range: integer
+    comments: This slot defines if component is source from an individual sample, or an aggregated collection of sample (a profile).
     in_subset:
       - RecommendedSubset
     examples:
@@ -499,7 +500,7 @@ slots:
     examples:
       - value: Samples were obtained from 12 retail stores using a probability-based sampling plan. Some fish had been treated during processing to retain moisture on thawing. Untreated fish = 265 mg sodium/100g.
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
-    description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
+    description: A controlled vocabulary term denoting how a component of nutritional interest was generated.
     recommended: true
     comments: Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)
     in_subset:
