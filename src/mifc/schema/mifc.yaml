@@ -557,6 +557,7 @@ slots:
       - value: False
   compound_individual_sample_id_list:
     description: A list of component_sample_id's that were used to create a component profile.
+    multivalued: true
     comments: This would typically be the list of individual samples the values of which were averaged to create a generic component profile.
     examples:
       - value: '[CY123W2|CY123W3|CY123W7|CY123W5|CY123W4|CY123W6]'
