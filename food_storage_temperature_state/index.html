@@ -312,18 +312,20 @@
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>
-<p><strong>Range</strong>: <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a>. The range of the slot is the type of the value that can be assigned to it.</p>
-</li>
-<li>
-<p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
-</li>
+<li><strong>Range</strong>: <a href="../FoodStorageTemperatureState/">FoodStorageTemperatureState</a>. The range of the slot is the type of the value that can be assigned to it.</li>
+<li><strong>Multivalued</strong>: True. If the slot is multivalued, more than one value can be attached to the same field. In the TSV format, these are <code>|</code> separated.</li>
+<li><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</li>
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
 <p class="admonition-title">Example: frozen</p>
 <p><strong>Example value</strong>:</p>
 <p><code>frozen</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Refrigerated</p>
+<p><strong>Example value</strong>:</p>
+<p><code>Refrigerated</code></p>
 </div>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -354,6 +356,7 @@ description: An enumerated set of controlled vocabulary terms representing the q
   &quot;Refrigerated&quot;).
 examples:
 - value: frozen
+- value: Refrigerated
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -363,6 +366,7 @@ domain_of:
 - Food
 range: FoodStorageTemperatureState
 recommended: true
+multivalued: true
 
 </code></pre>
 
