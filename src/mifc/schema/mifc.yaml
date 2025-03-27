@@ -341,11 +341,15 @@ slots:
     range: float
     exact_mappings:
       - PTFI:Collection_Latitude
+    examples:
+      - value: 25.761681
   food_acquisition_longitude: #TODO add numeric range constraint
     description: A float representing the longitude of the place from which the food sample was acquired.
     range: float
     exact_mappings:
       - PTFI:Collection_Longitude
+    examples:
+      - value: -80.191788
   food_acquisition_agent_name:
     description: A string denoting the name of the agent (person, device or other type of service) that acquired the food sample.
     exact_mappings:
@@ -389,6 +393,8 @@ slots:
       - value: FOOD:1400
   food_additional_types:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
+    examples:
+      - value: "['wheat flour (enriched)|syrup|water|salt']"
   food_brand_name:
     description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
     examples:
