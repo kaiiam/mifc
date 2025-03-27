@@ -386,9 +386,13 @@ slots:
     description: A list of controlled vocabulary denoting the label(s) of additional food types, not including the food_primary_type that are in a food sample.
   food_brand_name:
     description: A string denoting a name identifying a product, service, or organization selling and or distributing the primary food material.
+    examples:
+      - value: Bob's Red Mill
   food_lot_number:
     description: A string denoting the identifying lot number number assigned by a manufacturer to a particular quantity, (or lot) of the sampled primary food material.
     comments: A lot number can also be referred to as lot code.
+    examples:
+      - value: 9500
   food_label_weight:
     description: A float denoting the mass, (or weight on earth) as specified on the product label of a sampled primary food material.
     comments: This field should be used in along with food_acquisition_label_weight_unit to express the units the food_label_weight was measured.
