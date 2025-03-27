@@ -267,7 +267,8 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      value: frozen
+      - value: frozen
+      - value: Refrigerated
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
