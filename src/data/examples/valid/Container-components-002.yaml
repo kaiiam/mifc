@@ -25,15 +25,15 @@ components:
   component_measurement_unit: mg/(100.g)
   component_data_points_number: 0
   component_type: COMPONENT:1079
-  component_type_label: Fiber, total dietary
+  component_type_label: '"Fiber, total dietary"'
   compound_analytical_measurement_method: Nephelometric
 - component_sample_id: FDC:167512
   component_recorded_value: 2.12
   component_measurement_unit: ug/(100.g)
   component_data_points_number: 1
   component_type: COMPONENT:1089
-  component_type_label: Iron, Fe
-  compound_analytical_measurement_protocol_doi: AOAC 934.06 mod
+  component_type_label: '"Iron, Fe"'
+  compound_analytical_measurement_protocol_url: AOAC 934.06 mod
   compound_analytical_measurement_method: Gravimetric
 - component_sample_id: FDC:167513
   component_recorded_value: 4.34
@@ -41,7 +41,7 @@ components:
   component_data_points_number: 2
   component_type: COMPONENT:1003
   component_type_label: Protein
-  compound_analytical_measurement_protocol_doi: AOAC 985.01 + 984.27
+  compound_analytical_measurement_protocol_url: AOAC 985.01 + 984.27
   compound_analytical_measurement_method: Fluorometric
 - component_sample_id: FDC:167513
   component_recorded_value: 3.08
@@ -56,19 +56,19 @@ components:
   component_data_points_number: 0
   component_type: COMPONENT:1062
   component_type_label: Energy (kJ)
-  compound_analytical_measurement_protocol_doi: AOAC 996.06
+  compound_analytical_measurement_protocol_url: AOAC 996.06
   compound_analytical_measurement_method: HPLC
 - component_sample_id: FDC:167513
   component_recorded_value: 1.4
   component_measurement_unit: mg/(100.g)
   component_data_points_number: 6
   component_type: COMPONENT:1079
-  component_type_label: Fiber, total dietary
+  component_type_label: '"Fiber, total dietary"'
   compound_analytical_measurement_method: HPLC
 - component_sample_id: FDC:167513
   component_recorded_value: 1.93
   component_measurement_unit: ug/(100.g)
   component_data_points_number: 3
   component_type: COMPONENT:1089
-  component_type_label: Iron, Fe
+  component_type_label: '"Iron, Fe"'
   compound_analytical_measurement_method: HPLC
