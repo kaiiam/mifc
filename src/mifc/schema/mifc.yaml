@@ -70,7 +70,7 @@ classes:
       - food_acquisition_country
       - food_acquisition_country_subdivision
       - food_acquisition_date
-      - food_acquisition_date_year
+      - food_acquisition_year
       - food_acquisition_location_type
       - food_acquisition_location_name
       - food_acquisition_latitude
@@ -312,7 +312,7 @@ slots:
       - PTFI:Collection_Date
     examples:
       - value: 2023-03-08
-  food_acquisition_date_year:
+  food_acquisition_year:
     description: A string value representing the year a food sample was acquired.
     comments: When possible food_acquisition_date should be used instead of food_acquisition_date_year.
   food_acquisition_location_type:
