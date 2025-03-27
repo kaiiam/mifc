@@ -261,7 +261,7 @@ slots:
       - value: "[raw]"
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
-    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition.
     multivalued: true
     range: FoodStorageTemperatureState
     recommended: true
@@ -276,7 +276,7 @@ slots:
     examples:
       - value: unripe
   food_cooking_method:
-    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis.
     range: FoodCookingMethod
     recommended: true
     multivalued: true
@@ -304,7 +304,7 @@ slots:
     examples:
       - value: AFG
   food_acquisition_country_subdivision: #Example states or provinces see ISO 3166-2
-    description: A string denoting the country subdivision from which a food sample was acquired (e.g., state or province).
+    description: A string denoting the country subdivision (state or province) from which a food sample was acquired.
     examples:
       value: PA
   food_acquisition_date: #TODO add ISO datetime requirement?
@@ -372,7 +372,7 @@ slots:
     examples:
       - value: AFG
   food_distributor_country_subdivision:
-    description: A string denoting the country subdivision of a distributor organization from which a food sample was acquired, (e.g., state or province).
+    description: A string denoting the country subdivision (state or province) of a distributor organization from which a food sample was acquired.
     comments: To be determined if state codes should be specified over full names of states/provinces for countries globally.
     examples:
       - value: Ohio
