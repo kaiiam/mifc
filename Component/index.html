@@ -568,6 +568,8 @@ attributes:
     - Note that component_sample_id does not need be unique in a given dataset and
       should be used to relate Food and Component records via food_sample_id from
       the Food class.
+    examples:
+    - value: CY121UM
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -582,6 +584,8 @@ attributes:
     name: component_type
     description: A controlled vocabulary term representing the type of component of
       nutritional interest analyzed from a food sample.
+    examples:
+    - value: COMPONENT:1007
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -596,6 +600,8 @@ attributes:
     name: component_type_label
     description: A string denoting the label of a controlled vocabulary term representing
       an analyzed component_type from a food sample.
+    examples:
+    - value: Ash
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -645,6 +651,8 @@ attributes:
     name: component_data_points_number
     description: An integer representing the number of individual samples that comprise
       a component sample. 1 if an individual sample &gt;1 if an aggregation of samples.
+    examples:
+    - value: '7'
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -724,6 +732,11 @@ attributes:
     name: component_derivation_type
     description: A controlled vocabulary term denoting how a component of nutritional
       interest was generated, (e.g., Analytical or Calculated).
+    comments:
+    - Should make an enumeration with appropriate values (e.g, Analytical as default,
+      Calculated, inferred/Estimated, Sourced from literature etc)
+    examples:
+    - value: Analytical
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -801,6 +814,8 @@ attributes:
     comments:
     - Ideally a protocol with a digital object identifier (DOI) should be used in
       place of a generic URL if possible.
+    examples:
+    - value: https://doi.org/10.1093/9780197610145.003.3363
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc

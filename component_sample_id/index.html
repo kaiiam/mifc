@@ -263,6 +263,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comments" class="md-nav__link">
     Comments
   </a>
@@ -319,6 +326,12 @@
 <p><strong>Requirement status</strong>: <em>Required</em> (slot <strong>MUST</strong> be used.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: CY121UM</p>
+<p><strong>Example value</strong>:</p>
+<p><code>CY121UM</code></p>
+</div>
 <h2 id="comments">Comments</h2>
 <ul>
 <li>Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.</li>
@@ -351,6 +364,8 @@ description: A string denoting the primary identifier for a sample of the class 
 comments:
 - Note that component_sample_id does not need be unique in a given dataset and should
   be used to relate Food and Component records via food_sample_id from the Food class.
+examples:
+- value: CY121UM
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc

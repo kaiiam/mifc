@@ -263,6 +263,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -312,6 +326,16 @@
 <p><strong>Requirement status</strong>: <em>Recommended</em> (We suggest adding this slot, but it is not required.)</p>
 </li>
 </ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: Analytical</p>
+<p><strong>Example value</strong>:</p>
+<p><code>Analytical</code></p>
+</div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -338,6 +362,11 @@
 <pre><code class="language-yaml">name: component_derivation_type
 description: A controlled vocabulary term denoting how a component of nutritional
   interest was generated, (e.g., Analytical or Calculated).
+comments:
+- Should make an enumeration with appropriate values (e.g, Analytical as default,
+  Calculated, inferred/Estimated, Sourced from literature etc)
+examples:
+- value: Analytical
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
