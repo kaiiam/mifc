@@ -90,6 +90,7 @@ classes:
       - food_lot_number
       - food_label_weight
       - food_label_weight_unit
+      - food_sample_publication_date
     id_prefixes:
       - mifc
 
@@ -370,6 +371,8 @@ slots:
     comments: This field should be used in along with food_acquisition_label_weight_unit to express the units the food_label_weight was measured.
   food_label_weight_unit:
     description: A unit code representing the unit of measurement in which a food_label_weight is measured.
+  food_sample_publication_date:
+    description: A date value representing the date in which a food sample was published.
 
   # Component slots
   component_sample_id:
