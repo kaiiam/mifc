@@ -285,7 +285,7 @@ slots:
     examples:
       value: "[boiled|steamed]"
   food_origin_country:
-    description: A string denoting the country code from which a food sample originates.
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code from which a food sample originates.
     range: CountryCode
     examples:
       - value: AFG
@@ -296,7 +296,7 @@ slots:
     examples:
       value: Tucson
   food_acquisition_country: # See ISO 3166 for country codes
-    description: A string denoting the country code from which a food sample was acquired.
+    description: A value from an enumerated set of controlled vocabulary terms denoting denoting the country code from which a food sample was acquired.
     range: CountryCode
     recommended: true
     in_subset:
