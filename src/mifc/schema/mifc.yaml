@@ -196,7 +196,7 @@ slots:
     in_subset:
       - RecommendedSubset
   food_description_match_type:
-    description: A controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.
+    description: A value from a controlled vocabulary term representing the type of mapping between the food_description_label and food_primary_type_label.
     recommended: true
     range: SkosMatchType
     comments:
@@ -251,7 +251,7 @@ slots:
     examples:
       - value: 40822011143
   food_preservation_state:
-    description: An enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the preservation state(s) of a food sample.
     multivalued: true
     range: FoodPreservationState
     recommended: true
@@ -261,7 +261,7 @@ slots:
       - value: "[raw]"
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
-    description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
     multivalued: true
     range: FoodStorageTemperatureState
     recommended: true
@@ -271,12 +271,12 @@ slots:
       - value: "[frozen]"
       - value: "[frozen|refrigerated]"
   food_ripeness_state:
-    description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
+    description: A value from a enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
     examples:
       - value: unripe
   food_cooking_method:
-    description: An enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
+    description: One or multiple values from an enumerated set of controlled vocabulary terms representing the any cooking method(s) applied to a food sample prior to analysis (e.g., "baked").
     range: FoodCookingMethod
     recommended: true
     multivalued: true
