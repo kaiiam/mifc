@@ -142,7 +142,7 @@ classes:
     slots: ## Slots specific to Provenance
       - resource_dataset_label
       - resource_mifc_version_tag
-      - provenance_contributor_orcid
+      - resource_contributor_orcid
       - provenance_organization_name
 
   Container:
@@ -602,7 +602,7 @@ slots:
       - RecommendedSubset
     examples:
       - value: v1.0.1
-  provenance_contributor_orcid:
+  resource_contributor_orcid:
     description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
     recommended: true
     in_subset:
