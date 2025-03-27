@@ -55,7 +55,6 @@ classes:
       - food_primary_type
       - food_primary_type_label
       - food_primary_type_scientific_name
-      - food_primary_type_icncp_group_name
       - food_primary_type_cultivar_name
       - food_primary_type_animal_breed_name
       - food_primary_type_ncbi_taxon_id
@@ -232,9 +231,6 @@ slots:
     comments: This slot should only be used in cases where food materials are single ingredient foods or have a limited number of additives e.g. "salted Nori seaweed" or "filleted anchovies canned in oil".
     examples:
       - value: Gallus gallus
-  food_primary_type_icncp_group_name:
-    description: A string denoting the Group (or cultivar-group) formal taxon category of the primary food material as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).
-    comments: This slot requires discussion as it alternatively be included as part of the food_primary_type_scientific_name slot.
   food_primary_type_cultivar_name:
     description: A string denoting the cultivar name of the primary food material.
     examples:
