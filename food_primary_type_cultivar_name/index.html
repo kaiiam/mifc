@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_primary_type_icncp_group_name/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_primary_type_cultivar_name/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>food_primary_type_icncp_group_name - mifc</title>
+        <title>food_primary_type_cultivar_name - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#food_primary_type_icncp_group_name" class="md-skip">
+        <a href="#food_primary_type_cultivar_name" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              food_primary_type_icncp_group_name
+              food_primary_type_cultivar_name
             
           </span>
         </div>
@@ -263,8 +263,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#comments" class="md-nav__link">
-    Comments
+  <a href="#examples" class="md-nav__link">
+    Examples
   </a>
   
 </li>
@@ -297,18 +297,18 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_primary_type_icncp_group_name.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_primary_type_cultivar_name.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="food_primary_type_icncp_group_name">food_primary_type_icncp_group_name</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_primary_type_icncp_group_name">mifc:food_primary_type_icncp_group_name</a></p>
+<h1 id="food_primary_type_cultivar_name">food_primary_type_cultivar_name</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_primary_type_cultivar_name">mifc:food_primary_type_cultivar_name</a></p>
 <p><strong>Applicable to</strong>: <a href="../Food/">Food</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string denoting the Group (or cultivar-group) formal taxon category of the primary food material as specified by the International Code of Nomenclature for Cultivated Plants (ICNCP).</em></p>
+<p><em>A string denoting the cultivar name of the primary food material.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -319,10 +319,12 @@
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
 </li>
 </ul>
-<h2 id="comments">Comments</h2>
-<ul>
-<li>This slot requires discussion as it alternatively be included as part of the food_primary_type_scientific_name slot.</li>
-</ul>
+<h2 id="examples">Examples</h2>
+<div class="admonition example">
+<p class="admonition-title">Example: Adirondack Blue</p>
+<p><strong>Example value</strong>:</p>
+<p><code>Adirondack Blue</code></p>
+</div>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -334,11 +336,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:food_primary_type_icncp_group_name</td>
+<td>mifc:food_primary_type_cultivar_name</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:food_primary_type_icncp_group_name</td>
+<td>mifc:food_primary_type_cultivar_name</td>
 </tr>
 </tbody>
 </table>
@@ -346,16 +348,13 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: food_primary_type_icncp_group_name
-description: A string denoting the Group (or cultivar-group) formal taxon category
-  of the primary food material as specified by the International Code of Nomenclature
-  for Cultivated Plants (ICNCP).
-comments:
-- This slot requires discussion as it alternatively be included as part of the food_primary_type_scientific_name
-  slot.
+<pre><code class="language-yaml">name: food_primary_type_cultivar_name
+description: A string denoting the cultivar name of the primary food material.
+examples:
+- value: Adirondack Blue
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_primary_type_icncp_group_name
+alias: food_primary_type_cultivar_name
 domain_of:
 - Food
 range: string

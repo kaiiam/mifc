@@ -305,9 +305,7 @@
 
   Food : food_primary_type_animal_breed_name
 
-  Food : food_primary_type_icncp_cultivar_name
-
-  Food : food_primary_type_icncp_group_name
+  Food : food_primary_type_cultivar_name
 
   Food : food_primary_type_label
 
@@ -385,15 +383,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../food_primary_type_icncp_group_name/">food_primary_type_icncp_group_name</a></td>
+<td><a href="../food_primary_type_cultivar_name/">food_primary_type_cultivar_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string denoting the Group (or cultivar-group) formal taxon category of the ...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../food_primary_type_icncp_cultivar_name/">food_primary_type_icncp_cultivar_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string denoting the cultivar name of the primary food material as specified...</td>
+<td>A string denoting the cultivar name of the primary food material</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -680,8 +672,7 @@ slots:
 - food_primary_type
 - food_primary_type_label
 - food_primary_type_scientific_name
-- food_primary_type_icncp_group_name
-- food_primary_type_icncp_cultivar_name
+- food_primary_type_cultivar_name
 - food_primary_type_animal_breed_name
 - food_primary_type_ncbi_taxon_id
 - food_description_match_type
@@ -833,32 +824,14 @@ attributes:
     domain_of:
     - Food
     range: string
-  food_primary_type_icncp_group_name:
-    name: food_primary_type_icncp_group_name
-    description: A string denoting the Group (or cultivar-group) formal taxon category
-      of the primary food material as specified by the International Code of Nomenclature
-      for Cultivated Plants (ICNCP).
-    comments:
-    - This slot requires discussion as it alternatively be included as part of the
-      food_primary_type_scientific_name slot.
+  food_primary_type_cultivar_name:
+    name: food_primary_type_cultivar_name
+    description: A string denoting the cultivar name of the primary food material.
+    examples:
+    - value: Adirondack Blue
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: food_primary_type_icncp_group_name
-    owner: Food
-    domain_of:
-    - Food
-    range: string
-  food_primary_type_icncp_cultivar_name:
-    name: food_primary_type_icncp_cultivar_name
-    description: A string denoting the cultivar name of the primary food material
-      as specified by the International Code of Nomenclature for Cultivated Plants
-      (ICNCP).
-    comments:
-    - The ICNCP only applies to algae, fungi, and plant species. If present this slot
-      should be used in addition to the food_primary_type_icncp_group_name slot.
-    from_schema: https://w3id.org/kaiiam/mifc
-    rank: 1000
-    alias: food_primary_type_icncp_cultivar_name
+    alias: food_primary_type_cultivar_name
     owner: Food
     domain_of:
     - Food
@@ -1296,6 +1269,8 @@ attributes:
     comments:
     - Only use this attribute if a separate ID is assigned to laboratory samples derived
       from food samples. Otherwise just use the food_sample_id.
+    examples:
+    - value: CY124YB_1
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_laboratory_sample_id
@@ -1311,6 +1286,8 @@ attributes:
     comments:
     - Only use this attribute if identifiers are assigned to aliquots/sub-samples
       of food laboratory samples denoted by their food_laboratory_sample_id.
+    examples:
+    - value: NFY122P11
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_laboratory_sample_aliquot_id
@@ -1323,6 +1300,8 @@ attributes:
     name: food_laboratory_sample_batch_id
     description: A string denoting an identifier of a batch of laboratory samples
       analysed together.
+    examples:
+    - value: t
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_laboratory_sample_batch_id
