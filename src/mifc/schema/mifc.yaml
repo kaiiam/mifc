@@ -125,6 +125,7 @@ classes:
       - component_quality_control_remeasurement
       - compound_individual_sample_id_list
       - component_atwater_protein_conversion_factor
+      - component_atwater_fat_conversion_factor
       - food_laboratory_sample_id
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
@@ -493,6 +494,10 @@ slots:
   component_atwater_protein_conversion_factor:
     description: A float representing the protein conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
     range: float
+  component_atwater_fat_conversion_factor:
+    description: A float representing the fat conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
+    range: float
+
 
   # Provenance slots
   provenance_dataset_label:
