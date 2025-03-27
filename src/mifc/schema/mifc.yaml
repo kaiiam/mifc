@@ -140,7 +140,7 @@ classes:
     in_subset:
       - RecommendedSubset
     slots: ## Slots specific to Provenance
-      - provenance_dataset_label
+      - resource_dataset_label
       - provenance_mifc_version_tag
       - provenance_contributor_orcid
       - provenance_organization_name
@@ -588,7 +588,7 @@ slots:
     comments: A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
 
   # Provenance slots
-  provenance_dataset_label:
+  resource_dataset_label:
     description: A string corresponding to the labeled name of dataset.
     recommended: true #Might want to make this field required
     in_subset:
