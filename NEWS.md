@@ -1,5 +1,14 @@
 # Changes between MIFC releases:
 
+### v0.3.0
+
+**Component**
+
+* Rename `compound_analytical_measurement_protocol_doi` to `compound_analytical_measurement_protocol_url`
+
+**Food**
+
+
 ### v0.2.0
 
 **Component**
