@@ -390,16 +390,22 @@ slots:
     comments: Note that component_sample_id does not need be unique in a given dataset and should be used to relate Food and Component records via food_sample_id from the Food class.
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: CY121UM
   component_type:
     description: A controlled vocabulary term representing the type of component of nutritional interest analyzed from a food sample.
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: COMPONENT:1007
   component_type_label:
     description: A string denoting the label of a controlled vocabulary term representing an analyzed component_type from a food sample.
     recommended: true
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: Ash
   component_recorded_value: # https://github.com/linkml/linkml/issues/1421 for ideas on any_of to have multiple ranges or an enum to catch examples like <10 or BDL
     description: A float representing a recorded value of a component of nutritional interest measured from a laboratory sample derived from a food sample.
     required: true
@@ -416,12 +422,14 @@ slots:
     comments: TODO find a way to constrain these with valid UCUM codes perhaps enum or recommended LINKML units docs.
     examples:
       - value: g/(100.g)
-  component_data_points_number: # TODO add default 1 perhaps with ifabsent
+  component_data_points_number: # TODO add default 1 perhaps with if absent
     description: An integer representing the number of individual samples that comprise a component sample. 1 if an individual sample >1 if an aggregation of samples.
     required: true
     range: integer
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: 7
   component_record_date: # Generic date for Last Updated situation with USDA, TODO will need separate analytical analysis, and sample preparation dates. #Also will want to constrain with regex pattern to ISO8601 datetime stamp
     description: A date value representing recorded date pertaining to an analyzed sample.
     range: date
@@ -451,8 +459,11 @@ slots:
   component_derivation_type: # TODO add enumeration (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature) see food_nutrient_derivation.csv. May want to make required #may want to have another source field for if the data was from literature or external source to say where it was from doi or name of institution perhaps?
     description: A controlled vocabulary term denoting how a component of nutritional interest was generated, (e.g., Analytical or Calculated).
     recommended: true
+    comments: Should make an enumeration with appropriate values (e.g, Analytical as default, Calculated, inferred/Estimated, Sourced from literature etc)
     in_subset:
       - RecommendedSubset
+    examples:
+      - value: Analytical
   component_limit_of_quantitation:
     range: string
     description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.
