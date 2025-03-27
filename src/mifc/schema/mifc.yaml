@@ -603,8 +603,9 @@ slots:
     examples:
       - value: v1.0.1
   resource_contributor_orcid:
-    description: A string corresponding to a "|" delimited list of ORCIDs of people who contributed to a MIFC formatted dataset. See https://orcid.org/.
+    description: A list of strings representing ORCIDs URLs of people who contributed to a MIFC formatted dataset.
     recommended: true
+    comments: See https://orcid.org/.
     in_subset:
       - RecommendedSubset
     examples:
