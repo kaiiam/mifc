@@ -354,10 +354,14 @@ slots:
     description: A string denoting the name of the agent (person, device or other type of service) that acquired the food sample.
     exact_mappings:
       - PTFI:Collector_Name
+    examples:
+      - value: Denise Trainer
   food_acquisition_organization:
     description: A string denoting the name of the organization responsible for acquired the food sample.
     exact_mappings:
       - PTFI:Collector_Organization
+    examples:
+      - value: USDA FHPEL
   food_distributor_city:
     description: A string denoting the city of a distributor organization from which a food sample was acquired.
     examples:
