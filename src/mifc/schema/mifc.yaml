@@ -258,7 +258,7 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      - value: raw
+      - value: "[raw]"
     #Currently Maps to both PTFI: Specimen Preparation, and Specimen Preparation Method. Consider separating them like PTFI does. Former has options raw, processed, cooked, and unknown, latter is longer list of processing/cooking methods e.g., boiled
   food_storage_temperature_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative temperature state at which a food sample was stored prior to acquisition (e.g., "Refrigerated").
@@ -268,8 +268,8 @@ slots:
     in_subset:
       - RecommendedSubset
     examples:
-      - value: frozen
-      - value: Refrigerated
+      - value: "[frozen]"
+      - value: "[frozen|refrigerated]"
   food_ripeness_state:
     description: An enumerated set of controlled vocabulary terms representing the qualitative freshness state of a food sample when prepared for analysis.
     range: FoodRipenessState
