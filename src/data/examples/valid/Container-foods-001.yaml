@@ -4,7 +4,8 @@ foods:
   food_primary_type: FOOD:11954
   food_primary_type_label: '"Tomatillos, raw"'
   food_description_match_type: skos:exactMatch
-  food_preservation_state: raw
+  food_preservation_state:
+  - raw
 - food_sample_id: '167857'
   food_description_label: '"Pork, fresh, variety meats and by-products, ears, frozen,
     raw"'
@@ -12,8 +13,10 @@ foods:
   food_primary_type_label: '"Pork, fresh, variety meats and by-products, ears, frozen,
     raw"'
   food_description_match_type: skos:exactMatch
-  food_preservation_state: fresh
-  food_storage_temperature_state: frozen
+  food_preservation_state:
+  - fresh
+  food_storage_temperature_state:
+  - frozen
 - food_sample_id: '170166'
   food_description_label: '"Nuts, chestnuts, chinese, boiled and steamed"'
   food_primary_type: FOOD:12095

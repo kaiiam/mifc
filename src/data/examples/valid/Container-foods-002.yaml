@@ -3,7 +3,8 @@ foods:
   food_description_label: Butter, light, stick, with salt
   food_primary_type: FOOD:4601
   food_upc_code: '40822011143'
-  food_preservation_state: fresh
+  food_preservation_state:
+  - fresh
   food_acquisition_city: PITTSBURGH
   food_acquisition_country: USA
   food_acquisition_country_subdivision: PA
@@ -16,7 +17,8 @@ foods:
   food_description_label: Yam, raw
   food_primary_type: FOOD:11601
   food_upc_code: '79893110196'
-  food_preservation_state: raw
+  food_preservation_state:
+  - raw
   food_acquisition_city: TUCSON
   food_acquisition_country: USA
   food_acquisition_country_subdivision: AZ
