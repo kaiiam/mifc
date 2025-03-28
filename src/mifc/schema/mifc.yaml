@@ -593,14 +593,14 @@ slots:
   # Resource slots
   resource_dataset_label:
     description: A string corresponding to the labeled name of dataset.
-    recommended: true #Might want to make this field required
+    required: true
     in_subset:
       - RecommendedSubset
     examples:
       - value: Standard Reference (SR) Legacy
   resource_mifc_version_tag:
     description: A string corresponding to a named MIFC release number.
-    recommended: true #Might want to make this field required
+    required: true
     in_subset:
       - RecommendedSubset
     examples:
