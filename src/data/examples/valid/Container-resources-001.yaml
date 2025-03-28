@@ -1,5 +1,6 @@
 resources:
 - resource_dataset_label: Standard Reference (SR) Legacy
+  resource_dataset_version_number: 2
   resource_mifc_version_tag: v1.0.1
   resource_contributor_orcid:
   - https://orcid.org/0000-0003-0857-700X

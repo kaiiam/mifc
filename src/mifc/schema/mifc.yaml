@@ -141,6 +141,7 @@ classes:
       - RecommendedSubset
     slots: ## Slots specific to Resource
       - resource_dataset_label
+      - resource_dataset_version_number
       - resource_mifc_version_tag
       - resource_contributor_orcid
       - resource_organization_name
@@ -598,6 +599,15 @@ slots:
       - RecommendedSubset
     examples:
       - value: Standard Reference (SR) Legacy
+  resource_dataset_version_number:
+    description: An integer corresponding to the version number of MIFC dataset.
+    range: integer
+    required: true
+    comments: This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.
+    in_subset:
+      - RecommendedSubset
+    examples:
+      - value: 2
   resource_mifc_version_tag:
     description: A string corresponding to a named MIFC release number.
     required: true
