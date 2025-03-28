@@ -132,22 +132,9 @@ classes:
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
 
-#  Provenance:
-#    description: >-
-#      Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
-#    is_a: NamedThing
-#    class_uri: schema:Provenance
-#    in_subset:
-#      - RecommendedSubset
-#    slots: ## Slots specific to Provenance
-#      - resource_dataset_label
-#      - resource_mifc_version_tag
-#      - resource_contributor_orcid
-#      - resource_organization_name
-
   Resource:
     description: >-
-      Supplemental data about the MIFC collection resources.
+      Supplemental data about the provenance of MIFC collection resources.
     is_a: NamedThing
     class_uri: schema:Resource
     in_subset:
@@ -169,10 +156,6 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: Component
-#      provenances:
-#        multivalued: true
-#        inlined_as_list: true
-#        range: Provenance
       resources:
         multivalued: true
         inlined_as_list: true
@@ -607,7 +590,7 @@ slots:
       - value: 6.38
     comments: Also known as Jones' factors. https://www.ars.usda.gov/ARSUserFiles/80400525/Data/Classics/cir183.pdf. A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
 
-  # Provenance slots
+  # Resource slots
   resource_dataset_label:
     description: A string corresponding to the labeled name of dataset.
     recommended: true #Might want to make this field required
