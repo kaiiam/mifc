@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/resource_mifc_version_tag/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/resource_dataset_version_number/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>resource_mifc_version_tag - mifc</title>
+        <title>resource_dataset_version_number - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#resource_mifc_version_tag" class="md-skip">
+        <a href="#resource_dataset_version_number" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              resource_mifc_version_tag
+              resource_dataset_version_number
             
           </span>
         </div>
@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -297,23 +304,23 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/resource_mifc_version_tag.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/resource_dataset_version_number.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="resource_mifc_version_tag">resource_mifc_version_tag</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/resource_mifc_version_tag">mifc:resource_mifc_version_tag</a></p>
+<h1 id="resource_dataset_version_number">resource_dataset_version_number</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/resource_dataset_version_number">mifc:resource_dataset_version_number</a></p>
 <p><strong>Applicable to</strong>: <a href="../Resource/">Resource</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to a named MIFC release number.</em></p>
+<p><em>An integer corresponding to the version number of MIFC dataset.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Integer/">Integer</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Required</em> (slot <strong>MUST</strong> be used.)</p>
@@ -321,10 +328,14 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: v1.0.1</p>
+<p class="admonition-title">Example: 2</p>
 <p><strong>Example value</strong>:</p>
-<p><code>v1.0.1</code></p>
+<p><code>2</code></p>
 </div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -336,11 +347,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:resource_mifc_version_tag</td>
+<td>mifc:resource_dataset_version_number</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:resource_mifc_version_tag</td>
+<td>mifc:resource_dataset_version_number</td>
 </tr>
 </tbody>
 </table>
@@ -348,18 +359,20 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: resource_mifc_version_tag
-description: A string corresponding to a named MIFC release number.
+<pre><code class="language-yaml">name: resource_dataset_version_number
+description: An integer corresponding to the version number of MIFC dataset.
+comments:
+- This could alternatively be modeled as a version tag with a string like with resource_mifc_version_tag.
 examples:
-- value: v1.0.1
+- value: '2'
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: resource_mifc_version_tag
+alias: resource_dataset_version_number
 domain_of:
 - Resource
-range: string
+range: integer
 required: true
 
 </code></pre>
