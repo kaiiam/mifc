@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -325,6 +332,10 @@
 <p><strong>Example value</strong>:</p>
 <p><code>2.78</code></p>
 </div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>The Atwater general factor for protein is 4. See the USDA Handbook 74 <a href="https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF">https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF</a> for the calculation of energy using Atwater specific factors.</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -352,6 +363,9 @@
 description: A float representing the protein conversion factor used to calculate
   the available energy of a food when employing the Atwater system or a derivative
   thereof.
+comments:
+- The Atwater general factor for protein is 4. See the USDA Handbook 74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF
+  for the calculation of energy using Atwater specific factors.
 examples:
 - value: '2.78'
 from_schema: https://w3id.org/kaiiam/mifc
