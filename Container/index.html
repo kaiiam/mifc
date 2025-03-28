@@ -210,10 +210,10 @@
       Container --&gt; "*" Food : foods
     click Food href "../Food"
 
-  Container : provenances
+  Container : resources
 
-      Container --&gt; "*" Provenance : provenances
-    click Provenance href "../Provenance"
+      Container --&gt; "*" Resource : resources
+    click Resource href "../Resource"
 
 
 
@@ -243,8 +243,8 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../provenances/">provenances</a></td>
-<td>* <br/> <a href="../Provenance/">Provenance</a></td>
+<td><a href="../resources/">resources</a></td>
+<td>* <br/> <a href="../Resource/">Resource</a></td>
 <td></td>
 <td>direct</td>
 </tr>
@@ -301,13 +301,13 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
-  provenances:
-    name: provenances
+  resources:
+    name: resources
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     domain_of:
     - Container
-    range: Provenance
+    range: Resource
     multivalued: true
     inlined: true
     inlined_as_list: true
@@ -344,15 +344,15 @@ attributes:
     multivalued: true
     inlined: true
     inlined_as_list: true
-  provenances:
-    name: provenances
+  resources:
+    name: resources
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
-    alias: provenances
+    alias: resources
     owner: Container
     domain_of:
     - Container
-    range: Provenance
+    range: Resource
     multivalued: true
     inlined: true
     inlined_as_list: true

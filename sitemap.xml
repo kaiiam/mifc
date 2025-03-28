@@ -105,11 +105,11 @@
          <lastmod>2025-03-28</lastmod>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/Provenance/</loc>
+         <loc>https://kaiiam.github.io/mifc/RecommendedSubset/</loc>
          <lastmod>2025-03-28</lastmod>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/RecommendedSubset/</loc>
+         <loc>https://kaiiam.github.io/mifc/Resource/</loc>
          <lastmod>2025-03-28</lastmod>
     </url>
     <url>
@@ -421,10 +421,6 @@
          <lastmod>2025-03-28</lastmod>
     </url>
     <url>
-         <loc>https://kaiiam.github.io/mifc/provenances/</loc>
-         <lastmod>2025-03-28</lastmod>
-    </url>
-    <url>
          <loc>https://kaiiam.github.io/mifc/resource_contributor_orcid/</loc>
          <lastmod>2025-03-28</lastmod>
     </url>
@@ -438,6 +434,10 @@
     </url>
     <url>
          <loc>https://kaiiam.github.io/mifc/resource_organization_name/</loc>
+         <lastmod>2025-03-28</lastmod>
+    </url>
+    <url>
+         <loc>https://kaiiam.github.io/mifc/resources/</loc>
          <lastmod>2025-03-28</lastmod>
     </url>
 </urlset>

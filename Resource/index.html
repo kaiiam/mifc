@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://kaiiam.github.io/mifc/Provenance/" rel="canonical"/>
+<link href="https://kaiiam.github.io/mifc/Resource/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: Provenance - mifc</title>
+<title>Class: Resource - mifc</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-provenance">
+<a class="md-skip" href="#class-resource">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: Provenance
+              Class: Resource
             
           </span>
 </div>
@@ -201,27 +201,27 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Provenance.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/kaiiam/mifc/edit/master/docs/Resource.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-provenance">Class: Provenance</h1>
-<p><em>Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.</em></p>
-<p>URI: <a href="http://schema.org/Provenance">schema:Provenance</a></p>
+<h1 id="class-resource">Class: Resource</h1>
+<p><em>Supplemental data about the provenance of MIFC collection resources.</em></p>
+<p>URI: <a href="http://schema.org/Resource">schema:Resource</a></p>
 <div class="mermaid">classDiagram
-  class Provenance
-  click Provenance href "../Provenance"
-    NamedThing &lt;|-- Provenance
+  class Resource
+  click Resource href "../Resource"
+    NamedThing &lt;|-- Resource
       click NamedThing href "../NamedThing"
 
 
 
-  Provenance : resource_contributor_orcid
+  Resource : resource_contributor_orcid
 
-  Provenance : resource_dataset_label
+  Resource : resource_dataset_label
 
-  Provenance : resource_mifc_version_tag
+  Resource : resource_mifc_version_tag
 
-  Provenance : resource_organization_name
+  Resource : resource_organization_name
 
 
 
@@ -229,7 +229,7 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../NamedThing/">NamedThing</a><ul>
-<li><strong>Provenance</strong></li>
+<li><strong>Resource</strong></li>
 </ul>
 </li>
 </ul>
@@ -283,9 +283,9 @@
 <tbody>
 <tr>
 <td><a href="../Container/">Container</a></td>
-<td><a href="../provenances/">provenances</a></td>
+<td><a href="../resources/">resources</a></td>
 <td>range</td>
-<td><a href="./">Provenance</a></td>
+<td><a href="./">Resource</a></td>
 </tr>
 </tbody>
 </table>
@@ -305,11 +305,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Provenance</td>
+<td>schema:Resource</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:Provenance</td>
+<td>mifc:Resource</td>
 </tr>
 </tbody>
 </table>
@@ -317,9 +317,8 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: Provenance
-description: Supplemental data about the provenance of a Food and Component dataset
-  collection standardized using MIFC.
+<pre><code class="language-yaml">name: Resource
+description: Supplemental data about the provenance of MIFC collection resources.
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -329,15 +328,14 @@ slots:
 - resource_mifc_version_tag
 - resource_contributor_orcid
 - resource_organization_name
-class_uri: schema:Provenance
+class_uri: schema:Resource
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: Provenance
-description: Supplemental data about the provenance of a Food and Component dataset
-  collection standardized using MIFC.
+<pre><code class="language-yaml">name: Resource
+description: Supplemental data about the provenance of MIFC collection resources.
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -353,9 +351,9 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: resource_dataset_label
-    owner: Provenance
+    owner: Resource
     domain_of:
-    - Provenance
+    - Resource
     range: string
     recommended: true
   resource_mifc_version_tag:
@@ -368,9 +366,9 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: resource_mifc_version_tag
-    owner: Provenance
+    owner: Resource
     domain_of:
-    - Provenance
+    - Resource
     range: string
     recommended: true
   resource_contributor_orcid:
@@ -386,9 +384,9 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: resource_contributor_orcid
-    owner: Provenance
+    owner: Resource
     domain_of:
-    - Provenance
+    - Resource
     range: string
     recommended: true
     multivalued: true
@@ -404,13 +402,13 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: resource_organization_name
-    owner: Provenance
+    owner: Resource
     domain_of:
-    - Provenance
+    - Resource
     range: string
     recommended: true
     multivalued: true
-class_uri: schema:Provenance
+class_uri: schema:Resource
 
 </code></pre>
 </details>
