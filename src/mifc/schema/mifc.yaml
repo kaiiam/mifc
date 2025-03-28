@@ -132,14 +132,27 @@ classes:
       - food_laboratory_sample_aliquot_id
       - food_laboratory_sample_batch_id
 
-  Provenance:
+#  Provenance:
+#    description: >-
+#      Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
+#    is_a: NamedThing
+#    class_uri: schema:Provenance
+#    in_subset:
+#      - RecommendedSubset
+#    slots: ## Slots specific to Provenance
+#      - resource_dataset_label
+#      - resource_mifc_version_tag
+#      - resource_contributor_orcid
+#      - resource_organization_name
+
+  Resource:
     description: >-
-      Supplemental data about the provenance of a Food and Component dataset collection standardized using MIFC.
+      Supplemental data about the MIFC collection resources.
     is_a: NamedThing
-    class_uri: schema:Provenance
+    class_uri: schema:Resource
     in_subset:
       - RecommendedSubset
-    slots: ## Slots specific to Provenance
+    slots: ## Slots specific to Resource
       - resource_dataset_label
       - resource_mifc_version_tag
       - resource_contributor_orcid
@@ -156,10 +169,14 @@ classes:
         multivalued: true
         inlined_as_list: true
         range: Component
-      provenances:
+#      provenances:
+#        multivalued: true
+#        inlined_as_list: true
+#        range: Provenance
+      resources:
         multivalued: true
         inlined_as_list: true
-        range: Provenance
+        range: Resource
 
 slots:
   # Food slots
