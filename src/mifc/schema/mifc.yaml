@@ -568,16 +568,19 @@ slots:
   component_atwater_protein_conversion_factor:
     description: A float representing the protein conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
     range: float
+    comments: The Atwater general factor for protein is 4. See the USDA Handbook 74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF for the calculation of energy using Atwater specific factors.
     examples:
       - value: 2.78
   component_atwater_fat_conversion_factor:
     description: A float representing the fat conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
     range: float
+    comments: The Atwater general factor for fat is 9. See the USDA Handbook 74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF for the calculation of energy using Atwater specific factors.
     examples:
       - value: 8.37
   component_atwater_carbohydrate_conversion_factor:
     description: A float representing the carbohydrate conversion factor used to calculate the available energy of a food when employing the Atwater system or a derivative thereof.
     range: float
+    comments: The Atwater general factor for carbohydrates is of 4. See the USDA Handbook 74 https://www.ars.usda.gov/ARSUSERFILES/80400535/DATA/CLASSICS/USDA%20HANDBOOK%2074.PDF for the calculation of energy using Atwater specific factors.
     examples:
       - value: 3.84
   component_protein_from_nitrogen_conversion_factor:
@@ -585,7 +588,7 @@ slots:
     range: float
     examples:
       - value: 6.38
-    comments: A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
+    comments: Also known as Jones' factors. https://www.ars.usda.gov/ARSUserFiles/80400525/Data/Classics/cir183.pdf. A commonly used value for the component_protein_from_nitrogen_conversion_factor is 6.25 based on the assumptions that all proteins have a nitrogen content of 16%, and that all nitrogen is derived from protein. It should be noted that these assumptions might not always hold.
 
   # Provenance slots
   resource_dataset_label:
