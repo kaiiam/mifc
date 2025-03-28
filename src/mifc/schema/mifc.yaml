@@ -609,12 +609,13 @@ slots:
     examples:
       - value: 2
   resource_mifc_version_tag:
-    description: A string corresponding to a named MIFC release number.
+    description: A value from a enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.
     required: true
+    range: ResourceVersionTag
     in_subset:
       - RecommendedSubset
     examples:
-      - value: v1.0.1
+      - value: v0.3.0
   resource_contributor_orcid:
     description: A list of strings representing ORCIDs URLs of people who contributed to a MIFC-formatted dataset.
     recommended: true
@@ -813,6 +814,11 @@ enums:
         comments:
           - "From the sssom_schema: The subject and the object are associated in some unspecified way."
           - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
+  ResourceVersionTag:
+    permissible_values:
+      v0.1.0:
+      v0.2.0:
+      v0.3.0:
   CountryCode:
     comments: Source https://www.nationsonline.org/oneworld/country_code_list.htm
     permissible_values:
