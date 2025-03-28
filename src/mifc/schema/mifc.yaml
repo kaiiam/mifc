@@ -611,7 +611,7 @@ slots:
   resource_mifc_version_tag:
     description: A value from a enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.
     required: true
-    range: ResourceVersionTag
+    range: ResourceMIFCVersionTag
     in_subset:
       - RecommendedSubset
     examples:
@@ -814,7 +814,7 @@ enums:
         comments:
           - "From the sssom_schema: The subject and the object are associated in some unspecified way."
           - 'Only use if no applicable broad or narrow matches can be found in the vocabulary.'
-  ResourceVersionTag:
+  ResourceMIFCVersionTag:
     permissible_values:
       v0.1.0:
       v0.2.0:
