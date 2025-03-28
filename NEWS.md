@@ -12,7 +12,9 @@
 
 * Remove `food_primary_type_icncp_group_name`
 
-**Provenance** 
+**Resource**
+
+Note that the **Provenance** class was renamed to **Resource**
 
 * Rename `provenance_dataset_label` to `resource_dataset_label`
 
@@ -22,7 +24,6 @@
 
 * Rename `provenance_organization_name` to `resource_organization_name`
 
-TODO Rename **Provenance** class to **Resource**
 
 ### v0.2.0
 
