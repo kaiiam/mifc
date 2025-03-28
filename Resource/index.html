@@ -223,8 +223,8 @@
 
   Resource : resource_mifc_version_tag
 
-      Resource --&gt; "1" ResourceVersionTag : resource_mifc_version_tag
-    click ResourceVersionTag href "../ResourceVersionTag"
+      Resource --&gt; "1" ResourceMIFCVersionTag : resource_mifc_version_tag
+    click ResourceMIFCVersionTag href "../ResourceMIFCVersionTag"
 
   Resource : resource_organization_name
 
@@ -263,7 +263,7 @@
 </tr>
 <tr>
 <td><a href="../resource_mifc_version_tag/">resource_mifc_version_tag</a></td>
-<td>1 <br/> <a href="../ResourceVersionTag/">ResourceVersionTag</a></td>
+<td>1 <br/> <a href="../ResourceMIFCVersionTag/">ResourceMIFCVersionTag</a></td>
 <td>A value from a enumerated set of controlled vocabulary terms representing a s...</td>
 <td>direct</td>
 </tr>
@@ -400,7 +400,7 @@ attributes:
     owner: Resource
     domain_of:
     - Resource
-    range: ResourceVersionTag
+    range: ResourceMIFCVersionTag
     required: true
   resource_contributor_orcid:
     name: resource_contributor_orcid
