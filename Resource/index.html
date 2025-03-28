@@ -223,6 +223,9 @@
 
   Resource : resource_mifc_version_tag
 
+      Resource --&gt; "1" ResourceVersionTag : resource_mifc_version_tag
+    click ResourceVersionTag href "../ResourceVersionTag"
+
   Resource : resource_organization_name
 
 
@@ -260,8 +263,8 @@
 </tr>
 <tr>
 <td><a href="../resource_mifc_version_tag/">resource_mifc_version_tag</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>A string corresponding to a named MIFC release number</td>
+<td>1 <br/> <a href="../ResourceVersionTag/">ResourceVersionTag</a></td>
+<td>A value from a enumerated set of controlled vocabulary terms representing a s...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -385,9 +388,10 @@ attributes:
     required: true
   resource_mifc_version_tag:
     name: resource_mifc_version_tag
-    description: A string corresponding to a named MIFC release number.
+    description: A value from a enumerated set of controlled vocabulary terms representing
+      a string corresponding to a named MIFC release number.
     examples:
-    - value: v1.0.1
+    - value: v0.3.0
     in_subset:
     - RecommendedSubset
     from_schema: https://w3id.org/kaiiam/mifc
@@ -396,7 +400,7 @@ attributes:
     owner: Resource
     domain_of:
     - Resource
-    range: string
+    range: ResourceVersionTag
     required: true
   resource_contributor_orcid:
     name: resource_contributor_orcid

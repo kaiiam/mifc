@@ -308,12 +308,12 @@
 <p><strong>Applicable to</strong>: <a href="../Resource/">Resource</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string corresponding to a named MIFC release number.</em></p>
+<p><em>A value from a enumerated set of controlled vocabulary terms representing a string corresponding to a named MIFC release number.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../ResourceVersionTag/">ResourceVersionTag</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Required</em> (slot <strong>MUST</strong> be used.)</p>
@@ -321,9 +321,9 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: v1.0.1</p>
+<p class="admonition-title">Example: v0.3.0</p>
 <p><strong>Example value</strong>:</p>
-<p><code>v1.0.1</code></p>
+<p><code>v0.3.0</code></p>
 </div>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -349,9 +349,10 @@
 
 
 <pre><code class="language-yaml">name: resource_mifc_version_tag
-description: A string corresponding to a named MIFC release number.
+description: A value from a enumerated set of controlled vocabulary terms representing
+  a string corresponding to a named MIFC release number.
 examples:
-- value: v1.0.1
+- value: v0.3.0
 in_subset:
 - RecommendedSubset
 from_schema: https://w3id.org/kaiiam/mifc
@@ -359,7 +360,7 @@ rank: 1000
 alias: resource_mifc_version_tag
 domain_of:
 - Resource
-range: string
+range: ResourceVersionTag
 required: true
 
 </code></pre>
