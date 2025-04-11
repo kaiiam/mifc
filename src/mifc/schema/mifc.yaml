@@ -92,6 +92,7 @@ classes:
       - food_label_weight
       - food_label_weight_unit
       - food_sample_publication_date
+      - food_comment
     id_prefixes:
       - mifc
 
@@ -423,6 +424,10 @@ slots:
     description: A date value representing the date in which a food sample was published.
     examples:
       - value: 2020-10-30
+  food_comment:
+    description: A string representing a comment relating to a food sample.
+    examples:
+      - value: "Bananas where green at time of sampling and yellow at the time of analysis."
 
   # Component slots
   component_sample_id:
