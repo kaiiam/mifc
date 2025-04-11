@@ -256,6 +256,8 @@
 
   Food : food_category_type
 
+  Food : food_comment
+
   Food : food_cooking_method
 
       Food --&gt; "* _recommended_" FoodCookingMethod : food_cooking_method
@@ -604,6 +606,12 @@
 <td>A date value representing the date in which a food sample was published</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../food_comment/">food_comment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string representing a comment relating to a food sample</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -709,6 +717,7 @@ slots:
 - food_label_weight
 - food_label_weight_unit
 - food_sample_publication_date
+- food_comment
 class_uri: schema:Food
 
 </code></pre>
@@ -1384,6 +1393,18 @@ attributes:
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_sample_publication_date
+    owner: Food
+    domain_of:
+    - Food
+    range: string
+  food_comment:
+    name: food_comment
+    description: A string representing a comment relating to a food sample.
+    examples:
+    - value: Bananas where green at time of sampling and yellow at the time of analysis.
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_comment
     owner: Food
     domain_of:
     - Food
