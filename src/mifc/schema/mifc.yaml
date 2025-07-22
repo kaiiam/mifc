@@ -93,6 +93,7 @@ classes:
       - food_label_weight_unit
       - food_sample_publication_date
       - food_comment
+      - food_sample_weight
     id_prefixes:
       - mifc
 
@@ -431,6 +432,11 @@ slots:
     description: A string representing a comment relating to a food sample.
     examples:
       - value: "Bananas where green at time of sampling and yellow at the time of analysis."
+  food_sample_weight:
+    description: A float denoting the mass, (or weight on earth) of a food sample.
+    comments: This field should be used in along with food_sample_weight_unit to express the units the food_sample_weight was measured.
+    examples:
+      - value: 304
 
   # Component slots
   component_sample_id:
