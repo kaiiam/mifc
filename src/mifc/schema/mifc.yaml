@@ -95,6 +95,8 @@ classes:
       - food_comment
       - food_sample_weight
       - food_sample_weight_unit
+      - food_sample_digested_weight
+      - food_sample_digested_weight_unit
     id_prefixes:
       - mifc
 
@@ -447,6 +449,10 @@ slots:
     comments: This field should be used in along with food_sample_digested_weight_unit to express the units the food_sample_digested_weight was measured in.
     examples:
       - value: 209
+  food_sample_digested_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_sample_digested_weight is measured.
+    examples:
+      - value: 'g'
 
   # Component slots
   component_sample_id:
