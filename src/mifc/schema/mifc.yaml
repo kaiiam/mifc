@@ -118,6 +118,7 @@ classes:
       - component_limit_of_quantitation
       - component_limit_of_blank
       - component_limit_of_detection
+      - compound_trace_analysis_boolean
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
@@ -533,6 +534,12 @@ slots:
     comments: Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/. See component_limit_of_blank for description of the Limit of Blank.
     examples:
       - value: <0.15
+  compound_trace_analysis_boolean:
+    range: boolean
+    description: A boolean value denoting True if a measured component of nutritional is present at a very low concentration, requiring the use of precise analytical instrumentation.
+    comments: Trace analyses typically refer to analyte concentrations in the range of parts per million, parts per billion or lower.
+    examples:
+      - value: False
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
