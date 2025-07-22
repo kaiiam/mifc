@@ -315,7 +315,7 @@
 <p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.</em></p>
+<p><em>A string representing the lowest analyte concentration that can be reliably detected, as well as meet predefined goals for bias and imprecision.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -334,7 +334,7 @@
 </div>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/</a>.</li>
+<li>Description reference from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/</a>. The limit of quantification could be the same or higher than the limit of detection.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -360,13 +360,11 @@
 
 
 <pre><code class="language-yaml">name: component_limit_of_quantitation
-description: A string representing the lowest analyte concentration likely to be reliably
-  distinguished from the Limit of Blank (LoB) and at which detection is feasible during
-  the analysis of a component of nutritional interest.
+description: A string representing the lowest analyte concentration that can be reliably
+  detected, as well as meet predefined goals for bias and imprecision.
 comments:
-- LoB, (used in the description) is the highest apparent analyte concentration expected
-  to be found when replicates of a blank sample containing no analyte are tested.
-  Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+- Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+  The limit of quantification could be the same or higher than the limit of detection.
 examples:
 - value: &lt;0.25
 from_schema: https://w3id.org/kaiiam/mifc

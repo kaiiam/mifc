@@ -231,6 +231,10 @@
 
   Component : component_derivation_type
 
+  Component : component_limit_of_blank
+
+  Component : component_limit_of_detection
+
   Component : component_limit_of_quantitation
 
   Component : component_measurement_unit
@@ -267,6 +271,8 @@
   Component : compound_sample_aggregation_minimum_value
 
   Component : compound_sample_aggregation_standard_deviation
+
+  Component : compound_trace_analysis_boolean
 
   Component : food_laboratory_sample_aliquot_id
 
@@ -364,7 +370,25 @@
 <tr>
 <td><a href="../component_limit_of_quantitation/">component_limit_of_quantitation</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A string representing the lowest analyte concentration that can be reliably d...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_limit_of_blank/">component_limit_of_blank</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A float representing the highest apparent analyte concentration expected to b...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_limit_of_detection/">component_limit_of_detection</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
 <td>A string representing the lowest analyte concentration likely to be reliably ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../compound_trace_analysis_boolean/">compound_trace_analysis_boolean</a></td>
+<td>0..1 <br/> <a href="../Boolean/">Boolean</a></td>
+<td>A boolean value denoting True if a measured component of nutritional is prese...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -531,6 +555,9 @@ slots:
 - component_comment
 - component_derivation_type
 - component_limit_of_quantitation
+- component_limit_of_blank
+- component_limit_of_detection
+- compound_trace_analysis_boolean
 - compound_sample_aggregation_minimum_value
 - compound_sample_aggregation_maximum_value
 - compound_sample_aggregation_median_value
@@ -757,13 +784,11 @@ attributes:
     recommended: true
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
-    description: A string representing the lowest analyte concentration likely to
-      be reliably distinguished from the Limit of Blank (LoB) and at which detection
-      is feasible during the analysis of a component of nutritional interest.
+    description: A string representing the lowest analyte concentration that can be
+      reliably detected, as well as meet predefined goals for bias and imprecision.
     comments:
-    - LoB, (used in the description) is the highest apparent analyte concentration
-      expected to be found when replicates of a blank sample containing no analyte
-      are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    - Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+      The limit of quantification could be the same or higher than the limit of detection.
     examples:
     - value: &lt;0.25
     from_schema: https://w3id.org/kaiiam/mifc
@@ -773,6 +798,55 @@ attributes:
     domain_of:
     - Component
     range: string
+  component_limit_of_blank:
+    name: component_limit_of_blank
+    description: A float representing the highest apparent analyte concentration expected
+      to be found when measuring replicates of a blank sample containing no analyte.
+    comments:
+    - Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    examples:
+    - value: '0.0785'
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_limit_of_blank
+    owner: Component
+    domain_of:
+    - Component
+    range: float
+  component_limit_of_detection:
+    name: component_limit_of_detection
+    description: A string representing the lowest analyte concentration likely to
+      be reliably distinguished from the Limit of Blank and at which detection is
+      feasible during the analysis of a component of nutritional interest.
+    comments:
+    - Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+      See component_limit_of_blank for description of the Limit of Blank.
+    examples:
+    - value: &lt;0.15
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_limit_of_detection
+    owner: Component
+    domain_of:
+    - Component
+    range: string
+  compound_trace_analysis_boolean:
+    name: compound_trace_analysis_boolean
+    description: A boolean value denoting True if a measured component of nutritional
+      is present at a very low concentration, requiring the use of precise analytical
+      instrumentation.
+    comments:
+    - Trace analyses typically refer to analyte concentrations in the range of parts
+      per million, parts per billion or lower.
+    examples:
+    - value: 'False'
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: compound_trace_analysis_boolean
+    owner: Component
+    domain_of:
+    - Component
+    range: boolean
   compound_sample_aggregation_minimum_value:
     name: compound_sample_aggregation_minimum_value
     description: A float representing the minimum measured compound value of an aggregation
