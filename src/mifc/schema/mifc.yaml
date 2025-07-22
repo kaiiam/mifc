@@ -516,8 +516,8 @@ slots:
       - value: Analytical
   component_limit_of_quantitation:
     range: string
-    description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank (LoB) and at which detection is feasible during the analysis of a component of nutritional interest.
-    comments: LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    description: A string representing the lowest analyte concentration likely to be reliably distinguished from the Limit of Blank and at which detection is feasible during the analysis of a component of nutritional interest.
+    comments: Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/. See component_limit_of_blank for description of the Limit of Blank (LoB).
     examples:
       - value: <0.25
   component_limit_of_blank:
