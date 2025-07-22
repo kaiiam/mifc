@@ -94,6 +94,7 @@ classes:
       - food_sample_publication_date
       - food_comment
       - food_sample_weight
+      - food_sample_weight_unit
     id_prefixes:
       - mifc
 
@@ -437,6 +438,10 @@ slots:
     comments: This field should be used in along with food_sample_weight_unit to express the units the food_sample_weight was measured.
     examples:
       - value: 304
+  food_sample_weight_unit:
+    description: A unit code representing the unit of measurement in which a food_sample_weight_unit is measured.
+    examples:
+      - value: 'g'
 
   # Component slots
   component_sample_id:
