@@ -116,6 +116,7 @@ classes:
       - component_comment
       - component_derivation_type
       - component_limit_of_quantitation
+      - component_limit_of_blank
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
       - compound_sample_aggregation_median_value
@@ -519,6 +520,12 @@ slots:
     comments: LoB, (used in the description) is the highest apparent analyte concentration expected to be found when replicates of a blank sample containing no analyte are tested. Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
     examples:
       - value: <0.25
+  component_limit_of_blank:
+    range: float
+    description: A float representing the highest apparent analyte concentration expected to be found when measuring replicates of a blank sample containing no analyte.
+    comments: Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
+    examples:
+      - value: 0.0785
   compound_sample_aggregation_minimum_value: #Could try to shorten name for these 3
     description: A float representing the minimum measured compound value of an aggregation of compound samples.
     range: float
