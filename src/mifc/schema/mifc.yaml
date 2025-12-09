@@ -80,6 +80,7 @@ classes:
       - food_distributor_country
       - food_distributor_country_subdivision
       - food_expiration_date
+      - food_label_date
       - food_sell_by_date
       - food_category_label
       - food_category_type
@@ -385,8 +386,14 @@ slots:
     comments: To be determined if state codes should be specified over full names of states/provinces for countries globally.
     examples:
       - value: Ohio
+  food_label_date:
+    description: A date value representing the food label date as shown on the labeling information of the food sample.
+    range: date
+    comments: This field can be used in cases where it is unclear if a label date is an expiration date, sell by date, use by or other date on a product label.
+    examples:
+      - value: 2023-03-08
   food_expiration_date: #TODO add ISO datetime requirement?
-    description: A date value representing the food expiration data as shown on the labeling information of the food sample.
+    description: A date value representing the food expiration date as shown on the labeling information of the food sample.
     range: date
     examples:
       - value: 2023-03-08
