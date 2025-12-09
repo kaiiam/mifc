@@ -281,6 +281,8 @@
 
   Food : food_expiration_date
 
+  Food : food_label_date
+
   Food : food_label_weight
 
   Food : food_label_weight_unit
@@ -539,7 +541,13 @@
 <tr>
 <td><a href="../food_expiration_date/">food_expiration_date</a></td>
 <td>0..1 <br/> <a href="../Date/">Date</a></td>
-<td>A date value representing the food expiration data as shown on the labeling i...</td>
+<td>A date value representing the food expiration date as shown on the labeling i...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../food_label_date/">food_label_date</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>A date value representing the food label date as shown on the labeling inform...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -737,6 +745,7 @@ slots:
 - food_distributor_country
 - food_distributor_country_subdivision
 - food_expiration_date
+- food_label_date
 - food_sell_by_date
 - food_category_label
 - food_category_type
@@ -1249,13 +1258,29 @@ attributes:
     range: string
   food_expiration_date:
     name: food_expiration_date
-    description: A date value representing the food expiration data as shown on the
+    description: A date value representing the food expiration date as shown on the
       labeling information of the food sample.
     examples:
     - value: '2023-03-08'
     from_schema: https://w3id.org/kaiiam/mifc
     rank: 1000
     alias: food_expiration_date
+    owner: Food
+    domain_of:
+    - Food
+    range: date
+  food_label_date:
+    name: food_label_date
+    description: A date value representing the food label date as shown on the labeling
+      information of the food sample.
+    comments:
+    - This field can be used in cases where it is unclear if a label date is an expiration
+      date, sell by date, use by or other date on a product label.
+    examples:
+    - value: '2023-03-08'
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: food_label_date
     owner: Food
     domain_of:
     - Food
