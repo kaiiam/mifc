@@ -551,8 +551,8 @@ slots:
       - value: Analytical
   component_limit_of_quantitation:
     range: string
-    description: A string representing the lowest analyte concentration that can be reliably detected, as well as meet predefined goals for bias and imprecision.
-    comments: Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/. The limit of quantification could be the same or higher than the limit of detection.
+    description: A string representing the the level above which quantitative results may be determined with acceptable accuracy and precision. Limit of quantitation (or quantification) (LOQ) is variously defined but must be a value greater than the Method Detection Limit (MDL) and should apply to the complete analytical method.
+    comments: "Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual. Alternative definition: the minimum amount/concentration that can be quantified with acceptable precision."
     examples:
       - value: <0.25
   component_limit_of_blank:
