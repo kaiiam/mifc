@@ -123,6 +123,7 @@ classes:
       - component_limit_of_quantitation
       - component_limit_of_blank
       - component_limit_of_detection
+      - component_method_detection_limit
       - compound_trace_analysis_boolean
       - compound_sample_aggregation_minimum_value
       - compound_sample_aggregation_maximum_value
@@ -566,6 +567,12 @@ slots:
     comments: "Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual."
     examples:
       - value: <0.15
+  component_method_detection_limit:
+      range: float
+      description: A string representing the Method Detection Limit (MDL), the minimum concentration of a substance that can be measured and reported with 99% confidence that the analyte concentration is greater than zero. It is determined from analysis of a sample in a given matrix containing the analyte.
+      comments: "Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual."
+      examples:
+       - value: 0.57
   compound_trace_analysis_boolean:
     range: boolean
     description: A boolean value denoting True if a measured component of nutritional is present at a very low concentration, requiring the use of precise analytical instrumentation.
