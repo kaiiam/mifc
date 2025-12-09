@@ -239,6 +239,8 @@
 
   Component : component_measurement_unit
 
+  Component : component_method_detection_limit
+
   Component : component_protein_from_nitrogen_conversion_factor
 
   Component : component_quality_control_remeasurement
@@ -370,7 +372,7 @@
 <tr>
 <td><a href="../component_limit_of_quantitation/">component_limit_of_quantitation</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string representing the lowest analyte concentration that can be reliably d...</td>
+<td>A string representing the the level above which quantitative results may be d...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -382,7 +384,13 @@
 <tr>
 <td><a href="../component_limit_of_detection/">component_limit_of_detection</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A string representing the lowest analyte concentration likely to be reliably ...</td>
+<td>A string representing the lowest amount of analyte in a sample which can be d...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../component_method_detection_limit/">component_method_detection_limit</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>A string representing the Method Detection Limit (MDL), the minimum concentra...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -557,6 +565,7 @@ slots:
 - component_limit_of_quantitation
 - component_limit_of_blank
 - component_limit_of_detection
+- component_method_detection_limit
 - compound_trace_analysis_boolean
 - compound_sample_aggregation_minimum_value
 - compound_sample_aggregation_maximum_value
@@ -784,11 +793,15 @@ attributes:
     recommended: true
   component_limit_of_quantitation:
     name: component_limit_of_quantitation
-    description: A string representing the lowest analyte concentration that can be
-      reliably detected, as well as meet predefined goals for bias and imprecision.
+    description: A string representing the the level above which quantitative results
+      may be determined with acceptable accuracy and precision. Limit of quantitation
+      (or quantification) (LOQ) is variously defined but must be a value greater than
+      the Method Detection Limit (MDL) and should apply to the complete analytical
+      method.
     comments:
-    - Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
-      The limit of quantification could be the same or higher than the limit of detection.
+    - 'Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual.
+      Alternative definition: the minimum amount/concentration that can be quantified
+      with acceptable precision.'
     examples:
     - value: &lt;0.25
     from_schema: https://w3id.org/kaiiam/mifc
@@ -815,12 +828,13 @@ attributes:
     range: float
   component_limit_of_detection:
     name: component_limit_of_detection
-    description: A string representing the lowest analyte concentration likely to
-      be reliably distinguished from the Limit of Blank and at which detection is
-      feasible during the analysis of a component of nutritional interest.
+    description: A string representing the lowest amount of analyte in a sample which
+      can be detected but not necessarily quantified as an exact value. It is often
+      called the Limit Of Detection (LOD) which is the lowest concentration level
+      that can be determined statistically different from a blank at a specified level
+      of confidence.
     comments:
-    - Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
-      See component_limit_of_blank for description of the Limit of Blank.
+    - 'Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual.'
     examples:
     - value: &lt;0.15
     from_schema: https://w3id.org/kaiiam/mifc
@@ -830,6 +844,23 @@ attributes:
     domain_of:
     - Component
     range: string
+  component_method_detection_limit:
+    name: component_method_detection_limit
+    description: A string representing the Method Detection Limit (MDL), the minimum
+      concentration of a substance that can be measured and reported with 99% confidence
+      that the analyte concentration is greater than zero. It is determined from analysis
+      of a sample in a given matrix containing the analyte.
+    comments:
+    - 'Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual.'
+    examples:
+    - value: '0.57'
+    from_schema: https://w3id.org/kaiiam/mifc
+    rank: 1000
+    alias: component_method_detection_limit
+    owner: Component
+    domain_of:
+    - Component
+    range: float
   compound_trace_analysis_boolean:
     name: compound_trace_analysis_boolean
     description: A boolean value denoting True if a measured component of nutritional

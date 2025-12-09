@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://kaiiam.github.io/mifc/food_laboratory_sample_batch_id/">
+        <link rel="canonical" href="https://kaiiam.github.io/mifc/component_method_detection_limit/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.10">
     
     
       
-        <title>food_laboratory_sample_batch_id - mifc</title>
+        <title>component_method_detection_limit - mifc</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#food_laboratory_sample_batch_id" class="md-skip">
+        <a href="#component_method_detection_limit" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              food_laboratory_sample_batch_id
+              component_method_detection_limit
             
           </span>
         </div>
@@ -270,6 +270,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    Comments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mappings" class="md-nav__link">
     Mappings
   </a>
@@ -297,23 +304,23 @@
                 
                   
 
-  <a href="https://github.com/kaiiam/mifc/edit/master/docs/food_laboratory_sample_batch_id.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/kaiiam/mifc/edit/master/docs/component_method_detection_limit.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="food_laboratory_sample_batch_id">food_laboratory_sample_batch_id</h1>
-<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/food_laboratory_sample_batch_id">mifc:food_laboratory_sample_batch_id</a></p>
-<p><strong>Applicable to</strong>: <a href="../Food/">Food</a>, <a href="../Component/">Component</a></p>
+<h1 id="component_method_detection_limit">component_method_detection_limit</h1>
+<p><strong>URI</strong>: <a href="https://w3id.org/kaiiam/mifc/component_method_detection_limit">mifc:component_method_detection_limit</a></p>
+<p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string denoting an identifier of a batch of laboratory samples analysed together.</em></p>
+<p><em>A string representing the Method Detection Limit (MDL), the minimum concentration of a substance that can be measured and reported with 99% confidence that the analyte concentration is greater than zero. It is determined from analysis of a sample in a given matrix containing the analyte.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
 <li>
-<p><strong>Range</strong>: <a href="../String/">String</a>. The range of the slot is the type of the value that can be assigned to it.</p>
+<p><strong>Range</strong>: <a href="../Float/">Float</a>. The range of the slot is the type of the value that can be assigned to it.</p>
 </li>
 <li>
 <p><strong>Requirement status</strong>: <em>Optional</em> (You can add this slot, but it is not required.)</p>
@@ -321,10 +328,14 @@
 </ul>
 <h2 id="examples">Examples</h2>
 <div class="admonition example">
-<p class="admonition-title">Example: t</p>
+<p class="admonition-title">Example: 0.57</p>
 <p><strong>Example value</strong>:</p>
-<p><code>t</code></p>
+<p><code>0.57</code></p>
 </div>
+<h2 id="comments">Comments</h2>
+<ul>
+<li>Description reference: <a href="https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual">https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual</a>.</li>
+</ul>
 <h2 id="mappings">Mappings</h2>
 <table>
 <thead>
@@ -336,11 +347,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>mifc:food_laboratory_sample_batch_id</td>
+<td>mifc:component_method_detection_limit</td>
 </tr>
 <tr>
 <td>native</td>
-<td>mifc:food_laboratory_sample_batch_id</td>
+<td>mifc:component_method_detection_limit</td>
 </tr>
 </tbody>
 </table>
@@ -348,18 +359,21 @@
 <details><summary>LinkML source</summary>
 
 
-<pre><code class="language-yaml">name: food_laboratory_sample_batch_id
-description: A string denoting an identifier of a batch of laboratory samples analysed
-  together.
+<pre><code class="language-yaml">name: component_method_detection_limit
+description: A string representing the Method Detection Limit (MDL), the minimum concentration
+  of a substance that can be measured and reported with 99% confidence that the analyte
+  concentration is greater than zero. It is determined from analysis of a sample in
+  a given matrix containing the analyte.
+comments:
+- 'Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual.'
 examples:
-- value: t
+- value: '0.57'
 from_schema: https://w3id.org/kaiiam/mifc
 rank: 1000
-alias: food_laboratory_sample_batch_id
+alias: component_method_detection_limit
 domain_of:
-- Food
 - Component
-range: string
+range: float
 
 </code></pre>
 

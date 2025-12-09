@@ -315,7 +315,7 @@
 <p><strong>Applicable to</strong>: <a href="../Component/">Component</a></p>
 <div class="admonition info">
 <p class="admonition-title">Description</p>
-<p><em>A string representing the lowest analyte concentration that can be reliably detected, as well as meet predefined goals for bias and imprecision.</em></p>
+<p><em>A string representing the the level above which quantitative results may be determined with acceptable accuracy and precision. Limit of quantitation (or quantification) (LOQ) is variously defined but must be a value greater than the Method Detection Limit (MDL) and should apply to the complete analytical method.</em></p>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
@@ -334,7 +334,7 @@
 </div>
 <h2 id="comments">Comments</h2>
 <ul>
-<li>Description reference from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/</a>. The limit of quantification could be the same or higher than the limit of detection.</li>
+<li>Description reference: <a href="https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual">https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual</a>. Alternative definition: the minimum amount/concentration that can be quantified with acceptable precision.</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -360,11 +360,14 @@
 
 
 <pre><code class="language-yaml">name: component_limit_of_quantitation
-description: A string representing the lowest analyte concentration that can be reliably
-  detected, as well as meet predefined goals for bias and imprecision.
+description: A string representing the the level above which quantitative results
+  may be determined with acceptable accuracy and precision. Limit of quantitation
+  (or quantification) (LOQ) is variously defined but must be a value greater than
+  the Method Detection Limit (MDL) and should apply to the complete analytical method.
 comments:
-- Description reference from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2556583/.
-  The limit of quantification could be the same or higher than the limit of detection.
+- 'Description reference: https://www.fda.gov/science-research/field-science-and-laboratories/field-science-laboratory-manual.
+  Alternative definition: the minimum amount/concentration that can be quantified
+  with acceptable precision.'
 examples:
 - value: &lt;0.25
 from_schema: https://w3id.org/kaiiam/mifc
