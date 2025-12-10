@@ -803,10 +803,13 @@ enums:
       slightly ripe:
   FoodAcquisitionLocationType:
     permissible_values:
+      grower:
       field:
+      retailer:
       fresh market:
       small grocery:
       supermarket:
+      distributor:
       biobank:
       unknown:
       other:
