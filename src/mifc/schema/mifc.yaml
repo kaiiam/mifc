@@ -751,6 +751,8 @@ enums:
         description: Inductively coupled plasma
       ICP-MS:
         description: Inductively coupled plasma mass spectrometry
+      ICP-OES:
+        description: Inductively coupled plasma optical emission spectroscopy
       ID-GC-MS:
         description: Isotope dilution gas chromatography mass spectrometry
       Kjeldahl:
